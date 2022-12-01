@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15B3B5D8-405D-4009-AA5F-00CCB4A80F41}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TicketSelling</RootNamespace>
+    <AssemblyName>TicketSelling</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Common.cs" />
+    <Compile Include="Common\MessageEntity.cs" />
+    <Compile Include="Common\ProcedureConstants.cs" />
+    <Compile Include="Common\ResponseMessage.cs" />
+    <Compile Include="Common\ThemeColor.cs" />
+    <Compile Include="DAO\MovieDao.cs" />
+    <Compile Include="DAO\MovieSDDao.cs" />
+    <Compile Include="DAO\SeatDao.cs" />
+    <Compile Include="DAO\SeatTypeDao.cs" />
+    <Compile Include="DAO\StaffDao.cs" />
+    <Compile Include="DbConnector.cs" />
+    <Compile Include="Entity\Movie.cs" />
+    <Compile Include="Entity\MovieSD.cs" />
+    <Compile Include="Entity\Seat.cs" />
+    <Compile Include="Entity\SeatType.cs" />
+    <Compile Include="Entity\Staff.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Configuration\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Configuration\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Configuration\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Configuration\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Configuration\FrmMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Configuration\FrmMovie.Designer.cs">
+      <DependentUpon>FrmMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Configuration\FrmSeat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Configuration\FrmSeat.Designer.cs">
+      <DependentUpon>FrmSeat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Configuration\FrmStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Configuration\FrmStaff.Designer.cs">
+      <DependentUpon>FrmStaff.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Configuration\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Configuration\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Configuration\FrmMovie.resx">
+      <DependentUpon>FrmMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Configuration\FrmSeat.resx">
+      <DependentUpon>FrmSeat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Configuration\FrmStaff.resx">
+      <DependentUpon>FrmStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp">
+      <Version>6.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="FontAwesomeIconsDropdown">
+      <Version>1.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="GradientColorPicker">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Guna.UI2.WinForms">
+      <Version>2.0.3.5</Version>
+    </PackageReference>
+    <PackageReference Include="RJCodeAdvance.RJControls">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Siticone.Desktop.UI">
+      <Version>2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Wisej">
+      <Version>1.5.58</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_480px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\watching-movies-popcorn.gif" />
+    <None Include="Resources\popcorn-popcorns.gif" />
+    <None Include="Resources\link_500px.png" />
+    <None Include="Resources\note_480px.png" />
+    <None Include="Resources\team_480px.png" />
+    <None Include="Resources\movie_500px.png" />
+    <None Include="Resources\phone_512px.png" />
+    <None Include="Resources\password_144px.png" />
+    <None Include="Resources\name_208px.png" />
+    <None Include="Resources\name_480px.png" />
+    <None Include="Resources\test_account_480px.png" />
+    <None Include="Resources\password_480px.png" />
+    <None Include="Resources\person_480px.png" />
+    <None Include="Resources\gear_480px.png" />
+    <None Include="Resources\cinema vector.png" />
+    <None Include="Resources\cinema vector 2.png" />
+    <None Include="Resources\beautiful-color-gradients-backgrounds-076-premium-dark.png" />
+    <None Include="Resources\account_512px.png" />
+    <None Include="Resources\clock_512px.png" />
+    <None Include="Resources\british_movies_144px.png" />
+    <None Include="Resources\130718-movie.gif" />
+    <None Include="Resources\cineworld-cinema.gif" />
+    <None Include="Resources\cinema-time-cineworld.gif" />
+    <None Include="Resources\couple-watching-tv.gif" />
+    <Content Include="Resources\drop_arrow.png" />
+    <None Include="Resources\undraw_home_cinema_l7yl.png" />
+    <None Include="Resources\enlarge_480px.png" />
+    <None Include="Resources\toggle_full_screen_500px.png" />
+    <None Include="Resources\living_room_500px.png" />
+    <None Include="Resources\Menu_512px.png" />
+    <None Include="Resources\living_room_208px.png" />
+    <None Include="Resources\movie_camera_256px.png" />
+    <None Include="Resources\welcome-cinema-neon-sign-popcorn-260nw-1178142151.png" />
+    <None Include="Resources\male_user_512px.png" />
+    <None Include="Resources\people_500px.png" />
+    <None Include="Resources\cancel_512px.png" />
+    <None Include="Resources\cinema.png" />
+    <None Include="Resources\cinema 1.png" />
+    <None Include="Resources\cinema_500px.png" />
+    <Content Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
