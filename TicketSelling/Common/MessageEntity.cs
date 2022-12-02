@@ -16,6 +16,10 @@ namespace TicketSelling.Common
         public string MovieCoverName { get; set; }
 
         public int MovieId { get; set; }
+
+        public int AdminId { get; set; }
+
+        public string AdminPhotoName { get; set; }
     }
 
     public static class SqlDataSet

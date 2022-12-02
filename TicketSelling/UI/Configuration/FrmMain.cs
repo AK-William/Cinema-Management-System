@@ -274,6 +274,11 @@ namespace TicketSelling.UI.Configuration
                     lblTitleChildForm.Text = btnStaff.Tag.ToString();
                     iconCurrentChildForm.IconChar = btnStaff.IconChar;
                     break;
+                case "Admin":
+                    frm = new FrmAdmin();
+                    lblTitleChildForm.Text = btnAdmin.Tag.ToString();
+                    iconCurrentChildForm.IconChar = btnAdmin.IconChar;
+                    break;
             }
             panelBody.Controls.Add(frm);
             frm.Dock = DockStyle.Fill;
@@ -288,6 +293,7 @@ namespace TicketSelling.UI.Configuration
 
         private void BtnAdmin_Click(object sender, EventArgs e)
         {
+            MenuClick(sender, e);
             ActivateButton(sender); //menu highlight active button
         }
 

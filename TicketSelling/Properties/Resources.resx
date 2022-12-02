@@ -136,6 +136,9 @@
   <data name="team_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\team_480px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="gmail_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gmail_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cinema 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cinema 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,6 +178,9 @@
   <data name="Menu_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="zip_code_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zip_code_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="living_room_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\living_room_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -187,12 +193,17 @@
   <data name="password_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password_480px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  
   <data name="cinema vector 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cinema vector 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="password_144px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password_144px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="130718-movie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\130718-movie.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="city_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\city_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -221,8 +232,8 @@
   <data name="male_user_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\male_user_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="130718-movie" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\130718-movie.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Magnetic Card_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Magnetic Card_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gear_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gear_480px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -233,5 +244,7 @@
   <data name="cancel_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  
+  <data name="address_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\address_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

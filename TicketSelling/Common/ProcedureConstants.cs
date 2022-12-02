@@ -253,6 +253,7 @@ namespace TicketSelling.Common
 
 
         #region Movie
+
         public static string SP_MovieSave = @"IF EXISTS (SELECT * FROM TblMovie WHERE Name = @Name)
                                                     BEGIN
                                                       SELECT
@@ -344,6 +345,7 @@ namespace TicketSelling.Common
 
         #endregion
 
+
         #region MovieScheduleDate
 
         public static string MovieSDSave = @"IF EXISTS (SELECT * FROM TblScheduleMovie WHERE Name = @Name)
@@ -380,6 +382,105 @@ namespace TicketSelling.Common
         public static string GetMovieNameById = @"Select * from TblMovie where Id=@Id";
 
         public static string GetAllMovieSD = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblScheduleMovie WITH (NOLOCK)";
+
+        #endregion
+
+
+        #region Admin
+
+        public static string SP_AdminSave = @"IF EXISTS (SELECT * FROM TblAdmin WHERE Name = @Name)
+                                                    BEGIN
+                                                      SELECT
+                                                        '001' AS RespCode,
+                                                        'Duplicate Error' AS RespDesp,
+                                                        'ME' AS 'RespMessageType'
+                                                      SELECT
+                                                        *
+                                                      FROM TblAdmin
+                                                      WHERE Name = @Name
+                                                    END
+                                                    ELSE
+                                                    BEGIN
+                                                      INSERT INTO[dbo].[TblAdmin]
+                                                        ([Name]
+                                                        , [Username]
+                                                        , [Password]
+                                                        , [Gmail]
+                                                        , [PhoneNumber]
+                                                        , [NRC]
+                                                        , [Address]
+                                                        , [City]
+                                                        , [Postcode]
+                                                       ,[CreatedBy])
+                                                       VALUES(@Name, @Username, @Password, @Gmail, @PhoneNumber, @NRC, @Address, @City, @Postcode, @CreatedBy);
+
+                                                        SELECT
+                                                        '000' AS RespCode,
+                                                        'Successful Message' AS RespDesp,
+                                                        'MI' AS 'RespMessageType'
+                                                      SELECT
+                                                        *
+                                                      FROM TblAdmin
+                                                      WHERE Name = @Name
+                                                    END";
+
+        public static string UpdatePhoto = @"Update TblAdmin set Photo=@Photo where Id=@Id;
+                                                    SELECT
+                                                    '000' AS RespCode,
+                                                    'Successful Message' AS RespDesp,
+                                                    'MI' AS 'RespMessageType'
+                                                    SELECT
+                                                    *
+                                                    FROM TblAdmin
+                                                    WHERE  Id=@Id
+                                                    ";
+
+        public static string GetAllAdmin = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblAdmin WITH (NOLOCK)";
+
+        public static string UpdateAdmin = @"IF EXISTS (SELECT * FROM TblAdmin WHERE Name = @Name
+                                                       AND Id != @Id)
+                                                    BEGIN
+                                                      SELECT
+                                                        '001' AS RespCode,
+                                                        'Duplicate Error' AS RespDesp,
+                                                        'ME' AS 'RespMessageType'
+                                                      SELECT
+                                                        *
+                                                      FROM TblAdmin
+                                                      WHERE Name = @Name
+                                                    END
+                                                    ELSE
+                                                    BEGIN
+                                                      UPDATE [dbo].[TblAdmin]
+														   SET [Name] =  @Name
+                                                        , [Username] = @Username
+                                                        , [Password] = @Password
+                                                        , [Gmail] = @Gmail
+                                                        , [PhoneNumber] = @PhoneNumber
+                                                        , [NRC] = @NRC
+                                                        , [Address] = @Address
+                                                        , [City] = @City
+                                                        , [Postcode] = @Postcode
+														 WHERE Id = @Id 
+
+                                                      SELECT
+                                                        '000' AS RespCode,
+                                                        'Update Successful' AS RespDesp,
+                                                        'MI' AS 'RespMessageType'
+                                                      SELECT
+                                                        *
+                                                      FROM TblAdmin
+                                                      WHERE Name = @Name
+                                                    END";
+
+        public static string DeleteAdmin = @"DELETE TblAdmin WHERE Id = @Id; 
+                                                SELECT
+                                                '000' AS RespCode,
+                                                'Update Successful' AS RespDesp,
+                                                'MI' AS 'RespMessageType'
+                                                SELECT
+                                                *
+                                                FROM TblAdmin;";
 
         #endregion
 

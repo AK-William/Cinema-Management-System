@@ -68,9 +68,9 @@
             this.toolTipStaffs = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipTicket = new System.Windows.Forms.ToolTip(this.components);
             this.paneltitlebar = new Guna.UI2.WinForms.Guna2Panel();
+            this.iconCurrentChildForm = new FontAwesome.Sharp.IconButton();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.panelBody = new Guna.UI2.WinForms.Guna2Panel();
-            this.iconCurrentChildForm = new FontAwesome.Sharp.IconButton();
             this.panelleft.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelEntry.SuspendLayout();
@@ -662,13 +662,28 @@
             this.paneltitlebar.Size = new System.Drawing.Size(889, 53);
             this.paneltitlebar.TabIndex = 2;
             // 
+            // iconCurrentChildForm
+            // 
+            this.iconCurrentChildForm.Enabled = false;
+            this.iconCurrentChildForm.FlatAppearance.BorderSize = 0;
+            this.iconCurrentChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconCurrentChildForm.IconColor = System.Drawing.Color.White;
+            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrentChildForm.IconSize = 40;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(6, 0);
+            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(50, 53);
+            this.iconCurrentChildForm.TabIndex = 1;
+            this.iconCurrentChildForm.UseVisualStyleBackColor = true;
+            // 
             // lblTitleChildForm
             // 
             this.lblTitleChildForm.AutoSize = true;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.White;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(82, 13);
-            this.lblTitleChildForm.Margin = new System.Windows.Forms.Padding(2);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(59, 13);
+            this.lblTitleChildForm.Margin = new System.Windows.Forms.Padding(0);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
             this.lblTitleChildForm.Size = new System.Drawing.Size(61, 23);
             this.lblTitleChildForm.TabIndex = 0;
@@ -682,21 +697,6 @@
             this.panelBody.Name = "panelBody";
             this.panelBody.Size = new System.Drawing.Size(889, 527);
             this.panelBody.TabIndex = 3;
-            // 
-            // iconCurrentChildForm
-            // 
-            this.iconCurrentChildForm.Enabled = false;
-            this.iconCurrentChildForm.FlatAppearance.BorderSize = 0;
-            this.iconCurrentChildForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.iconCurrentChildForm.IconColor = System.Drawing.Color.White;
-            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm.IconSize = 40;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(6, 0);
-            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(71, 53);
-            this.iconCurrentChildForm.TabIndex = 1;
-            this.iconCurrentChildForm.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 
