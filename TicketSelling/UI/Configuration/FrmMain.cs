@@ -279,6 +279,12 @@ namespace TicketSelling.UI.Configuration
                     lblTitleChildForm.Text = btnAdmin.Tag.ToString();
                     iconCurrentChildForm.IconChar = btnAdmin.IconChar;
                     break;
+                case "Home":
+                    frm = new FrmHome();
+                    lblTitleChildForm.Text = btnHome.Tag.ToString();
+                    iconCurrentChildForm.IconChar = btnHome.IconChar;
+                    break;
+               
             }
             panelBody.Controls.Add(frm);
             frm.Dock = DockStyle.Fill;
@@ -295,10 +301,12 @@ namespace TicketSelling.UI.Configuration
         {
             MenuClick(sender, e);
             ActivateButton(sender); //menu highlight active button
+            btnAdmin.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //Admin button white fix
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
         {
+            MenuClick(sender, e);
             HideSubMenu();
             ActivateButton(sender); //menu highlight active button
         }
@@ -435,16 +443,19 @@ namespace TicketSelling.UI.Configuration
             this.Close();
         }
 
+        private void BtnSetting_Click(object sender, EventArgs e)
+        {
+            panelBody.Controls.Clear();
+            UserControl frmSetting = new FrmSetting();
+            panelBody.Controls.Add(frmSetting);
+            frmSetting.Dock = DockStyle.Fill;
+            DisableButton();
+        }
 
         #region menu highlight active button
 
         private IconButton currentBtn;
 
-        private struct RGBColors
-        {
-            public static Color color1 = Color.FromArgb(0, 120, 215);
-            public static Color color2 = Color.FromArgb(0, 120, 215);
-        }
         private void ActivateButton(object senderBtn)
         {
             if (senderBtn != null)
@@ -466,14 +477,15 @@ namespace TicketSelling.UI.Configuration
                 }
                 else
                 {
-                    currentBtn.BackColor = Color.FromArgb(0, 120, 215);
+                    currentBtn.BackColor = Color.FromArgb(51,153,255);
                 }
             }
         }
 
+
         #endregion
 
-
+        
     }
 }
 

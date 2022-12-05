@@ -94,7 +94,7 @@
             this.tabcontrolSeat.Controls.Add(this.tabSeatType);
             this.tabcontrolSeat.Controls.Add(this.tabSeat);
             this.tabcontrolSeat.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabcontrolSeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabcontrolSeat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabcontrolSeat.ImageList = this.imageList1;
             this.tabcontrolSeat.ItemSize = new System.Drawing.Size(180, 50);
             this.tabcontrolSeat.Location = new System.Drawing.Point(0, 0);
@@ -410,7 +410,7 @@
             this.tabSeat.Location = new System.Drawing.Point(4, 54);
             this.tabSeat.Name = "tabSeat";
             this.tabSeat.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSeat.Size = new System.Drawing.Size(881, 471);
+            this.tabSeat.Size = new System.Drawing.Size(881, 522);
             this.tabSeat.TabIndex = 0;
             this.tabSeat.Text = "Seat";
             this.tabSeat.UseVisualStyleBackColor = true;
@@ -419,10 +419,10 @@
             // 
             this.guna2Panel3.Controls.Add(this.dgvSeat);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Panel3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Panel3.Location = new System.Drawing.Point(362, 3);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(516, 465);
+            this.guna2Panel3.Size = new System.Drawing.Size(516, 516);
             this.guna2Panel3.TabIndex = 1;
             // 
             // dgvSeat
@@ -452,7 +452,7 @@
             this.ColTypeId});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -466,7 +466,7 @@
             this.dgvSeat.ReadOnly = true;
             this.dgvSeat.RowHeadersVisible = false;
             this.dgvSeat.RowTemplate.Height = 24;
-            this.dgvSeat.Size = new System.Drawing.Size(516, 465);
+            this.dgvSeat.Size = new System.Drawing.Size(516, 516);
             this.dgvSeat.TabIndex = 1;
             this.dgvSeat.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvSeat.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -558,7 +558,7 @@
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel2.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(359, 465);
+            this.guna2Panel2.Size = new System.Drawing.Size(359, 516);
             this.guna2Panel2.TabIndex = 0;
             // 
             // label5

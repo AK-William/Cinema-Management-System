@@ -23,7 +23,7 @@ namespace TicketSelling.DAO.Entity
         public string Photo { get; set; }
         public byte[] PhotoByte { get; set; }
         public string Gmail { get; set; }
-        public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public string NRC { get; set; }
         public string Address { get; set; }
         public string City { get; set; }

@@ -31,7 +31,6 @@ namespace TicketSelling.DAO
                 scom = new SqlCommand(ProcedureConstants.SP_MovieSave, sqlConnection);
                 scom.CommandType = CommandType.Text;
                 scom.Parameters.AddWithValue("@Name", req.Name);
-                //scom.Parameters.AddWithValue("@MovieCover", req.MovieCover);
                 scom.Parameters.AddWithValue("@Casts", req.Casts);
                 scom.Parameters.AddWithValue("@Runtime", req.Runtime);
                 scom.Parameters.AddWithValue("@MovieType", req.MovieType);

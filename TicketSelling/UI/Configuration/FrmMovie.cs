@@ -441,7 +441,7 @@ namespace TicketSelling.UI.Configuration
                 if (!CheckRequireFieldsSD()) return;
                 MessageEntity res = new MovieSDDao().SaveMovieSD(1, new DAO.Entity.MovieSD()
                 {
-                    //Name = CbSDName.Text,
+                    MovieId = Convert.ToInt32(CbSDName.SelectedValue),
                     StartDate = Convert.ToDateTime(txtSDStartDate.Value),
                     EndDate = Convert.ToDateTime(txtSDEndDate.Value),
                 });
@@ -516,5 +516,7 @@ namespace TicketSelling.UI.Configuration
         }
 
         #endregion
+
+       
     }
 }

@@ -89,6 +89,12 @@
     <Compile Include="UI\Configuration\FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Configuration\FrmHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Configuration\FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Configuration\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,12 @@
     <Compile Include="UI\Configuration\FrmSeat.Designer.cs">
       <DependentUpon>FrmSeat.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Configuration\FrmSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Configuration\FrmSetting.Designer.cs">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Configuration\FrmStaff.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -127,8 +139,14 @@
     <EmbeddedResource Include="UI\Configuration\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Configuration\FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Configuration\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Configuration\FrmMain.my-MM.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Configuration\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -138,6 +156,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Configuration\FrmSeat.resx">
       <DependentUpon>FrmSeat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Configuration\FrmSetting.my-MM.resx">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Configuration\FrmSetting.resx">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Configuration\FrmStaff.resx">
       <DependentUpon>FrmStaff.cs</DependentUpon>

@@ -61,8 +61,9 @@ namespace TicketSelling.DAO
                     RespCode = dt.Rows[0]["RespCode"].ToString(),
                     RespDesp = dt.Rows[0]["RespDesp"].ToString(),
                     RespMessageType = dt.Rows[0]["RespMessageType"].ToString(),
-                    MovieId = Convert.ToInt32(ds.Tables[1].Rows[0]["Id"].ToString()),
-                    MovieCoverName = "M-" + ds.Tables[1].Rows[0]["Id"].ToString()
+
+                    AdminId = Convert.ToInt32(ds.Tables[1].Rows[0]["Id"].ToString()),
+                    AdminPhotoName = "A-" + ds.Tables[1].Rows[0]["Id"].ToString()
                 };
             }
             catch (Exception ex)
@@ -74,7 +75,7 @@ namespace TicketSelling.DAO
             }
         }
 
-        public MessageEntity UpdatePhoto(Admin req)
+        public MessageEntity UpdateAdminPhoto(Admin req)
         {
             sqlConnection = DbConnector.Connect();
             if (sqlConnection == null)
@@ -84,7 +85,7 @@ namespace TicketSelling.DAO
             MessageEntity _MessageEntity = null;
             try
             {
-                scom = new SqlCommand(ProcedureConstants.UpdatePhoto, sqlConnection);
+                scom = new SqlCommand(ProcedureConstants.UpdateAdminPhoto, sqlConnection);
                 scom.CommandType = CommandType.Text;
                 scom.Parameters.AddWithValue("@Id", req.Id);
                 scom.Parameters.AddWithValue("@Photo", req.Photo);
@@ -109,8 +110,9 @@ namespace TicketSelling.DAO
                     RespCode = dt.Rows[0]["RespCode"].ToString(),
                     RespDesp = dt.Rows[0]["RespDesp"].ToString(),
                     RespMessageType = dt.Rows[0]["RespMessageType"].ToString(),
-                    MovieId = Convert.ToInt32(ds.Tables[1].Rows[0]["Id"].ToString()),
-                    MovieCoverName = "M-" + ds.Tables[1].Rows[0]["Id"].ToString()
+
+                    AdminId = Convert.ToInt32(ds.Tables[1].Rows[0]["Id"].ToString()),
+                    AdminPhotoName = "A-" + ds.Tables[1].Rows[0]["Id"].ToString()
                 };
             }
             catch (Exception ex)
@@ -153,12 +155,12 @@ namespace TicketSelling.DAO
                         RowNumber = dt.Rows[i]["RowNumber"].ToString(),
                         Id = Convert.ToInt32(dt.Rows[i]["Id"]),
                         Name = dt.Rows[i]["Name"].ToString(),
-                        Username = dt.Rows[i]["Name"].ToString(),
+                        Username = dt.Rows[i]["Username"].ToString(),
                         Photo = dt.Rows[i]["Photo"].ToString(),
                         PhotoByte = File.ReadAllBytes(dt.Rows[i]["Photo"].ToString()),
                         Password = dt.Rows[i]["Password"].ToString(),
                         Gmail = dt.Rows[i]["Gmail"].ToString(),
-                        PhoneNumber = Convert.ToInt32(dt.Rows[i]["PhoneNumber"]),
+                        PhoneNumber = dt.Rows[i]["PhoneNumber"].ToString(),
                         NRC = dt.Rows[i]["NRC"].ToString(),
                         Address = dt.Rows[i]["Address"].ToString(),
                         City = dt.Rows[i]["City"].ToString(),
