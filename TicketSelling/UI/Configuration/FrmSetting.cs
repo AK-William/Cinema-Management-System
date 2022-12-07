@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TicketSelling.UI.Configuration;
 
 
 namespace TicketSelling.UI.Configuration
@@ -19,12 +20,12 @@ namespace TicketSelling.UI.Configuration
             InitializeComponent();
         }
 
-        FrmMain frmmain = new FrmMain();
+       
 
-        void  ColorTheme(string color)
+        public void  ColorTheme(string color)
         {
             this.BackColor = Color.FromName(color);
-          
+          FrmMain.ActiveForm.BackColor = Color.FromName(color);
         }
 
         private void CbChangeColor_SelectedIndexChanged(object sender, EventArgs e)
@@ -32,7 +33,9 @@ namespace TicketSelling.UI.Configuration
             ColorTheme(cbChangeColor.Text);
         }
 
-        private void CbChangeLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        
+
+        public void CbChangeLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cbChangeLanguage.SelectedIndex)
             {

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -39,13 +41,11 @@
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2GradientPanel1
@@ -60,10 +60,35 @@
             this.guna2GradientPanel1.CustomBorderThickness = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(443, 615);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(332, 500);
             this.guna2GradientPanel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Goudy Stout", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(26, 66);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(287, 74);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Welcome \r\n    Back";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::TicketSelling.Properties.Resources._130718_movie1;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(55, 206);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(241, 212);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
             // 
             // guna2GradientPanel2
             // 
@@ -75,10 +100,9 @@
             this.guna2GradientPanel2.CustomBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.guna2GradientPanel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(443, 0);
-            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(332, 0);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(456, 615);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(342, 500);
             this.guna2GradientPanel2.TabIndex = 1;
             // 
             // btnExit
@@ -90,12 +114,12 @@
             this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnExit.ImageRotate = 0F;
             this.btnExit.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnExit.Location = new System.Drawing.Point(396, 14);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Location = new System.Drawing.Point(297, 11);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.PressedState.Image = global::TicketSelling.Properties.Resources.cancel_480px;
             this.btnExit.PressedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnExit.Size = new System.Drawing.Size(53, 49);
+            this.btnExit.Size = new System.Drawing.Size(40, 40);
             this.btnExit.TabIndex = 12;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
@@ -113,13 +137,12 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.label6);
             this.guna2CustomGradientPanel2.CustomBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.guna2CustomGradientPanel2.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(17, 94);
-            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(13, 76);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.ShadowDecoration.BorderRadius = 10;
             this.guna2CustomGradientPanel2.ShadowDecoration.Color = System.Drawing.Color.DeepSkyBlue;
             this.guna2CustomGradientPanel2.ShadowDecoration.Enabled = true;
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(425, 495);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(319, 402);
             this.guna2CustomGradientPanel2.TabIndex = 11;
             // 
             // btnLogin
@@ -137,11 +160,10 @@
             this.btnLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLogin.IconSize = 30;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(117, 372);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogin.Location = new System.Drawing.Point(88, 302);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.btnLogin.Size = new System.Drawing.Size(184, 49);
+            this.btnLogin.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLogin.Size = new System.Drawing.Size(138, 40);
             this.btnLogin.TabIndex = 78;
             this.btnLogin.Tag = "";
             this.btnLogin.Text = "   LOGIN";
@@ -153,10 +175,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TicketSelling.Properties.Resources.male_user_512px;
-            this.pictureBox1.Location = new System.Drawing.Point(161, 43);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(121, 35);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 95);
+            this.pictureBox1.Size = new System.Drawing.Size(82, 77);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -165,7 +186,7 @@
             // 
             this.txtPassword.Animated = true;
             this.txtPassword.AutoRoundedCorners = true;
-            this.txtPassword.BorderRadius = 18;
+            this.txtPassword.BorderRadius = 15;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.DefaultText = "";
             this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -178,13 +199,13 @@
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.IconLeft = global::TicketSelling.Properties.Resources.password_480px;
             this.txtPassword.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtPassword.Location = new System.Drawing.Point(40, 292);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPassword.Location = new System.Drawing.Point(30, 237);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "Enter your Password";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(353, 39);
+            this.txtPassword.Size = new System.Drawing.Size(265, 32);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.TextOffset = new System.Drawing.Point(10, 0);
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPassword_KeyDown);
@@ -193,10 +214,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(35, 263);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(26, 214);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 22);
+            this.label4.Size = new System.Drawing.Size(69, 19);
             this.label4.TabIndex = 3;
             this.label4.Text = "Password";
             // 
@@ -204,7 +224,7 @@
             // 
             this.txtUsername.Animated = true;
             this.txtUsername.AutoRoundedCorners = true;
-            this.txtUsername.BorderRadius = 18;
+            this.txtUsername.BorderRadius = 15;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.DefaultText = "";
             this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -217,13 +237,13 @@
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.IconLeft = global::TicketSelling.Properties.Resources.person_480px;
             this.txtUsername.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtUsername.Location = new System.Drawing.Point(40, 183);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(5);
+            this.txtUsername.Location = new System.Drawing.Point(30, 149);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Enter your username";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(353, 39);
+            this.txtUsername.Size = new System.Drawing.Size(265, 32);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.TextOffset = new System.Drawing.Point(10, 0);
             this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsername_KeyDown);
@@ -233,10 +253,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(35, 155);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(26, 126);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 22);
+            this.label5.Size = new System.Drawing.Size(46, 19);
             this.label5.TabIndex = 1;
             this.label5.Text = "Name";
             // 
@@ -244,47 +263,21 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(168, 11);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(126, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 31);
+            this.label6.Size = new System.Drawing.Size(73, 23);
             this.label6.TabIndex = 0;
             this.label6.Text = "LOGIN";
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::TicketSelling.Properties.Resources._130718_movie1;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(3, 175);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(443, 392);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Goudy Stout", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(19, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(417, 110);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Welcome \r\n    Back";
-            // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(899, 615);
+            this.ClientSize = new System.Drawing.Size(674, 500);
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmLogin";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -292,11 +285,11 @@
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

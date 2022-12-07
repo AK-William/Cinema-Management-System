@@ -145,22 +145,16 @@
   <data name="btnReport.ToolTip7" xml:space="preserve">
     <value />
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="panelBody.Size" type="System.Drawing.Size, System.Drawing">
-    <value>889, 527</value>
-  </data>
   <data name="&gt;&gt;btnConfiguration.Parent" xml:space="preserve">
     <value>panelConfiguration</value>
   </data>
   <data name="&gt;&gt;toolTipReport.Name" xml:space="preserve">
     <value>toolTipReport</value>
   </data>
-  <data name="btnMovie.ToolTip6" xml:space="preserve">
+  <data name="panelleft.ToolTip5" xml:space="preserve">
     <value />
   </data>
-  <data name="btnTicket.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnStaff.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
@@ -192,9 +186,6 @@
   <data name="btnSetting.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="panelleft.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;txtLoginNameForMain.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -221,9 +212,6 @@
   </data>
   <data name="&gt;&gt;btnMovie.Parent" xml:space="preserve">
     <value>panelConfiguration</value>
-  </data>
-  <data name="btnExit.ToolTip5" xml:space="preserve">
-    <value />
   </data>
   <data name="btnlogout.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -255,6 +243,9 @@
   <data name="btnTicket.Size" type="System.Drawing.Size, System.Drawing">
     <value>266, 70</value>
   </data>
+  <data name="btnMovie.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
   <data name="iconCurrentChildForm.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -279,6 +270,9 @@
   <data name="btnHome.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="pictureBox1.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
   <data name="&gt;&gt;btnStaff.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -288,11 +282,17 @@
   <data name="&gt;&gt;toolTipEntry.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;iconCurrentChildForm.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="btnEntry.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
   <data name="paneltitlebar.ToolTip2" xml:space="preserve">
     <value />
+  </data>
+  <data name="btnTicket.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="label1.ToolTip10" xml:space="preserve">
     <value />
@@ -327,8 +327,8 @@
   <data name="btnEntry.Size" type="System.Drawing.Size, System.Drawing">
     <value>266, 70</value>
   </data>
-  <data name="panelEntry.ToolTip1" xml:space="preserve">
-    <value />
+  <data name="btnEntry.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 0, 0, 0</value>
   </data>
   <data name="panelBody.ToolTip8" xml:space="preserve">
     <value />
@@ -351,11 +351,14 @@
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>78, 5</value>
   </data>
+  <data name="panelTitle.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnHome.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;toolTipMovie.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lblTitleChildForm.Name" xml:space="preserve">
+    <value>lblTitleChildForm</value>
   </data>
   <data name="guna2CirclePictureBox1.ToolTip4" xml:space="preserve">
     <value />
@@ -396,6 +399,9 @@
   <data name="btnHome.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="panelEntry.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMain</value>
   </data>
@@ -414,16 +420,16 @@
   <data name="$this.ToolTip9" xml:space="preserve">
     <value />
   </data>
-  <data name="btnMovie.ToolTip8" xml:space="preserve">
-    <value />
-  </data>
   <data name="btnAccount.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
-  <data name="pictureBox1.ToolTip2" xml:space="preserve">
+  <data name="paneltitlebar.ToolTip3" xml:space="preserve">
     <value />
   </data>
   <data name="lblTitleChildForm.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMovie.ToolTip1" xml:space="preserve">
     <value />
   </data>
   <data name="&gt;&gt;guna2CirclePictureBox1.Parent" xml:space="preserve">
@@ -434,9 +440,6 @@
   </data>
   <data name="&gt;&gt;panelAccountShow.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="btnExit.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="panelMenuBar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -474,6 +477,9 @@
   <data name="panelBody.ToolTip9" xml:space="preserve">
     <value />
   </data>
+  <data name="btnEntry.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnHome.ToolTip4" xml:space="preserve">
     <value />
   </data>
@@ -488,6 +494,9 @@
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="&gt;&gt;panelMenu.Parent" xml:space="preserve">
+    <value>panelleft</value>
   </data>
   <data name="guna2CirclePictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
@@ -558,7 +567,7 @@
   <data name="paneltitlebar.Location" type="System.Drawing.Point, System.Drawing">
     <value>266, 101</value>
   </data>
-  <data name="panelTitle.ToolTip6" xml:space="preserve">
+  <data name="btnMinimize.ToolTip6" xml:space="preserve">
     <value />
   </data>
   <data name="btnMaximize.ToolTip3" xml:space="preserve">
@@ -606,17 +615,20 @@
   <data name="btnEntry.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 14.25pt</value>
   </data>
-  <data name="txtLoginNameForMain.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 0, 10, 0</value>
+  <data name="panelConfiguration.ToolTip4" xml:space="preserve">
+    <value />
   </data>
   <data name="btnlogout.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <data name="btnExit.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
   <data name="txtLoginNameForMain.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 21</value>
   </data>
-  <data name="btnMenu.ToolTip4" xml:space="preserve">
-    <value />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="&gt;&gt;btnMenu.Parent" xml:space="preserve">
     <value>panelMenuBar</value>
@@ -642,6 +654,9 @@
   <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;btnTicket.Name" xml:space="preserve">
+    <value>btnTicket</value>
+  </data>
   <data name="&gt;&gt;panelleft.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
@@ -651,20 +666,14 @@
   <data name="btnReport.Size" type="System.Drawing.Size, System.Drawing">
     <value>266, 70</value>
   </data>
-  <data name="&gt;&gt;lblTitleChildForm.Name" xml:space="preserve">
-    <value>lblTitleChildForm</value>
-  </data>
-  <data name="panelMenuBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 154</value>
+  <data name="panelTitle.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="paneltitlebar.ToolTip1" xml:space="preserve">
     <value />
   </data>
   <data name="&gt;&gt;btnTicket.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="paneltitlebar.ToolTip3" xml:space="preserve">
-    <value />
   </data>
   <data name="btnStaff.ToolTip9" xml:space="preserve">
     <value />
@@ -703,9 +712,6 @@
     <value>panelMenu</value>
   </data>
   <data name="btnExit.ToolTip10" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btnMaximize.ToolTip4" xml:space="preserve">
     <value />
   </data>
   <data name="&gt;&gt;btnSetting.Name" xml:space="preserve">
@@ -748,6 +754,9 @@
     <value>0, 70</value>
   </data>
   <data name="panelEntry.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitleChildForm.ToolTip3" xml:space="preserve">
     <value />
   </data>
   <data name="btnMinimize.Size" type="System.Drawing.Size, System.Drawing">
@@ -819,6 +828,9 @@
   <data name="btnMaximize.ToolTip9" xml:space="preserve">
     <value />
   </data>
+  <data name="lblTitleChildForm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
   <data name="panelEntry.ToolTip2" xml:space="preserve">
     <value />
   </data>
@@ -860,9 +872,6 @@
   </data>
   <data name="&gt;&gt;btnEntry.Type" xml:space="preserve">
     <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
-  </data>
-  <data name="panelAccountShow.ToolTip6" xml:space="preserve">
-    <value />
   </data>
   <data name="&gt;&gt;btnHome.Type" xml:space="preserve">
     <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
@@ -948,6 +957,9 @@
   <data name="txtLoginNameForMain.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="panelAccountShow.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnAdmin.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -966,6 +978,9 @@
   <data name="btnSetting.ToolTip10" xml:space="preserve">
     <value />
   </data>
+  <data name="btnExit.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
   <data name="&gt;&gt;btnMaximize.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
@@ -974,9 +989,6 @@
   </data>
   <data name="&gt;&gt;toolTipStaffs.Name" xml:space="preserve">
     <value>toolTipStaffs</value>
-  </data>
-  <data name="panelConfiguration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 67</value>
   </data>
   <data name="btnlogout.ToolTip1" xml:space="preserve">
     <value />
@@ -1083,7 +1095,10 @@
   <data name="btnlogout.ToolTip10" xml:space="preserve">
     <value />
   </data>
-  <data name="btnTicket.ToolTip6" xml:space="preserve">
+  <data name="txtLoginNameForMain.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 0, 10, 0</value>
+  </data>
+  <data name="btnMovie.ToolTip2" xml:space="preserve">
     <value />
   </data>
   <data name="panelAccountShow.Location" type="System.Drawing.Point, System.Drawing">
@@ -1091,9 +1106,6 @@
   </data>
   <data name="panelBody.ToolTip6" xml:space="preserve">
     <value />
-  </data>
-  <data name="&gt;&gt;toolTipSeat.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnAdmin.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageBeforeText</value>
@@ -1119,7 +1131,7 @@
   <data name="btnAdmin.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 70</value>
   </data>
-  <data name="btnMenu.ToolTip7" xml:space="preserve">
+  <data name="$this.ToolTip6" xml:space="preserve">
     <value />
   </data>
   <data name="&gt;&gt;paneltitlebar.ZOrder" xml:space="preserve">
@@ -1143,12 +1155,6 @@
   <data name="&gt;&gt;toolTipMovie.Name" xml:space="preserve">
     <value>toolTipMovie</value>
   </data>
-  <data name="btnMinimize.ToolTip10" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btnReport.ToolTip4" xml:space="preserve">
-    <value />
-  </data>
   <data name="btnMaximize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -1160,9 +1166,6 @@
   </data>
   <data name="&gt;&gt;btnlogout.Name" xml:space="preserve">
     <value>btnlogout</value>
-  </data>
-  <data name="btnStaff.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Hi There!</value>
@@ -1182,9 +1185,6 @@
   <data name="txtLoginNameForMain.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 0, 10, 0</value>
   </data>
-  <data name="&gt;&gt;btnMovie.Type" xml:space="preserve">
-    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
-  </data>
   <data name="guna2CirclePictureBox1.ToolTip10" xml:space="preserve">
     <value />
   </data>
@@ -1196,6 +1196,9 @@
   </data>
   <data name="panelBody.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
+  </data>
+  <data name="panelTitle.ToolTip3" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;lblTitleChildForm.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1215,17 +1218,11 @@
   <data name="pictureBox1.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="panelAccountShow.ToolTip7" xml:space="preserve">
-    <value />
-  </data>
   <data name="txtLoginNameForMain.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
   <data name="btnAdmin.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
-  </data>
-  <data name="btnAdmin.ToolTip7" xml:space="preserve">
-    <value />
   </data>
   <data name="btnReport.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1250,6 +1247,9 @@
   </data>
   <data name="&gt;&gt;toolTipEntry.Name" xml:space="preserve">
     <value>toolTipEntry</value>
+  </data>
+  <data name="panelMenuBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 154</value>
   </data>
   <data name="btnSeat.Text" xml:space="preserve">
     <value>    Seat</value>
@@ -1278,17 +1278,11 @@
   <data name="btnSeat.ToolTip3" xml:space="preserve">
     <value />
   </data>
-  <data name="panelConfiguration.ToolTip4" xml:space="preserve">
-    <value />
-  </data>
   <data name="panelConfiguration.ToolTip7" xml:space="preserve">
     <value />
   </data>
   <data name="btnAccount.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 61</value>
-  </data>
-  <data name="&gt;&gt;panelMenuBar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="panelTitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>266, 0</value>
@@ -1353,13 +1347,16 @@
   <data name="btnReport.ToolTip2" xml:space="preserve">
     <value />
   </data>
+  <data name="&gt;&gt;btnMaximize.Type" xml:space="preserve">
+    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
+  </data>
   <data name="iconCurrentChildForm.ToolTip5" xml:space="preserve">
     <value />
   </data>
   <data name="iconCurrentChildForm.ToolTip4" xml:space="preserve">
     <value />
   </data>
-  <data name="iconCurrentChildForm.ToolTip7" xml:space="preserve">
+  <data name="pictureBox1.ToolTip2" xml:space="preserve">
     <value />
   </data>
   <data name="iconCurrentChildForm.ToolTip6" xml:space="preserve">
@@ -1392,6 +1389,9 @@
   <data name="iconCurrentChildForm.ToolTip8" xml:space="preserve">
     <value />
   </data>
+  <data name="iconCurrentChildForm.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnStaff.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 0, 0, 0</value>
   </data>
@@ -1401,8 +1401,8 @@
   <data name="btnAdmin.ToolTip8" xml:space="preserve">
     <value />
   </data>
-  <data name="lblTitleChildForm.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="btnAdmin.ToolTip7" xml:space="preserve">
+    <value />
   </data>
   <data name="btnAdmin.ToolTip6" xml:space="preserve">
     <value />
@@ -1430,6 +1430,9 @@
   </data>
   <data name="&gt;&gt;btnSeat.Parent" xml:space="preserve">
     <value>panelConfiguration</value>
+  </data>
+  <data name="btnSeat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 60</value>
   </data>
   <data name="panelMenuBar.ToolTip9" xml:space="preserve">
     <value />
@@ -1470,14 +1473,11 @@
   <data name="btnMinimize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="panelAccountShow.ToolTip1" xml:space="preserve">
-    <value />
-  </data>
   <data name="&gt;&gt;panelConfiguration.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="btnEntry.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 0, 0, 0</value>
+  <data name="&gt;&gt;panelMenuBar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -1501,9 +1501,6 @@
     <value>Flat</value>
   </data>
   <data name="btnReport.ToolTip1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="pictureBox1.ToolTip9" xml:space="preserve">
     <value />
   </data>
   <data name="panelleft.ToolTip3" xml:space="preserve">
@@ -1584,9 +1581,6 @@
   <data name="btnSeat.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 70</value>
   </data>
-  <data name="btnSetting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 61</value>
-  </data>
   <data name="btnReport.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -1632,8 +1626,8 @@
   <data name="panelConfiguration.ToolTip1" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;iconCurrentChildForm.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="panelConfiguration.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 67</value>
   </data>
   <data name="btnSetting.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -1671,16 +1665,10 @@
   <data name="$this.ToolTip2" xml:space="preserve">
     <value />
   </data>
-  <data name="btnStaff.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 130</value>
-  </data>
-  <data name="panelleft.ToolTip5" xml:space="preserve">
-    <value />
-  </data>
   <data name="btnMovie.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panelTitle.ToolTip3" xml:space="preserve">
+  <data name="btnMinimize.ToolTip10" xml:space="preserve">
     <value />
   </data>
   <data name="pictureBox1.ToolTip8" xml:space="preserve">
@@ -1704,6 +1692,9 @@
   <data name="&gt;&gt;panelBody.Name" xml:space="preserve">
     <value>panelBody</value>
   </data>
+  <data name="txtLoginNameForMain.Text" xml:space="preserve">
+    <value>User</value>
+  </data>
   <data name="btnReport.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
@@ -1719,8 +1710,8 @@
   <data name="btnEntry.ToolTip6" xml:space="preserve">
     <value />
   </data>
-  <data name="btnEntry.ToolTip5" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;panelAccountShow.Name" xml:space="preserve">
+    <value>panelAccountShow</value>
   </data>
   <data name="btnEntry.ToolTip4" xml:space="preserve">
     <value />
@@ -1749,11 +1740,11 @@
   <data name="btnMovie.Text" xml:space="preserve">
     <value>    Movie</value>
   </data>
+  <data name="btnMovie.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnStaff.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;panelMenu.Parent" xml:space="preserve">
-    <value>panelleft</value>
   </data>
   <data name="btnAdmin.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1772,6 +1763,9 @@
   </data>
   <data name="&gt;&gt;btnlogout.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="lblTitleChildForm.ToolTip4" xml:space="preserve">
+    <value />
   </data>
   <data name="btnMenu.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1793,6 +1787,9 @@
   </data>
   <data name="paneltitlebar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
+  </data>
+  <data name="panelEntry.ToolTip1" xml:space="preserve">
+    <value />
   </data>
   <data name="panelleft.ToolTip1" xml:space="preserve">
     <value />
@@ -1830,8 +1827,8 @@
   <data name="panelBody.ToolTip3" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;btnMaximize.Parent" xml:space="preserve">
-    <value>panelTitle</value>
+  <data name="&gt;&gt;btnAdmin.Name" xml:space="preserve">
+    <value>btnAdmin</value>
   </data>
   <data name="btnHome.ToolTip1" xml:space="preserve">
     <value />
@@ -1845,6 +1842,12 @@
   <data name="btnSetting.ToolTip1" xml:space="preserve">
     <value />
   </data>
+  <data name="btnConfiguration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnMenu.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnMovie.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
@@ -1853,9 +1856,6 @@
   </data>
   <data name="btnExit.Location" type="System.Drawing.Point, System.Drawing">
     <value>842, 0</value>
-  </data>
-  <data name="btnConfiguration.ToolTip9" xml:space="preserve">
-    <value />
   </data>
   <data name="label1.ToolTip8" xml:space="preserve">
     <value />
@@ -1875,6 +1875,12 @@
   <data name="panelMenu.ToolTip7" xml:space="preserve">
     <value />
   </data>
+  <data name="$this.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAccountShow.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnEntry.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
@@ -1890,8 +1896,8 @@
   <data name="btnSeat.ToolTip2" xml:space="preserve">
     <value />
   </data>
-  <data name="lblTitleChildForm.ToolTip3" xml:space="preserve">
-    <value />
+  <data name="btnStaff.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 130</value>
   </data>
   <data name="&gt;&gt;toolTipTicket.Name" xml:space="preserve">
     <value>toolTipTicket</value>
@@ -1902,9 +1908,6 @@
   <data name="btnMenu.ToolTip10" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="btnHome.Text" xml:space="preserve">
     <value>    Home</value>
   </data>
@@ -1914,28 +1917,22 @@
   <data name="panelConfiguration.ToolTip5" xml:space="preserve">
     <value />
   </data>
-  <data name="panelMenu.ToolTip8" xml:space="preserve">
-    <value />
-  </data>
   <data name="panelEntry.ToolTip9" xml:space="preserve">
     <value />
   </data>
   <data name="guna2CirclePictureBox1.ToolTip5" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;panelAccountShow.Name" xml:space="preserve">
-    <value>panelAccountShow</value>
-  </data>
   <data name="$this.ToolTip4" xml:space="preserve">
     <value />
   </data>
-  <data name="panelEntry.ToolTip7" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;btnConfiguration.Type" xml:space="preserve">
+    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
   </data>
   <data name="txtLoginNameForMain.ToolTip9" xml:space="preserve">
     <value />
   </data>
-  <data name="pictureBox1.ToolTip7" xml:space="preserve">
+  <data name="panelEntry.ToolTip7" xml:space="preserve">
     <value />
   </data>
   <data name="btnMinimize.ToolTip1" xml:space="preserve">
@@ -1949,6 +1946,9 @@
   </data>
   <data name="btnMenu.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;toolTipMovie.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="iconCurrentChildForm.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -1968,8 +1968,8 @@
   <data name="btnMinimize.ToolTip5" xml:space="preserve">
     <value />
   </data>
-  <data name="btnConfiguration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;btnMaximize.Parent" xml:space="preserve">
+    <value>panelTitle</value>
   </data>
   <data name="btnlogout.ToolTip6" xml:space="preserve">
     <value />
@@ -1980,8 +1980,8 @@
   <data name="btnTicket.ToolTip8" xml:space="preserve">
     <value />
   </data>
-  <data name="panelConfiguration.ToolTip10" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnHome.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -1992,17 +1992,17 @@
   <data name="&gt;&gt;toolTipConfiguration.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnMinimize.ToolTip6" xml:space="preserve">
+  <data name="btnSetting.ToolTip5" xml:space="preserve">
     <value />
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="panelTitle.ToolTip" xml:space="preserve">
+  <data name="$this.ToolTip7" xml:space="preserve">
     <value />
   </data>
   <data name="btnEntry.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="panelleft.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
   </data>
   <data name="btnHome.ToolTip10" xml:space="preserve">
     <value />
@@ -2019,14 +2019,14 @@
   <data name="&gt;&gt;panelMenu.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="txtLoginNameForMain.Text" xml:space="preserve">
-    <value>User</value>
+  <data name="&gt;&gt;btnMovie.Type" xml:space="preserve">
+    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
   </data>
   <data name="btnReport.ToolTip9" xml:space="preserve">
     <value />
   </data>
-  <data name="lblTitleChildForm.ToolTip4" xml:space="preserve">
-    <value />
+  <data name="panelleft.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="btnSeat.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2091,14 +2091,14 @@
   <data name="panelBody.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="panelConfiguration.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
   <data name="btnAccount.ToolTip9" xml:space="preserve">
     <value />
   </data>
   <data name="btnConfiguration.Size" type="System.Drawing.Size, System.Drawing">
     <value>266, 70</value>
-  </data>
-  <data name="btnTicket.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
   </data>
   <data name="btnMovie.ToolTip10" xml:space="preserve">
     <value />
@@ -2112,17 +2112,14 @@
   <data name="btnTicket.ToolTip9" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;btnConfiguration.Type" xml:space="preserve">
-    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
-  </data>
   <data name="&gt;&gt;btnStaff.Type" xml:space="preserve">
     <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
   </data>
   <data name="btnlogout.ToolTip8" xml:space="preserve">
     <value />
   </data>
-  <data name="btnSetting.ToolTip5" xml:space="preserve">
-    <value />
+  <data name="panelBody.Size" type="System.Drawing.Size, System.Drawing">
+    <value>889, 527</value>
   </data>
   <data name="panelMenu.ToolTip9" xml:space="preserve">
     <value />
@@ -2148,17 +2145,20 @@
   <data name="lblTitleChildForm.ToolTip5" xml:space="preserve">
     <value />
   </data>
-  <data name="$this.ToolTip7" xml:space="preserve">
+  <data name="btnSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 61</value>
+  </data>
+  <data name="panelAccountShow.ToolTip2" xml:space="preserve">
     <value />
   </data>
-  <data name="$this.ToolTip10" xml:space="preserve">
+  <data name="btnMenu.ToolTip7" xml:space="preserve">
     <value />
   </data>
   <data name="guna2CirclePictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="btnSeat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 60</value>
+  <data name="btnStaff.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="txtLoginNameForMain.ToolTip4" xml:space="preserve">
     <value />
@@ -2166,8 +2166,8 @@
   <data name="btnMaximize.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 25</value>
   </data>
-  <data name="&gt;&gt;btnAdmin.Name" xml:space="preserve">
-    <value>btnAdmin</value>
+  <data name="btnReport.ToolTip4" xml:space="preserve">
+    <value />
   </data>
   <data name="btnSeat.ToolTip8" xml:space="preserve">
     <value />
@@ -2175,8 +2175,8 @@
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>146, 112</value>
   </data>
-  <data name="panelleft.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
+  <data name="btnExit.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="panelAccountShow.ToolTip10" xml:space="preserve">
     <value />
@@ -2190,8 +2190,8 @@
   <data name="btnEntry.ToolTip9" xml:space="preserve">
     <value />
   </data>
-  <data name="$this.ToolTip6" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;toolTipSeat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolTipMenu.Name" xml:space="preserve">
     <value>toolTipMenu</value>
@@ -2205,11 +2205,11 @@
   <data name="panelConfiguration.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="btnExit.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
+  <data name="btnConfiguration.ToolTip9" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;btnMaximize.Type" xml:space="preserve">
-    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
+  <data name="btnExit.ToolTip5" xml:space="preserve">
+    <value />
   </data>
   <data name="btnHome.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>10, 0, 0, 0</value>
@@ -2223,43 +2223,43 @@
   <data name="panelAccountShow.ToolTip9" xml:space="preserve">
     <value />
   </data>
-  <data name="panelAccountShow.ToolTip8" xml:space="preserve">
+  <data name="pictureBox1.ToolTip9" xml:space="preserve">
     <value />
   </data>
   <data name="btnMovie.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="panelEntry.ToolTip3" xml:space="preserve">
+  <data name="btnMovie.ToolTip8" xml:space="preserve">
     <value />
   </data>
-  <data name="btnMovie.ToolTip9" xml:space="preserve">
+  <data name="btnMaximize.ToolTip4" xml:space="preserve">
     <value />
   </data>
   <data name="btnSeat.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="btnExit.ToolTip9" xml:space="preserve">
+  <data name="panelAccountShow.ToolTip1" xml:space="preserve">
     <value />
   </data>
   <data name="btnMovie.ToolTip4" xml:space="preserve">
     <value />
   </data>
-  <data name="panelAccountShow.ToolTip3" xml:space="preserve">
+  <data name="btnTicket.ToolTip6" xml:space="preserve">
     <value />
   </data>
-  <data name="panelAccountShow.ToolTip2" xml:space="preserve">
+  <data name="btnMovie.ToolTip6" xml:space="preserve">
     <value />
   </data>
-  <data name="btnMovie.ToolTip7" xml:space="preserve">
-    <value />
+  <data name="btnTicket.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="panelAccountShow.ToolTip4" xml:space="preserve">
     <value />
   </data>
-  <data name="btnMovie.ToolTip1" xml:space="preserve">
+  <data name="panelAccountShow.ToolTip7" xml:space="preserve">
     <value />
   </data>
-  <data name="btnMovie.ToolTip2" xml:space="preserve">
+  <data name="panelAccountShow.ToolTip6" xml:space="preserve">
     <value />
   </data>
   <data name="btnMovie.ToolTip3" xml:space="preserve">
@@ -2280,8 +2280,8 @@
   <data name="&gt;&gt;panelleft.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnTicket.Name" xml:space="preserve">
-    <value>btnTicket</value>
+  <data name="panelMenu.ToolTip8" xml:space="preserve">
+    <value />
   </data>
   <data name="btnExit.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -2295,6 +2295,9 @@
   <metadata name="toolTipReport.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1227, 17</value>
   </metadata>
+  <metadata name="toolTipEntry.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>644, 17</value>
+  </metadata>
   <metadata name="toolTipAdmin.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>495, 17</value>
   </metadata>
@@ -2303,9 +2306,6 @@
   </metadata>
   <metadata name="toolTipHome.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTipStaffs.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1378, 17</value>
   </metadata>
   <metadata name="toolTipTicket.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1512, 17</value>
@@ -2325,8 +2325,8 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="toolTipEntry.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>644, 17</value>
+  <metadata name="toolTipStaffs.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1378, 17</value>
   </metadata>
   <metadata name="toolTipSeat.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>361, 17</value>

@@ -185,6 +185,7 @@ namespace TicketSelling.DAO
             }
         }
 
+
         public MessageEntity UpdateAdmin(int UserID, Admin req)
         {
             sqlConnection = DbConnector.Connect();

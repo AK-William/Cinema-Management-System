@@ -274,7 +274,7 @@ namespace TicketSelling.UI.Configuration
             cbSeatType.DataSource = LstSeatType;
             cbSeatType.DisplayMember = "Name";
             cbSeatType.ValueMember = "Id";
-            cbSeatType.SelectedIndex = 0;
+            cbSeatType.SelectedIndex = -1;
             cbSeatType.SelectedIndexChanged += new EventHandler(CbSeatType_SelectedIndexChanged);
             BindDgvData();
         }

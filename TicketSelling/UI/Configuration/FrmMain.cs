@@ -11,6 +11,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TicketSelling.Common;
 using TicketSelling.Properties;
+using System.Globalization;
+using System.Threading;
+using System.Threading.Tasks;
+using TicketSelling.UI.Configuration;
 
 namespace TicketSelling.UI.Configuration
 {
@@ -18,6 +22,8 @@ namespace TicketSelling.UI.Configuration
     {
         private int borderSize = 2;
         private Size formSize;
+
+        
 
         public FrmMain()
         {
@@ -28,7 +34,7 @@ namespace TicketSelling.UI.Configuration
             this.Padding = new Padding(borderSize);//Border size
             //this.BackColor = Color.FromArgb(51, 153, 255);//Border color
         }
-
+        
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -284,7 +290,7 @@ namespace TicketSelling.UI.Configuration
                     lblTitleChildForm.Text = btnHome.Tag.ToString();
                     iconCurrentChildForm.IconChar = btnHome.IconChar;
                     break;
-               
+
             }
             panelBody.Controls.Add(frm);
             frm.Dock = DockStyle.Fill;
@@ -477,15 +483,14 @@ namespace TicketSelling.UI.Configuration
                 }
                 else
                 {
-                    currentBtn.BackColor = Color.FromArgb(51,153,255);
+                    currentBtn.BackColor = Color.FromArgb(0, 120, 215);
                 }
             }
         }
 
-
         #endregion
 
-        
+
     }
 }
 

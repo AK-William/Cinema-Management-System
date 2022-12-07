@@ -439,7 +439,7 @@ namespace TicketSelling.UI.Configuration
             btnSave.Visible = false;
             btnUpdate.Visible = true;
             strString = dgvRowST.Cells["ColAdminPhotoString"].Value.ToString();
-            AdminPhotoName = "M-" + id;
+            AdminPhotoName = "A-" + id;
             FileStream fStream = new FileStream(strString, FileMode.Open, FileAccess.Read);
             codeImage = new byte[fStream.Length];
 

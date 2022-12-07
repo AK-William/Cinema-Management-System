@@ -27,6 +27,7 @@ namespace TicketSelling.UI.Configuration
         {
             InitializeComponent();
             dgvMovie.AutoGenerateColumns = false;
+            dgvSD.AutoGenerateColumns = false;
             btnMovieUpdate.Visible = false;
         }
 
@@ -116,9 +117,7 @@ namespace TicketSelling.UI.Configuration
                 imgUrl = ofd.FileName;
                 FileStream fStream = new FileStream(ofd.FileName, FileMode.Open, FileAccess.Read);
                 codeImage = new byte[fStream.Length];
-
                 fStream.Read(codeImage, 0, (Int32)fStream.Length);
-
                 fStream.Dispose();
                 pictureBox.Text = ofd.FileName;
                 pictureBox.Image = new Bitmap(ofd.FileName);
@@ -411,12 +410,13 @@ namespace TicketSelling.UI.Configuration
 
         #region ScheduleDate
 
-
         private void ResetSD()
         {
             CbSDName.Text = "";
             txtSDStartDate.Text = "";
             txtSDEndDate.Text = "";
+            btnSDUpdate.Visible = false;
+            btnSDSave.Visible = true;
         }
 
         private void BtnSDCancel_Click(object sender, EventArgs e)
@@ -434,7 +434,12 @@ namespace TicketSelling.UI.Configuration
             return true;
         }
 
-        private void SaveDataSD()
+        private void BtnSDSave_Click(object sender, EventArgs e)
+        {
+            SaveMovieSD();
+        }
+
+        private void SaveMovieSD()
         {
             try
             {
@@ -442,8 +447,8 @@ namespace TicketSelling.UI.Configuration
                 MessageEntity res = new MovieSDDao().SaveMovieSD(1, new DAO.Entity.MovieSD()
                 {
                     MovieId = Convert.ToInt32(CbSDName.SelectedValue),
-                    StartDate = Convert.ToDateTime(txtSDStartDate.Value),
-                    EndDate = Convert.ToDateTime(txtSDEndDate.Value),
+                    StartDate = Convert.ToDateTime(txtSDStartDate.Text),
+                    EndDate = Convert.ToDateTime(txtSDEndDate.Text),
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
@@ -468,11 +473,6 @@ namespace TicketSelling.UI.Configuration
                 MessageBox.Show(ex.Message);
 
             }
-        }
-
-        private void BtnSDSave_Click(object sender, EventArgs e)
-        {
-            SaveDataSD();
         }
 
         private void BindDgvMovieSD()
@@ -515,8 +515,89 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
+
+
         #endregion
 
-       
+        int idsd = -1; int MovieId;
+        private void DgvSD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvSD.Rows[e.RowIndex].Cells["ColDelSD"].ColumnIndex == e.ColumnIndex)
+                {
+                    DialogResult res = MessageBox.Show("Are you sure you want to Delete", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    if (res == DialogResult.OK)
+                    {
+                        MessageEntity res1 = new MovieSDDao().DeleteMovieSD(Convert.ToInt32(dgvSD.Rows[e.RowIndex].Cells["ColMovieSDId"].Value));
+                        if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
+                        {
+                            MessageBox.Show("Delete Success");
+                            ResetSD();
+                            BindDgvMovieSD();
+                        }
+                        else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
+                        {
+                            MessageBox.Show("Delete Fail");
+                        }
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void DgvSD_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow dgvRow = dgvSD.SelectedRows[0];
+            idsd = Convert.ToInt32(dgvRow.Cells["ColMovieSDId"].Value);
+            CbSDName.SelectedValue = Convert.ToInt32(dgvRow.Cells["ColMovieId"].Value.ToString());
+            MovieId = Convert.ToInt32(dgvRow.Cells["ColMovieId"].Value.ToString());
+           
+            txtSDStartDate.Text = dgvRow.Cells["ColStartDate"].Value.ToString();
+            txtSDEndDate.Text = dgvRow.Cells["ColEndDate"].Value.ToString();
+
+            btnSDSave.Visible = false;
+            btnSDUpdate.Visible = true;
+        }
+
+        private void BtnSDUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageEntity res = new MovieSDDao().UpdateMovieSD(1, new DAO.Entity.MovieSD()
+                {
+                    Id = idsd,
+                    MovieId = MovieId,
+                    StartDate = Convert.ToDateTime(txtSDStartDate.Text),
+                    EndDate = Convert.ToDateTime(txtSDEndDate.Text),
+                });
+                if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
+                {
+                    MessageBox.Show("Update Success");
+                    Reset();
+                    BindDgvMovieSD();
+                }
+                else if (res.RespMessageType == CommonResponseMessage.ResErrorType)
+                {
+                    if (res.RespDesp == "Duplicate Error")
+                    {
+                        MessageBox.Show("Name Already Exist");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Save Fail");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
     }
 }

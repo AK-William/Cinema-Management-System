@@ -446,7 +446,7 @@ namespace TicketSelling.Common
 
         #region MovieScheduleDate
 
-        public static string MovieSDSave = @"IF EXISTS (SELECT * FROM TblScheduleMovie WHERE Id = @Id)
+        public static string SaveMovieSD = @"IF EXISTS (SELECT * FROM TblScheduleMovie WHERE MovieId = @MovieId)
                                                     BEGIN
                                                       SELECT
                                                         '001' AS RespCode,
@@ -455,17 +455,16 @@ namespace TicketSelling.Common
                                                       SELECT
                                                         *
                                                       FROM TblScheduleMovie
-                                                      WHERE Id = @Id
+                                                      WHERE MovieId = @MovieId
                                                     END
                                                     ELSE
                                                     BEGIN
                                                       INSERT INTO[dbo].[TblScheduleMovie]
-                                                        (
-                                                         [MovieId]
-                                                        , [StartDate]
-                                                        , [EndDate]
+                                                        ([MovieId]
+                                                        ,[StartDate]
+                                                        ,[EndDate]
                                                        ,[CreatedBy])
-                                                       VALUES(@MovieId, @StartDate, @EndDate, @CreatedBy);
+                                                       VALUES(@MovieId, @StartDate , @EndDate , @CreatedBy);
 
                                                         SELECT
                                                         '000' AS RespCode,
@@ -474,17 +473,65 @@ namespace TicketSelling.Common
                                                       SELECT
                                                         *
                                                       FROM TblScheduleMovie
-                                                      WHERE Id = @Id
+                                                      WHERE MovieId = @MovieId
                                                     END";
 
         public static string GetMovieNameById = @"Select * from TblMovie where Id=@Id";
 
-        public static string GetAllMovieSD = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblScheduleMovie WITH (NOLOCK)";
+        public static string GetAllMovieSD = @"SELECT
+                                                ROW_NUMBER() OVER (ORDER BY SM.Id ASC) AS RowNumber,
+                                                SM.Id,
+                                                Name,
+                                                SM.MovieId,
+                                                StartDate,
+                                                EndDate
+                                                FROM TblScheduleMovie AS SM WITH (NOLOCK)
+                                                INNER JOIN TblMovie AS M
+                                                ON SM.MovieId = M.Id";   //inner join movie with schedule date
+
+        public static string DeleteMovieSD = @"DELETE TblScheduleMovie WHERE Id = @Id; 
+                                                SELECT
+                                                '000' AS RespCode,
+                                                'Update Successful' AS RespDesp,
+                                                'MI' AS 'RespMessageType'
+                                                SELECT
+                                                *
+                                                FROM TblScheduleMovie;";
+
+        public static string UpdateMovieSD = @"IF EXISTS (SELECT * FROM TblScheduleMovie WHERE MovieId = @MovieId AND
+                                                        Id != @Id)
+                                                    BEGIN
+                                                      SELECT
+                                                        '001' AS RespCode,
+                                                        'Duplicate Error' AS RespDesp,
+                                                        'ME' AS 'RespMessageType'
+                                                      SELECT
+                                                        *
+                                                      FROM TblScheduleMovie
+                                                      WHERE MovieId = @MovieId
+                                                    END
+                                                    ELSE
+                                                    BEGIN
+                                                      UPDATE [dbo].[TblScheduleMovie]
+														   SET [MovieId] = @MovieId
+															  ,[StartDate] = @StartDate
+                                                              ,[EndDate]= @EndDate
+														 WHERE Id = @Id 
+
+                                                      SELECT
+                                                        '000' AS RespCode,
+                                                        'Update Successful' AS RespDesp,
+                                                        'MI' AS 'RespMessageType'
+                                                      SELECT
+                                                        *
+                                                      FROM TblScheduleMovie
+                                                      WHERE MovieId = @MovieId
+                                                    END";
 
         #endregion
 
 
-        
+
 
 
         public static string Login = @"IF EXISTS(SELECT * FROM TblStaff where Username=@Username AND Password=@Password)
