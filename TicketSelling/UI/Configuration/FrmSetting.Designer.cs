@@ -106,16 +106,21 @@
             this.cbChangeColor.Items.AddRange(new object[] {
             resources.GetString("cbChangeColor.Items"),
             resources.GetString("cbChangeColor.Items1"),
-            resources.GetString("cbChangeColor.Items2")});
+            resources.GetString("cbChangeColor.Items2"),
+            resources.GetString("cbChangeColor.Items3"),
+            resources.GetString("cbChangeColor.Items4"),
+            resources.GetString("cbChangeColor.Items5"),
+            resources.GetString("cbChangeColor.Items6"),
+            resources.GetString("cbChangeColor.Items7")});
             this.cbChangeColor.Name = "cbChangeColor";
             this.cbChangeColor.StartIndex = 0;
             this.cbChangeColor.SelectedIndexChanged += new System.EventHandler(this.CbChangeColor_SelectedIndexChanged);
             // 
             // FrmSetting
             // 
-            resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.guna2Panel1);
+            resources.ApplyResources(this, "$this");
             this.Name = "FrmSetting";
             this.Tag = "Setting";
             this.guna2Panel1.ResumeLayout(false);

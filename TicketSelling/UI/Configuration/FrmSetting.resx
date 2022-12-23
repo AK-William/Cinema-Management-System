@@ -247,13 +247,28 @@
     <value>30</value>
   </data>
   <data name="cbChangeColor.Items" xml:space="preserve">
-    <value>Blue</value>
+    <value>Lochmara</value>
   </data>
   <data name="cbChangeColor.Items1" xml:space="preserve">
-    <value>Pink</value>
+    <value>Cerise Red</value>
   </data>
   <data name="cbChangeColor.Items2" xml:space="preserve">
-    <value>Green</value>
+    <value>Java</value>
+  </data>
+  <data name="cbChangeColor.Items3" xml:space="preserve">
+    <value>Seance</value>
+  </data>
+  <data name="cbChangeColor.Items4" xml:space="preserve">
+    <value>Cutty Sark</value>
+  </data>
+  <data name="cbChangeColor.Items5" xml:space="preserve">
+    <value>Malachite</value>
+  </data>
+  <data name="cbChangeColor.Items6" xml:space="preserve">
+    <value>Gold</value>
+  </data>
+  <data name="cbChangeColor.Items7" xml:space="preserve">
+    <value>Cardinel Red</value>
   </data>
   <data name="cbChangeColor.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 96</value>
@@ -333,9 +348,6 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>120, 120</value>
-  </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>

@@ -76,14 +76,14 @@
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(311, 580);
+            this.guna2Panel2.Size = new System.Drawing.Size(389, 725);
             this.guna2Panel2.TabIndex = 1;
             // 
             // btnUpdate
             // 
             this.btnUpdate.Animated = true;
             this.btnUpdate.AutoRoundedCorners = true;
-            this.btnUpdate.BorderRadius = 20;
+            this.btnUpdate.BorderRadius = 26;
             this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -91,10 +91,10 @@
             this.btnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(182)))), ((int)(((byte)(211)))));
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(78, 400);
+            this.btnUpdate.Location = new System.Drawing.Point(98, 500);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(97, 43);
+            this.btnUpdate.Size = new System.Drawing.Size(121, 54);
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.Visible = false;
@@ -104,7 +104,7 @@
             // 
             this.btnReset.Animated = true;
             this.btnReset.AutoRoundedCorners = true;
-            this.btnReset.BorderRadius = 20;
+            this.btnReset.BorderRadius = 26;
             this.btnReset.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -112,10 +112,10 @@
             this.btnReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(73)))), ((int)(((byte)(131)))));
             this.btnReset.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(184, 400);
+            this.btnReset.Location = new System.Drawing.Point(230, 500);
             this.btnReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(97, 43);
+            this.btnReset.Size = new System.Drawing.Size(121, 54);
             this.btnReset.TabIndex = 12;
             this.btnReset.Text = "Cancel";
             this.btnReset.Click += new System.EventHandler(this.BtnReset_Click);
@@ -124,10 +124,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 293);
+            this.label5.Location = new System.Drawing.Point(25, 366);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 25);
+            this.label5.Size = new System.Drawing.Size(181, 33);
             this.label5.TabIndex = 11;
             this.label5.Text = "Phone Number";
             // 
@@ -135,10 +135,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 201);
+            this.label4.Location = new System.Drawing.Point(25, 251);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 25);
+            this.label4.Size = new System.Drawing.Size(121, 33);
             this.label4.TabIndex = 7;
             this.label4.Text = "Password";
             // 
@@ -146,10 +146,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 110);
+            this.label3.Location = new System.Drawing.Point(25, 138);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 25);
+            this.label3.Size = new System.Drawing.Size(124, 33);
             this.label3.TabIndex = 6;
             this.label3.Text = "Username";
             // 
@@ -157,10 +157,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 27);
+            this.label2.Location = new System.Drawing.Point(25, 34);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 25);
+            this.label2.Size = new System.Drawing.Size(79, 33);
             this.label2.TabIndex = 5;
             this.label2.Text = "Name";
             // 
@@ -168,7 +168,7 @@
             // 
             this.btnRegister.Animated = true;
             this.btnRegister.AutoRoundedCorners = true;
-            this.btnRegister.BorderRadius = 20;
+            this.btnRegister.BorderRadius = 26;
             this.btnRegister.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRegister.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRegister.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -176,10 +176,10 @@
             this.btnRegister.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(78, 400);
+            this.btnRegister.Location = new System.Drawing.Point(98, 500);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(97, 43);
+            this.btnRegister.Size = new System.Drawing.Size(121, 54);
             this.btnRegister.TabIndex = 8;
             this.btnRegister.Text = "Save";
             this.btnRegister.Click += new System.EventHandler(this.BtnRegister_Click);
@@ -188,7 +188,7 @@
             // 
             this.txtPhoneNumber.Animated = true;
             this.txtPhoneNumber.AutoRoundedCorners = true;
-            this.txtPhoneNumber.BorderRadius = 19;
+            this.txtPhoneNumber.BorderRadius = 24;
             this.txtPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPhoneNumber.DefaultText = "";
             this.txtPhoneNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -201,13 +201,13 @@
             this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhoneNumber.IconLeft = global::TicketSelling.Properties.Resources.phone_512px;
             this.txtPhoneNumber.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtPhoneNumber.Location = new System.Drawing.Point(25, 322);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(31, 402);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PasswordChar = '\0';
             this.txtPhoneNumber.PlaceholderText = "Enter your Phone Number";
             this.txtPhoneNumber.SelectedText = "";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(258, 40);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(322, 50);
             this.txtPhoneNumber.TabIndex = 4;
             this.txtPhoneNumber.TextOffset = new System.Drawing.Point(30, 0);
             this.txtPhoneNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPhoneNumber_KeyDown);
@@ -217,7 +217,7 @@
             // 
             this.txtPassword.Animated = true;
             this.txtPassword.AutoRoundedCorners = true;
-            this.txtPassword.BorderRadius = 19;
+            this.txtPassword.BorderRadius = 24;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.DefaultText = "";
             this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -230,13 +230,13 @@
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.IconLeft = global::TicketSelling.Properties.Resources.password_144px;
             this.txtPassword.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtPassword.Location = new System.Drawing.Point(25, 230);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Location = new System.Drawing.Point(31, 288);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "Enter Password";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(258, 40);
+            this.txtPassword.Size = new System.Drawing.Size(322, 50);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.TextOffset = new System.Drawing.Point(30, 0);
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsername_KeyDown);
@@ -245,7 +245,7 @@
             // 
             this.txtUsername.Animated = true;
             this.txtUsername.AutoRoundedCorners = true;
-            this.txtUsername.BorderRadius = 19;
+            this.txtUsername.BorderRadius = 24;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.DefaultText = "";
             this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -258,13 +258,13 @@
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.IconLeft = global::TicketSelling.Properties.Resources.name_208px;
             this.txtUsername.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtUsername.Location = new System.Drawing.Point(25, 139);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Location = new System.Drawing.Point(31, 174);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Enter your username";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(258, 40);
+            this.txtUsername.Size = new System.Drawing.Size(322, 50);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.TextOffset = new System.Drawing.Point(30, 0);
             this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsername_KeyDown);
@@ -274,7 +274,7 @@
             // 
             this.txtName.Animated = true;
             this.txtName.AutoRoundedCorners = true;
-            this.txtName.BorderRadius = 19;
+            this.txtName.BorderRadius = 24;
             this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtName.DefaultText = "";
             this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -287,13 +287,13 @@
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.IconLeft = global::TicketSelling.Properties.Resources.name_208px;
             this.txtName.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtName.Location = new System.Drawing.Point(25, 56);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Location = new System.Drawing.Point(31, 70);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "Enter your real name";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(258, 40);
+            this.txtName.Size = new System.Drawing.Size(322, 50);
             this.txtName.TabIndex = 1;
             this.txtName.TextOffset = new System.Drawing.Point(30, 0);
             this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsername_KeyDown);
@@ -302,10 +302,10 @@
             // 
             this.guna2Panel3.Controls.Add(this.dgvStaff);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel3.Location = new System.Drawing.Point(311, 0);
+            this.guna2Panel3.Location = new System.Drawing.Point(389, 0);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(578, 580);
+            this.guna2Panel3.Size = new System.Drawing.Size(722, 725);
             this.guna2Panel3.TabIndex = 2;
             // 
             // dgvStaff
@@ -350,7 +350,7 @@
             this.dgvStaff.ReadOnly = true;
             this.dgvStaff.RowHeadersVisible = false;
             this.dgvStaff.RowTemplate.Height = 24;
-            this.dgvStaff.Size = new System.Drawing.Size(578, 580);
+            this.dgvStaff.Size = new System.Drawing.Size(722, 725);
             this.dgvStaff.TabIndex = 0;
             this.dgvStaff.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvStaff.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -447,13 +447,12 @@
             // 
             // FrmStaff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmStaff";
-            this.Size = new System.Drawing.Size(889, 580);
+            this.Size = new System.Drawing.Size(1111, 725);
             this.Load += new System.EventHandler(this.FrmStaff_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();

@@ -98,9 +98,10 @@
             this.tabcontrolSeat.ImageList = this.imageList1;
             this.tabcontrolSeat.ItemSize = new System.Drawing.Size(180, 50);
             this.tabcontrolSeat.Location = new System.Drawing.Point(0, 0);
+            this.tabcontrolSeat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabcontrolSeat.Name = "tabcontrolSeat";
             this.tabcontrolSeat.SelectedIndex = 0;
-            this.tabcontrolSeat.Size = new System.Drawing.Size(889, 580);
+            this.tabcontrolSeat.Size = new System.Drawing.Size(1111, 725);
             this.tabcontrolSeat.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.tabcontrolSeat.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.tabcontrolSeat.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -128,9 +129,10 @@
             this.tabSeatType.Controls.Add(this.guna2Panel4);
             this.tabSeatType.ImageIndex = 1;
             this.tabSeatType.Location = new System.Drawing.Point(4, 54);
+            this.tabSeatType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabSeatType.Name = "tabSeatType";
-            this.tabSeatType.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSeatType.Size = new System.Drawing.Size(881, 522);
+            this.tabSeatType.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabSeatType.Size = new System.Drawing.Size(1103, 667);
             this.tabSeatType.TabIndex = 1;
             this.tabSeatType.Text = "Seat Type";
             this.tabSeatType.UseVisualStyleBackColor = true;
@@ -140,9 +142,10 @@
             this.guna2Panel5.Controls.Add(this.dgvSeatType);
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel5.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Panel5.Location = new System.Drawing.Point(349, 3);
+            this.guna2Panel5.Location = new System.Drawing.Point(436, 4);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(529, 516);
+            this.guna2Panel5.Size = new System.Drawing.Size(663, 659);
             this.guna2Panel5.TabIndex = 2;
             // 
             // dgvSeatType
@@ -185,7 +188,7 @@
             this.dgvSeatType.ReadOnly = true;
             this.dgvSeatType.RowHeadersVisible = false;
             this.dgvSeatType.RowTemplate.Height = 30;
-            this.dgvSeatType.Size = new System.Drawing.Size(529, 516);
+            this.dgvSeatType.Size = new System.Drawing.Size(663, 659);
             this.dgvSeatType.TabIndex = 1;
             this.dgvSeatType.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvSeatType.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -264,16 +267,17 @@
             this.guna2Panel4.Controls.Add(this.txtSeatTypeNote);
             this.guna2Panel4.Controls.Add(this.txtSeatTypeName);
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel4.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel4.Location = new System.Drawing.Point(4, 4);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(346, 516);
+            this.guna2Panel4.Size = new System.Drawing.Size(432, 659);
             this.guna2Panel4.TabIndex = 1;
             // 
             // btnSeatTypeSave
             // 
             this.btnSeatTypeSave.Animated = true;
             this.btnSeatTypeSave.AutoRoundedCorners = true;
-            this.btnSeatTypeSave.BorderRadius = 20;
+            this.btnSeatTypeSave.BorderRadius = 26;
             this.btnSeatTypeSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatTypeSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatTypeSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -281,10 +285,10 @@
             this.btnSeatTypeSave.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSeatTypeSave.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSeatTypeSave.ForeColor = System.Drawing.Color.White;
-            this.btnSeatTypeSave.Location = new System.Drawing.Point(122, 317);
+            this.btnSeatTypeSave.Location = new System.Drawing.Point(152, 396);
             this.btnSeatTypeSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeatTypeSave.Name = "btnSeatTypeSave";
-            this.btnSeatTypeSave.Size = new System.Drawing.Size(97, 43);
+            this.btnSeatTypeSave.Size = new System.Drawing.Size(121, 54);
             this.btnSeatTypeSave.TabIndex = 29;
             this.btnSeatTypeSave.Text = "Save";
             this.btnSeatTypeSave.Click += new System.EventHandler(this.BtnSeatTypeSave_Click);
@@ -293,7 +297,7 @@
             // 
             this.btnSeatTypeUpdate.Animated = true;
             this.btnSeatTypeUpdate.AutoRoundedCorners = true;
-            this.btnSeatTypeUpdate.BorderRadius = 20;
+            this.btnSeatTypeUpdate.BorderRadius = 26;
             this.btnSeatTypeUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatTypeUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatTypeUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -301,10 +305,10 @@
             this.btnSeatTypeUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(182)))), ((int)(((byte)(211)))));
             this.btnSeatTypeUpdate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSeatTypeUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnSeatTypeUpdate.Location = new System.Drawing.Point(122, 317);
+            this.btnSeatTypeUpdate.Location = new System.Drawing.Point(152, 396);
             this.btnSeatTypeUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeatTypeUpdate.Name = "btnSeatTypeUpdate";
-            this.btnSeatTypeUpdate.Size = new System.Drawing.Size(97, 43);
+            this.btnSeatTypeUpdate.Size = new System.Drawing.Size(121, 54);
             this.btnSeatTypeUpdate.TabIndex = 28;
             this.btnSeatTypeUpdate.Text = "Update";
             this.btnSeatTypeUpdate.Visible = false;
@@ -314,7 +318,7 @@
             // 
             this.btnSeatTypeCancel.Animated = true;
             this.btnSeatTypeCancel.AutoRoundedCorners = true;
-            this.btnSeatTypeCancel.BorderRadius = 20;
+            this.btnSeatTypeCancel.BorderRadius = 26;
             this.btnSeatTypeCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatTypeCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatTypeCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -322,10 +326,10 @@
             this.btnSeatTypeCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(73)))), ((int)(((byte)(131)))));
             this.btnSeatTypeCancel.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSeatTypeCancel.ForeColor = System.Drawing.Color.White;
-            this.btnSeatTypeCancel.Location = new System.Drawing.Point(223, 317);
+            this.btnSeatTypeCancel.Location = new System.Drawing.Point(279, 396);
             this.btnSeatTypeCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeatTypeCancel.Name = "btnSeatTypeCancel";
-            this.btnSeatTypeCancel.Size = new System.Drawing.Size(97, 43);
+            this.btnSeatTypeCancel.Size = new System.Drawing.Size(121, 54);
             this.btnSeatTypeCancel.TabIndex = 27;
             this.btnSeatTypeCancel.Text = "Cancel";
             this.btnSeatTypeCancel.Click += new System.EventHandler(this.BtnSeatTypeCancel_Click);
@@ -334,10 +338,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 115);
+            this.label3.Location = new System.Drawing.Point(19, 144);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 21);
+            this.label3.Size = new System.Drawing.Size(59, 27);
             this.label3.TabIndex = 25;
             this.label3.Text = "Note";
             // 
@@ -345,10 +349,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 15);
+            this.label4.Location = new System.Drawing.Point(19, 19);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 21);
+            this.label4.Size = new System.Drawing.Size(116, 27);
             this.label4.TabIndex = 24;
             this.label4.Text = "Seat Name";
             // 
@@ -366,13 +370,13 @@
             this.txtSeatTypeNote.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtSeatTypeNote.ForeColor = System.Drawing.Color.Black;
             this.txtSeatTypeNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSeatTypeNote.Location = new System.Drawing.Point(20, 154);
-            this.txtSeatTypeNote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSeatTypeNote.Location = new System.Drawing.Point(25, 192);
+            this.txtSeatTypeNote.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSeatTypeNote.Name = "txtSeatTypeNote";
             this.txtSeatTypeNote.PasswordChar = '\0';
             this.txtSeatTypeNote.PlaceholderText = "";
             this.txtSeatTypeNote.SelectedText = "";
-            this.txtSeatTypeNote.Size = new System.Drawing.Size(300, 131);
+            this.txtSeatTypeNote.Size = new System.Drawing.Size(375, 164);
             this.txtSeatTypeNote.TabIndex = 2;
             this.txtSeatTypeNote.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSeatTypeNote_KeyDown);
             // 
@@ -380,7 +384,7 @@
             // 
             this.txtSeatTypeName.Animated = true;
             this.txtSeatTypeName.AutoRoundedCorners = true;
-            this.txtSeatTypeName.BorderRadius = 19;
+            this.txtSeatTypeName.BorderRadius = 24;
             this.txtSeatTypeName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSeatTypeName.DefaultText = "";
             this.txtSeatTypeName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -391,13 +395,13 @@
             this.txtSeatTypeName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSeatTypeName.ForeColor = System.Drawing.Color.Black;
             this.txtSeatTypeName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSeatTypeName.Location = new System.Drawing.Point(20, 53);
-            this.txtSeatTypeName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSeatTypeName.Location = new System.Drawing.Point(25, 66);
+            this.txtSeatTypeName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSeatTypeName.Name = "txtSeatTypeName";
             this.txtSeatTypeName.PasswordChar = '\0';
             this.txtSeatTypeName.PlaceholderText = "";
             this.txtSeatTypeName.SelectedText = "";
-            this.txtSeatTypeName.Size = new System.Drawing.Size(300, 40);
+            this.txtSeatTypeName.Size = new System.Drawing.Size(375, 50);
             this.txtSeatTypeName.TabIndex = 1;
             this.txtSeatTypeName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSeatTypeName_KeyDown);
             this.txtSeatTypeName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSeatTypeName_KeyPress);
@@ -408,9 +412,10 @@
             this.tabSeat.Controls.Add(this.guna2Panel2);
             this.tabSeat.ImageIndex = 0;
             this.tabSeat.Location = new System.Drawing.Point(4, 54);
+            this.tabSeat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabSeat.Name = "tabSeat";
-            this.tabSeat.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSeat.Size = new System.Drawing.Size(881, 522);
+            this.tabSeat.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabSeat.Size = new System.Drawing.Size(1103, 667);
             this.tabSeat.TabIndex = 0;
             this.tabSeat.Text = "Seat";
             this.tabSeat.UseVisualStyleBackColor = true;
@@ -420,9 +425,10 @@
             this.guna2Panel3.Controls.Add(this.dgvSeat);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Panel3.Location = new System.Drawing.Point(362, 3);
+            this.guna2Panel3.Location = new System.Drawing.Point(453, 4);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(516, 516);
+            this.guna2Panel3.Size = new System.Drawing.Size(646, 659);
             this.guna2Panel3.TabIndex = 1;
             // 
             // dgvSeat
@@ -466,7 +472,7 @@
             this.dgvSeat.ReadOnly = true;
             this.dgvSeat.RowHeadersVisible = false;
             this.dgvSeat.RowTemplate.Height = 24;
-            this.dgvSeat.Size = new System.Drawing.Size(516, 516);
+            this.dgvSeat.Size = new System.Drawing.Size(646, 659);
             this.dgvSeat.TabIndex = 1;
             this.dgvSeat.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvSeat.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -556,19 +562,20 @@
             this.guna2Panel2.Controls.Add(this.txtSeatPrice);
             this.guna2Panel2.Controls.Add(this.txtNumberOfSeats);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel2.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel2.Location = new System.Drawing.Point(4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(359, 516);
+            this.guna2Panel2.Size = new System.Drawing.Size(449, 659);
             this.guna2Panel2.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 99);
+            this.label5.Location = new System.Drawing.Point(25, 124);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 21);
+            this.label5.Size = new System.Drawing.Size(59, 27);
             this.label5.TabIndex = 33;
             this.label5.Text = "Note";
             // 
@@ -587,13 +594,13 @@
             this.txtSeatNote.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSeatNote.ForeColor = System.Drawing.Color.Black;
             this.txtSeatNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSeatNote.Location = new System.Drawing.Point(24, 131);
-            this.txtSeatNote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSeatNote.Location = new System.Drawing.Point(30, 164);
+            this.txtSeatNote.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSeatNote.Name = "txtSeatNote";
             this.txtSeatNote.PasswordChar = '\0';
             this.txtSeatNote.PlaceholderText = "";
             this.txtSeatNote.SelectedText = "";
-            this.txtSeatNote.Size = new System.Drawing.Size(304, 91);
+            this.txtSeatNote.Size = new System.Drawing.Size(380, 114);
             this.txtSeatNote.TabIndex = 32;
             // 
             // cbSeatType
@@ -608,9 +615,10 @@
             this.cbSeatType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSeatType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbSeatType.ItemHeight = 30;
-            this.cbSeatType.Location = new System.Drawing.Point(23, 50);
+            this.cbSeatType.Location = new System.Drawing.Point(29, 62);
+            this.cbSeatType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbSeatType.Name = "cbSeatType";
-            this.cbSeatType.Size = new System.Drawing.Size(305, 36);
+            this.cbSeatType.Size = new System.Drawing.Size(380, 36);
             this.cbSeatType.TabIndex = 31;
             this.cbSeatType.SelectedIndexChanged += new System.EventHandler(this.CbSeatType_SelectedIndexChanged);
             // 
@@ -618,10 +626,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 11);
+            this.label2.Location = new System.Drawing.Point(22, 14);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 21);
+            this.label2.Size = new System.Drawing.Size(169, 27);
             this.label2.TabIndex = 30;
             this.label2.Text = "Seat Type Name";
             // 
@@ -629,7 +637,7 @@
             // 
             this.btnSeatSave.Animated = true;
             this.btnSeatSave.AutoRoundedCorners = true;
-            this.btnSeatSave.BorderRadius = 20;
+            this.btnSeatSave.BorderRadius = 26;
             this.btnSeatSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -637,10 +645,10 @@
             this.btnSeatSave.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSeatSave.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSeatSave.ForeColor = System.Drawing.Color.White;
-            this.btnSeatSave.Location = new System.Drawing.Point(117, 406);
+            this.btnSeatSave.Location = new System.Drawing.Point(146, 508);
             this.btnSeatSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeatSave.Name = "btnSeatSave";
-            this.btnSeatSave.Size = new System.Drawing.Size(97, 43);
+            this.btnSeatSave.Size = new System.Drawing.Size(121, 54);
             this.btnSeatSave.TabIndex = 29;
             this.btnSeatSave.Text = "Save";
             this.btnSeatSave.Click += new System.EventHandler(this.BtnSeatSave_Click);
@@ -649,7 +657,7 @@
             // 
             this.btnSeatUpdate.Animated = true;
             this.btnSeatUpdate.AutoRoundedCorners = true;
-            this.btnSeatUpdate.BorderRadius = 20;
+            this.btnSeatUpdate.BorderRadius = 26;
             this.btnSeatUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -657,10 +665,10 @@
             this.btnSeatUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(182)))), ((int)(((byte)(211)))));
             this.btnSeatUpdate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSeatUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnSeatUpdate.Location = new System.Drawing.Point(117, 406);
+            this.btnSeatUpdate.Location = new System.Drawing.Point(146, 508);
             this.btnSeatUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeatUpdate.Name = "btnSeatUpdate";
-            this.btnSeatUpdate.Size = new System.Drawing.Size(97, 43);
+            this.btnSeatUpdate.Size = new System.Drawing.Size(121, 54);
             this.btnSeatUpdate.TabIndex = 28;
             this.btnSeatUpdate.Text = "Update";
             this.btnSeatUpdate.Visible = false;
@@ -670,7 +678,7 @@
             // 
             this.btnSeatCancel.Animated = true;
             this.btnSeatCancel.AutoRoundedCorners = true;
-            this.btnSeatCancel.BorderRadius = 20;
+            this.btnSeatCancel.BorderRadius = 26;
             this.btnSeatCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -678,10 +686,10 @@
             this.btnSeatCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(73)))), ((int)(((byte)(131)))));
             this.btnSeatCancel.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSeatCancel.ForeColor = System.Drawing.Color.White;
-            this.btnSeatCancel.Location = new System.Drawing.Point(218, 406);
+            this.btnSeatCancel.Location = new System.Drawing.Point(272, 508);
             this.btnSeatCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeatCancel.Name = "btnSeatCancel";
-            this.btnSeatCancel.Size = new System.Drawing.Size(97, 43);
+            this.btnSeatCancel.Size = new System.Drawing.Size(121, 54);
             this.btnSeatCancel.TabIndex = 27;
             this.btnSeatCancel.Text = "Cancel";
             this.btnSeatCancel.Click += new System.EventHandler(this.BtnSeatCancel_Click);
@@ -690,10 +698,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 311);
+            this.label6.Location = new System.Drawing.Point(22, 389);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 21);
+            this.label6.Size = new System.Drawing.Size(62, 27);
             this.label6.TabIndex = 25;
             this.label6.Text = "Price";
             // 
@@ -701,10 +709,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(18, 234);
+            this.label7.Location = new System.Drawing.Point(22, 292);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 21);
+            this.label7.Size = new System.Drawing.Size(172, 27);
             this.label7.TabIndex = 24;
             this.label7.Text = "Number of Seats";
             // 
@@ -712,7 +720,7 @@
             // 
             this.txtSeatPrice.Animated = true;
             this.txtSeatPrice.AutoRoundedCorners = true;
-            this.txtSeatPrice.BorderRadius = 19;
+            this.txtSeatPrice.BorderRadius = 24;
             this.txtSeatPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSeatPrice.DefaultText = "";
             this.txtSeatPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -723,13 +731,13 @@
             this.txtSeatPrice.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtSeatPrice.ForeColor = System.Drawing.Color.Black;
             this.txtSeatPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSeatPrice.Location = new System.Drawing.Point(23, 344);
-            this.txtSeatPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSeatPrice.Location = new System.Drawing.Point(29, 430);
+            this.txtSeatPrice.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSeatPrice.Name = "txtSeatPrice";
             this.txtSeatPrice.PasswordChar = '\0';
             this.txtSeatPrice.PlaceholderText = "";
             this.txtSeatPrice.SelectedText = "";
-            this.txtSeatPrice.Size = new System.Drawing.Size(305, 40);
+            this.txtSeatPrice.Size = new System.Drawing.Size(381, 50);
             this.txtSeatPrice.TabIndex = 23;
             this.txtSeatPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSeatPrice_KeyPress);
             // 
@@ -737,7 +745,7 @@
             // 
             this.txtNumberOfSeats.Animated = true;
             this.txtNumberOfSeats.AutoRoundedCorners = true;
-            this.txtNumberOfSeats.BorderRadius = 19;
+            this.txtNumberOfSeats.BorderRadius = 24;
             this.txtNumberOfSeats.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNumberOfSeats.DefaultText = "";
             this.txtNumberOfSeats.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -748,13 +756,13 @@
             this.txtNumberOfSeats.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtNumberOfSeats.ForeColor = System.Drawing.Color.Black;
             this.txtNumberOfSeats.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNumberOfSeats.Location = new System.Drawing.Point(23, 267);
-            this.txtNumberOfSeats.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumberOfSeats.Location = new System.Drawing.Point(29, 334);
+            this.txtNumberOfSeats.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNumberOfSeats.Name = "txtNumberOfSeats";
             this.txtNumberOfSeats.PasswordChar = '\0';
             this.txtNumberOfSeats.PlaceholderText = "";
             this.txtNumberOfSeats.SelectedText = "";
-            this.txtNumberOfSeats.Size = new System.Drawing.Size(305, 40);
+            this.txtNumberOfSeats.Size = new System.Drawing.Size(381, 50);
             this.txtNumberOfSeats.TabIndex = 22;
             this.txtNumberOfSeats.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumberOfSeats_KeyPress);
             // 
@@ -788,11 +796,11 @@
             // 
             // FrmSeat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.tabcontrolSeat);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmSeat";
-            this.Size = new System.Drawing.Size(889, 580);
+            this.Size = new System.Drawing.Size(1111, 725);
             this.Load += new System.EventHandler(this.FrmSeat_Load);
             this.tabcontrolSeat.ResumeLayout(false);
             this.tabSeatType.ResumeLayout(false);

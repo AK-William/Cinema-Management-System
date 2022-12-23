@@ -140,9 +140,10 @@
             this.TabControlMovie.ImageList = this.imageList1;
             this.TabControlMovie.ItemSize = new System.Drawing.Size(180, 50);
             this.TabControlMovie.Location = new System.Drawing.Point(0, 0);
+            this.TabControlMovie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TabControlMovie.Name = "TabControlMovie";
             this.TabControlMovie.SelectedIndex = 0;
-            this.TabControlMovie.Size = new System.Drawing.Size(997, 553);
+            this.TabControlMovie.Size = new System.Drawing.Size(1246, 691);
             this.TabControlMovie.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.TabControlMovie.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.TabControlMovie.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -171,9 +172,10 @@
             this.tabMovie.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabMovie.ImageIndex = 0;
             this.tabMovie.Location = new System.Drawing.Point(4, 54);
+            this.tabMovie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabMovie.Name = "tabMovie";
-            this.tabMovie.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMovie.Size = new System.Drawing.Size(989, 495);
+            this.tabMovie.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabMovie.Size = new System.Drawing.Size(1238, 633);
             this.tabMovie.TabIndex = 0;
             this.tabMovie.Text = "Movie";
             this.tabMovie.UseVisualStyleBackColor = true;
@@ -182,9 +184,10 @@
             // 
             this.panelMoviedgv.Controls.Add(this.dgvMovie);
             this.panelMoviedgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMoviedgv.Location = new System.Drawing.Point(3, 258);
+            this.panelMoviedgv.Location = new System.Drawing.Point(4, 323);
+            this.panelMoviedgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMoviedgv.Name = "panelMoviedgv";
-            this.panelMoviedgv.Size = new System.Drawing.Size(983, 234);
+            this.panelMoviedgv.Size = new System.Drawing.Size(1230, 306);
             this.panelMoviedgv.TabIndex = 1;
             // 
             // dgvMovie
@@ -198,7 +201,7 @@
             this.dgvMovie.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -234,7 +237,7 @@
             this.dgvMovie.RowHeadersVisible = false;
             this.dgvMovie.RowHeadersWidth = 45;
             this.dgvMovie.RowTemplate.Height = 100;
-            this.dgvMovie.Size = new System.Drawing.Size(983, 234);
+            this.dgvMovie.Size = new System.Drawing.Size(1230, 306);
             this.dgvMovie.TabIndex = 63;
             this.dgvMovie.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvMovie.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -383,19 +386,20 @@
             this.panelMovieTop.Controls.Add(this.txtCasts);
             this.panelMovieTop.Controls.Add(this.txtName);
             this.panelMovieTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMovieTop.Location = new System.Drawing.Point(3, 3);
+            this.panelMovieTop.Location = new System.Drawing.Point(4, 4);
+            this.panelMovieTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMovieTop.Name = "panelMovieTop";
-            this.panelMovieTop.Size = new System.Drawing.Size(983, 255);
+            this.panelMovieTop.Size = new System.Drawing.Size(1230, 319);
             this.panelMovieTop.TabIndex = 0;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(312, 172);
+            this.label6.Location = new System.Drawing.Point(390, 215);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 21);
+            this.label6.Size = new System.Drawing.Size(126, 27);
             this.label6.TabIndex = 117;
             this.label6.Text = "Trailer Link";
             // 
@@ -414,13 +418,13 @@
             this.txtMovieLink.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMovieLink.IconLeft = global::TicketSelling.Properties.Resources.link_500px;
             this.txtMovieLink.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtMovieLink.Location = new System.Drawing.Point(316, 197);
-            this.txtMovieLink.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMovieLink.Location = new System.Drawing.Point(395, 246);
+            this.txtMovieLink.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtMovieLink.Name = "txtMovieLink";
             this.txtMovieLink.PasswordChar = '\0';
             this.txtMovieLink.PlaceholderText = "Enter Trailer Link";
             this.txtMovieLink.SelectedText = "";
-            this.txtMovieLink.Size = new System.Drawing.Size(262, 40);
+            this.txtMovieLink.Size = new System.Drawing.Size(328, 50);
             this.txtMovieLink.TabIndex = 105;
             this.txtMovieLink.TextOffset = new System.Drawing.Point(10, 0);
             this.txtMovieLink.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtMovieLink_KeyDown);
@@ -429,10 +433,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(312, 15);
+            this.label4.Location = new System.Drawing.Point(390, 19);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 21);
+            this.label4.Size = new System.Drawing.Size(127, 27);
             this.label4.TabIndex = 116;
             this.label4.Text = "Movie Type";
             // 
@@ -451,13 +455,13 @@
             this.txtMovieType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMovieType.IconLeft = global::TicketSelling.Properties.Resources.british_movies_144px;
             this.txtMovieType.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtMovieType.Location = new System.Drawing.Point(317, 40);
-            this.txtMovieType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMovieType.Location = new System.Drawing.Point(396, 50);
+            this.txtMovieType.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtMovieType.Name = "txtMovieType";
             this.txtMovieType.PasswordChar = '\0';
             this.txtMovieType.PlaceholderText = "Enter Movie\'s genre";
             this.txtMovieType.SelectedText = "";
-            this.txtMovieType.Size = new System.Drawing.Size(262, 40);
+            this.txtMovieType.Size = new System.Drawing.Size(328, 50);
             this.txtMovieType.TabIndex = 103;
             this.txtMovieType.TextOffset = new System.Drawing.Point(10, 0);
             this.txtMovieType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtMovieType_KeyDown);
@@ -474,10 +478,11 @@
             this.btnMovieSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMovieSearch.IconSize = 30;
             this.btnMovieSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMovieSearch.Location = new System.Drawing.Point(849, 42);
+            this.btnMovieSearch.Location = new System.Drawing.Point(1061, 52);
+            this.btnMovieSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMovieSearch.Name = "btnMovieSearch";
-            this.btnMovieSearch.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnMovieSearch.Size = new System.Drawing.Size(123, 40);
+            this.btnMovieSearch.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnMovieSearch.Size = new System.Drawing.Size(154, 50);
             this.btnMovieSearch.TabIndex = 115;
             this.btnMovieSearch.Tag = "";
             this.btnMovieSearch.Text = "Search";
@@ -490,9 +495,10 @@
             // 
             this.pictureBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox.ImageRotate = 0F;
-            this.pictureBox.Location = new System.Drawing.Point(596, 15);
+            this.pictureBox.Location = new System.Drawing.Point(745, 19);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(231, 222);
+            this.pictureBox.Size = new System.Drawing.Size(289, 278);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox.TabIndex = 114;
             this.pictureBox.TabStop = false;
@@ -501,7 +507,7 @@
             // 
             this.btnMovieSave.Animated = true;
             this.btnMovieSave.AutoRoundedCorners = true;
-            this.btnMovieSave.BorderRadius = 20;
+            this.btnMovieSave.BorderRadius = 26;
             this.btnMovieSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnMovieSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnMovieSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -509,10 +515,10 @@
             this.btnMovieSave.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnMovieSave.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnMovieSave.ForeColor = System.Drawing.Color.White;
-            this.btnMovieSave.Location = new System.Drawing.Point(856, 124);
+            this.btnMovieSave.Location = new System.Drawing.Point(1070, 155);
             this.btnMovieSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnMovieSave.Name = "btnMovieSave";
-            this.btnMovieSave.Size = new System.Drawing.Size(97, 43);
+            this.btnMovieSave.Size = new System.Drawing.Size(121, 54);
             this.btnMovieSave.TabIndex = 113;
             this.btnMovieSave.Text = "Save";
             this.btnMovieSave.Click += new System.EventHandler(this.BtnMovieSave_Click);
@@ -521,7 +527,7 @@
             // 
             this.btnMovieUpdate.Animated = true;
             this.btnMovieUpdate.AutoRoundedCorners = true;
-            this.btnMovieUpdate.BorderRadius = 20;
+            this.btnMovieUpdate.BorderRadius = 26;
             this.btnMovieUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnMovieUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnMovieUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -529,10 +535,10 @@
             this.btnMovieUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(182)))), ((int)(((byte)(211)))));
             this.btnMovieUpdate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnMovieUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnMovieUpdate.Location = new System.Drawing.Point(856, 124);
+            this.btnMovieUpdate.Location = new System.Drawing.Point(1070, 155);
             this.btnMovieUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnMovieUpdate.Name = "btnMovieUpdate";
-            this.btnMovieUpdate.Size = new System.Drawing.Size(97, 43);
+            this.btnMovieUpdate.Size = new System.Drawing.Size(121, 54);
             this.btnMovieUpdate.TabIndex = 112;
             this.btnMovieUpdate.Text = "Update";
             this.btnMovieUpdate.Click += new System.EventHandler(this.BtnMovieUpdate_Click);
@@ -541,7 +547,7 @@
             // 
             this.btnMovieCancel.Animated = true;
             this.btnMovieCancel.AutoRoundedCorners = true;
-            this.btnMovieCancel.BorderRadius = 20;
+            this.btnMovieCancel.BorderRadius = 26;
             this.btnMovieCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnMovieCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnMovieCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -549,10 +555,10 @@
             this.btnMovieCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(73)))), ((int)(((byte)(131)))));
             this.btnMovieCancel.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnMovieCancel.ForeColor = System.Drawing.Color.White;
-            this.btnMovieCancel.Location = new System.Drawing.Point(856, 184);
+            this.btnMovieCancel.Location = new System.Drawing.Point(1070, 230);
             this.btnMovieCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnMovieCancel.Name = "btnMovieCancel";
-            this.btnMovieCancel.Size = new System.Drawing.Size(97, 43);
+            this.btnMovieCancel.Size = new System.Drawing.Size(121, 54);
             this.btnMovieCancel.TabIndex = 111;
             this.btnMovieCancel.Text = "Cancel";
             this.btnMovieCancel.Click += new System.EventHandler(this.BtnMovieCancel_Click);
@@ -561,10 +567,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(845, 15);
+            this.label8.Location = new System.Drawing.Point(1056, 19);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 21);
+            this.label8.Size = new System.Drawing.Size(139, 27);
             this.label8.TabIndex = 110;
             this.label8.Text = "Movie Cover";
             // 
@@ -572,10 +578,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(312, 88);
+            this.label7.Location = new System.Drawing.Point(390, 110);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 21);
+            this.label7.Size = new System.Drawing.Size(123, 27);
             this.label7.TabIndex = 109;
             this.label7.Text = "Description";
             // 
@@ -594,13 +600,13 @@
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescription.IconLeft = global::TicketSelling.Properties.Resources.note_480px;
             this.txtDescription.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtDescription.Location = new System.Drawing.Point(316, 114);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescription.Location = new System.Drawing.Point(395, 142);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PasswordChar = '\0';
             this.txtDescription.PlaceholderText = "Enter Movie\'s preview";
             this.txtDescription.SelectedText = "";
-            this.txtDescription.Size = new System.Drawing.Size(262, 40);
+            this.txtDescription.Size = new System.Drawing.Size(328, 50);
             this.txtDescription.TabIndex = 104;
             this.txtDescription.TextOffset = new System.Drawing.Point(10, 0);
             this.txtDescription.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDescription_KeyDown);
@@ -609,10 +615,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(31, 172);
+            this.label5.Location = new System.Drawing.Point(39, 215);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 21);
+            this.label5.Size = new System.Drawing.Size(94, 27);
             this.label5.TabIndex = 108;
             this.label5.Text = "Runtime";
             // 
@@ -632,13 +638,13 @@
             this.txtRuntime.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRuntime.IconLeft = global::TicketSelling.Properties.Resources.clock_512px;
             this.txtRuntime.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtRuntime.Location = new System.Drawing.Point(35, 198);
-            this.txtRuntime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRuntime.Location = new System.Drawing.Point(44, 248);
+            this.txtRuntime.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtRuntime.Name = "txtRuntime";
             this.txtRuntime.PasswordChar = '\0';
             this.txtRuntime.PlaceholderText = "Enter the length of the film";
             this.txtRuntime.SelectedText = "";
-            this.txtRuntime.Size = new System.Drawing.Size(258, 40);
+            this.txtRuntime.Size = new System.Drawing.Size(322, 50);
             this.txtRuntime.TabIndex = 102;
             this.txtRuntime.TextOffset = new System.Drawing.Point(10, 0);
             this.txtRuntime.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtRuntime_KeyDown);
@@ -647,10 +653,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 88);
+            this.label3.Location = new System.Drawing.Point(39, 110);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 21);
+            this.label3.Size = new System.Drawing.Size(64, 27);
             this.label3.TabIndex = 107;
             this.label3.Text = "Casts";
             // 
@@ -658,10 +664,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 14);
+            this.label2.Location = new System.Drawing.Point(39, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 21);
+            this.label2.Size = new System.Drawing.Size(69, 27);
             this.label2.TabIndex = 106;
             this.label2.Text = "Name";
             // 
@@ -681,13 +687,13 @@
             this.txtCasts.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCasts.IconLeft = global::TicketSelling.Properties.Resources.team_480px;
             this.txtCasts.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtCasts.Location = new System.Drawing.Point(35, 114);
-            this.txtCasts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCasts.Location = new System.Drawing.Point(44, 142);
+            this.txtCasts.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtCasts.Name = "txtCasts";
             this.txtCasts.PasswordChar = '\0';
             this.txtCasts.PlaceholderText = "Enter Actor and Actress";
             this.txtCasts.SelectedText = "";
-            this.txtCasts.Size = new System.Drawing.Size(258, 40);
+            this.txtCasts.Size = new System.Drawing.Size(322, 50);
             this.txtCasts.TabIndex = 101;
             this.txtCasts.TextOffset = new System.Drawing.Point(10, 0);
             this.txtCasts.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCasts_KeyDown);
@@ -708,13 +714,13 @@
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.IconLeft = global::TicketSelling.Properties.Resources.movie_500px;
             this.txtName.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtName.Location = new System.Drawing.Point(35, 39);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Location = new System.Drawing.Point(44, 49);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "Enter Movie\'s Name";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(258, 40);
+            this.txtName.Size = new System.Drawing.Size(322, 50);
             this.txtName.TabIndex = 100;
             this.txtName.TextOffset = new System.Drawing.Point(10, 0);
             this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtName_KeyDown);
@@ -725,9 +731,10 @@
             this.tabScheduleDate.Controls.Add(this.panelSDLeft);
             this.tabScheduleDate.ImageIndex = 1;
             this.tabScheduleDate.Location = new System.Drawing.Point(4, 54);
+            this.tabScheduleDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabScheduleDate.Name = "tabScheduleDate";
-            this.tabScheduleDate.Padding = new System.Windows.Forms.Padding(3);
-            this.tabScheduleDate.Size = new System.Drawing.Size(989, 495);
+            this.tabScheduleDate.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabScheduleDate.Size = new System.Drawing.Size(1238, 633);
             this.tabScheduleDate.TabIndex = 1;
             this.tabScheduleDate.Text = "Schedule Date";
             this.tabScheduleDate.UseVisualStyleBackColor = true;
@@ -736,9 +743,10 @@
             // 
             this.panelSDdgv.Controls.Add(this.dgvSD);
             this.panelSDdgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSDdgv.Location = new System.Drawing.Point(377, 3);
+            this.panelSDdgv.Location = new System.Drawing.Point(472, 4);
+            this.panelSDdgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelSDdgv.Name = "panelSDdgv";
-            this.panelSDdgv.Size = new System.Drawing.Size(609, 489);
+            this.panelSDdgv.Size = new System.Drawing.Size(762, 625);
             this.panelSDdgv.TabIndex = 1;
             // 
             // dgvSD
@@ -752,7 +760,7 @@
             this.dgvSD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -783,7 +791,7 @@
             this.dgvSD.ReadOnly = true;
             this.dgvSD.RowHeadersVisible = false;
             this.dgvSD.RowTemplate.Height = 24;
-            this.dgvSD.Size = new System.Drawing.Size(609, 489);
+            this.dgvSD.Size = new System.Drawing.Size(762, 625);
             this.dgvSD.TabIndex = 3;
             this.dgvSD.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvSD.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -880,9 +888,10 @@
             this.panelSDLeft.Controls.Add(this.label10);
             this.panelSDLeft.Controls.Add(this.label11);
             this.panelSDLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSDLeft.Location = new System.Drawing.Point(3, 3);
+            this.panelSDLeft.Location = new System.Drawing.Point(4, 4);
+            this.panelSDLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelSDLeft.Name = "panelSDLeft";
-            this.panelSDLeft.Size = new System.Drawing.Size(374, 489);
+            this.panelSDLeft.Size = new System.Drawing.Size(468, 625);
             this.panelSDLeft.TabIndex = 0;
             // 
             // CbSDName
@@ -897,9 +906,10 @@
             this.CbSDName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbSDName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.CbSDName.ItemHeight = 30;
-            this.CbSDName.Location = new System.Drawing.Point(109, 64);
+            this.CbSDName.Location = new System.Drawing.Point(136, 80);
+            this.CbSDName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CbSDName.Name = "CbSDName";
-            this.CbSDName.Size = new System.Drawing.Size(247, 36);
+            this.CbSDName.Size = new System.Drawing.Size(308, 36);
             this.CbSDName.TabIndex = 80;
             this.CbSDName.SelectedIndexChanged += new System.EventHandler(this.CbSDName_SelectedIndexChanged);
             // 
@@ -907,7 +917,7 @@
             // 
             this.btnSDSave.Animated = true;
             this.btnSDSave.AutoRoundedCorners = true;
-            this.btnSDSave.BorderRadius = 20;
+            this.btnSDSave.BorderRadius = 26;
             this.btnSDSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSDSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSDSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -915,10 +925,10 @@
             this.btnSDSave.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSDSave.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSDSave.ForeColor = System.Drawing.Color.White;
-            this.btnSDSave.Location = new System.Drawing.Point(158, 290);
+            this.btnSDSave.Location = new System.Drawing.Point(198, 362);
             this.btnSDSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSDSave.Name = "btnSDSave";
-            this.btnSDSave.Size = new System.Drawing.Size(97, 43);
+            this.btnSDSave.Size = new System.Drawing.Size(121, 54);
             this.btnSDSave.TabIndex = 79;
             this.btnSDSave.Text = "Save";
             this.btnSDSave.Click += new System.EventHandler(this.BtnSDSave_Click);
@@ -927,7 +937,7 @@
             // 
             this.btnSDUpdate.Animated = true;
             this.btnSDUpdate.AutoRoundedCorners = true;
-            this.btnSDUpdate.BorderRadius = 20;
+            this.btnSDUpdate.BorderRadius = 26;
             this.btnSDUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSDUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSDUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -935,10 +945,10 @@
             this.btnSDUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(182)))), ((int)(((byte)(211)))));
             this.btnSDUpdate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSDUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnSDUpdate.Location = new System.Drawing.Point(158, 290);
+            this.btnSDUpdate.Location = new System.Drawing.Point(198, 362);
             this.btnSDUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnSDUpdate.Name = "btnSDUpdate";
-            this.btnSDUpdate.Size = new System.Drawing.Size(97, 43);
+            this.btnSDUpdate.Size = new System.Drawing.Size(121, 54);
             this.btnSDUpdate.TabIndex = 78;
             this.btnSDUpdate.Text = "Update";
             this.btnSDUpdate.Visible = false;
@@ -948,7 +958,7 @@
             // 
             this.btnSDCancel.Animated = true;
             this.btnSDCancel.AutoRoundedCorners = true;
-            this.btnSDCancel.BorderRadius = 20;
+            this.btnSDCancel.BorderRadius = 26;
             this.btnSDCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSDCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSDCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -956,10 +966,10 @@
             this.btnSDCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(73)))), ((int)(((byte)(131)))));
             this.btnSDCancel.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSDCancel.ForeColor = System.Drawing.Color.White;
-            this.btnSDCancel.Location = new System.Drawing.Point(259, 290);
+            this.btnSDCancel.Location = new System.Drawing.Point(324, 362);
             this.btnSDCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnSDCancel.Name = "btnSDCancel";
-            this.btnSDCancel.Size = new System.Drawing.Size(97, 43);
+            this.btnSDCancel.Size = new System.Drawing.Size(121, 54);
             this.btnSDCancel.TabIndex = 77;
             this.btnSDCancel.Text = "Cancel";
             this.btnSDCancel.Click += new System.EventHandler(this.BtnSDCancel_Click);
@@ -968,16 +978,17 @@
             // 
             this.txtSDEndDate.Animated = true;
             this.txtSDEndDate.AutoRoundedCorners = true;
-            this.txtSDEndDate.BorderRadius = 21;
+            this.txtSDEndDate.BorderRadius = 26;
             this.txtSDEndDate.Checked = true;
             this.txtSDEndDate.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtSDEndDate.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txtSDEndDate.Location = new System.Drawing.Point(109, 202);
+            this.txtSDEndDate.Location = new System.Drawing.Point(136, 252);
+            this.txtSDEndDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSDEndDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtSDEndDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtSDEndDate.Name = "txtSDEndDate";
-            this.txtSDEndDate.Size = new System.Drawing.Size(247, 44);
+            this.txtSDEndDate.Size = new System.Drawing.Size(309, 55);
             this.txtSDEndDate.TabIndex = 76;
             this.txtSDEndDate.Value = new System.DateTime(2022, 11, 11, 14, 24, 37, 31);
             // 
@@ -985,16 +996,17 @@
             // 
             this.txtSDStartDate.Animated = true;
             this.txtSDStartDate.AutoRoundedCorners = true;
-            this.txtSDStartDate.BorderRadius = 21;
+            this.txtSDStartDate.BorderRadius = 26;
             this.txtSDStartDate.Checked = true;
             this.txtSDStartDate.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtSDStartDate.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txtSDStartDate.Location = new System.Drawing.Point(109, 132);
+            this.txtSDStartDate.Location = new System.Drawing.Point(136, 165);
+            this.txtSDStartDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSDStartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtSDStartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtSDStartDate.Name = "txtSDStartDate";
-            this.txtSDStartDate.Size = new System.Drawing.Size(247, 44);
+            this.txtSDStartDate.Size = new System.Drawing.Size(309, 55);
             this.txtSDStartDate.TabIndex = 75;
             this.txtSDStartDate.Value = new System.DateTime(2022, 12, 7, 0, 0, 0, 0);
             // 
@@ -1002,10 +1014,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(9, 215);
+            this.label9.Location = new System.Drawing.Point(11, 269);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 21);
+            this.label9.Size = new System.Drawing.Size(103, 27);
             this.label9.TabIndex = 74;
             this.label9.Text = "End Date";
             // 
@@ -1013,10 +1025,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(9, 145);
+            this.label10.Location = new System.Drawing.Point(11, 181);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 21);
+            this.label10.Size = new System.Drawing.Size(109, 27);
             this.label10.TabIndex = 73;
             this.label10.Text = "Start Date";
             // 
@@ -1024,10 +1036,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(21, 72);
+            this.label11.Location = new System.Drawing.Point(26, 90);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 21);
+            this.label11.Size = new System.Drawing.Size(69, 27);
             this.label11.TabIndex = 72;
             this.label11.Text = "Name";
             // 
@@ -1037,8 +1049,9 @@
             this.tabScheduleTime.Controls.Add(this.panelleftST);
             this.tabScheduleTime.ImageIndex = 2;
             this.tabScheduleTime.Location = new System.Drawing.Point(4, 54);
+            this.tabScheduleTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabScheduleTime.Name = "tabScheduleTime";
-            this.tabScheduleTime.Size = new System.Drawing.Size(989, 495);
+            this.tabScheduleTime.Size = new System.Drawing.Size(1238, 633);
             this.tabScheduleTime.TabIndex = 2;
             this.tabScheduleTime.Text = "Schedule Time";
             this.tabScheduleTime.UseVisualStyleBackColor = true;
@@ -1047,9 +1060,10 @@
             // 
             this.panelrightST.Controls.Add(this.dgvST);
             this.panelrightST.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelrightST.Location = new System.Drawing.Point(374, 0);
+            this.panelrightST.Location = new System.Drawing.Point(468, 0);
+            this.panelrightST.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelrightST.Name = "panelrightST";
-            this.panelrightST.Size = new System.Drawing.Size(615, 495);
+            this.panelrightST.Size = new System.Drawing.Size(770, 633);
             this.panelrightST.TabIndex = 1;
             // 
             // dgvST
@@ -1063,7 +1077,7 @@
             this.dgvST.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1094,7 +1108,7 @@
             this.dgvST.ReadOnly = true;
             this.dgvST.RowHeadersVisible = false;
             this.dgvST.RowTemplate.Height = 24;
-            this.dgvST.Size = new System.Drawing.Size(615, 495);
+            this.dgvST.Size = new System.Drawing.Size(770, 633);
             this.dgvST.TabIndex = 4;
             this.dgvST.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvST.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1192,25 +1206,27 @@
             this.panelleftST.Controls.Add(this.label1);
             this.panelleftST.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelleftST.Location = new System.Drawing.Point(0, 0);
+            this.panelleftST.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelleftST.Name = "panelleftST";
-            this.panelleftST.Size = new System.Drawing.Size(374, 495);
+            this.panelleftST.Size = new System.Drawing.Size(468, 633);
             this.panelleftST.TabIndex = 0;
             // 
             // STTime
             // 
             this.STTime.Animated = true;
             this.STTime.AutoRoundedCorners = true;
-            this.STTime.BorderRadius = 21;
+            this.STTime.BorderRadius = 26;
             this.STTime.Checked = true;
             this.STTime.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.STTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.STTime.Location = new System.Drawing.Point(109, 196);
+            this.STTime.Location = new System.Drawing.Point(136, 245);
+            this.STTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.STTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.STTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.STTime.Name = "STTime";
             this.STTime.ShowUpDown = true;
-            this.STTime.Size = new System.Drawing.Size(247, 44);
+            this.STTime.Size = new System.Drawing.Size(309, 55);
             this.STTime.TabIndex = 89;
             this.STTime.Value = new System.DateTime(2022, 12, 8, 23, 43, 0, 0);
             // 
@@ -1218,16 +1234,17 @@
             // 
             this.STDate.Animated = true;
             this.STDate.AutoRoundedCorners = true;
-            this.STDate.BorderRadius = 21;
+            this.STDate.BorderRadius = 26;
             this.STDate.Checked = true;
             this.STDate.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.STDate.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.STDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.STDate.Location = new System.Drawing.Point(109, 130);
+            this.STDate.Location = new System.Drawing.Point(136, 162);
+            this.STDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.STDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.STDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.STDate.Name = "STDate";
-            this.STDate.Size = new System.Drawing.Size(247, 44);
+            this.STDate.Size = new System.Drawing.Size(309, 55);
             this.STDate.TabIndex = 88;
             this.STDate.Value = new System.DateTime(2022, 11, 11, 14, 24, 37, 31);
             // 
@@ -1235,10 +1252,10 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(21, 208);
+            this.label13.Location = new System.Drawing.Point(26, 260);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 21);
+            this.label13.Size = new System.Drawing.Size(60, 27);
             this.label13.TabIndex = 87;
             this.label13.Text = "Time";
             // 
@@ -1246,10 +1263,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(21, 140);
+            this.label12.Location = new System.Drawing.Point(26, 175);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 21);
+            this.label12.Size = new System.Drawing.Size(58, 27);
             this.label12.TabIndex = 86;
             this.label12.Text = "Date";
             // 
@@ -1257,7 +1274,7 @@
             // 
             this.btnSTSave.Animated = true;
             this.btnSTSave.AutoRoundedCorners = true;
-            this.btnSTSave.BorderRadius = 20;
+            this.btnSTSave.BorderRadius = 26;
             this.btnSTSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSTSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSTSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -1265,10 +1282,10 @@
             this.btnSTSave.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSTSave.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSTSave.ForeColor = System.Drawing.Color.White;
-            this.btnSTSave.Location = new System.Drawing.Point(57, 290);
+            this.btnSTSave.Location = new System.Drawing.Point(71, 362);
             this.btnSTSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSTSave.Name = "btnSTSave";
-            this.btnSTSave.Size = new System.Drawing.Size(97, 43);
+            this.btnSTSave.Size = new System.Drawing.Size(121, 54);
             this.btnSTSave.TabIndex = 85;
             this.btnSTSave.Text = "Save";
             this.btnSTSave.Click += new System.EventHandler(this.BtnSTSave_Click);
@@ -1277,7 +1294,7 @@
             // 
             this.btnSTUpdate.Animated = true;
             this.btnSTUpdate.AutoRoundedCorners = true;
-            this.btnSTUpdate.BorderRadius = 20;
+            this.btnSTUpdate.BorderRadius = 26;
             this.btnSTUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSTUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSTUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -1285,10 +1302,10 @@
             this.btnSTUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(182)))), ((int)(((byte)(211)))));
             this.btnSTUpdate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSTUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnSTUpdate.Location = new System.Drawing.Point(158, 290);
+            this.btnSTUpdate.Location = new System.Drawing.Point(198, 362);
             this.btnSTUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnSTUpdate.Name = "btnSTUpdate";
-            this.btnSTUpdate.Size = new System.Drawing.Size(97, 43);
+            this.btnSTUpdate.Size = new System.Drawing.Size(121, 54);
             this.btnSTUpdate.TabIndex = 84;
             this.btnSTUpdate.Text = "Update";
             this.btnSTUpdate.Visible = false;
@@ -1297,7 +1314,7 @@
             // 
             this.btnSTCancel.Animated = true;
             this.btnSTCancel.AutoRoundedCorners = true;
-            this.btnSTCancel.BorderRadius = 20;
+            this.btnSTCancel.BorderRadius = 26;
             this.btnSTCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSTCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSTCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -1305,10 +1322,10 @@
             this.btnSTCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(73)))), ((int)(((byte)(131)))));
             this.btnSTCancel.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSTCancel.ForeColor = System.Drawing.Color.White;
-            this.btnSTCancel.Location = new System.Drawing.Point(259, 290);
+            this.btnSTCancel.Location = new System.Drawing.Point(324, 362);
             this.btnSTCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnSTCancel.Name = "btnSTCancel";
-            this.btnSTCancel.Size = new System.Drawing.Size(97, 43);
+            this.btnSTCancel.Size = new System.Drawing.Size(121, 54);
             this.btnSTCancel.TabIndex = 83;
             this.btnSTCancel.Text = "Cancel";
             this.btnSTCancel.Click += new System.EventHandler(this.BtnSTCancel_Click);
@@ -1325,9 +1342,10 @@
             this.CbSTName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbSTName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.CbSTName.ItemHeight = 30;
-            this.CbSTName.Location = new System.Drawing.Point(109, 64);
+            this.CbSTName.Location = new System.Drawing.Point(136, 80);
+            this.CbSTName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CbSTName.Name = "CbSTName";
-            this.CbSTName.Size = new System.Drawing.Size(247, 36);
+            this.CbSTName.Size = new System.Drawing.Size(308, 36);
             this.CbSTName.TabIndex = 82;
             this.CbSTName.SelectedIndexChanged += new System.EventHandler(this.CbSTName_SelectedIndexChanged);
             // 
@@ -1335,10 +1353,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 72);
+            this.label1.Location = new System.Drawing.Point(26, 90);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 21);
+            this.label1.Size = new System.Drawing.Size(69, 27);
             this.label1.TabIndex = 81;
             this.label1.Text = "Name";
             // 
@@ -1352,11 +1370,11 @@
             // 
             // FrmMovie
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.TabControlMovie);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmMovie";
-            this.Size = new System.Drawing.Size(997, 553);
+            this.Size = new System.Drawing.Size(1246, 691);
             this.Load += new System.EventHandler(this.FrmMovie_Load);
             this.TabControlMovie.ResumeLayout(false);
             this.tabMovie.ResumeLayout(false);

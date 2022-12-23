@@ -60,7 +60,6 @@
             this.txtAdminName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvAdmin = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.ColNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAdminName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +74,7 @@
             this.ColAdminPostcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDel = new System.Windows.Forms.DataGridViewImageColumn();
             this.ColAdminPhotoString = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdminPhoto)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -688,17 +688,6 @@
             this.dgvAdmin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAdmin_CellContentClick);
             this.dgvAdmin.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAdmin_CellDoubleClick);
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewImageColumn1.FillWeight = 50.76143F;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // ColNo
             // 
             this.ColNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -814,10 +803,20 @@
             this.ColAdminPhotoString.ReadOnly = true;
             this.ColAdminPhotoString.Visible = false;
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewImageColumn1.FillWeight = 50.76143F;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // FrmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
