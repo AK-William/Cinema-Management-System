@@ -517,8 +517,8 @@
             // 
             // FrmMain
             // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.panelBody);
             this.Controls.Add(this.paneltitlebar);
             this.Controls.Add(this.panelTitle);

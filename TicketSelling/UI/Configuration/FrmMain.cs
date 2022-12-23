@@ -55,21 +55,18 @@ namespace TicketSelling.UI.Configuration
                 btnMenu.Dock = DockStyle.Top;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
-
                     menuButton.Text = "";
                     menuButton.ImageAlign = ContentAlignment.MiddleCenter;
                     menuButton.Padding = new Padding(0);
                 }
                 foreach (Button menuButton in panelConfiguration.Controls.OfType<Button>())
                 {
-
                     menuButton.Text = "";
                     menuButton.ImageAlign = ContentAlignment.MiddleCenter;
                     menuButton.Padding = new Padding(0);
                 }
                 foreach (Button menuButton in panelEntry.Controls.OfType<Button>())
                 {
-
                     menuButton.Text = "";
                     menuButton.ImageAlign = ContentAlignment.MiddleCenter;
                     menuButton.Padding = new Padding(0);
@@ -247,7 +244,8 @@ namespace TicketSelling.UI.Configuration
 
         private void ShowSubMenu(Panel pnl) // Button drop down open
         {
-            pnl.Height = pnl.Controls.OfType<Button>().Count() * 78;
+            //pnl.Height = pnl.Controls.OfType<Button>().Count() * 78;
+            pnl.Height = 3 * btnHome.Height;
         }
 
         private void HideSubMenu() // Button drop down close
