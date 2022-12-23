@@ -22,7 +22,7 @@ namespace TicketSelling.UI.Configuration
 
         private void BtnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         public static string user;
@@ -61,6 +61,7 @@ namespace TicketSelling.UI.Configuration
         private void FrmLogin_Load(object sender, EventArgs e)
         {
             txtUsername.Focus();
+            txtPassword.UseSystemPasswordChar = true;
         }
 
         private bool CheckRequireFields()
@@ -98,5 +99,19 @@ namespace TicketSelling.UI.Configuration
                 btnLogin.Focus();
             }
         }
+
+        private void ChkSP_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkSP.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+       
     }
 }

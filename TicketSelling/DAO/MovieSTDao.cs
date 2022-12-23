@@ -11,63 +11,13 @@ using System.IO;
 
 namespace TicketSelling.DAO
 {
-    public class MovieSDDao
+    public class MovieSTDao
     {
         SqlConnection sqlConnection;
         SqlCommand scom;
         SqlDataAdapter adapter;
 
-        public MessageEntity SaveMovieSD(int UserID, MovieSD req)
-        {
-            DataSet ds = new DataSet();
-            sqlConnection = DbConnector.Connect();
-            if (sqlConnection == null)
-            {
-                return null;
-            }
-            MessageEntity _MessageEntity = null;
-            try
-            {
-                    scom = new SqlCommand(ProcedureConstants.SaveMovieSD, sqlConnection);
-                    scom.CommandType = CommandType.Text;
-                    scom.Parameters.AddWithValue("@MovieId", req.MovieId);
-                    scom.Parameters.AddWithValue("@StartDate", req.StartDate);
-                    scom.Parameters.AddWithValue("@EndDate", req.EndDate);
-                    scom.Parameters.AddWithValue("@CreatedBy", UserID);
-                    ds = new DataSet();
-                    adapter = new SqlDataAdapter(scom);
-                    adapter.Fill(ds);
-                
-
-                sqlConnection.Close();
-                _MessageEntity = SqlDataSet.Check(ds, 2);
-                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
-                    return _MessageEntity;
-
-                DataTable dt = ds.Tables[1];
-                _MessageEntity = SqlDataTable.Check(dt, 1);
-                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
-                    return new MessageEntity() { RespCode = "001", RespDesp = "Saving Error!", RespMessageType = CommonResponseMessage.ResErrorType };
-
-                dt = ds.Tables[0];
-
-                return new MessageEntity()
-                {
-                    RespCode = dt.Rows[0]["RespCode"].ToString(),
-                    RespDesp = dt.Rows[0]["RespDesp"].ToString(),
-                    RespMessageType = dt.Rows[0]["RespMessageType"].ToString()
-                };
-            }
-            catch (Exception ex)
-            {
-                _MessageEntity.RespCode = CommonResponseMessage.ExceptionErrorCode;
-                _MessageEntity.RespDesp = ex.Message;
-                _MessageEntity.RespMessageType = CommonResponseMessage.ResErrorType;
-                return _MessageEntity;
-            }
-        }
-
-        public ResMovieSD GetAllMovieSD()
+        public MessageEntity DeleteMovieST(int Id)
         {
             sqlConnection = DbConnector.Connect();
             if (sqlConnection == null)
@@ -77,61 +27,7 @@ namespace TicketSelling.DAO
             MessageEntity _MessageEntity = null;
             try
             {
-                scom = new SqlCommand(ProcedureConstants.GetAllMovieSD, sqlConnection);
-                scom.CommandType = CommandType.Text;
-                DataSet ds = new DataSet();
-                adapter = new SqlDataAdapter(scom);
-                adapter.Fill(ds);
-                sqlConnection.Close();
-
-                _MessageEntity = SqlDataSet.Check(ds, 1);
-                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
-                    return new ResMovieSD() { MessageEntity = _MessageEntity };
-
-                DataTable dt = ds.Tables[0];
-                List<MovieSD> lst = new List<MovieSD>();
-
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    lst.Add(new MovieSD
-                    {
-                        RowNumber = dt.Rows[i]["RowNumber"].ToString(),
-                        Id = Convert.ToInt32(dt.Rows[i]["Id"]),
-                        MovieId = Convert.ToInt32(dt.Rows[i]["MovieId"]),
-                        Name = dt.Rows[i]["Name"].ToString(),
-                        StartDate = Convert.ToDateTime(dt.Rows[i]["StartDate"].ToString()),
-                        EndDate = Convert.ToDateTime(dt.Rows[i]["EndDate"].ToString()),
-                    });
-                }
-                return new ResMovieSD()
-                {
-                    MessageEntity = new MessageEntity()
-                    {
-                        RespMessageType = CommonResponseMessage.ResSuccessType
-                    },
-                    LstMovieSD = lst
-                };
-            }
-            catch (Exception ex)
-            {
-                _MessageEntity.RespCode = CommonResponseMessage.ExceptionErrorCode;
-                _MessageEntity.RespDesp = ex.Message;
-                _MessageEntity.RespMessageType = CommonResponseMessage.ResErrorType;
-                return new ResMovieSD() { MessageEntity = _MessageEntity };
-            }
-        }
-
-        public MessageEntity DeleteMovieSD(int Id)
-        {
-            sqlConnection = DbConnector.Connect();
-            if (sqlConnection == null)
-            {
-                return null;
-            }
-            MessageEntity _MessageEntity = null;
-            try
-            {
-                scom = new SqlCommand(ProcedureConstants.DeleteMovieSD, sqlConnection);
+                scom = new SqlCommand(ProcedureConstants.DeleteMovieST, sqlConnection);
                 scom.CommandType = CommandType.Text;
                 scom.Parameters.AddWithValue("@Id", Id);
                 DataSet ds = new DataSet();
@@ -165,7 +61,7 @@ namespace TicketSelling.DAO
             }
         }
 
-        public MessageEntity UpdateMovieSD(int UserID, MovieSD req)
+        public ResMovieST GetAllMovieST()
         {
             sqlConnection = DbConnector.Connect();
             if (sqlConnection == null)
@@ -175,12 +71,116 @@ namespace TicketSelling.DAO
             MessageEntity _MessageEntity = null;
             try
             {
-                scom = new SqlCommand(ProcedureConstants.UpdateMovieSD, sqlConnection);
+                scom = new SqlCommand(ProcedureConstants.GetAllMovieST, sqlConnection);
+                scom.CommandType = CommandType.Text;
+                DataSet ds = new DataSet();
+                adapter = new SqlDataAdapter(scom);
+                adapter.Fill(ds);
+                sqlConnection.Close();
+
+                _MessageEntity = SqlDataSet.Check(ds, 1);
+                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
+                    return new ResMovieST() { MessageEntity = _MessageEntity };
+
+                DataTable dt = ds.Tables[0];
+                List<MovieST> lst = new List<MovieST>();
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    lst.Add(new MovieST
+                    {
+                        RowNumber = dt.Rows[i]["RowNumber"].ToString(),
+                        Id = Convert.ToInt32(dt.Rows[i]["Id"]),
+                        MovieId = Convert.ToInt32(dt.Rows[i]["MovieId"]),
+                        Name = dt.Rows[i]["Name"].ToString(),
+                        Date = Convert.ToDateTime(dt.Rows[i]["Date"].ToString()),
+                        Time = dt.Rows[i]["Time"].ToString(),
+                    });
+                }
+                return new ResMovieST()
+                {
+                    MessageEntity = new MessageEntity()
+                    {
+                        RespMessageType = CommonResponseMessage.ResSuccessType
+                    },
+                    LstMovieST = lst
+                };
+            }
+            catch (Exception ex)
+            {
+                _MessageEntity.RespCode = CommonResponseMessage.ExceptionErrorCode;
+                _MessageEntity.RespDesp = ex.Message;
+                _MessageEntity.RespMessageType = CommonResponseMessage.ResErrorType;
+                return new ResMovieST() { MessageEntity = _MessageEntity };
+            }
+        }
+
+        public MessageEntity SaveMovieST(int UserID, MovieST req)
+        {
+            DataSet ds = new DataSet();
+            sqlConnection = DbConnector.Connect();
+            if (sqlConnection == null)
+            {
+                return null;
+            }
+            MessageEntity _MessageEntity = null;
+            try
+            {
+                scom = new SqlCommand(ProcedureConstants.SaveMovieST, sqlConnection);
+                scom.CommandType = CommandType.Text;
+                scom.Parameters.AddWithValue("@MovieId", req.MovieId);
+                scom.Parameters.AddWithValue("@Date", req.Date);
+                scom.Parameters.AddWithValue("@Time", req.Time);
+                scom.Parameters.AddWithValue("@CreatedBy", UserID);
+                ds = new DataSet();
+                adapter = new SqlDataAdapter(scom);
+                adapter.Fill(ds);
+
+
+                sqlConnection.Close();
+                _MessageEntity = SqlDataSet.Check(ds, 2);
+                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
+                    return _MessageEntity;
+
+                DataTable dt = ds.Tables[1];
+                _MessageEntity = SqlDataTable.Check(dt, 1);
+                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
+                    return new MessageEntity() { RespCode = "001", RespDesp = "Saving Error!", RespMessageType = CommonResponseMessage.ResErrorType };
+
+                dt = ds.Tables[0];
+
+                return new MessageEntity()
+                {
+                    RespCode = dt.Rows[0]["RespCode"].ToString(),
+                    RespDesp = dt.Rows[0]["RespDesp"].ToString(),
+                    RespMessageType = dt.Rows[0]["RespMessageType"].ToString()
+                };
+            }
+            catch (Exception ex)
+            {
+                _MessageEntity.RespCode = CommonResponseMessage.ExceptionErrorCode;
+                _MessageEntity.RespDesp = ex.Message;
+                _MessageEntity.RespMessageType = CommonResponseMessage.ResErrorType;
+                return _MessageEntity;
+            }
+        }
+
+        public MessageEntity UpdateMovieST(int UserID, MovieST req)
+        {
+            sqlConnection = DbConnector.Connect();
+            if (sqlConnection == null)
+            {
+                return null;
+            }
+            MessageEntity _MessageEntity = null;
+            try
+            {
+                scom = new SqlCommand(ProcedureConstants.UpdateMovieST, sqlConnection);
                 scom.CommandType = CommandType.Text;
                 scom.Parameters.AddWithValue("@Id", req.Id);
                 scom.Parameters.AddWithValue("@MovieId", req.MovieId);
-                scom.Parameters.AddWithValue("@StartDate", req.StartDate);
-                scom.Parameters.AddWithValue("@EndDate", req.EndDate);
+                scom.Parameters.AddWithValue("@Date", req.Date);
+                scom.Parameters.AddWithValue("@Time", req.Time);
                 DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(scom);
                 adapter.Fill(ds);
@@ -211,7 +211,5 @@ namespace TicketSelling.DAO
                 return _MessageEntity;
             }
         }
-
-
     }
 }

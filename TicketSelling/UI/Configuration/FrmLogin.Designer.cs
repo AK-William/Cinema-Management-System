@@ -34,6 +34,7 @@
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.chkSP = new Guna.UI2.WinForms.Guna2CheckBox();
             this.btnLogin = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -61,7 +62,7 @@
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(332, 500);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(332, 515);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
             // label1
@@ -82,7 +83,7 @@
             this.guna2PictureBox1.Image = global::TicketSelling.Properties.Resources._130718_movie1;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(55, 206);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(241, 212);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -102,7 +103,7 @@
             this.guna2GradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel2.Location = new System.Drawing.Point(332, 0);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(342, 500);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(355, 515);
             this.guna2GradientPanel2.TabIndex = 1;
             // 
             // btnExit
@@ -115,7 +116,7 @@
             this.btnExit.ImageRotate = 0F;
             this.btnExit.ImageSize = new System.Drawing.Size(45, 45);
             this.btnExit.Location = new System.Drawing.Point(297, 11);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.PressedState.Image = global::TicketSelling.Properties.Resources.cancel_480px;
             this.btnExit.PressedState.ImageSize = new System.Drawing.Size(45, 45);
@@ -128,6 +129,7 @@
             this.guna2CustomGradientPanel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel2.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.guna2CustomGradientPanel2.BorderRadius = 3;
+            this.guna2CustomGradientPanel2.Controls.Add(this.chkSP);
             this.guna2CustomGradientPanel2.Controls.Add(this.btnLogin);
             this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox1);
             this.guna2CustomGradientPanel2.Controls.Add(this.txtPassword);
@@ -145,6 +147,25 @@
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(319, 402);
             this.guna2CustomGradientPanel2.TabIndex = 11;
             // 
+            // chkSP
+            // 
+            this.chkSP.AutoSize = true;
+            this.chkSP.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chkSP.CheckedState.BorderRadius = 0;
+            this.chkSP.CheckedState.BorderThickness = 0;
+            this.chkSP.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chkSP.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSP.Location = new System.Drawing.Point(101, 279);
+            this.chkSP.Name = "chkSP";
+            this.chkSP.Size = new System.Drawing.Size(111, 19);
+            this.chkSP.TabIndex = 79;
+            this.chkSP.Text = "Show Password";
+            this.chkSP.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chkSP.UncheckedState.BorderRadius = 0;
+            this.chkSP.UncheckedState.BorderThickness = 0;
+            this.chkSP.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chkSP.CheckedChanged += new System.EventHandler(this.ChkSP_CheckedChanged);
+            // 
             // btnLogin
             // 
             this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -160,7 +181,7 @@
             this.btnLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLogin.IconSize = 30;
             this.btnLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogin.Location = new System.Drawing.Point(88, 302);
+            this.btnLogin.Location = new System.Drawing.Point(88, 316);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnLogin.Size = new System.Drawing.Size(138, 40);
@@ -200,9 +221,9 @@
             this.txtPassword.IconLeft = global::TicketSelling.Properties.Resources.password_480px;
             this.txtPassword.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtPassword.Location = new System.Drawing.Point(30, 237);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderText = "Enter your Password";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(265, 32);
@@ -271,12 +292,14 @@
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(674, 500);
+            this.ClientSize = new System.Drawing.Size(687, 515);
+            this.ControlBox = false;
             this.Controls.Add(this.guna2GradientPanel2);
             this.Controls.Add(this.guna2GradientPanel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLogin";
             this.ShowInTaskbar = false;
@@ -295,8 +318,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2ImageButton btnExit;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
@@ -309,5 +330,7 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2CheckBox chkSP;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
     }
 }

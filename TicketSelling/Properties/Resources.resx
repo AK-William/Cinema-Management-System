@@ -193,6 +193,9 @@
   <data name="password_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password_480px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="address_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\address_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cinema vector 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cinema vector 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -207,6 +210,9 @@
   </data>
   <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eye_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="watching-movies-popcorn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\watching-movies-popcorn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,7 +250,7 @@
   <data name="cancel_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="address_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\address_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="closed_eye_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\closed_eye_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

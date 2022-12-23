@@ -23,7 +23,7 @@ namespace TicketSelling.UI.Configuration
         private int borderSize = 2;
         private Size formSize;
 
-        
+
 
         public FrmMain()
         {
@@ -34,7 +34,7 @@ namespace TicketSelling.UI.Configuration
             this.Padding = new Padding(borderSize);//Border size
             //this.BackColor = Color.FromArgb(51, 153, 255);//Border color
         }
-        
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -290,7 +290,11 @@ namespace TicketSelling.UI.Configuration
                     lblTitleChildForm.Text = btnHome.Tag.ToString();
                     iconCurrentChildForm.IconChar = btnHome.IconChar;
                     break;
-
+                case "Setting":
+                    frm = new FrmSetting();
+                    lblTitleChildForm.Text = btnSetting.Tag.ToString();
+                    iconCurrentChildForm.IconChar = btnSetting.IconChar;
+                    break;
             }
             panelBody.Controls.Add(frm);
             frm.Dock = DockStyle.Fill;
@@ -446,23 +450,20 @@ namespace TicketSelling.UI.Configuration
         {
             FrmLogin flm = new FrmLogin();
             flm.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void BtnSetting_Click(object sender, EventArgs e)
         {
-            panelBody.Controls.Clear();
-            UserControl frmSetting = new FrmSetting();
-            panelBody.Controls.Add(frmSetting);
-            frmSetting.Dock = DockStyle.Fill;
+            MenuClick(sender, e);
             DisableButton();
         }
 
         #region menu highlight active button
 
-        private IconButton currentBtn;
+        public IconButton currentBtn;
 
-        private void ActivateButton(object senderBtn)
+        public void ActivateButton(object senderBtn)
         {
             if (senderBtn != null)
             {
@@ -473,18 +474,24 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
-        private void DisableButton()
+        public void DisableButton()
         {
             if (currentBtn != null)
             {
-                if (currentBtn == btnAdmin || currentBtn == btnStaff || currentBtn == btnMovie || currentBtn == btnSeat)
+                if (panelleft.BackColor == Color.FromArgb(253, 73, 131))
                 {
-                    currentBtn.BackColor = Color.FromArgb(0, 102, 204);
+                    currentBtn.BackColor = Color.FromArgb(253, 73, 131);
                 }
-                else
+                else if (panelleft.BackColor == Color.FromArgb(0, 120, 215))
                 {
                     currentBtn.BackColor = Color.FromArgb(0, 120, 215);
                 }
+                else if (panelleft.BackColor == Color.FromArgb(27, 182, 211))
+                {
+                    currentBtn.BackColor = Color.FromArgb(27, 182, 211);
+                }
+
+
             }
         }
 

@@ -256,7 +256,7 @@ namespace TicketSelling.DAO
             }
         }
 
-        public int CheckSeatBySeatTypeId(int SeatTypeId)
+        public int CheckSeatBySeatTypeId(int SeatTypeId)  //Control delete seat type when seat are assign
         {
             sqlConnection = DbConnector.Connect();
             if (sqlConnection == null)

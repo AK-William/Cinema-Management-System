@@ -33,6 +33,8 @@ namespace TicketSelling.UI.Configuration
         {
             txtAdminName.Select();
             BindDgvAdmin();
+            txtAdminPassword.UseSystemPasswordChar = true;
+            hidepassword.Visible = false;
         }
 
         private void Reset()
@@ -230,8 +232,8 @@ namespace TicketSelling.UI.Configuration
                 {
                     SaveImageFilePath(res.AdminPhotoName);
                     UpdateAdminPhoto(res.AdminId);
-                   // Reset();
-                   // BindDgvAdmin();
+                    // Reset();
+                    // BindDgvAdmin();
                 }
                 else if (res.RespMessageType == CommonResponseMessage.ResErrorType)
                 {
@@ -461,6 +463,21 @@ namespace TicketSelling.UI.Configuration
         private void TxtAdminUsername_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.KeyChar = char.ToLower(e.KeyChar);
+        }
+
+        private void Showpassword_Click(object sender, EventArgs e)
+        {
+            txtAdminPassword.UseSystemPasswordChar = false;
+            hidepassword.Visible = true;
+            showpassword.Visible = false;
+
+        }
+
+        private void Hidepassword_Click(object sender, EventArgs e)
+        {
+            txtAdminPassword.UseSystemPasswordChar = true;
+            hidepassword.Visible = false;
+            showpassword.Visible = true;
         }
     }
 }

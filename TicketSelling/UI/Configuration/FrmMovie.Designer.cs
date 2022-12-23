@@ -76,6 +76,13 @@
             this.tabScheduleDate = new System.Windows.Forms.TabPage();
             this.panelSDdgv = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvSD = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMovieSDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMovieId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNameSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDelSD = new System.Windows.Forms.DataGridViewImageColumn();
             this.panelSDLeft = new Guna.UI2.WinForms.Guna2Panel();
             this.CbSDName = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnSDSave = new Guna.UI2.WinForms.Guna2Button();
@@ -87,33 +94,26 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tabScheduleTime = new System.Windows.Forms.TabPage();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMovieSDId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMovieId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNameSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDelSD = new System.Windows.Forms.DataGridViewImageColumn();
-            this.panelleftST = new System.Windows.Forms.Panel();
             this.panelrightST = new System.Windows.Forms.Panel();
             this.dgvST = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.cbMovieST = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColIDST = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMovieIdST = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSTDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSTTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDelST = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panelleftST = new System.Windows.Forms.Panel();
+            this.STTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.STDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.btnSTSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnSTUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnSTCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.STDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.STTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.CbSTName = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.TabControlMovie.SuspendLayout();
             this.tabMovie.SuspendLayout();
             this.panelMoviedgv.SuspendLayout();
@@ -125,9 +125,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSD)).BeginInit();
             this.panelSDLeft.SuspendLayout();
             this.tabScheduleTime.SuspendLayout();
-            this.panelleftST.SuspendLayout();
             this.panelrightST.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvST)).BeginInit();
+            this.panelleftST.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabControlMovie
@@ -136,8 +136,9 @@
             this.TabControlMovie.Controls.Add(this.tabScheduleDate);
             this.TabControlMovie.Controls.Add(this.tabScheduleTime);
             this.TabControlMovie.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabControlMovie.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabControlMovie.ImageList = this.imageList1;
-            this.TabControlMovie.ItemSize = new System.Drawing.Size(180, 40);
+            this.TabControlMovie.ItemSize = new System.Drawing.Size(180, 50);
             this.TabControlMovie.Location = new System.Drawing.Point(0, 0);
             this.TabControlMovie.Name = "TabControlMovie";
             this.TabControlMovie.SelectedIndex = 0;
@@ -157,7 +158,7 @@
             this.TabControlMovie.TabButtonSelectedState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
             this.TabControlMovie.TabButtonSelectedState.ForeColor = System.Drawing.Color.White;
             this.TabControlMovie.TabButtonSelectedState.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.TabControlMovie.TabButtonSize = new System.Drawing.Size(180, 40);
+            this.TabControlMovie.TabButtonSize = new System.Drawing.Size(180, 50);
             this.TabControlMovie.TabIndex = 0;
             this.TabControlMovie.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.TabControlMovie.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
@@ -167,11 +168,12 @@
             // 
             this.tabMovie.Controls.Add(this.panelMoviedgv);
             this.tabMovie.Controls.Add(this.panelMovieTop);
+            this.tabMovie.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabMovie.ImageIndex = 0;
-            this.tabMovie.Location = new System.Drawing.Point(4, 44);
+            this.tabMovie.Location = new System.Drawing.Point(4, 54);
             this.tabMovie.Name = "tabMovie";
             this.tabMovie.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMovie.Size = new System.Drawing.Size(989, 505);
+            this.tabMovie.Size = new System.Drawing.Size(989, 495);
             this.tabMovie.TabIndex = 0;
             this.tabMovie.Text = "Movie";
             this.tabMovie.UseVisualStyleBackColor = true;
@@ -182,7 +184,7 @@
             this.panelMoviedgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMoviedgv.Location = new System.Drawing.Point(3, 258);
             this.panelMoviedgv.Name = "panelMoviedgv";
-            this.panelMoviedgv.Size = new System.Drawing.Size(983, 244);
+            this.panelMoviedgv.Size = new System.Drawing.Size(983, 234);
             this.panelMoviedgv.TabIndex = 1;
             // 
             // dgvMovie
@@ -193,11 +195,10 @@
             this.dgvMovie.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvMovie.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvMovie.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvMovie.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -218,7 +219,7 @@
             this.ColMovieCoverString});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -233,7 +234,7 @@
             this.dgvMovie.RowHeadersVisible = false;
             this.dgvMovie.RowHeadersWidth = 45;
             this.dgvMovie.RowTemplate.Height = 100;
-            this.dgvMovie.Size = new System.Drawing.Size(983, 244);
+            this.dgvMovie.Size = new System.Drawing.Size(983, 234);
             this.dgvMovie.TabIndex = 63;
             this.dgvMovie.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvMovie.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -275,7 +276,6 @@
             this.ColIdMovie.Name = "ColIdMovie";
             this.ColIdMovie.ReadOnly = true;
             this.ColIdMovie.Visible = false;
-            this.ColIdMovie.Width = 51;
             // 
             // ColMovieName
             // 
@@ -290,7 +290,6 @@
             // 
             this.ColMovieCover.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColMovieCover.DataPropertyName = "MovieCoverByte";
-            this.ColMovieCover.FillWeight = 181.2669F;
             this.ColMovieCover.HeaderText = "Movie Cover";
             this.ColMovieCover.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.ColMovieCover.Name = "ColMovieCover";
@@ -311,7 +310,7 @@
             // 
             this.ColRuntime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColRuntime.DataPropertyName = "Runtime";
-            this.ColRuntime.FillWeight = 90.63343F;
+            this.ColRuntime.FillWeight = 60F;
             this.ColRuntime.HeaderText = "Runtime";
             this.ColRuntime.Name = "ColRuntime";
             this.ColRuntime.ReadOnly = true;
@@ -345,14 +344,15 @@
             // 
             // ColDelMovie
             // 
-            this.ColDelMovie.FillWeight = 135.6957F;
+            this.ColDelMovie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColDelMovie.FillWeight = 15F;
             this.ColDelMovie.HeaderText = "";
             this.ColDelMovie.Image = global::TicketSelling.Properties.Resources.delete;
+            this.ColDelMovie.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.ColDelMovie.Name = "ColDelMovie";
             this.ColDelMovie.ReadOnly = true;
             this.ColDelMovie.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.ColDelMovie.ToolTipText = "Delete";
-            this.ColDelMovie.Width = 5;
             // 
             // ColMovieCoverString
             // 
@@ -361,7 +361,6 @@
             this.ColMovieCoverString.Name = "ColMovieCoverString";
             this.ColMovieCoverString.ReadOnly = true;
             this.ColMovieCoverString.Visible = false;
-            this.ColMovieCoverString.Width = 183;
             // 
             // panelMovieTop
             // 
@@ -489,7 +488,7 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(47)))), ((int)(((byte)(57)))));
+            this.pictureBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox.ImageRotate = 0F;
             this.pictureBox.Location = new System.Drawing.Point(596, 15);
             this.pictureBox.Name = "pictureBox";
@@ -527,7 +526,7 @@
             this.btnMovieUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnMovieUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnMovieUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMovieUpdate.FillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnMovieUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(182)))), ((int)(((byte)(211)))));
             this.btnMovieUpdate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnMovieUpdate.ForeColor = System.Drawing.Color.White;
             this.btnMovieUpdate.Location = new System.Drawing.Point(856, 124);
@@ -547,7 +546,7 @@
             this.btnMovieCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnMovieCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnMovieCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMovieCancel.FillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnMovieCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(73)))), ((int)(((byte)(131)))));
             this.btnMovieCancel.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnMovieCancel.ForeColor = System.Drawing.Color.White;
             this.btnMovieCancel.Location = new System.Drawing.Point(856, 184);
@@ -725,10 +724,10 @@
             this.tabScheduleDate.Controls.Add(this.panelSDdgv);
             this.tabScheduleDate.Controls.Add(this.panelSDLeft);
             this.tabScheduleDate.ImageIndex = 1;
-            this.tabScheduleDate.Location = new System.Drawing.Point(4, 44);
+            this.tabScheduleDate.Location = new System.Drawing.Point(4, 54);
             this.tabScheduleDate.Name = "tabScheduleDate";
             this.tabScheduleDate.Padding = new System.Windows.Forms.Padding(3);
-            this.tabScheduleDate.Size = new System.Drawing.Size(989, 505);
+            this.tabScheduleDate.Size = new System.Drawing.Size(989, 495);
             this.tabScheduleDate.TabIndex = 1;
             this.tabScheduleDate.Text = "Schedule Date";
             this.tabScheduleDate.UseVisualStyleBackColor = true;
@@ -739,7 +738,7 @@
             this.panelSDdgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSDdgv.Location = new System.Drawing.Point(377, 3);
             this.panelSDdgv.Name = "panelSDdgv";
-            this.panelSDdgv.Size = new System.Drawing.Size(609, 499);
+            this.panelSDdgv.Size = new System.Drawing.Size(609, 489);
             this.panelSDdgv.TabIndex = 1;
             // 
             // dgvSD
@@ -753,7 +752,7 @@
             this.dgvSD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -770,7 +769,7 @@
             this.ColDelSD});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -784,7 +783,7 @@
             this.dgvSD.ReadOnly = true;
             this.dgvSD.RowHeadersVisible = false;
             this.dgvSD.RowTemplate.Height = 24;
-            this.dgvSD.Size = new System.Drawing.Size(609, 499);
+            this.dgvSD.Size = new System.Drawing.Size(609, 489);
             this.dgvSD.TabIndex = 3;
             this.dgvSD.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvSD.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -809,189 +808,6 @@
             this.dgvSD.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvSD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSD_CellContentClick);
             this.dgvSD.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSD_CellDoubleClick);
-            // 
-            // panelSDLeft
-            // 
-            this.panelSDLeft.Controls.Add(this.CbSDName);
-            this.panelSDLeft.Controls.Add(this.btnSDSave);
-            this.panelSDLeft.Controls.Add(this.btnSDUpdate);
-            this.panelSDLeft.Controls.Add(this.btnSDCancel);
-            this.panelSDLeft.Controls.Add(this.txtSDEndDate);
-            this.panelSDLeft.Controls.Add(this.txtSDStartDate);
-            this.panelSDLeft.Controls.Add(this.label9);
-            this.panelSDLeft.Controls.Add(this.label10);
-            this.panelSDLeft.Controls.Add(this.label11);
-            this.panelSDLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSDLeft.Location = new System.Drawing.Point(3, 3);
-            this.panelSDLeft.Name = "panelSDLeft";
-            this.panelSDLeft.Size = new System.Drawing.Size(374, 499);
-            this.panelSDLeft.TabIndex = 0;
-            // 
-            // CbSDName
-            // 
-            this.CbSDName.AutoRoundedCorners = true;
-            this.CbSDName.BackColor = System.Drawing.Color.Transparent;
-            this.CbSDName.BorderRadius = 17;
-            this.CbSDName.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CbSDName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbSDName.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CbSDName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.CbSDName.Font = new System.Drawing.Font("Times New Roman", 15.75F);
-            this.CbSDName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.CbSDName.ItemHeight = 30;
-            this.CbSDName.Location = new System.Drawing.Point(109, 64);
-            this.CbSDName.Name = "CbSDName";
-            this.CbSDName.Size = new System.Drawing.Size(247, 36);
-            this.CbSDName.TabIndex = 80;
-            this.CbSDName.SelectedIndexChanged += new System.EventHandler(this.CbSDName_SelectedIndexChanged);
-            // 
-            // btnSDSave
-            // 
-            this.btnSDSave.Animated = true;
-            this.btnSDSave.AutoRoundedCorners = true;
-            this.btnSDSave.BorderRadius = 20;
-            this.btnSDSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSDSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSDSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSDSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSDSave.FillColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSDSave.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnSDSave.ForeColor = System.Drawing.Color.White;
-            this.btnSDSave.Location = new System.Drawing.Point(143, 321);
-            this.btnSDSave.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSDSave.Name = "btnSDSave";
-            this.btnSDSave.Size = new System.Drawing.Size(97, 43);
-            this.btnSDSave.TabIndex = 79;
-            this.btnSDSave.Text = "Save";
-            this.btnSDSave.Click += new System.EventHandler(this.BtnSDSave_Click);
-            // 
-            // btnSDUpdate
-            // 
-            this.btnSDUpdate.Animated = true;
-            this.btnSDUpdate.AutoRoundedCorners = true;
-            this.btnSDUpdate.BorderRadius = 20;
-            this.btnSDUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSDUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSDUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSDUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSDUpdate.FillColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSDUpdate.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnSDUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnSDUpdate.Location = new System.Drawing.Point(46, 392);
-            this.btnSDUpdate.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSDUpdate.Name = "btnSDUpdate";
-            this.btnSDUpdate.Size = new System.Drawing.Size(97, 43);
-            this.btnSDUpdate.TabIndex = 78;
-            this.btnSDUpdate.Text = "Update";
-            this.btnSDUpdate.Visible = false;
-            this.btnSDUpdate.Click += new System.EventHandler(this.BtnSDUpdate_Click);
-            // 
-            // btnSDCancel
-            // 
-            this.btnSDCancel.Animated = true;
-            this.btnSDCancel.AutoRoundedCorners = true;
-            this.btnSDCancel.BorderRadius = 20;
-            this.btnSDCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSDCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSDCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSDCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSDCancel.FillColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSDCancel.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnSDCancel.ForeColor = System.Drawing.Color.White;
-            this.btnSDCancel.Location = new System.Drawing.Point(236, 392);
-            this.btnSDCancel.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSDCancel.Name = "btnSDCancel";
-            this.btnSDCancel.Size = new System.Drawing.Size(97, 43);
-            this.btnSDCancel.TabIndex = 77;
-            this.btnSDCancel.Text = "Cancel";
-            this.btnSDCancel.Click += new System.EventHandler(this.BtnSDCancel_Click);
-            // 
-            // txtSDEndDate
-            // 
-            this.txtSDEndDate.Animated = true;
-            this.txtSDEndDate.AutoRoundedCorners = true;
-            this.txtSDEndDate.BorderRadius = 21;
-            this.txtSDEndDate.Checked = true;
-            this.txtSDEndDate.FillColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtSDEndDate.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txtSDEndDate.Location = new System.Drawing.Point(109, 202);
-            this.txtSDEndDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.txtSDEndDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.txtSDEndDate.Name = "txtSDEndDate";
-            this.txtSDEndDate.Size = new System.Drawing.Size(247, 44);
-            this.txtSDEndDate.TabIndex = 76;
-            this.txtSDEndDate.Value = new System.DateTime(2022, 11, 11, 14, 24, 37, 31);
-            // 
-            // txtSDStartDate
-            // 
-            this.txtSDStartDate.Animated = true;
-            this.txtSDStartDate.AutoRoundedCorners = true;
-            this.txtSDStartDate.BorderRadius = 21;
-            this.txtSDStartDate.Checked = true;
-            this.txtSDStartDate.FillColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtSDStartDate.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.txtSDStartDate.Location = new System.Drawing.Point(109, 132);
-            this.txtSDStartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.txtSDStartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.txtSDStartDate.Name = "txtSDStartDate";
-            this.txtSDStartDate.Size = new System.Drawing.Size(247, 44);
-            this.txtSDStartDate.TabIndex = 75;
-            this.txtSDStartDate.Value = new System.DateTime(2022, 11, 11, 14, 24, 37, 31);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(9, 215);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 21);
-            this.label9.TabIndex = 74;
-            this.label9.Text = "End Date";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(9, 145);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 21);
-            this.label10.TabIndex = 73;
-            this.label10.Text = "Start Date";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(21, 72);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 21);
-            this.label11.TabIndex = 72;
-            this.label11.Text = "Name";
-            // 
-            // tabScheduleTime
-            // 
-            this.tabScheduleTime.Controls.Add(this.panelrightST);
-            this.tabScheduleTime.Controls.Add(this.panelleftST);
-            this.tabScheduleTime.ImageIndex = 2;
-            this.tabScheduleTime.Location = new System.Drawing.Point(4, 44);
-            this.tabScheduleTime.Name = "tabScheduleTime";
-            this.tabScheduleTime.Size = new System.Drawing.Size(989, 505);
-            this.tabScheduleTime.TabIndex = 2;
-            this.tabScheduleTime.Text = "Schedule Time";
-            this.tabScheduleTime.UseVisualStyleBackColor = true;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "clapper_board_256px.png");
-            this.imageList1.Images.SetKeyName(1, "timeline_week_400px.png");
-            this.imageList1.Images.SetKeyName(2, "time_400px.png");
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -1052,30 +868,188 @@
             this.ColDelSD.ReadOnly = true;
             this.ColDelSD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
-            // panelleftST
+            // panelSDLeft
             // 
-            this.panelleftST.Controls.Add(this.STTime);
-            this.panelleftST.Controls.Add(this.STDate);
-            this.panelleftST.Controls.Add(this.label13);
-            this.panelleftST.Controls.Add(this.label12);
-            this.panelleftST.Controls.Add(this.btnSTSave);
-            this.panelleftST.Controls.Add(this.btnSTUpdate);
-            this.panelleftST.Controls.Add(this.btnSTCancel);
-            this.panelleftST.Controls.Add(this.cbMovieST);
-            this.panelleftST.Controls.Add(this.label1);
-            this.panelleftST.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelleftST.Location = new System.Drawing.Point(0, 0);
-            this.panelleftST.Name = "panelleftST";
-            this.panelleftST.Size = new System.Drawing.Size(386, 505);
-            this.panelleftST.TabIndex = 0;
+            this.panelSDLeft.Controls.Add(this.CbSDName);
+            this.panelSDLeft.Controls.Add(this.btnSDSave);
+            this.panelSDLeft.Controls.Add(this.btnSDUpdate);
+            this.panelSDLeft.Controls.Add(this.btnSDCancel);
+            this.panelSDLeft.Controls.Add(this.txtSDEndDate);
+            this.panelSDLeft.Controls.Add(this.txtSDStartDate);
+            this.panelSDLeft.Controls.Add(this.label9);
+            this.panelSDLeft.Controls.Add(this.label10);
+            this.panelSDLeft.Controls.Add(this.label11);
+            this.panelSDLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSDLeft.Location = new System.Drawing.Point(3, 3);
+            this.panelSDLeft.Name = "panelSDLeft";
+            this.panelSDLeft.Size = new System.Drawing.Size(374, 489);
+            this.panelSDLeft.TabIndex = 0;
+            // 
+            // CbSDName
+            // 
+            this.CbSDName.AutoRoundedCorners = true;
+            this.CbSDName.BackColor = System.Drawing.Color.Transparent;
+            this.CbSDName.BorderRadius = 17;
+            this.CbSDName.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CbSDName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbSDName.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CbSDName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CbSDName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbSDName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CbSDName.ItemHeight = 30;
+            this.CbSDName.Location = new System.Drawing.Point(109, 64);
+            this.CbSDName.Name = "CbSDName";
+            this.CbSDName.Size = new System.Drawing.Size(247, 36);
+            this.CbSDName.TabIndex = 80;
+            this.CbSDName.SelectedIndexChanged += new System.EventHandler(this.CbSDName_SelectedIndexChanged);
+            // 
+            // btnSDSave
+            // 
+            this.btnSDSave.Animated = true;
+            this.btnSDSave.AutoRoundedCorners = true;
+            this.btnSDSave.BorderRadius = 20;
+            this.btnSDSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSDSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSDSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSDSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSDSave.FillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSDSave.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnSDSave.ForeColor = System.Drawing.Color.White;
+            this.btnSDSave.Location = new System.Drawing.Point(158, 290);
+            this.btnSDSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSDSave.Name = "btnSDSave";
+            this.btnSDSave.Size = new System.Drawing.Size(97, 43);
+            this.btnSDSave.TabIndex = 79;
+            this.btnSDSave.Text = "Save";
+            this.btnSDSave.Click += new System.EventHandler(this.BtnSDSave_Click);
+            // 
+            // btnSDUpdate
+            // 
+            this.btnSDUpdate.Animated = true;
+            this.btnSDUpdate.AutoRoundedCorners = true;
+            this.btnSDUpdate.BorderRadius = 20;
+            this.btnSDUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSDUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSDUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSDUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSDUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(182)))), ((int)(((byte)(211)))));
+            this.btnSDUpdate.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnSDUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnSDUpdate.Location = new System.Drawing.Point(158, 290);
+            this.btnSDUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSDUpdate.Name = "btnSDUpdate";
+            this.btnSDUpdate.Size = new System.Drawing.Size(97, 43);
+            this.btnSDUpdate.TabIndex = 78;
+            this.btnSDUpdate.Text = "Update";
+            this.btnSDUpdate.Visible = false;
+            this.btnSDUpdate.Click += new System.EventHandler(this.BtnSDUpdate_Click);
+            // 
+            // btnSDCancel
+            // 
+            this.btnSDCancel.Animated = true;
+            this.btnSDCancel.AutoRoundedCorners = true;
+            this.btnSDCancel.BorderRadius = 20;
+            this.btnSDCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSDCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSDCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSDCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSDCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(73)))), ((int)(((byte)(131)))));
+            this.btnSDCancel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnSDCancel.ForeColor = System.Drawing.Color.White;
+            this.btnSDCancel.Location = new System.Drawing.Point(259, 290);
+            this.btnSDCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSDCancel.Name = "btnSDCancel";
+            this.btnSDCancel.Size = new System.Drawing.Size(97, 43);
+            this.btnSDCancel.TabIndex = 77;
+            this.btnSDCancel.Text = "Cancel";
+            this.btnSDCancel.Click += new System.EventHandler(this.BtnSDCancel_Click);
+            // 
+            // txtSDEndDate
+            // 
+            this.txtSDEndDate.Animated = true;
+            this.txtSDEndDate.AutoRoundedCorners = true;
+            this.txtSDEndDate.BorderRadius = 21;
+            this.txtSDEndDate.Checked = true;
+            this.txtSDEndDate.FillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtSDEndDate.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.txtSDEndDate.Location = new System.Drawing.Point(109, 202);
+            this.txtSDEndDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtSDEndDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtSDEndDate.Name = "txtSDEndDate";
+            this.txtSDEndDate.Size = new System.Drawing.Size(247, 44);
+            this.txtSDEndDate.TabIndex = 76;
+            this.txtSDEndDate.Value = new System.DateTime(2022, 11, 11, 14, 24, 37, 31);
+            // 
+            // txtSDStartDate
+            // 
+            this.txtSDStartDate.Animated = true;
+            this.txtSDStartDate.AutoRoundedCorners = true;
+            this.txtSDStartDate.BorderRadius = 21;
+            this.txtSDStartDate.Checked = true;
+            this.txtSDStartDate.FillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtSDStartDate.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.txtSDStartDate.Location = new System.Drawing.Point(109, 132);
+            this.txtSDStartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtSDStartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.txtSDStartDate.Name = "txtSDStartDate";
+            this.txtSDStartDate.Size = new System.Drawing.Size(247, 44);
+            this.txtSDStartDate.TabIndex = 75;
+            this.txtSDStartDate.Value = new System.DateTime(2022, 12, 7, 0, 0, 0, 0);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(9, 215);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 21);
+            this.label9.TabIndex = 74;
+            this.label9.Text = "End Date";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(9, 145);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 21);
+            this.label10.TabIndex = 73;
+            this.label10.Text = "Start Date";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(21, 72);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 21);
+            this.label11.TabIndex = 72;
+            this.label11.Text = "Name";
+            // 
+            // tabScheduleTime
+            // 
+            this.tabScheduleTime.Controls.Add(this.panelrightST);
+            this.tabScheduleTime.Controls.Add(this.panelleftST);
+            this.tabScheduleTime.ImageIndex = 2;
+            this.tabScheduleTime.Location = new System.Drawing.Point(4, 54);
+            this.tabScheduleTime.Name = "tabScheduleTime";
+            this.tabScheduleTime.Size = new System.Drawing.Size(989, 495);
+            this.tabScheduleTime.TabIndex = 2;
+            this.tabScheduleTime.Text = "Schedule Time";
+            this.tabScheduleTime.UseVisualStyleBackColor = true;
             // 
             // panelrightST
             // 
             this.panelrightST.Controls.Add(this.dgvST);
             this.panelrightST.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelrightST.Location = new System.Drawing.Point(386, 0);
+            this.panelrightST.Location = new System.Drawing.Point(374, 0);
             this.panelrightST.Name = "panelrightST";
-            this.panelrightST.Size = new System.Drawing.Size(603, 505);
+            this.panelrightST.Size = new System.Drawing.Size(615, 495);
             this.panelrightST.TabIndex = 1;
             // 
             // dgvST
@@ -1089,7 +1063,7 @@
             this.dgvST.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -1098,15 +1072,15 @@
             this.dgvST.ColumnHeadersHeight = 35;
             this.dgvST.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
+            this.ColIDST,
+            this.ColMovieIdST,
             this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewImageColumn1});
+            this.ColSTDate,
+            this.ColSTTime,
+            this.ColDelST});
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -1120,7 +1094,7 @@
             this.dgvST.ReadOnly = true;
             this.dgvST.RowHeadersVisible = false;
             this.dgvST.RowTemplate.Height = 24;
-            this.dgvST.Size = new System.Drawing.Size(603, 505);
+            this.dgvST.Size = new System.Drawing.Size(615, 495);
             this.dgvST.TabIndex = 4;
             this.dgvST.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvST.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1143,34 +1117,141 @@
             this.dgvST.ThemeStyle.RowsStyle.Height = 24;
             this.dgvST.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvST.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvST.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvST_CellContentClick);
+            this.dgvST.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvST_CellDoubleClick);
             // 
-            // cbMovieST
+            // dataGridViewTextBoxColumn2
             // 
-            this.cbMovieST.AutoRoundedCorners = true;
-            this.cbMovieST.BackColor = System.Drawing.Color.Transparent;
-            this.cbMovieST.BorderRadius = 17;
-            this.cbMovieST.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbMovieST.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMovieST.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbMovieST.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbMovieST.Font = new System.Drawing.Font("Times New Roman", 15.75F);
-            this.cbMovieST.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbMovieST.ItemHeight = 30;
-            this.cbMovieST.Location = new System.Drawing.Point(118, 68);
-            this.cbMovieST.Name = "cbMovieST";
-            this.cbMovieST.Size = new System.Drawing.Size(247, 36);
-            this.cbMovieST.TabIndex = 82;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "RowNumber";
+            this.dataGridViewTextBoxColumn2.FillWeight = 66.63515F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "No";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // label1
+            // ColIDST
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 76);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 21);
-            this.label1.TabIndex = 81;
-            this.label1.Text = "Name";
+            this.ColIDST.DataPropertyName = "Id";
+            this.ColIDST.HeaderText = "ID";
+            this.ColIDST.Name = "ColIDST";
+            this.ColIDST.ReadOnly = true;
+            this.ColIDST.Visible = false;
+            // 
+            // ColMovieIdST
+            // 
+            this.ColMovieIdST.DataPropertyName = "MovieId";
+            this.ColMovieIdST.HeaderText = "MovieID";
+            this.ColMovieIdST.Name = "ColMovieIdST";
+            this.ColMovieIdST.ReadOnly = true;
+            this.ColMovieIdST.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn6.FillWeight = 105.7516F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // ColSTDate
+            // 
+            this.ColSTDate.DataPropertyName = "Date";
+            this.ColSTDate.FillWeight = 105.7516F;
+            this.ColSTDate.HeaderText = "Date";
+            this.ColSTDate.Name = "ColSTDate";
+            this.ColSTDate.ReadOnly = true;
+            // 
+            // ColSTTime
+            // 
+            this.ColSTTime.DataPropertyName = "Time";
+            this.ColSTTime.FillWeight = 105.7516F;
+            this.ColSTTime.HeaderText = "Time";
+            this.ColSTTime.Name = "ColSTTime";
+            this.ColSTTime.ReadOnly = true;
+            // 
+            // ColDelST
+            // 
+            this.ColDelST.FillWeight = 53.681F;
+            this.ColDelST.HeaderText = "";
+            this.ColDelST.Image = ((System.Drawing.Image)(resources.GetObject("ColDelST.Image")));
+            this.ColDelST.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColDelST.Name = "ColDelST";
+            this.ColDelST.ReadOnly = true;
+            this.ColDelST.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // panelleftST
+            // 
+            this.panelleftST.Controls.Add(this.STTime);
+            this.panelleftST.Controls.Add(this.STDate);
+            this.panelleftST.Controls.Add(this.label13);
+            this.panelleftST.Controls.Add(this.label12);
+            this.panelleftST.Controls.Add(this.btnSTSave);
+            this.panelleftST.Controls.Add(this.btnSTUpdate);
+            this.panelleftST.Controls.Add(this.btnSTCancel);
+            this.panelleftST.Controls.Add(this.CbSTName);
+            this.panelleftST.Controls.Add(this.label1);
+            this.panelleftST.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelleftST.Location = new System.Drawing.Point(0, 0);
+            this.panelleftST.Name = "panelleftST";
+            this.panelleftST.Size = new System.Drawing.Size(374, 495);
+            this.panelleftST.TabIndex = 0;
+            // 
+            // STTime
+            // 
+            this.STTime.Animated = true;
+            this.STTime.AutoRoundedCorners = true;
+            this.STTime.BorderRadius = 21;
+            this.STTime.Checked = true;
+            this.STTime.FillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.STTime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.STTime.Location = new System.Drawing.Point(109, 196);
+            this.STTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.STTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.STTime.Name = "STTime";
+            this.STTime.ShowUpDown = true;
+            this.STTime.Size = new System.Drawing.Size(247, 44);
+            this.STTime.TabIndex = 89;
+            this.STTime.Value = new System.DateTime(2022, 12, 8, 23, 43, 0, 0);
+            // 
+            // STDate
+            // 
+            this.STDate.Animated = true;
+            this.STDate.AutoRoundedCorners = true;
+            this.STDate.BorderRadius = 21;
+            this.STDate.Checked = true;
+            this.STDate.FillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.STDate.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.STDate.Location = new System.Drawing.Point(109, 130);
+            this.STDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.STDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.STDate.Name = "STDate";
+            this.STDate.Size = new System.Drawing.Size(247, 44);
+            this.STDate.TabIndex = 88;
+            this.STDate.Value = new System.DateTime(2022, 11, 11, 14, 24, 37, 31);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(21, 208);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(47, 21);
+            this.label13.TabIndex = 87;
+            this.label13.Text = "Time";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(21, 140);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(44, 21);
+            this.label12.TabIndex = 86;
+            this.label12.Text = "Date";
             // 
             // btnSTSave
             // 
@@ -1184,12 +1265,13 @@
             this.btnSTSave.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSTSave.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSTSave.ForeColor = System.Drawing.Color.White;
-            this.btnSTSave.Location = new System.Drawing.Point(135, 434);
+            this.btnSTSave.Location = new System.Drawing.Point(57, 290);
             this.btnSTSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSTSave.Name = "btnSTSave";
             this.btnSTSave.Size = new System.Drawing.Size(97, 43);
             this.btnSTSave.TabIndex = 85;
             this.btnSTSave.Text = "Save";
+            this.btnSTSave.Click += new System.EventHandler(this.BtnSTSave_Click);
             // 
             // btnSTUpdate
             // 
@@ -1200,10 +1282,10 @@
             this.btnSTUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSTUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSTUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSTUpdate.FillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSTUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(182)))), ((int)(((byte)(211)))));
             this.btnSTUpdate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSTUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnSTUpdate.Location = new System.Drawing.Point(14, 434);
+            this.btnSTUpdate.Location = new System.Drawing.Point(158, 290);
             this.btnSTUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnSTUpdate.Name = "btnSTUpdate";
             this.btnSTUpdate.Size = new System.Drawing.Size(97, 43);
@@ -1220,133 +1302,58 @@
             this.btnSTCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSTCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSTCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSTCancel.FillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSTCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(73)))), ((int)(((byte)(131)))));
             this.btnSTCancel.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSTCancel.ForeColor = System.Drawing.Color.White;
-            this.btnSTCancel.Location = new System.Drawing.Point(246, 434);
+            this.btnSTCancel.Location = new System.Drawing.Point(259, 290);
             this.btnSTCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnSTCancel.Name = "btnSTCancel";
             this.btnSTCancel.Size = new System.Drawing.Size(97, 43);
             this.btnSTCancel.TabIndex = 83;
             this.btnSTCancel.Text = "Cancel";
+            this.btnSTCancel.Click += new System.EventHandler(this.BtnSTCancel_Click);
             // 
-            // dataGridViewTextBoxColumn2
+            // CbSTName
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "RowNumber";
-            this.dataGridViewTextBoxColumn2.FillWeight = 66.63515F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "No";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.CbSTName.AutoRoundedCorners = true;
+            this.CbSTName.BackColor = System.Drawing.Color.Transparent;
+            this.CbSTName.BorderRadius = 17;
+            this.CbSTName.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CbSTName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbSTName.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CbSTName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CbSTName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbSTName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CbSTName.ItemHeight = 30;
+            this.CbSTName.Location = new System.Drawing.Point(109, 64);
+            this.CbSTName.Name = "CbSTName";
+            this.CbSTName.Size = new System.Drawing.Size(247, 36);
+            this.CbSTName.TabIndex = 82;
+            this.CbSTName.SelectedIndexChanged += new System.EventHandler(this.CbSTName_SelectedIndexChanged);
             // 
-            // dataGridViewTextBoxColumn4
+            // label1
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn4.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Visible = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 72);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 21);
+            this.label1.TabIndex = 81;
+            this.label1.Text = "Name";
             // 
-            // dataGridViewTextBoxColumn5
+            // imageList1
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "MovieId";
-            this.dataGridViewTextBoxColumn5.HeaderText = "MovieID";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn6.FillWeight = 105.7516F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.FillWeight = 105.7516F;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Date";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.FillWeight = 105.7516F;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Time";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.FillWeight = 53.681F;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(30, 144);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 21);
-            this.label12.TabIndex = 86;
-            this.label12.Text = "Date";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(27, 219);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 21);
-            this.label13.TabIndex = 87;
-            this.label13.Text = "Time";
-            // 
-            // STDate
-            // 
-            this.STDate.Animated = true;
-            this.STDate.AutoRoundedCorners = true;
-            this.STDate.BorderRadius = 21;
-            this.STDate.Checked = true;
-            this.STDate.FillColor = System.Drawing.SystemColors.MenuHighlight;
-            this.STDate.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.STDate.Location = new System.Drawing.Point(118, 135);
-            this.STDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.STDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.STDate.Name = "STDate";
-            this.STDate.Size = new System.Drawing.Size(247, 44);
-            this.STDate.TabIndex = 88;
-            this.STDate.Value = new System.DateTime(2022, 11, 11, 14, 24, 37, 31);
-            // 
-            // STTime
-            // 
-            this.STTime.Animated = true;
-            this.STTime.AutoRoundedCorners = true;
-            this.STTime.BorderRadius = 21;
-            this.STTime.Checked = true;
-            this.STTime.FillColor = System.Drawing.SystemColors.MenuHighlight;
-            this.STTime.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STTime.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.STTime.Location = new System.Drawing.Point(118, 207);
-            this.STTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.STTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.STTime.Name = "STTime";
-            this.STTime.Size = new System.Drawing.Size(247, 44);
-            this.STTime.TabIndex = 89;
-            this.STTime.Value = new System.DateTime(2022, 11, 11, 14, 24, 37, 31);
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "clapper_board_256px.png");
+            this.imageList1.Images.SetKeyName(1, "timeline_week_400px.png");
+            this.imageList1.Images.SetKeyName(2, "time_400px.png");
             // 
             // FrmMovie
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.TabControlMovie);
             this.Name = "FrmMovie";
             this.Size = new System.Drawing.Size(997, 553);
@@ -1364,10 +1371,10 @@
             this.panelSDLeft.ResumeLayout(false);
             this.panelSDLeft.PerformLayout();
             this.tabScheduleTime.ResumeLayout(false);
-            this.panelleftST.ResumeLayout(false);
-            this.panelleftST.PerformLayout();
             this.panelrightST.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvST)).EndInit();
+            this.panelleftST.ResumeLayout(false);
+            this.panelleftST.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1394,17 +1401,6 @@
         private Guna.UI2.WinForms.Guna2Panel panelMovieTop;
         private Guna.UI2.WinForms.Guna2DataGridView dgvSD;
         private Guna.UI2.WinForms.Guna2DataGridView dgvMovie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColIdMovie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMovieName;
-        private System.Windows.Forms.DataGridViewImageColumn ColMovieCover;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColCasts;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColRuntime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMovieType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMovieLink;
-        private System.Windows.Forms.DataGridViewImageColumn ColDelMovie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColMovieCoverString;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox txtMovieLink;
         private System.Windows.Forms.Label label4;
@@ -1432,22 +1428,33 @@
         private System.Windows.Forms.DataGridViewImageColumn ColDelSD;
         private System.Windows.Forms.Panel panelrightST;
         private Guna.UI2.WinForms.Guna2DataGridView dgvST;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.Panel panelleftST;
         private Guna.UI2.WinForms.Guna2Button btnSTSave;
         private Guna.UI2.WinForms.Guna2Button btnSTUpdate;
         private Guna.UI2.WinForms.Guna2Button btnSTCancel;
-        private Guna.UI2.WinForms.Guna2ComboBox cbMovieST;
+        private Guna.UI2.WinForms.Guna2ComboBox CbSTName;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DateTimePicker STTime;
         private Guna.UI2.WinForms.Guna2DateTimePicker STDate;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColIDST;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMovieIdST;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSTDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSTTime;
+        private System.Windows.Forms.DataGridViewImageColumn ColDelST;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColIdMovie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMovieName;
+        private System.Windows.Forms.DataGridViewImageColumn ColMovieCover;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCasts;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColRuntime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMovieType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMovieLink;
+        private System.Windows.Forms.DataGridViewImageColumn ColDelMovie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMovieCoverString;
     }
 }

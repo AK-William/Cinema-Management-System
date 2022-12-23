@@ -281,7 +281,7 @@
             this.btnSeatTypeSave.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSeatTypeSave.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSeatTypeSave.ForeColor = System.Drawing.Color.White;
-            this.btnSeatTypeSave.Location = new System.Drawing.Point(103, 317);
+            this.btnSeatTypeSave.Location = new System.Drawing.Point(122, 317);
             this.btnSeatTypeSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeatTypeSave.Name = "btnSeatTypeSave";
             this.btnSeatTypeSave.Size = new System.Drawing.Size(97, 43);
@@ -298,10 +298,10 @@
             this.btnSeatTypeUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatTypeUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSeatTypeUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSeatTypeUpdate.FillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSeatTypeUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(182)))), ((int)(((byte)(211)))));
             this.btnSeatTypeUpdate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSeatTypeUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnSeatTypeUpdate.Location = new System.Drawing.Point(103, 317);
+            this.btnSeatTypeUpdate.Location = new System.Drawing.Point(122, 317);
             this.btnSeatTypeUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnSeatTypeUpdate.Name = "btnSeatTypeUpdate";
             this.btnSeatTypeUpdate.Size = new System.Drawing.Size(97, 43);
@@ -319,7 +319,7 @@
             this.btnSeatTypeCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatTypeCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSeatTypeCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSeatTypeCancel.FillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSeatTypeCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(73)))), ((int)(((byte)(131)))));
             this.btnSeatTypeCancel.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSeatTypeCancel.ForeColor = System.Drawing.Color.White;
             this.btnSeatTypeCancel.Location = new System.Drawing.Point(223, 317);
@@ -436,7 +436,7 @@
             this.dgvSeat.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -654,7 +654,7 @@
             this.btnSeatUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSeatUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSeatUpdate.FillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSeatUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(182)))), ((int)(((byte)(211)))));
             this.btnSeatUpdate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSeatUpdate.ForeColor = System.Drawing.Color.White;
             this.btnSeatUpdate.Location = new System.Drawing.Point(117, 406);
@@ -675,7 +675,7 @@
             this.btnSeatCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSeatCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSeatCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSeatCancel.FillColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSeatCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(73)))), ((int)(((byte)(131)))));
             this.btnSeatCancel.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnSeatCancel.ForeColor = System.Drawing.Color.White;
             this.btnSeatCancel.Location = new System.Drawing.Point(218, 406);
@@ -788,8 +788,8 @@
             // 
             // FrmSeat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.tabcontrolSeat);
             this.Name = "FrmSeat";
             this.Size = new System.Drawing.Size(889, 580);
@@ -822,11 +822,8 @@
         private Guna.UI2.WinForms.Guna2Button btnSeatSave;
         private Guna.UI2.WinForms.Guna2Button btnSeatUpdate;
         private Guna.UI2.WinForms.Guna2Button btnSeatCancel;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvSeat;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvSeatType;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2Button btnSeatTypeSave;
         private Guna.UI2.WinForms.Guna2Button btnSeatTypeUpdate;
         private Guna.UI2.WinForms.Guna2Button btnSeatTypeCancel;
         private System.Windows.Forms.Label label3;
@@ -851,5 +848,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrice;
         private System.Windows.Forms.DataGridViewImageColumn ColDelSeat;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTypeId;
+        public Guna.UI2.WinForms.Guna2DataGridView dgvSeat;
+        public Guna.UI2.WinForms.Guna2DataGridView dgvSeatType;
+        private Guna.UI2.WinForms.Guna2Button btnSeatTypeSave;
     }
 }

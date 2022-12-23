@@ -147,7 +147,7 @@ namespace TicketSelling.UI.Configuration
         {
             try
             {
-                int SeatCount = new SeatTypeDao().CheckSeatBySeatTypeId(Convert.ToInt32(dgvSeatType.Rows[e.RowIndex].Cells["ColIdSeatType"].Value));
+                int SeatCount = new SeatTypeDao().CheckSeatBySeatTypeId(Convert.ToInt32(dgvSeatType.Rows[e.RowIndex].Cells["ColIdSeatType"].Value));//Control delete seattype when seats are assign
                 if (SeatCount > 0)
                 {
                     MessageBox.Show("Transaction Exists");
@@ -274,7 +274,7 @@ namespace TicketSelling.UI.Configuration
             cbSeatType.DataSource = LstSeatType;
             cbSeatType.DisplayMember = "Name";
             cbSeatType.ValueMember = "Id";
-            cbSeatType.SelectedIndex = -1;
+            cbSeatType.SelectedIndex = 0;
             cbSeatType.SelectedIndexChanged += new EventHandler(CbSeatType_SelectedIndexChanged);
             BindDgvData();
         }
@@ -447,7 +447,7 @@ namespace TicketSelling.UI.Configuration
 
         #endregion
 
-
+        
     }
 }
     

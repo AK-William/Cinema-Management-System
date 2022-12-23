@@ -66,6 +66,7 @@
     <Compile Include="DAO\AdminDao.cs" />
     <Compile Include="DAO\MovieDao.cs" />
     <Compile Include="DAO\MovieSDDao.cs" />
+    <Compile Include="DAO\MovieSTDao.cs" />
     <Compile Include="DAO\SeatDao.cs" />
     <Compile Include="DAO\SeatTypeDao.cs" />
     <Compile Include="DAO\StaffDao.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Entity\Admin.cs" />
     <Compile Include="Entity\Movie.cs" />
     <Compile Include="Entity\MovieSD.cs" />
+    <Compile Include="Entity\MovieST.cs" />
     <Compile Include="Entity\Seat.cs" />
     <Compile Include="Entity\SeatType.cs" />
     <Compile Include="Entity\Staff.cs" />
@@ -206,6 +208,7 @@
     <None Include="Resources\cancel_480px1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\eye_500px.png" />
     <None Include="Resources\Magnetic Card_500px.png" />
     <None Include="Resources\zip_code_500px.png" />
     <None Include="Resources\gmail_512px.png" />
@@ -235,6 +238,7 @@
     <None Include="Resources\couple-watching-tv.gif" />
     <None Include="Resources\city_512px.png" />
     <None Include="Resources\address_500px.png" />
+    <None Include="Resources\closed_eye_512px.png" />
     <Content Include="Resources\drop_arrow.png" />
     <None Include="Resources\undraw_home_cinema_l7yl.png" />
     <None Include="Resources\enlarge_480px.png" />

@@ -246,7 +246,7 @@ namespace TicketSelling.Common
 
         public static string GetSeatId = @"SELECT * FROM TblSeat where SeatTypeId=@SeatTypeId";
 
-        public static string GetSeatCountBySeatTypeId = @"SELECT COUNT(Id) Count FROM  TblSeat where SeatTypeId=@SeatTypeId;";
+        public static string GetSeatCountBySeatTypeId = @"SELECT COUNT(Id) Count FROM  TblSeat where SeatTypeId=@SeatTypeId;";//Control delete seattype when seat are assign
 
         #endregion
 
@@ -441,6 +441,8 @@ namespace TicketSelling.Common
                                                 *
                                                 FROM TblMovie;";
 
+        public static string GetMovieCountByMovieId = @"SELECT COUNT(Id) Count FROM  TblScheduleMovie where MovieId=@MovieId;"; //Control delete Movie when date are assign
+
         #endregion
 
 
@@ -487,7 +489,7 @@ namespace TicketSelling.Common
                                                 EndDate
                                                 FROM TblScheduleMovie AS SM WITH (NOLOCK)
                                                 INNER JOIN TblMovie AS M
-                                                ON SM.MovieId = M.Id";   //inner join movie with schedule date
+                                                ON SM.MovieId = M.Id";   //inner join movie with schedule date to show name on Schedule date's data grid view
 
         public static string DeleteMovieSD = @"DELETE TblScheduleMovie WHERE Id = @Id; 
                                                 SELECT
@@ -528,9 +530,95 @@ namespace TicketSelling.Common
                                                       WHERE MovieId = @MovieId
                                                     END";
 
+
+
         #endregion
 
+        #region dbMovieScheduleTime
 
+        public static string GetMovieDateById = @"SELECT * FROM TblScheduleMovie where MovieId = @MovieId";
+
+        public static string DeleteMovieST = @"DELETE TblScheduleMovieTime WHERE Id = @Id; 
+                                                SELECT
+                                                '000' AS RespCode,
+                                                'Update Successful' AS RespDesp,
+                                                'MI' AS 'RespMessageType'
+                                                SELECT
+                                                *
+                                                FROM TblScheduleMovieTime;";
+
+        public static string GetAllMovieST = @"SELECT
+                                                ROW_NUMBER() OVER (ORDER BY SMT.Id ASC) AS RowNumber,
+                                                SMT.Id,
+                                                Name,
+                                                SMT.MovieId,
+                                                Date,
+                                                Time
+                                                FROM TblScheduleMovieTime AS SMT WITH (NOLOCK)
+                                                INNER JOIN TblMovie AS M
+                                                ON SMT.MovieId = M.Id";
+
+        public static string SaveMovieST = @"IF EXISTS (SELECT * FROM TblScheduleMovieTime WHERE MovieId = @MovieId AND Time = @Time AND Date = @Date)
+                                                    BEGIN
+                                                      SELECT
+                                                        '001' AS RespCode,
+                                                        'Duplicate Error' AS RespDesp,
+                                                        'ME' AS 'RespMessageType'
+                                                      SELECT
+                                                        *
+                                                      FROM TblScheduleMovieTime
+                                                      WHERE MovieId = @MovieId
+                                                    END
+                                                    ELSE
+                                                    BEGIN
+                                                      INSERT INTO[dbo].[TblScheduleMovieTime]
+                                                        ([MovieId]
+                                                        ,[Date]
+                                                        ,[Time]
+                                                       ,[CreatedBy])
+                                                       VALUES(@MovieId, @Date , @Time , @CreatedBy);
+
+                                                        SELECT
+                                                        '000' AS RespCode,
+                                                        'Successful Message' AS RespDesp,
+                                                        'MI' AS 'RespMessageType'
+                                                      SELECT
+                                                        *
+                                                      FROM TblScheduleMovieTime
+                                                      WHERE MovieId = @MovieId
+                                                    END";
+
+        public static string UpdateMovieST = @"IF EXISTS (SELECT * FROM TblScheduleMovieTime WHERE MovieId = @MovieId AND
+                                                        Id != @Id)
+                                                    BEGIN
+                                                      SELECT
+                                                        '001' AS RespCode,
+                                                        'Duplicate Error' AS RespDesp,
+                                                        'ME' AS 'RespMessageType'
+                                                      SELECT
+                                                        *
+                                                      FROM TblScheduleMovieTime
+                                                      WHERE MovieId = @MovieId
+                                                    END
+                                                    ELSE
+                                                    BEGIN
+                                                      UPDATE [dbo].[TblScheduleMovieTime]
+														   SET [MovieId] = @MovieId
+															  ,[Date] = @Date
+                                                              ,[Time]= @Time
+														 WHERE Id = @Id 
+
+                                                      SELECT
+                                                        '000' AS RespCode,
+                                                        'Update Successful' AS RespDesp,
+                                                        'MI' AS 'RespMessageType'
+                                                      SELECT
+                                                        *
+                                                      FROM TblScheduleMovieTime
+                                                      WHERE MovieId = @MovieId
+                                                    END";
+
+        #endregion
 
 
 

@@ -223,6 +223,16 @@ namespace TicketSelling.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap closed_eye_512px {
+            get {
+                object obj = ResourceManager.GetObject("closed_eye_512px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap couple_watching_tv {
             get {
                 object obj = ResourceManager.GetObject("couple-watching-tv", resourceCulture);
@@ -236,6 +246,16 @@ namespace TicketSelling.Properties {
         internal static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eye_500px {
+            get {
+                object obj = ResourceManager.GetObject("eye_500px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
