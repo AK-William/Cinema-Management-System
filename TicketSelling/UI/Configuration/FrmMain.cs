@@ -488,7 +488,26 @@ namespace TicketSelling.UI.Configuration
                 {
                     currentBtn.BackColor = Color.FromArgb(27, 182, 211);
                 }
-
+                else if (panelleft.BackColor == Color.FromArgb(123, 31, 162))
+                {
+                    currentBtn.BackColor = Color.FromArgb(123, 31, 162);
+                }
+                else if (panelleft.BackColor == Color.FromArgb(84, 110, 122))
+                {
+                    currentBtn.BackColor = Color.FromArgb(84, 110, 122);
+                }
+                else if (panelleft.BackColor == Color.FromArgb(0, 200, 83))
+                {
+                    currentBtn.BackColor = Color.FromArgb(0, 200, 83);
+                }
+                else if (panelleft.BackColor == Color.FromArgb(255, 214, 0))
+                {
+                    currentBtn.BackColor = Color.FromArgb(255, 214, 0);
+                }
+                else if (panelleft.BackColor == Color.FromArgb(196, 30, 58))
+                {
+                    currentBtn.BackColor = Color.FromArgb(196, 30, 58);
+                }
 
             }
         }
