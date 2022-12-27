@@ -23,8 +23,6 @@ namespace TicketSelling.UI.Configuration
         private int borderSize = 2;
         private Size formSize;
 
-
-
         public FrmMain()
         {
             InitializeComponent();
@@ -245,14 +243,14 @@ namespace TicketSelling.UI.Configuration
         private void ShowSubMenu(Panel pnl) // Button drop down open
         {
             //pnl.Height = pnl.Controls.OfType<Button>().Count() * 78;
-            pnl.Height = 3 * btnHome.Height;
+            pnl.Height = 3 * btnDashboard.Height;
         }
 
         private void HideSubMenu() // Button drop down close
         {
             foreach (var pnl in panelMenu.Controls.OfType<Panel>())
             {
-                pnl.Height = btnHome.Height;
+                pnl.Height = btnDashboard.Height;
             }
         }
 
@@ -283,10 +281,10 @@ namespace TicketSelling.UI.Configuration
                     lblTitleChildForm.Text = btnAdmin.Tag.ToString();
                     iconCurrentChildForm.IconChar = btnAdmin.IconChar;
                     break;
-                case "Home":
-                    frm = new FrmHome();
-                    lblTitleChildForm.Text = btnHome.Tag.ToString();
-                    iconCurrentChildForm.IconChar = btnHome.IconChar;
+                case "Dashboard":
+                    frm = new FrmDashboard();
+                    lblTitleChildForm.Text = btnDashboard.Tag.ToString();
+                    iconCurrentChildForm.IconChar = btnDashboard.IconChar;
                     break;
                 case "Setting":
                     frm = new FrmSetting();
@@ -312,7 +310,7 @@ namespace TicketSelling.UI.Configuration
             btnAdmin.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //Admin button white fix
         }
 
-        private void BtnHome_Click(object sender, EventArgs e)
+        private void BtnDashboard_Click(object sender, EventArgs e)
         {
             MenuClick(sender, e);
             HideSubMenu();
@@ -358,10 +356,14 @@ namespace TicketSelling.UI.Configuration
             ActivateButton(sender); //menu highlight active button
         }
 
-        private void BtnSeat_Click(object sender, EventArgs e)
+        public void BtnSeat_Click(object sender, EventArgs e)
         {
             MenuClick(sender, e);
             ActivateButton(sender); //menu highlight active button
+            //panelBody.Controls.Clear();
+            //UserControl frmseat = new FrmSeat();
+            //panelBody.Controls.Add(frmseat);
+            //frmseat.Dock = DockStyle.Fill;
         }
 
         private void BtnMovie_Click(object sender, EventArgs e)
@@ -377,7 +379,7 @@ namespace TicketSelling.UI.Configuration
         #region tooltip
         private void BtnHome_MouseHover(object sender, EventArgs e)
         {
-            toolTipHome.Show("Home", btnHome);
+            toolTipHome.Show("Home", btnDashboard);
         }
 
         private void BtnConfiguration_MouseHover(object sender, EventArgs e)
@@ -448,7 +450,7 @@ namespace TicketSelling.UI.Configuration
         {
             FrmLogin flm = new FrmLogin();
             flm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void BtnSetting_Click(object sender, EventArgs e)

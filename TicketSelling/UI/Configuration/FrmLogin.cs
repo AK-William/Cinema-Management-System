@@ -20,12 +20,33 @@ namespace TicketSelling.UI.Configuration
             txtUsername.Select();
         }
 
+        public static string user;
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            txtUsername.Focus();
+            txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private bool CheckRequireFields()
+        {
+            if (string.IsNullOrEmpty(txtUsername.Text))
+            {
+                MessageBox.Show("Enter your Username");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("Enter Password");
+                return false;
+            }
+            return true;
+        }
+
         private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-        public static string user;
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
@@ -55,28 +76,6 @@ namespace TicketSelling.UI.Configuration
                 MessageBox.Show(ex.Message);
 
             }
-
-        }
-
-        private void FrmLogin_Load(object sender, EventArgs e)
-        {
-            txtUsername.Focus();
-            txtPassword.UseSystemPasswordChar = true;
-        }
-
-        private bool CheckRequireFields()
-        {
-            if (string.IsNullOrEmpty(txtUsername.Text))
-            {
-                MessageBox.Show("Enter your Username");
-                return false;
-            }
-            if (string.IsNullOrEmpty(txtPassword.Text))
-            {
-                MessageBox.Show("Enter Password");
-                return false;
-            }
-            return true;
         }
 
         private void TxtUsername_KeyDown(object sender, KeyEventArgs e)
@@ -111,7 +110,5 @@ namespace TicketSelling.UI.Configuration
                 txtPassword.UseSystemPasswordChar = true;
             }
         }
-
-       
     }
 }

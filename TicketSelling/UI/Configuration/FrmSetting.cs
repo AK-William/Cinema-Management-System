@@ -21,13 +21,12 @@ namespace TicketSelling.UI.Configuration
             InitializeComponent();
         }
 
-        FrmSeat frmseat = new FrmSeat();
-       // FrmLogin frmlogin = new FrmLogin();
+        FrmMain frmmain = (FrmMain)Application.OpenForms["FrmMain"];
 
         public void CbChangeColor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FrmMain frmmain = (FrmMain)Application.OpenForms["FrmMain"];
-           
+            
+            
             switch (cbChangeColor.SelectedIndex)
             {
                 case 0:
@@ -38,15 +37,14 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnStaff.BackColor = Color.FromArgb(0, 120, 215);
                     frmmain.btnMovie.BackColor = Color.FromArgb(0, 120, 215);
                     frmmain.btnSeat.BackColor = Color.FromArgb(0, 120, 215);
-                    frmmain.btnHome.BackColor = Color.FromArgb(0, 120, 215);
+                    frmmain.btnDashboard.BackColor = Color.FromArgb(0, 120, 215);
                     frmmain.btnTicket.BackColor = Color.FromArgb(0, 120, 215);
                     frmmain.btnReport.BackColor = Color.FromArgb(0, 120, 215);
                     frmmain.btnAccount.IconColor = Color.FromArgb(0, 120, 215);
                     frmmain.accountimage.IconColor = Color.FromArgb(0, 120, 215);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(0, 120, 215);
-                    frmseat.dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 120, 215);
-                    frmseat.dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 120, 215);
                     break;
+
                 case 1:
                     frmmain.panelleft.BackColor = Color.FromArgb(253, 73, 131);
                     frmmain.panelMenuBar.BackColor = Color.FromArgb(253, 73, 131);
@@ -55,15 +53,14 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnStaff.BackColor = Color.FromArgb(253, 73, 131);
                     frmmain.btnMovie.BackColor = Color.FromArgb(253, 73, 131);
                     frmmain.btnSeat.BackColor = Color.FromArgb(253, 73, 131);
-                    frmmain.btnHome.BackColor = Color.FromArgb(253, 73, 131);
+                    frmmain.btnDashboard.BackColor = Color.FromArgb(253, 73, 131);
                     frmmain.btnTicket.BackColor = Color.FromArgb(253, 73, 131);
                     frmmain.btnReport.BackColor = Color.FromArgb(253, 73, 131);
                     frmmain.btnAccount.IconColor = Color.FromArgb(253, 73, 131);
                     frmmain.accountimage.IconColor = Color.FromArgb(253, 73, 131);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(253, 73, 131);
-                    frmseat.dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(253, 73, 131);
-                    frmseat.dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(253, 73, 131);
                     break;
+
                 case 2:
                     frmmain.panelleft.BackColor = Color.FromArgb(27, 182, 211);
                     frmmain.panelMenuBar.BackColor = Color.FromArgb(27, 182, 211);
@@ -72,14 +69,12 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnStaff.BackColor = Color.FromArgb(27, 182, 211);
                     frmmain.btnMovie.BackColor = Color.FromArgb(27, 182, 211);
                     frmmain.btnSeat.BackColor = Color.FromArgb(27, 182, 211);
-                    frmmain.btnHome.BackColor = Color.FromArgb(27, 182, 211);
+                    frmmain.btnDashboard.BackColor = Color.FromArgb(27, 182, 211);
                     frmmain.btnTicket.BackColor = Color.FromArgb(27, 182, 211);
                     frmmain.btnReport.BackColor = Color.FromArgb(27, 182, 211);
                     frmmain.btnAccount.IconColor = Color.FromArgb(27, 182, 211);
                     frmmain.accountimage.IconColor = Color.FromArgb(27, 182, 211);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(27, 182, 211);
-                    frmseat.dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(27, 182, 211);
-                    frmseat.dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(27, 182, 211);
                     break;
                     
                 case 3:
@@ -90,14 +85,12 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnStaff.BackColor = Color.FromArgb(123, 31, 162);
                     frmmain.btnMovie.BackColor = Color.FromArgb(123, 31, 162);
                     frmmain.btnSeat.BackColor = Color.FromArgb(123, 31, 162);
-                    frmmain.btnHome.BackColor = Color.FromArgb(123, 31, 162);
+                    frmmain.btnDashboard.BackColor = Color.FromArgb(123, 31, 162);
                     frmmain.btnTicket.BackColor = Color.FromArgb(123, 31, 162);
                     frmmain.btnReport.BackColor = Color.FromArgb(123, 31, 162);
                     frmmain.btnAccount.IconColor = Color.FromArgb(123, 31, 162);
                     frmmain.accountimage.IconColor = Color.FromArgb(123, 31, 162);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(123, 31, 162);
-                    frmseat.dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(123, 31, 162);
-                    frmseat.dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(123, 31, 162);
                     break;
                     
                 case 4:
@@ -108,14 +101,12 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnStaff.BackColor = Color.FromArgb(84, 110, 122);
                     frmmain.btnMovie.BackColor = Color.FromArgb(84, 110, 122);
                     frmmain.btnSeat.BackColor = Color.FromArgb(84, 110, 122);
-                    frmmain.btnHome.BackColor = Color.FromArgb(84, 110, 122);
+                    frmmain.btnDashboard.BackColor = Color.FromArgb(84, 110, 122);
                     frmmain.btnTicket.BackColor = Color.FromArgb(84, 110, 122);
                     frmmain.btnReport.BackColor = Color.FromArgb(84, 110, 122);
                     frmmain.btnAccount.IconColor = Color.FromArgb(84, 110, 122);
                     frmmain.accountimage.IconColor = Color.FromArgb(84, 110, 122);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(84, 110, 122);
-                    frmseat.dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 110, 122);
-                    frmseat.dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 110, 122);
                     break;
 
                 case 5:
@@ -126,14 +117,12 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnStaff.BackColor = Color.FromArgb(0, 200, 83);
                     frmmain.btnMovie.BackColor = Color.FromArgb(0, 200, 83);
                     frmmain.btnSeat.BackColor = Color.FromArgb(0, 200, 83);
-                    frmmain.btnHome.BackColor = Color.FromArgb(0, 200, 83);
+                    frmmain.btnDashboard.BackColor = Color.FromArgb(0, 200, 83);
                     frmmain.btnTicket.BackColor = Color.FromArgb(0, 200, 83);
                     frmmain.btnReport.BackColor = Color.FromArgb(0, 200, 83);
                     frmmain.btnAccount.IconColor = Color.FromArgb(0, 200, 83);
                     frmmain.accountimage.IconColor = Color.FromArgb(0, 200, 83);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(0, 200, 83);
-                    frmseat.dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 200, 83);
-                    frmseat.dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 200, 83);
                     break;
 
                 case 6:
@@ -144,14 +133,12 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnStaff.BackColor = Color.FromArgb(255, 214, 0);
                     frmmain.btnMovie.BackColor = Color.FromArgb(255, 214, 0);
                     frmmain.btnSeat.BackColor = Color.FromArgb(255, 214, 0);
-                    frmmain.btnHome.BackColor = Color.FromArgb(255, 214, 0);
+                    frmmain.btnDashboard.BackColor = Color.FromArgb(255, 214, 0);
                     frmmain.btnTicket.BackColor = Color.FromArgb(255, 214, 0);
                     frmmain.btnReport.BackColor = Color.FromArgb(255, 214, 0);
                     frmmain.btnAccount.IconColor = Color.FromArgb(255, 214, 0);
                     frmmain.accountimage.IconColor = Color.FromArgb(255, 214, 0);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(255, 214, 0);
-                    frmseat.dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 214, 0);
-                    frmseat.dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 214, 0);
                     break;
 
                 case 7:
@@ -162,14 +149,12 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnStaff.BackColor = Color.FromArgb(196, 30, 58);
                     frmmain.btnMovie.BackColor = Color.FromArgb(196, 30, 58);
                     frmmain.btnSeat.BackColor = Color.FromArgb(196, 30, 58);
-                    frmmain.btnHome.BackColor = Color.FromArgb(196, 30, 58);
+                    frmmain.btnDashboard.BackColor = Color.FromArgb(196, 30, 58);
                     frmmain.btnTicket.BackColor = Color.FromArgb(196, 30, 58);
                     frmmain.btnReport.BackColor = Color.FromArgb(196, 30, 58);
                     frmmain.btnAccount.IconColor = Color.FromArgb(196, 30, 58);
                     frmmain.accountimage.IconColor = Color.FromArgb(196, 30, 58);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(196, 30, 58);
-                    frmseat.dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(196, 30, 58);
-                    frmseat.dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(196, 30, 58);
                     break;
             }
         }

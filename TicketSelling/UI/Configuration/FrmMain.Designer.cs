@@ -43,7 +43,7 @@
             this.btnMovie = new FontAwesome.Sharp.IconButton();
             this.btnSeat = new FontAwesome.Sharp.IconButton();
             this.btnConfiguration = new FontAwesome.Sharp.IconButton();
-            this.btnHome = new FontAwesome.Sharp.IconButton();
+            this.btnDashboard = new FontAwesome.Sharp.IconButton();
             this.panelMenuBar = new System.Windows.Forms.Panel();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -98,7 +98,7 @@
             this.panelMenu.Controls.Add(this.btnTicket);
             this.panelMenu.Controls.Add(this.panelEntry);
             this.panelMenu.Controls.Add(this.panelConfiguration);
-            this.panelMenu.Controls.Add(this.btnHome);
+            this.panelMenu.Controls.Add(this.btnDashboard);
             resources.ApplyResources(this.panelMenu, "panelMenu");
             this.panelMenu.Name = "panelMenu";
             // 
@@ -107,7 +107,7 @@
             resources.ApplyResources(this.btnlogout, "btnlogout");
             this.btnlogout.FlatAppearance.BorderSize = 0;
             this.btnlogout.ForeColor = System.Drawing.Color.White;
-            this.btnlogout.IconChar = FontAwesome.Sharp.IconChar.SignOut;
+            this.btnlogout.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
             this.btnlogout.IconColor = System.Drawing.Color.White;
             this.btnlogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnlogout.Name = "btnlogout";
@@ -187,7 +187,7 @@
             resources.ApplyResources(this.btnEntry, "btnEntry");
             this.btnEntry.FlatAppearance.BorderSize = 0;
             this.btnEntry.ForeColor = System.Drawing.Color.White;
-            this.btnEntry.IconChar = FontAwesome.Sharp.IconChar.Vcard;
+            this.btnEntry.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
             this.btnEntry.IconColor = System.Drawing.Color.White;
             this.btnEntry.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEntry.Name = "btnEntry";
@@ -240,7 +240,7 @@
             resources.ApplyResources(this.btnConfiguration, "btnConfiguration");
             this.btnConfiguration.FlatAppearance.BorderSize = 0;
             this.btnConfiguration.ForeColor = System.Drawing.Color.White;
-            this.btnConfiguration.IconChar = FontAwesome.Sharp.IconChar.ListDots;
+            this.btnConfiguration.IconChar = FontAwesome.Sharp.IconChar.ListUl;
             this.btnConfiguration.IconColor = System.Drawing.Color.White;
             this.btnConfiguration.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnConfiguration.Name = "btnConfiguration";
@@ -249,19 +249,19 @@
             this.btnConfiguration.Click += new System.EventHandler(this.BtnConfiguration_Click);
             this.btnConfiguration.MouseHover += new System.EventHandler(this.BtnConfiguration_MouseHover);
             // 
-            // btnHome
+            // btnDashboard
             // 
-            resources.ApplyResources(this.btnHome, "btnHome");
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.IconChar = FontAwesome.Sharp.IconChar.Home;
-            this.btnHome.IconColor = System.Drawing.Color.White;
-            this.btnHome.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Tag = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
-            this.btnHome.MouseHover += new System.EventHandler(this.BtnHome_MouseHover);
+            resources.ApplyResources(this.btnDashboard, "btnDashboard");
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.btnDashboard.IconColor = System.Drawing.Color.White;
+            this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Tag = "Dashboard";
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.BtnDashboard_Click);
+            this.btnDashboard.MouseHover += new System.EventHandler(this.BtnHome_MouseHover);
             // 
             // panelMenuBar
             // 
@@ -331,8 +331,8 @@
             // txtLoginNameForMain
             // 
             this.txtLoginNameForMain.AllowDrop = true;
+            this.txtLoginNameForMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             resources.ApplyResources(this.txtLoginNameForMain, "txtLoginNameForMain");
-            this.txtLoginNameForMain.AutoEllipsis = true;
             this.txtLoginNameForMain.ForeColor = System.Drawing.Color.Black;
             this.txtLoginNameForMain.Name = "txtLoginNameForMain";
             // 
@@ -358,7 +358,7 @@
             this.btnSetting.BackColor = System.Drawing.Color.Transparent;
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.btnSetting.IconChar = FontAwesome.Sharp.IconChar.Cog;
+            this.btnSetting.IconChar = FontAwesome.Sharp.IconChar.Gear;
             this.btnSetting.IconColor = System.Drawing.Color.Gray;
             this.btnSetting.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSetting.Name = "btnSetting";
@@ -377,7 +377,7 @@
             resources.ApplyResources(this.btnMinimize, "btnMinimize");
             this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(182)))), ((int)(((byte)(211)))));
             this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Subtract;
             this.btnMinimize.IconColor = System.Drawing.Color.Black;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 20;
@@ -535,7 +535,6 @@
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             this.panelAccountShow.ResumeLayout(false);
-            this.panelAccountShow.PerformLayout();
             this.paneltitlebar.ResumeLayout(false);
             this.paneltitlebar.PerformLayout();
             this.ResumeLayout(false);
@@ -580,7 +579,7 @@
         public System.Windows.Forms.Panel panelEntry;
         public FontAwesome.Sharp.IconButton btnAdmin;
         public FontAwesome.Sharp.IconButton btnStaff;
-        public FontAwesome.Sharp.IconButton btnHome;
+        public FontAwesome.Sharp.IconButton btnDashboard;
         public FontAwesome.Sharp.IconButton btnMovie;
         public FontAwesome.Sharp.IconButton btnSeat;
         public FontAwesome.Sharp.IconButton btnTicket;

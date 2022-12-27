@@ -9,14 +9,18 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TicketSelling.Common;
+using TicketSelling.DAO;
+using TicketSelling.DAO.Entity;
 
 namespace TicketSelling.UI.Configuration
 {
-    public partial class FrmHome : UserControl
+    public partial class FrmDashboard : UserControl
     {
-        public FrmHome()
+        public FrmDashboard()
         {
             InitializeComponent();
+            dgvMovieDB.AutoGenerateColumns = false;
         }
 
        

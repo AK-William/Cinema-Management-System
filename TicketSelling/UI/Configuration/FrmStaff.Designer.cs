@@ -88,7 +88,7 @@
             this.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(182)))), ((int)(((byte)(211)))));
+            this.btnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(165)))));
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(98, 500);
@@ -109,7 +109,7 @@
             this.btnReset.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnReset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnReset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(73)))), ((int)(((byte)(131)))));
+            this.btnReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(30)))), ((int)(((byte)(58)))));
             this.btnReset.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnReset.ForeColor = System.Drawing.Color.White;
             this.btnReset.Location = new System.Drawing.Point(230, 500);
@@ -202,7 +202,7 @@
             this.txtPhoneNumber.IconLeft = global::TicketSelling.Properties.Resources.phone_512px;
             this.txtPhoneNumber.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtPhoneNumber.Location = new System.Drawing.Point(31, 402);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(5);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PasswordChar = '\0';
             this.txtPhoneNumber.PlaceholderText = "Enter your Phone Number";
@@ -231,7 +231,7 @@
             this.txtPassword.IconLeft = global::TicketSelling.Properties.Resources.password_144px;
             this.txtPassword.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtPassword.Location = new System.Drawing.Point(31, 288);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.PlaceholderText = "Enter Password";
@@ -259,7 +259,7 @@
             this.txtUsername.IconLeft = global::TicketSelling.Properties.Resources.name_208px;
             this.txtUsername.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtUsername.Location = new System.Drawing.Point(31, 174);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Enter your username";
@@ -288,7 +288,7 @@
             this.txtName.IconLeft = global::TicketSelling.Properties.Resources.name_208px;
             this.txtName.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtName.Location = new System.Drawing.Point(31, 70);
-            this.txtName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "Enter your real name";
@@ -470,7 +470,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvStaff;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -485,5 +484,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPhoneNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPassword;
         private System.Windows.Forms.DataGridViewImageColumn ColDel;
+        public Guna.UI2.WinForms.Guna2DataGridView dgvStaff;
     }
 }

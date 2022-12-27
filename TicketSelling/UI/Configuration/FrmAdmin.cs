@@ -27,6 +27,7 @@ namespace TicketSelling.UI.Configuration
             InitializeComponent();
             txtAdminName.Select();
             dgvAdmin.AutoGenerateColumns = false;
+            colorchangeadmin();
         }
 
         private void Frm_Load(object sender, EventArgs e)
@@ -58,6 +59,56 @@ namespace TicketSelling.UI.Configuration
         {
             Reset();
         }
+
+        #region theme color change
+
+        FrmMain frmmain = (FrmMain)Application.OpenForms["FrmMain"];
+
+        public void colorchangeadmin()
+        {
+            if (frmmain.panelleft.BackColor == Color.FromArgb(253, 73, 131))
+            {
+                dgvAdmin.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(253, 73, 131);
+                dgvAdmin.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(253, 73, 131);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(0, 120, 215))
+            {
+                dgvAdmin.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 120, 215);
+                dgvAdmin.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(27, 182, 211))
+            {
+                dgvAdmin.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(27, 182, 211);
+                dgvAdmin.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(27, 182, 211);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(123, 31, 162))
+            {
+                dgvAdmin.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(123, 31, 162);
+                dgvAdmin.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(123, 31, 162);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(84, 110, 122))
+            {
+                dgvAdmin.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 110, 122);
+                dgvAdmin.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(84, 110, 122);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(0, 200, 83))
+            {
+                dgvAdmin.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 200, 83);
+                dgvAdmin.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 200, 83);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(255, 214, 0))
+            {
+                dgvAdmin.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 214, 0);
+                dgvAdmin.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 214, 0);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(196, 30, 58))
+            {
+                dgvAdmin.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(196, 30, 58);
+                dgvAdmin.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(196, 30, 58);
+            }
+        }
+
+        #endregion
 
 
         #region KeyDown

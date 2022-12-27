@@ -21,6 +21,7 @@ namespace TicketSelling.UI.Configuration
             dgvSeatType.AutoGenerateColumns = false;
             dgvSeat.AutoGenerateColumns = false;
             this.dgvSeat.Columns["ColPrice"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            colorchangeseat();
         }
 
         #region SeatType
@@ -98,12 +99,79 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
+        
         private void FrmSeat_Load(object sender, EventArgs e)
         {
             BindDgvData();
             BindDgvSeat();
             txtSeatTypeName.Focus();
         }
+
+        #region theme color change
+
+        FrmMain frmmain = (FrmMain)Application.OpenForms["FrmMain"];
+
+        public void colorchangeseat()
+        {
+            if (frmmain.panelleft.BackColor == Color.FromArgb(253, 73, 131))
+            {
+                dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(253, 73, 131);
+                dgvSeatType.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(253, 73, 131);
+                dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(253, 73, 131);
+                dgvSeat.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(253, 73, 131);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(0, 120, 215))
+            {
+                dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 120, 215);
+                dgvSeatType.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
+                dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 120, 215);
+                dgvSeat.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(27, 182, 211))
+            {
+                dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(27, 182, 211);
+                dgvSeatType.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(27, 182, 211);
+                dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(27, 182, 211);
+                dgvSeat.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(27, 182, 211);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(123, 31, 162))
+            {
+                dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(123, 31, 162);
+                dgvSeatType.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(123, 31, 162);
+                dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(123, 31, 162);
+                dgvSeat.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(123, 31, 162);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(84, 110, 122))
+            {
+                dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 110, 122);
+                dgvSeatType.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(84, 110, 122);
+                dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 110, 122);
+                dgvSeat.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(84, 110, 122);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(0, 200, 83))
+            {
+                dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 200, 83);
+                dgvSeatType.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 200, 83);
+                dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 200, 83);
+                dgvSeat.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 200, 83);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(255, 214, 0))
+            {
+                dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 214, 0);
+                dgvSeatType.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 214, 0);
+                dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 214, 0);
+                dgvSeat.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 214, 0);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(196, 30, 58))
+            {
+                dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(196, 30, 58);
+                dgvSeatType.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(196, 30, 58);
+                dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(196, 30, 58);
+                dgvSeat.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(196, 30, 58);
+            }
+        }
+
+        #endregion
 
         private void Reset()
         {
@@ -447,7 +515,7 @@ namespace TicketSelling.UI.Configuration
 
         #endregion
 
-        
+       
     }
 }
     

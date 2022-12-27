@@ -30,6 +30,7 @@ namespace TicketSelling.UI.Configuration
             dgvSD.AutoGenerateColumns = false;
             dgvST.AutoGenerateColumns = false;
             btnMovieUpdate.Visible = false;
+            colorchangemovie();
         }
 
         private void FrmMovie_Load(object sender, EventArgs e)
@@ -40,12 +41,129 @@ namespace TicketSelling.UI.Configuration
             txtSDStartDate.Value = DateTime.Now;
             txtSDEndDate.Value = DateTime.Now;
             STDate.Value = DateTime.Now;
-            STTime.Format = DateTimePickerFormat.Custom;
-            STTime.CustomFormat = "hh : mm : tt";
-            STTime.Value = DateTime.Now;
+            STTime.Format = DateTimePickerFormat.Time;
+            STTime.ShowUpDown = true;
+            
         }
 
+
+        #region theme color change
+
+        FrmMain frmmain = (FrmMain)Application.OpenForms["FrmMain"];
+
+        public void colorchangemovie()
+        {
+            if (frmmain.panelleft.BackColor == Color.FromArgb(253, 73, 131))
+            {
+                dgvMovie.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(253, 73, 131);
+                dgvMovie.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(253, 73, 131);
+                dgvSD.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(253, 73, 131);
+                dgvSD.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(253, 73, 131);
+                dgvST.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(253, 73, 131);
+                dgvST.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(253, 73, 131);
+                txtSDStartDate.FillColor = Color.FromArgb(253, 73, 131);
+                txtSDEndDate.FillColor = Color.FromArgb(253, 73, 131);
+                STDate.FillColor = Color.FromArgb(253, 73, 131);
+                STTime.FillColor = Color.FromArgb(253, 73, 131);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(0, 120, 215))
+            {
+                dgvMovie.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 120, 215);
+                dgvMovie.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
+                dgvSD.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 120, 215);
+                dgvSD.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
+                dgvST.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 120, 215);
+                dgvST.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 120, 215);
+                txtSDStartDate.FillColor = Color.FromArgb(0, 120, 215);
+                txtSDEndDate.FillColor = Color.FromArgb(0, 120, 215);
+                STDate.FillColor = Color.FromArgb(0, 120, 215);
+                STTime.FillColor = Color.FromArgb(0, 120, 215);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(27, 182, 211))
+            {
+                dgvMovie.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(27, 182, 211);
+                dgvMovie.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(27, 182, 211);
+                dgvSD.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(27, 182, 211);
+                dgvSD.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(27, 182, 211);
+                dgvST.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(27, 182, 211);
+                dgvST.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(27, 182, 211);
+                txtSDStartDate.FillColor = Color.FromArgb(27, 182, 211);
+                txtSDEndDate.FillColor = Color.FromArgb(27, 182, 211);
+                STDate.FillColor = Color.FromArgb(27, 182, 211);
+                STTime.FillColor = Color.FromArgb(27, 182, 211);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(123, 31, 162))
+            {
+                dgvMovie.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(123, 31, 162);
+                dgvMovie.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(123, 31, 162);
+                dgvSD.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(123, 31, 162);
+                dgvSD.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(123, 31, 162);
+                dgvST.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(123, 31, 162);
+                dgvST.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(123, 31, 162);
+                txtSDStartDate.FillColor = Color.FromArgb(123, 31, 162);
+                txtSDEndDate.FillColor = Color.FromArgb(123, 31, 162);
+                STDate.FillColor = Color.FromArgb(123, 31, 162);
+                STTime.FillColor = Color.FromArgb(123, 31, 162);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(84, 110, 122))
+            {
+                dgvMovie.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 110, 122);
+                dgvMovie.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(84, 110, 122);
+                dgvSD.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 110, 122);
+                dgvSD.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(84, 110, 122);
+                dgvST.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(84, 110, 122);
+                dgvST.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(84, 110, 122);
+                txtSDStartDate.FillColor = Color.FromArgb(84, 110, 122);
+                txtSDEndDate.FillColor = Color.FromArgb(84, 110, 122);
+                STDate.FillColor = Color.FromArgb(84, 110, 122);
+                STTime.FillColor = Color.FromArgb(84, 110, 122);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(0, 200, 83))
+            {
+                dgvMovie.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 200, 83);
+                dgvMovie.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 200, 83);
+                dgvSD.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 200, 83);
+                dgvSD.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 200, 83);
+                dgvST.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 200, 83);
+                dgvST.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 200, 83);
+                txtSDStartDate.FillColor = Color.FromArgb(0, 200, 83);
+                txtSDEndDate.FillColor = Color.FromArgb(0, 200, 83);
+                STDate.FillColor = Color.FromArgb(0, 200, 83);
+                STTime.FillColor = Color.FromArgb(0, 200, 83);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(255, 214, 0))
+            {
+                dgvMovie.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 214, 0);
+                dgvMovie.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 214, 0);
+                dgvSD.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 214, 0);
+                dgvSD.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 214, 0);
+                dgvST.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 214, 0);
+                dgvST.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 214, 0);
+                txtSDStartDate.FillColor = Color.FromArgb(255, 214, 0);
+                txtSDEndDate.FillColor = Color.FromArgb(255, 214, 0);
+                STDate.FillColor = Color.FromArgb(255, 214, 0);
+                STTime.FillColor = Color.FromArgb(255, 214, 0);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(196, 30, 58))
+            {
+                dgvMovie.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(196, 30, 58);
+                dgvMovie.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(196, 30, 58);
+                dgvSD.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(196, 30, 58);
+                dgvSD.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(196, 30, 58);
+                dgvST.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(196, 30, 58);
+                dgvST.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(196, 30, 58);
+                txtSDStartDate.FillColor = Color.FromArgb(196, 30, 58);
+                txtSDEndDate.FillColor = Color.FromArgb(196, 30, 58);
+                STDate.FillColor = Color.FromArgb(196, 30, 58);
+                STTime.FillColor = Color.FromArgb(196, 30, 58);
+            }
+        }
+
+        #endregion
+
+
         #region MOVIE
+
 
         #region MovieKeyDown
 
@@ -541,7 +659,6 @@ namespace TicketSelling.UI.Configuration
         }
 
 
-
         int idsd = -1; int MovieId;
         private void DgvSD_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -625,6 +742,9 @@ namespace TicketSelling.UI.Configuration
 
 
         #endregion
+
+
+        #region Movie Schedule Time
 
         private bool CheckRequireFieldsST()
         {
@@ -757,10 +877,47 @@ namespace TicketSelling.UI.Configuration
 
             STDate.Text = dgvRow.Cells["ColSTDate"].Value.ToString();
             STTime.Text = dgvRow.Cells["ColSTTime"].Value.ToString();
-            
 
             btnSTSave.Visible = false;
             btnSTUpdate.Visible = true;
         }
+
+        private void BtnSTUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageEntity res = new MovieSTDao().UpdateMovieST(1, new DAO.Entity.MovieST()
+                {
+                    Id = idst,
+                    MovieId = MovieId,
+                    Date = Convert.ToDateTime(STDate.Text),
+                    Time = STTime.Text,
+                });
+                if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
+                {
+                    MessageBox.Show("Update Success");
+                    ResetST();
+                    BindDgvMovieST();
+                }
+                else if (res.RespMessageType == CommonResponseMessage.ResErrorType)
+                {
+                    if (res.RespDesp == "Duplicate Error")
+                    {
+                        MessageBox.Show("Name Already Exist");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Save Fail");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+
+        #endregion
     }
 }

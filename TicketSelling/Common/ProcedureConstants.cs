@@ -87,6 +87,7 @@ namespace TicketSelling.Common
                                                 *
                                                 FROM TblStaff;";
 
+
         #endregion
 
 
@@ -531,7 +532,6 @@ namespace TicketSelling.Common
                                                     END";
 
 
-
         #endregion
 
         #region dbMovieScheduleTime
@@ -597,7 +597,7 @@ namespace TicketSelling.Common
                                                         'ME' AS 'RespMessageType'
                                                       SELECT
                                                         *
-                                                      FROM TblScheduleMovieTime
+                                                      FROM TblScheduleMovie
                                                       WHERE MovieId = @MovieId
                                                     END
                                                     ELSE
@@ -614,7 +614,7 @@ namespace TicketSelling.Common
                                                         'MI' AS 'RespMessageType'
                                                       SELECT
                                                         *
-                                                      FROM TblScheduleMovieTime
+                                                      FROM TblScheduleMovie
                                                       WHERE MovieId = @MovieId
                                                     END";
 
@@ -636,5 +636,15 @@ namespace TicketSelling.Common
                                             'Invalid Username and Password' AS RespDesp,
                                             'ME' AS 'RespMessageType'
                                         END";
+
+
+        #region dashboard
+
+
+        public static string GetMovieCoverById = @"Select * from TblMovie where Id=@Id";
+
+
+        #endregion
+
     }
 }

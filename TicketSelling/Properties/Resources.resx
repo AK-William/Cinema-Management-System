@@ -166,6 +166,9 @@
   <data name="welcome-cinema-neon-sign-popcorn-260nw-1178142151" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\welcome-cinema-neon-sign-popcorn-260nw-1178142151.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="watching-movies-popcorn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\watching-movies-popcorn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cinema-time-cineworld" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cinema-time-cineworld.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,11 +181,11 @@
   <data name="Menu_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="zip_code_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zip_code_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="living_room_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\living_room_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Magnetic Card_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Magnetic Card_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="people_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\people_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,14 +199,14 @@
   <data name="address_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\address_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="closed_eye_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\closed_eye_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cinema vector 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cinema vector 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="password_144px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password_144px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="130718-movie" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\130718-movie.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="city_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\city_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,11 +214,8 @@
   <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="eye_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eye_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="watching-movies-popcorn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\watching-movies-popcorn.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="zip_code_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zip_code_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cancel_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel_480px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,8 +226,8 @@
   <data name="name_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\name_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="couple-watching-tv" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\couple-watching-tv.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eye_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="toggle_full_screen_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toggle_full_screen_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,8 +238,8 @@
   <data name="male_user_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\male_user_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Magnetic Card_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Magnetic Card_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="130718-movie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\130718-movie.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gear_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gear_480px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,7 +250,10 @@
   <data name="cancel_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="closed_eye_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\closed_eye_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="couple-watching-tv" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\couple-watching-tv.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gradient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gradient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

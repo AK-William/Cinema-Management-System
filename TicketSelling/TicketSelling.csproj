@@ -64,6 +64,7 @@
     <Compile Include="Common\ResponseMessage.cs" />
     <Compile Include="Common\ThemeColor.cs" />
     <Compile Include="DAO\AdminDao.cs" />
+    <Compile Include="DAO\DashboardDao.cs" />
     <Compile Include="DAO\MovieDao.cs" />
     <Compile Include="DAO\MovieSDDao.cs" />
     <Compile Include="DAO\MovieSTDao.cs" />
@@ -91,11 +92,11 @@
     <Compile Include="UI\Configuration\FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Configuration\FrmHome.cs">
+    <Compile Include="UI\Configuration\FrmDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Configuration\FrmHome.Designer.cs">
-      <DependentUpon>FrmHome.cs</DependentUpon>
+    <Compile Include="UI\Configuration\FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Configuration\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -141,8 +142,8 @@
     <EmbeddedResource Include="UI\Configuration\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Configuration\FrmHome.resx">
-      <DependentUpon>FrmHome.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Configuration\FrmDashboard.resx">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Configuration\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -183,7 +184,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FontAwesome.Sharp">
-      <Version>6.1.1</Version>
+      <Version>6.2.1</Version>
     </PackageReference>
     <PackageReference Include="FontAwesomeIconsDropdown">
       <Version>1.4.0</Version>
@@ -208,6 +209,7 @@
     <None Include="Resources\cancel_480px1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\gradient.png" />
     <None Include="Resources\eye_500px.png" />
     <None Include="Resources\Magnetic Card_500px.png" />
     <None Include="Resources\zip_code_500px.png" />
