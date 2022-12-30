@@ -49,8 +49,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.panelAccountShow = new Guna.UI2.WinForms.Guna2Panel();
-            this.accountimage = new FontAwesome.Sharp.IconButton();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtLoginNameForMain = new System.Windows.Forms.Label();
+            this.accountimage = new FontAwesome.Sharp.IconButton();
             this.btnAccount = new FontAwesome.Sharp.IconButton();
             this.btnSetting = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitle.SuspendLayout();
             this.panelAccountShow.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.paneltitlebar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -311,11 +313,25 @@
             this.panelAccountShow.BackColor = System.Drawing.Color.Transparent;
             this.panelAccountShow.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.panelAccountShow.BorderThickness = 2;
+            this.panelAccountShow.Controls.Add(this.guna2Panel1);
             this.panelAccountShow.Controls.Add(this.accountimage);
-            this.panelAccountShow.Controls.Add(this.txtLoginNameForMain);
             this.panelAccountShow.Name = "panelAccountShow";
             this.panelAccountShow.Tag = "AS";
             this.panelAccountShow.UseTransparentBackground = true;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.txtLoginNameForMain);
+            resources.ApplyResources(this.guna2Panel1, "guna2Panel1");
+            this.guna2Panel1.Name = "guna2Panel1";
+            // 
+            // txtLoginNameForMain
+            // 
+            this.txtLoginNameForMain.AllowDrop = true;
+            resources.ApplyResources(this.txtLoginNameForMain, "txtLoginNameForMain");
+            this.txtLoginNameForMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtLoginNameForMain.ForeColor = System.Drawing.Color.Black;
+            this.txtLoginNameForMain.Name = "txtLoginNameForMain";
             // 
             // accountimage
             // 
@@ -327,14 +343,6 @@
             this.accountimage.IconSize = 60;
             this.accountimage.Name = "accountimage";
             this.accountimage.UseVisualStyleBackColor = true;
-            // 
-            // txtLoginNameForMain
-            // 
-            this.txtLoginNameForMain.AllowDrop = true;
-            this.txtLoginNameForMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            resources.ApplyResources(this.txtLoginNameForMain, "txtLoginNameForMain");
-            this.txtLoginNameForMain.ForeColor = System.Drawing.Color.Black;
-            this.txtLoginNameForMain.Name = "txtLoginNameForMain";
             // 
             // btnAccount
             // 
@@ -535,6 +543,7 @@
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             this.panelAccountShow.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
             this.paneltitlebar.ResumeLayout(false);
             this.paneltitlebar.PerformLayout();
             this.ResumeLayout(false);
@@ -542,13 +551,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panelTitle;
         private FontAwesome.Sharp.IconButton btnMenu;
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton btnMinimize;
         private FontAwesome.Sharp.IconButton btnMaximize;
         private FontAwesome.Sharp.IconButton btnExit;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelConfiguration;
         private FontAwesome.Sharp.IconButton btnConfiguration;
@@ -566,7 +573,6 @@
         private System.Windows.Forms.ToolTip toolTipStaffs;
         private System.Windows.Forms.ToolTip toolTipTicket;
         private FontAwesome.Sharp.IconButton btnSetting;
-        private System.Windows.Forms.Label txtLoginNameForMain;
         private System.Windows.Forms.Label lblTitleChildForm;
         private Guna.UI2.WinForms.Guna2Panel panelBody;
         private FontAwesome.Sharp.IconButton iconCurrentChildForm;
@@ -584,5 +590,9 @@
         public FontAwesome.Sharp.IconButton btnSeat;
         public FontAwesome.Sharp.IconButton btnTicket;
         public FontAwesome.Sharp.IconButton btnReport;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        public System.Windows.Forms.Panel panelTitle;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label txtLoginNameForMain;
     }
 }

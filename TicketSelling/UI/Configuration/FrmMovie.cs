@@ -43,7 +43,7 @@ namespace TicketSelling.UI.Configuration
             STDate.Value = DateTime.Now;
             STTime.Format = DateTimePickerFormat.Time;
             STTime.ShowUpDown = true;
-            
+
         }
 
 
@@ -214,6 +214,7 @@ namespace TicketSelling.UI.Configuration
                 btnMovieSearch.Focus();
             }
         }
+
         #endregion
 
         private void Reset()
@@ -366,7 +367,7 @@ namespace TicketSelling.UI.Configuration
                 string extension = System.IO.Path.GetExtension(imgUrl);
                 string serverPhotoPath = Path.Combine(@"C:\Shared\Images\");
                 strString = serverPhotoPath + MovieCoverName + extension;
-                Bitmap imgOutforsaveondisk = CommonFormat.ConvertTo16bpp(CommonFormat.getResizedImage(codeImage, 1280, 720));
+                Bitmap imgOutforsaveondisk = CommonFormat.ConvertTo16bpp(CommonFormat.getResizedImage(codeImage, 800, 600));
                 imgOutforsaveondisk.Save(strString);
             }
 
@@ -380,7 +381,6 @@ namespace TicketSelling.UI.Configuration
                 //string serverPhotoPath = App_Setting.ServerPhotoPath;
                 string serverPhotoPath = Path.Combine(@"C:\Shared\Images\");
 
-
                 string extension = System.IO.Path.GetExtension(imgUrl);
                 string name = MovieCoverName + extension;
 
@@ -389,7 +389,6 @@ namespace TicketSelling.UI.Configuration
                 Bitmap orgBitmap = new Bitmap(imgUrl);
                 orgBitmap.Save(strString);
                 orgBitmap.Dispose();
-
             }
             else
             {
@@ -402,7 +401,7 @@ namespace TicketSelling.UI.Configuration
             SaveData();
         }
 
-        private void BindDgvMovie()
+        public void BindDgvMovie()
         {
             try
             {
@@ -411,7 +410,8 @@ namespace TicketSelling.UI.Configuration
                 if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
                     dgvMovie.DataSource = res.LstMovie;
-                    LstMovie = res.LstMovie; //forCombobox
+                    LstMovieSD = res.LstMovie; //forCombobox
+                    LstMovieST = res.LstMovie; //forCombobox
                 }
             }
             catch (Exception ex)
@@ -432,11 +432,11 @@ namespace TicketSelling.UI.Configuration
         {
             try
             {
+                if (!CheckRequireFields()) return;
                 if (AnyChanges)
                 {
                     EditImageFilePath(MovieCoverName);
                 }
-                if (!CheckRequireFields()) return;
                 MessageEntity res = new MovieDao().UpdateMovie(1, new DAO.Entity.Movie()
                 {
                     Id = id,
@@ -630,36 +630,69 @@ namespace TicketSelling.UI.Configuration
             ResMovie res = new MovieDao().GetMovieNameById(MovieId);
         }
 
-        private List<Movie> LstMovie = new List<Movie>();
+        private List<Movie> LstMovieSD = new List<Movie>();
+        private List<Movie> LstMovieST = new List<Movie>();
 
+        //public List<Movie> LstMovie { get; set; }
         private void TabControlMovie_Click(object sender, EventArgs e)
         {
-            if (LstMovie != null && LstMovie.Count > 0)
+            if (LstMovieSD != null && LstMovieSD.Count > 0)
             {
                 //Schedule date combo box
                 CbSDName.SelectedIndexChanged -= new EventHandler(CbSDName_SelectedIndexChanged);
                 CbSDName.DataSource = null;
-                CbSDName.DataSource = LstMovie;
+                CbSDName.DataSource = LstMovieSD;
                 CbSDName.DisplayMember = "Name";
                 CbSDName.ValueMember = "Id";
                 CbSDName.SelectedIndex = 0;
                 CbSDName.SelectedIndexChanged += new EventHandler(CbSDName_SelectedIndexChanged);
                 BindDgvMovieSD();
-
+            }
+            if (LstMovieST != null && LstMovieST.Count > 0)
+            {
                 //Schedule time combo box
                 CbSTName.SelectedIndexChanged -= new EventHandler(CbSTName_SelectedIndexChanged);
                 CbSTName.DataSource = null;
-                CbSTName.DataSource = LstMovie;
+                CbSTName.DataSource = LstMovieST;
                 CbSTName.DisplayMember = "Name";
                 CbSTName.ValueMember = "Id";
                 CbSTName.SelectedIndex = 0;
                 CbSTName.SelectedIndexChanged += new EventHandler(CbSTName_SelectedIndexChanged);
                 BindDgvMovieST();
             }
+
+            //if (LstMovie != null && LstMovie.Count > 0)
+            //{
+            //    //Schedule date combo box
+            //    CbSDName.SelectedIndexChanged -= new EventHandler(CbSDName_SelectedIndexChanged);
+            //    CbSDName.DataSource = null;
+            //    CbSDName.DataSource = LstMovie;
+            //    CbSDName.DisplayMember = "Name";
+            //    CbSDName.ValueMember = "Id";
+            //    CbSDName.SelectedIndex = 0;
+            //    CbSDName.SelectedIndexChanged += new EventHandler(CbSDName_SelectedIndexChanged);
+            //    BindDgvMovieSD();
+
+            //    CbSTName.SelectedIndexChanged -= new EventHandler(CbSTName_SelectedIndexChanged);
+            //    CbSTName.DataSource = null;
+            //    CbSTName.DataSource = LstMovie;
+            //    CbSTName.DisplayMember = "Name";
+            //    CbSTName.ValueMember = "Id";
+            //    CbSTName.SelectedIndex = 0;
+            //    CbSTName.SelectedIndexChanged += new EventHandler(CbSTName_SelectedIndexChanged);
+            //    BindDgvMovieST();
         }
 
+        private void CbSTName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int MovieId = Convert.ToInt32(CbSTName.SelectedValue);
+            ResMovieSD res = new MovieDao().GetMovieDateById(MovieId);
+            STDate.MinDate = res.LstMovieSD[0].StartDate;
+            STDate.MaxDate = res.LstMovieSD[0].EndDate;
+        }
 
         int idsd = -1; int MovieId;
+
         private void DgvSD_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -740,55 +773,10 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
-
         #endregion
 
 
         #region Movie Schedule Time
-
-        private bool CheckRequireFieldsST()
-        {
-            if (string.IsNullOrEmpty(CbSTName.Text))
-            {
-                MessageBox.Show("Choose Movie Name");
-                return false;
-            }
-            return true;
-        }
-
-        private void BindDgvMovieST()
-        {
-            try
-            {
-                dgvST.DataSource = null;
-                ResMovieST res = new MovieSTDao().GetAllMovieST();
-                if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
-                {
-                    dgvST.DataSource = res.LstMovieST;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void ResetST()
-        {
-            CbSTName.Text = "";
-            STDate.Text = "";
-            STTime.Text = "";
-            btnSTUpdate.Visible = false;
-            btnSTSave.Visible = true;
-        }
-
-        private void CbSTName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int MovieId = Convert.ToInt32(CbSTName.SelectedValue);
-            ResMovieSD res = new MovieDao().GetMovieDateById(MovieId);
-            STDate.MinDate = res.LstMovieSD[0].StartDate;
-            STDate.MaxDate = res.LstMovieSD[0].EndDate;
-        }
 
         private void DgvST_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -820,9 +808,42 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
-        private void BtnSTCancel_Click(object sender, EventArgs e)
+        private bool CheckRequireFieldsST()
         {
-            ResetST();
+            if (string.IsNullOrEmpty(CbSTName.Text))
+            {
+                MessageBox.Show("Choose Movie Name");
+                return false;
+            }
+            return true;
+        }
+
+        private void BindDgvMovieST()
+        {
+            try
+            {
+                dgvST.DataSource = null;
+                ResMovieST res = new MovieSTDao().GetAllMovieST();
+                if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
+                {
+                    dgvST.DataSource = res.LstMovieST;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void ResetST()
+        {
+            CbSTName.SelectedIndex = 0;
+            STDate.Text = "";
+            STTime.Text = "";
+            btnSTUpdate.Visible = false;
+            btnSTSave.Visible = true;
+            STDate.MinDate = DateTime.Now;
+            STDate.MaxDate = DateTime.Now.AddYears(5);
         }
 
         private void SaveMovieST()
@@ -861,10 +882,16 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
+        private void BtnSTCancel_Click(object sender, EventArgs e)
+        {
+            ResetST();
+        }
+
         private void BtnSTSave_Click(object sender, EventArgs e)
         {
             SaveMovieST();
         }
+
 
         int idst = -1;
 
@@ -920,4 +947,6 @@ namespace TicketSelling.UI.Configuration
 
         #endregion
     }
+
 }
+

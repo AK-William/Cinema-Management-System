@@ -270,6 +270,7 @@ namespace TicketSelling.Common
                                                       INSERT INTO[dbo].[TblAdmin]
                                                         ([Name]
                                                         , [Username]
+                                                        , [Role]
                                                         , [Password]
                                                         , [Gmail]
                                                         , [PhoneNumber]
@@ -278,7 +279,7 @@ namespace TicketSelling.Common
                                                         , [City]
                                                         , [Postcode]
                                                        ,[CreatedBy])
-                                                       VALUES(@Name, @Username, @Password, @Gmail, @PhoneNumber, @NRC, @Address, @City, @Postcode, @CreatedBy);
+                                                       VALUES(@Name, @Username, @Role, @Password, @Gmail, @PhoneNumber, @NRC, @Address, @City, @Postcode, @CreatedBy);
 
                                                         SELECT
                                                         '000' AS RespCode,
@@ -319,6 +320,7 @@ namespace TicketSelling.Common
                                                     BEGIN
                                                       UPDATE [dbo].[TblAdmin]
 														   SET [Name] =  @Name
+                                                        , [Role] = @Role
                                                         , [Username] = @Username
                                                         , [Password] = @Password
                                                         , [Gmail] = @Gmail
@@ -588,8 +590,7 @@ namespace TicketSelling.Common
                                                       WHERE MovieId = @MovieId
                                                     END";
 
-        public static string UpdateMovieST = @"IF EXISTS (SELECT * FROM TblScheduleMovieTime WHERE MovieId = @MovieId AND
-                                                        Id != @Id)
+        public static string UpdateMovieST = @"IF EXISTS (SELECT * FROM TblScheduleMovieTime WHERE MovieId != @MovieId)
                                                     BEGIN
                                                       SELECT
                                                         '001' AS RespCode,
@@ -597,7 +598,7 @@ namespace TicketSelling.Common
                                                         'ME' AS 'RespMessageType'
                                                       SELECT
                                                         *
-                                                      FROM TblScheduleMovie
+                                                      FROM TblScheduleMovieTime
                                                       WHERE MovieId = @MovieId
                                                     END
                                                     ELSE
@@ -614,19 +615,17 @@ namespace TicketSelling.Common
                                                         'MI' AS 'RespMessageType'
                                                       SELECT
                                                         *
-                                                      FROM TblScheduleMovie
+                                                      FROM TblScheduleMovieTime
                                                       WHERE MovieId = @MovieId
                                                     END";
 
         #endregion
 
-
-
-        public static string Login = @"IF EXISTS(SELECT * FROM TblStaff where Username=@Username AND Password=@Password)
+        public static string LoginStaff = @"IF EXISTS(SELECT * FROM TblStaff where Username=@Username AND Password=@Password)
                                         BEGIN
                                             SELECT
                                             '000' AS RespCode,
-                                            'Login Successful' AS RespDesp,
+                                            'Login Successful. Welcome Back!' AS RespDesp,
                                             'MI' AS 'RespMessageType'
                                         END
                                         ELSE
@@ -637,12 +636,27 @@ namespace TicketSelling.Common
                                             'ME' AS 'RespMessageType'
                                         END";
 
+        public static string Login = @"IF EXISTS(SELECT * FROM TblAdmin where Username=@Username AND Password=@Password)
+                                        BEGIN
+                                            SELECT
+                                            '000' AS RespCode,
+                                            'Login Successful. Welcome Back!' AS RespDesp,
+                                            'MI' AS 'RespMessageType'
+                                        END
+                                        ELSE
+                                        BEGIN
+                                            SELECT
+                                            '001' AS RespCode,
+                                            'Invalid Username and Password' AS RespDesp,
+                                            'ME' AS 'RespMessageType'
+                                        END";
+
+       
 
         #region dashboard
 
 
-        public static string GetMovieCoverById = @"Select * from TblMovie where Id=@Id";
-
+        public static string GetAllMovieDB = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblMovie WITH (NOLOCK)";
 
         #endregion
 

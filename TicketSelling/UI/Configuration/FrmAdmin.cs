@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using TicketSelling.Common;
 using TicketSelling.DAO.Entity;
 using System.IO;
+using System.Windows.Media.Imaging;
 
 namespace TicketSelling.UI.Configuration
 {
@@ -25,7 +26,6 @@ namespace TicketSelling.UI.Configuration
         public FrmAdmin()
         {
             InitializeComponent();
-            txtAdminName.Select();
             dgvAdmin.AutoGenerateColumns = false;
             colorchangeadmin();
         }
@@ -50,6 +50,7 @@ namespace TicketSelling.UI.Configuration
             txtAdminAddress.Text = "";
             txtAdminCity.Text = "";
             txtAdminPostcode.Text = "";
+            cbuserrole.Text = "";
             btnSave.Visible = true;
             btnUpdate.Visible = false;
             txtAdminName.Select();
@@ -59,6 +60,7 @@ namespace TicketSelling.UI.Configuration
         {
             Reset();
         }
+
 
         #region theme color change
 
@@ -187,6 +189,7 @@ namespace TicketSelling.UI.Configuration
 
         #endregion
 
+
         private void PictureBoxAdminPhoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -208,6 +211,7 @@ namespace TicketSelling.UI.Configuration
 
         private bool CheckRequireFields()
         {
+            
             if (string.IsNullOrEmpty(txtAdminName.Text))
             {
                 MessageBox.Show("Enter your Real Name");
@@ -258,7 +262,16 @@ namespace TicketSelling.UI.Configuration
                 MessageBox.Show("Enter your photo");
                 return false;
             }
-
+            if (string.IsNullOrEmpty(pictureBoxAdminPhoto.Text))
+            {
+                MessageBox.Show("Enter your ID Photo");
+                return false;
+            }
+            if (string.IsNullOrEmpty(cbuserrole.Text))
+            {
+                MessageBox.Show("Enter your role");
+                return false;
+            }
             return true;
         }
 
@@ -271,6 +284,7 @@ namespace TicketSelling.UI.Configuration
                 {
                     Name = txtAdminName.Text,
                     Username = txtAdminUsername.Text,
+                    Role = cbuserrole.Text,
                     Password = txtAdminPassword.Text,
                     Gmail = txtAdminGmail.Text,
                     PhoneNumber = txtAdminPhoneNumber.Text,
@@ -283,8 +297,8 @@ namespace TicketSelling.UI.Configuration
                 {
                     SaveImageFilePath(res.AdminPhotoName);
                     UpdateAdminPhoto(res.AdminId);
-                    // Reset();
-                    // BindDgvAdmin();
+                     Reset();
+                     BindDgvAdmin();
                 }
                 else if (res.RespMessageType == CommonResponseMessage.ResErrorType)
                 {
@@ -336,7 +350,7 @@ namespace TicketSelling.UI.Configuration
                 string extension = System.IO.Path.GetExtension(imgUrl);
                 string serverPhotoPath = Path.Combine(@"C:\Shared\Images\Admin\");
                 strString = serverPhotoPath + AdminPhotoName + extension;
-                Bitmap imgOutforsaveondisk = CommonFormat.ConvertTo16bpp(CommonFormat.getResizedImage(codeImage, 1280, 720));
+                Bitmap imgOutforsaveondisk = CommonFormat.ConvertTo16bpp(CommonFormat.getResizedImage(codeImage, 800, 600));
                 imgOutforsaveondisk.Save(strString);
             }
 
@@ -347,9 +361,7 @@ namespace TicketSelling.UI.Configuration
             string strString = null;
             if (imgUrl.Length > 0)
             {
-                //string serverPhotoPath = App_Setting.ServerPhotoPath;
                 string serverPhotoPath = Path.Combine(@"C:\Shared\Images\Admin\");
-
 
                 string extension = System.IO.Path.GetExtension(imgUrl);
                 string name = AdminPhotoName + extension;
@@ -411,6 +423,7 @@ namespace TicketSelling.UI.Configuration
                     Id = id,
                     Name = txtAdminName.Text,
                     Photo = strString,
+                    Role = cbuserrole.Text,
                     Username = txtAdminUsername.Text,
                     Password = txtAdminPassword.Text,
                     Gmail = txtAdminGmail.Text,
@@ -480,6 +493,7 @@ namespace TicketSelling.UI.Configuration
             DataGridViewRow dgvRowST = dgvAdmin.SelectedRows[0];
             id = Convert.ToInt32(dgvRowST.Cells["ColId"].Value);
             txtAdminName.Text = dgvRowST.Cells["ColAdminName"].Value.ToString();
+            cbuserrole.Text = dgvRowST.Cells["Coluserrole"].Value.ToString();
             txtAdminUsername.Text = dgvRowST.Cells["ColAdminUsername"].Value.ToString();
             txtAdminPassword.Text = Cryptography.Decrypt(dgvRowST.Cells["ColAdminPassword"].Value.ToString());
             txtAdminGmail.Text = dgvRowST.Cells["ColAdminGmail"].Value.ToString();

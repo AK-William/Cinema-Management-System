@@ -393,6 +393,26 @@ namespace TicketSelling.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap night_500px {
+            get {
+                object obj = ResourceManager.GetObject("night_500px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap night_500px_white {
+            get {
+                object obj = ResourceManager.GetObject("night_500px white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap note_480px {
             get {
                 object obj = ResourceManager.GetObject("note_480px", resourceCulture);
@@ -456,6 +476,26 @@ namespace TicketSelling.Properties {
         internal static System.Drawing.Bitmap popcorn_popcorns {
             get {
                 object obj = ResourceManager.GetObject("popcorn-popcorns", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sun_512px {
+            get {
+                object obj = ResourceManager.GetObject("sun_512px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sun_512px_white {
+            get {
+                object obj = ResourceManager.GetObject("sun_512px white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

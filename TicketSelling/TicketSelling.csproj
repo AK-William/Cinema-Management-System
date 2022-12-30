@@ -209,6 +209,10 @@
     <None Include="Resources\cancel_480px1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\night_500px white.png" />
+    <None Include="Resources\sun_512px white.png" />
+    <None Include="Resources\night_500px.png" />
+    <None Include="Resources\sun_512px.png" />
     <None Include="Resources\gradient.png" />
     <None Include="Resources\eye_500px.png" />
     <None Include="Resources\Magnetic Card_500px.png" />

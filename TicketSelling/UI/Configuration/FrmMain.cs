@@ -31,6 +31,8 @@ namespace TicketSelling.UI.Configuration
             txtLoginNameForMain.Text = FrmLogin.user;
             this.Padding = new Padding(borderSize);//Border size
             //this.BackColor = Color.FromArgb(51, 153, 255);//Border color
+            panelBody.Controls.Add(frmdashboard);
+            frmdashboard.Dock = DockStyle.Fill;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -282,7 +284,6 @@ namespace TicketSelling.UI.Configuration
                     iconCurrentChildForm.IconChar = btnAdmin.IconChar;
                     break;
                 case "Dashboard":
-                    frm = new FrmDashboard();
                     lblTitleChildForm.Text = btnDashboard.Tag.ToString();
                     iconCurrentChildForm.IconChar = btnDashboard.IconChar;
                     break;
@@ -310,11 +311,15 @@ namespace TicketSelling.UI.Configuration
             btnAdmin.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //Admin button white fix
         }
 
+        UserControl frmdashboard = new FrmDashboard(); //declare outside to use in form load
         private void BtnDashboard_Click(object sender, EventArgs e)
         {
             MenuClick(sender, e);
             HideSubMenu();
             ActivateButton(sender); //menu highlight active button
+            panelBody.Controls.Clear();
+            panelBody.Controls.Add(frmdashboard);
+            frmdashboard.Dock = DockStyle.Fill;
         }
 
         private void BtnConfiguration_Click(object sender, EventArgs e)

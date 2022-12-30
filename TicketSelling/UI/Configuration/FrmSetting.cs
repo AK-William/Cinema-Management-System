@@ -19,6 +19,22 @@ namespace TicketSelling.UI.Configuration
         public FrmSetting()
         {
             InitializeComponent();
+            dayw.Visible = false;
+            nightw.Visible = false;
+            colorchangesetting();
+        }
+
+        public void colorchangesetting()
+        {
+            if (frmmain.panelTitle.BackColor == Color.FromArgb(41, 47, 57))
+            {
+                this.BackColor = Color.FromArgb(41, 47, 57);
+            }
+            else 
+            {
+                this.BackColor = Color.White;
+            }
+           
         }
 
         FrmMain frmmain = (FrmMain)Application.OpenForms["FrmMain"];
@@ -159,6 +175,7 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
+
         public void CbChangeLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (cbChangeLanguage.SelectedIndex)
@@ -173,5 +190,40 @@ namespace TicketSelling.UI.Configuration
             this.Controls.Clear();
             InitializeComponent();
         }
+
+
+        private void Daynight_CheckedChanged(object sender, EventArgs e)
+        {
+            if (daynight.Checked == true)
+            {
+                this.BackColor = Color.FromArgb(41, 47, 57);
+                dayw.Visible = true;
+                nightw.Visible = true;
+                dayb.Visible = false;
+                nightb.Visible = false;
+                lblchangecolor.ForeColor = Color.White;
+                lblchangelanguage.ForeColor = Color.White;
+                lblDayNight.ForeColor = Color.White;
+                frmmain.panelTitle.BackColor = Color.FromArgb(41, 47, 57);
+                frmmain.label1.ForeColor = Color.White;
+                frmmain.txtLoginNameForMain.ForeColor = Color.White;
+            }
+            else
+            {
+                this.BackColor = Color.White;
+                dayw.Visible = false;
+                nightw.Visible = false;
+                dayb.Visible = true;
+                nightb.Visible = true;
+                lblchangecolor.ForeColor = Color.Black;
+                lblchangelanguage.ForeColor = Color.Black;
+                lblDayNight.ForeColor = Color.Black;
+                frmmain.panelTitle.BackColor = Color.White;
+                frmmain.label1.ForeColor = Color.Black;
+                frmmain.txtLoginNameForMain.ForeColor = Color.Black;
+            }
+        }
+
+       
     }
 }

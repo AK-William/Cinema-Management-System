@@ -117,87 +117,1106 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnlogout.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnlogout.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnReport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnlogout.ToolTip1" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnTicket.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnlogout.ToolTip2" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnStaff.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnlogout.ToolTip3" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnAdmin.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnlogout.ToolTip4" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnEntry.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnlogout.ToolTip5" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnMovie.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnlogout.ToolTip6" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnSeat.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnlogout.ToolTip7" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnConfiguration.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnlogout.ToolTip8" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnHome.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnlogout.ToolTip9" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnHome.Text" xml:space="preserve">
-    <value>    မူလ</value>
+  <data name="btnlogout.ToolTip10" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnMenu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnReport.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnReport.ToolTip1" xml:space="preserve">
+    <value />
   </data>
-  <data name="txtLoginNameForMain.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnReport.ToolTip2" xml:space="preserve">
+    <value />
   </data>
-  <data name="guna2CirclePictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnReport.ToolTip3" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnAccount.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnReport.ToolTip4" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnSetting.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnReport.ToolTip5" xml:space="preserve">
+    <value />
   </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="btnReport.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReport.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReport.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReport.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReport.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTicket.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTicket.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTicket.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTicket.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTicket.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTicket.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTicket.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTicket.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTicket.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTicket.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnTicket.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnStaff.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnStaff.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnStaff.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnStaff.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnStaff.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnStaff.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnStaff.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnStaff.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnStaff.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnStaff.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnStaff.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAdmin.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAdmin.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAdmin.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAdmin.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAdmin.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAdmin.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAdmin.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAdmin.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAdmin.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAdmin.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAdmin.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEntry.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEntry.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEntry.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEntry.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEntry.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEntry.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEntry.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEntry.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEntry.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEntry.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnEntry.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEntry.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEntry.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEntry.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEntry.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEntry.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEntry.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEntry.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEntry.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEntry.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEntry.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelEntry.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMovie.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMovie.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMovie.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMovie.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMovie.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMovie.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMovie.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMovie.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMovie.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMovie.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMovie.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSeat.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSeat.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSeat.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSeat.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSeat.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSeat.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSeat.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSeat.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSeat.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSeat.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSeat.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnConfiguration.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnConfiguration.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnConfiguration.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnConfiguration.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnConfiguration.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnConfiguration.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnConfiguration.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnConfiguration.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnConfiguration.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnConfiguration.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnConfiguration.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelConfiguration.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelConfiguration.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelConfiguration.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelConfiguration.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelConfiguration.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelConfiguration.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelConfiguration.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelConfiguration.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelConfiguration.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelConfiguration.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelConfiguration.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDashboard.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDashboard.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDashboard.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDashboard.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDashboard.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDashboard.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDashboard.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDashboard.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDashboard.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDashboard.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDashboard.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenu.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenu.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenu.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenu.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenu.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenu.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenu.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenu.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenu.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenu.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenu.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMenu.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMenu.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMenu.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMenu.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMenu.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMenu.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMenu.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMenu.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMenu.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMenu.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMenu.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenuBar.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenuBar.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenuBar.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenuBar.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenuBar.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenuBar.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenuBar.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenuBar.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenuBar.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenuBar.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelMenuBar.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelleft.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelleft.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelleft.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelleft.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelleft.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelleft.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelleft.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelleft.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelleft.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelleft.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelleft.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLoginNameForMain.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLoginNameForMain.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLoginNameForMain.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLoginNameForMain.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLoginNameForMain.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLoginNameForMain.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLoginNameForMain.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLoginNameForMain.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLoginNameForMain.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLoginNameForMain.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLoginNameForMain.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="guna2Panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="guna2Panel1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="guna2Panel1.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="guna2Panel1.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="guna2Panel1.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="guna2Panel1.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="guna2Panel1.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="guna2Panel1.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="guna2Panel1.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="guna2Panel1.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="guna2Panel1.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="accountimage.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="accountimage.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="accountimage.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="accountimage.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="accountimage.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="accountimage.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="accountimage.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="accountimage.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="accountimage.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="accountimage.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="accountimage.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAccountShow.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAccountShow.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAccountShow.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAccountShow.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAccountShow.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAccountShow.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAccountShow.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAccountShow.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAccountShow.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAccountShow.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelAccountShow.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAccount.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAccount.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAccount.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAccount.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAccount.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAccount.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAccount.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAccount.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAccount.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAccount.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAccount.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSetting.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSetting.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSetting.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSetting.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSetting.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSetting.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSetting.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSetting.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSetting.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSetting.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnSetting.ToolTip10" xml:space="preserve">
+    <value />
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 31</value>
+    <value>104, 37</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>မင်္ဂလာပါ</value>
   </data>
-  <data name="btnMinimize.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnMaximize.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="label1.ToolTip1" xml:space="preserve">
+    <value />
   </data>
-  <data name="btnExit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="label1.ToolTip2" xml:space="preserve">
+    <value />
   </data>
-  <data name="iconCurrentChildForm.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="label1.ToolTip3" xml:space="preserve">
+    <value />
   </data>
-  <data name="lblTitleChildForm.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="label1.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMinimize.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMinimize.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMinimize.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMinimize.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMinimize.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMinimize.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMinimize.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMinimize.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMinimize.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMinimize.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMinimize.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMaximize.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMaximize.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMaximize.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMaximize.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMaximize.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMaximize.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMaximize.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMaximize.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMaximize.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMaximize.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnMaximize.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnExit.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnExit.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnExit.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnExit.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnExit.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnExit.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnExit.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnExit.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnExit.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnExit.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnExit.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTitle.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTitle.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTitle.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTitle.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTitle.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTitle.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTitle.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTitle.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTitle.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTitle.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelTitle.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iconCurrentChildForm.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iconCurrentChildForm.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iconCurrentChildForm.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iconCurrentChildForm.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iconCurrentChildForm.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iconCurrentChildForm.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iconCurrentChildForm.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iconCurrentChildForm.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iconCurrentChildForm.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iconCurrentChildForm.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iconCurrentChildForm.ToolTip10" xml:space="preserve">
+    <value />
   </data>
   <data name="lblTitleChildForm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 23</value>
+    <value>48, 31</value>
   </data>
   <data name="lblTitleChildForm.Text" xml:space="preserve">
     <value>မူလ</value>
+  </data>
+  <data name="lblTitleChildForm.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitleChildForm.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitleChildForm.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitleChildForm.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitleChildForm.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitleChildForm.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitleChildForm.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitleChildForm.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitleChildForm.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitleChildForm.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblTitleChildForm.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paneltitlebar.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paneltitlebar.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paneltitlebar.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paneltitlebar.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paneltitlebar.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paneltitlebar.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paneltitlebar.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paneltitlebar.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paneltitlebar.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paneltitlebar.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="paneltitlebar.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBody.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBody.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBody.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBody.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBody.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBody.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBody.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBody.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBody.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBody.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="panelBody.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip10" xml:space="preserve">
+    <value />
   </data>
 </root>

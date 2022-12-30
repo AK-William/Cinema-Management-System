@@ -403,56 +403,6 @@ namespace TicketSelling.DAO
             }
         }
 
-        public ResMovie GetMovieCoverById(int MovieId)
-        {
-            sqlConnection = DbConnector.Connect();
-            if (sqlConnection == null)
-            {
-                return null;
-            }
-            MessageEntity _MessageEntity = null;
-            try
-            {
-                scom = new SqlCommand(ProcedureConstants.GetMovieCoverById, sqlConnection);
-                scom.CommandType = CommandType.Text;
-                scom.Parameters.AddWithValue("@Id", MovieId);
-                DataSet ds = new DataSet();
-                adapter = new SqlDataAdapter(scom);
-                adapter.Fill(ds);
-                sqlConnection.Close();
-
-                _MessageEntity = SqlDataSet.Check(ds, 1);
-                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
-                    return new ResMovie() { MessageEntity = _MessageEntity };
-
-                DataTable dt = ds.Tables[0];
-                List<Movie> lst = new List<Movie>();
-
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    lst.Add(new Movie
-                    {
-                        Id = Convert.ToInt32(dt.Rows[i]["Id"]),
-                        MovieCover = dt.Rows[i]["MovieCover"].ToString(),
-                        MovieCoverByte = File.ReadAllBytes(dt.Rows[i]["MovieCover"].ToString()),
-                    });
-                }
-                return new ResMovie()
-                {
-                    MessageEntity = new MessageEntity()
-                    {
-                        RespMessageType = CommonResponseMessage.ResSuccessType
-                    },
-                    LstMovie = lst
-                };
-            }
-            catch (Exception ex)
-            {
-                _MessageEntity.RespCode = CommonResponseMessage.ExceptionErrorCode;
-                _MessageEntity.RespDesp = ex.Message;
-                _MessageEntity.RespMessageType = CommonResponseMessage.ResErrorType;
-                return new ResMovie() { MessageEntity = _MessageEntity };
-            }
-        }
+       
     }
 }

@@ -219,7 +219,7 @@ namespace TicketSelling.DAO
             MessageEntity _MessageEntity = null;
             try
             {
-                scom = new SqlCommand(ProcedureConstants.Login, sqlConnection);
+                scom = new SqlCommand(ProcedureConstants.LoginStaff, sqlConnection);
                 scom.CommandType = CommandType.Text;
                 scom.Parameters.AddWithValue("@Username", req.Username);
                 scom.Parameters.AddWithValue("@Password", Cryptography.Encrypt(req.Password));

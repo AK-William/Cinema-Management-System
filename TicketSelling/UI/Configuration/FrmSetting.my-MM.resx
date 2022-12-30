@@ -118,16 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="guna2HtmlLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 23</value>
+  <data name="lblDayNight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 33</value>
   </data>
-  <data name="guna2HtmlLabel2.Text" xml:space="preserve">
-    <value>ဘာသာစကား</value>
+  <data name="lblDayNight.Text" xml:space="preserve">
+    <value>နေ့ညအလင်းအ‌မှောင်ပြောင်းရန်</value>
   </data>
-  <data name="guna2HtmlLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 23</value>
+  <data name="lblchangelanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 33</value>
   </data>
-  <data name="guna2HtmlLabel1.Text" xml:space="preserve">
-    <value>အရောင်‌ပြောင်းရန်</value>
+  <data name="lblchangelanguage.Text" xml:space="preserve">
+    <value>ဘာသာစကား‌ပြောင်းရန်</value>
+  </data>
+  <data name="lblchangecolor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 33</value>
+  </data>
+  <data name="lblchangecolor.Text" xml:space="preserve">
+    <value>အ‌ရောင်‌‌ပြောင်းရန်</value>
   </data>
 </root>
