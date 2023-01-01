@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdmin));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbuserrole = new Guna.UI2.WinForms.Guna2ComboBox();
             this.hidepassword = new Guna.UI2.WinForms.Guna2Button();
             this.showpassword = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
@@ -60,9 +62,6 @@
             this.txtAdminName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvAdmin = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.cbuserrole = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.ColNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAdminName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +77,7 @@
             this.ColAdminPostcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDel = new System.Windows.Forms.DataGridViewImageColumn();
             this.ColAdminPhotoString = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdminPhoto)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -119,6 +119,38 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1180, 441);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(206, 115);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 33);
+            this.label1.TabIndex = 307;
+            this.label1.Text = "Role";
+            // 
+            // cbuserrole
+            // 
+            this.cbuserrole.AutoRoundedCorners = true;
+            this.cbuserrole.BackColor = System.Drawing.Color.Transparent;
+            this.cbuserrole.BorderRadius = 17;
+            this.cbuserrole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbuserrole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbuserrole.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbuserrole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbuserrole.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.cbuserrole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbuserrole.ItemHeight = 30;
+            this.cbuserrole.Items.AddRange(new object[] {
+            "Admin",
+            "Staff"});
+            this.cbuserrole.Location = new System.Drawing.Point(212, 165);
+            this.cbuserrole.Name = "cbuserrole";
+            this.cbuserrole.Size = new System.Drawing.Size(126, 36);
+            this.cbuserrole.StartIndex = 0;
+            this.cbuserrole.TabIndex = 306;
             // 
             // hidepassword
             // 
@@ -694,49 +726,6 @@
             this.dgvAdmin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAdmin_CellContentClick);
             this.dgvAdmin.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAdmin_CellDoubleClick);
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewImageColumn1.FillWeight = 50.76143F;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // cbuserrole
-            // 
-            this.cbuserrole.AutoRoundedCorners = true;
-            this.cbuserrole.BackColor = System.Drawing.Color.Transparent;
-            this.cbuserrole.BorderRadius = 17;
-            this.cbuserrole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbuserrole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbuserrole.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbuserrole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbuserrole.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.cbuserrole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbuserrole.ItemHeight = 30;
-            this.cbuserrole.Items.AddRange(new object[] {
-            "Admin",
-            "Staff"});
-            this.cbuserrole.Location = new System.Drawing.Point(212, 165);
-            this.cbuserrole.Name = "cbuserrole";
-            this.cbuserrole.Size = new System.Drawing.Size(126, 36);
-            this.cbuserrole.StartIndex = 0;
-            this.cbuserrole.TabIndex = 306;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(206, 115);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 33);
-            this.label1.TabIndex = 307;
-            this.label1.Text = "Type";
-            // 
             // ColNo
             // 
             this.ColNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -858,6 +847,17 @@
             this.ColAdminPhotoString.Name = "ColAdminPhotoString";
             this.ColAdminPhotoString.ReadOnly = true;
             this.ColAdminPhotoString.Visible = false;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewImageColumn1.FillWeight = 50.76143F;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // FrmAdmin
             // 

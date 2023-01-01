@@ -590,7 +590,36 @@ namespace TicketSelling.Common
                                                       WHERE MovieId = @MovieId
                                                     END";
 
-        public static string UpdateMovieST = @"IF EXISTS (SELECT * FROM TblScheduleMovieTime WHERE MovieId != @MovieId)
+        //public static string UpdateMovieST = @"IF EXISTS (SELECT * FROM TblScheduleMovieTime WHERE MovieId != @MovieId)
+        //                                            BEGIN
+        //                                              SELECT
+        //                                                '001' AS RespCode,
+        //                                                'Duplicate Error' AS RespDesp,
+        //                                                'ME' AS 'RespMessageType'
+        //                                              SELECT
+        //                                                *
+        //                                              FROM TblScheduleMovieTime
+        //                                              WHERE MovieId = @MovieId
+        //                                            END
+        //                                            ELSE
+        //                                            BEGIN
+        //                                              UPDATE [dbo].[TblScheduleMovieTime]
+								//						   SET [MovieId] = @MovieId
+								//							  ,[Date] = @Date
+        //                                                      ,[Time]= @Time
+								//						 WHERE Id = @Id 
+
+        //                                              SELECT
+        //                                                '000' AS RespCode,
+        //                                                'Update Successful' AS RespDesp,
+        //                                                'MI' AS 'RespMessageType'
+        //                                              SELECT
+        //                                                *
+        //                                              FROM TblScheduleMovieTime
+        //                                              WHERE MovieId = @MovieId
+        //                                            END";
+
+        public static string UpdateMovieST = @"IF EXISTS (SELECT * FROM TblScheduleMovieTime WHERE MovieId = @MovieId AND Time = @Time AND Date = @Date)
                                                     BEGIN
                                                       SELECT
                                                         '001' AS RespCode,
