@@ -31,6 +31,7 @@ namespace TicketSelling.UI.Configuration
             dgvST.AutoGenerateColumns = false;
             btnMovieUpdate.Visible = false;
             colorchangemovie();
+            colordaynight();
         }
 
         private void FrmMovie_Load(object sender, EventArgs e)
@@ -43,7 +44,6 @@ namespace TicketSelling.UI.Configuration
             STDate.Value = DateTime.Now;
             STTime.Format = DateTimePickerFormat.Time;
             STTime.ShowUpDown = true;
-
         }
 
 
@@ -157,6 +157,80 @@ namespace TicketSelling.UI.Configuration
                 STDate.FillColor = Color.FromArgb(196, 30, 58);
                 STTime.FillColor = Color.FromArgb(196, 30, 58);
             }
+        }
+
+        public void colordaynight()
+        {
+            if (frmmain.panelTitle.BackColor == Color.FromArgb(41, 47, 57))
+            {
+                tabMovie.BackColor = Color.FromArgb(43, 55, 61);
+                lblname.ForeColor = Color.White;
+                lblcasts.ForeColor = Color.White;
+                lblruntime.ForeColor = Color.White;
+                lblmovietype.ForeColor = Color.White;
+                lbldescription.ForeColor = Color.White;
+                lbltrailerlink.ForeColor = Color.White;
+                lblmoviecover.ForeColor = Color.White;
+                txtName.FillColor = Color.FromArgb(45, 57, 68);
+                txtName.ForeColor = Color.White;
+                txtName.PlaceholderForeColor = Color.Gray;
+                txtCasts.FillColor = Color.FromArgb(45, 57, 68);
+                txtCasts.ForeColor = Color.White;
+                txtCasts.PlaceholderForeColor = Color.Gray;
+                txtRuntime.FillColor = Color.FromArgb(45, 57, 68);
+                txtRuntime.ForeColor = Color.White;
+                txtRuntime.PlaceholderForeColor = Color.Gray;
+                txtMovieType.FillColor = Color.FromArgb(45, 57, 68);
+                txtMovieType.ForeColor = Color.White;
+                txtMovieType.PlaceholderForeColor = Color.Gray;
+                txtDescription.FillColor = Color.FromArgb(45, 57, 68);
+                txtDescription.ForeColor = Color.White;
+                txtDescription.PlaceholderForeColor = Color.Gray;
+                txtMovieLink.FillColor = Color.FromArgb(45, 57, 68);
+                txtMovieLink.ForeColor = Color.White;
+                txtMovieLink.PlaceholderForeColor = Color.Gray;
+                pictureBox.FillColor = Color.FromArgb(68, 87, 96);
+                dgvMovie.BackgroundColor = Color.FromArgb(68, 87, 96);
+                dgvMovie.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovie.DefaultCellStyle.ForeColor = Color.White;
+                dgvMovie.GridColor = Color.FromArgb(41, 47, 57);
+                dgvMovie.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovie.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                dgvMovie.DefaultCellStyle.SelectionForeColor = Color.White;
+
+                tabScheduleDate.BackColor = Color.FromArgb(43, 55, 61);
+                lblSDName.ForeColor = Color.White;
+                lblSDstartdate.ForeColor = Color.White;
+                lblSDenddate.ForeColor = Color.White;
+                CbSDName.FillColor = Color.FromArgb(45, 57, 68);
+                CbSDName.ForeColor = Color.White;
+                txtSDStartDate.ForeColor = Color.White;
+                txtSDEndDate.ForeColor = Color.White;
+                dgvSD.BackgroundColor = Color.FromArgb(68, 87, 96);
+                dgvSD.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvSD.DefaultCellStyle.ForeColor = Color.White;
+                dgvSD.GridColor = Color.FromArgb(41, 47, 57);
+                dgvSD.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvSD.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                dgvSD.DefaultCellStyle.SelectionForeColor = Color.White;
+
+                tabScheduleTime.BackColor = Color.FromArgb(43, 55, 61);
+                lblSTname.ForeColor = Color.White;
+                lblSTdate.ForeColor = Color.White;
+                lblSTtime.ForeColor = Color.White;
+                CbSTName.FillColor = Color.FromArgb(45, 57, 68);
+                CbSTName.ForeColor = Color.White;
+                STDate.ForeColor = Color.White;
+                STTime.ForeColor = Color.White;
+                dgvST.BackgroundColor = Color.FromArgb(68, 87, 96);
+                dgvST.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvST.DefaultCellStyle.ForeColor = Color.White;
+                dgvST.GridColor = Color.FromArgb(41, 47, 57);
+                dgvST.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvST.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                dgvST.DefaultCellStyle.SelectionForeColor = Color.White;
+            }
+           
         }
 
         #endregion

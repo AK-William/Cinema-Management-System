@@ -12,6 +12,9 @@ using TicketSelling.Common;
 using TicketSelling.DAO.Entity;
 using System.IO;
 using System.Windows.Media.Imaging;
+using System.Text.RegularExpressions;
+using System.Globalization;
+
 
 namespace TicketSelling.UI.Configuration
 {
@@ -28,6 +31,7 @@ namespace TicketSelling.UI.Configuration
             InitializeComponent();
             dgvAdmin.AutoGenerateColumns = false;
             colorchangeadmin();
+            colordaynight();
         }
 
         private void Frm_Load(object sender, EventArgs e)
@@ -36,6 +40,8 @@ namespace TicketSelling.UI.Configuration
             BindDgvAdmin();
             txtAdminPassword.UseSystemPasswordChar = true;
             hidepassword.Visible = false;
+
+
         }
 
         private void Reset()
@@ -54,6 +60,7 @@ namespace TicketSelling.UI.Configuration
             btnSave.Visible = true;
             btnUpdate.Visible = false;
             txtAdminName.Select();
+            errorProvider1.Clear();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -108,6 +115,63 @@ namespace TicketSelling.UI.Configuration
                 dgvAdmin.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(196, 30, 58);
                 dgvAdmin.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(196, 30, 58);
             }
+        }
+
+        public void colordaynight()
+        {
+            if (frmmain.panelTitle.BackColor == Color.FromArgb(41, 47, 57))
+            {
+                this.BackColor = Color.FromArgb(43, 55, 61);
+                labelPhoto.ForeColor = Color.White;
+                labelRole.ForeColor = Color.White;
+                labelName.ForeColor = Color.White;
+                labelUsername.ForeColor = Color.White;
+                labelPassword.ForeColor = Color.White;
+                labelGmail.ForeColor = Color.White;
+                labelPhoneNumber.ForeColor = Color.White;
+                labelAdminNRC.ForeColor = Color.White;
+                labelAddress.ForeColor = Color.White;
+                labelCity.ForeColor = Color.White;
+                labelAdminPostcode.ForeColor = Color.White;
+                txtAdminName.FillColor = Color.FromArgb(45, 57, 68);
+                txtAdminName.ForeColor = Color.White;
+                txtAdminName.PlaceholderForeColor = Color.Gray;
+                txtAdminUsername.FillColor = Color.FromArgb(45, 57, 68);
+                txtAdminUsername.ForeColor = Color.White;
+                txtAdminUsername.PlaceholderForeColor = Color.Gray;
+                txtAdminPassword.FillColor = Color.FromArgb(45, 57, 68);
+                txtAdminPassword.ForeColor = Color.White;
+                txtAdminPassword.PlaceholderForeColor = Color.Gray;
+                txtAdminGmail.FillColor = Color.FromArgb(45, 57, 68);
+                txtAdminGmail.ForeColor = Color.White;
+                txtAdminGmail.PlaceholderForeColor = Color.Gray;
+                txtAdminPhoneNumber.FillColor = Color.FromArgb(45, 57, 68);
+                txtAdminPhoneNumber.ForeColor = Color.White;
+                txtAdminPhoneNumber.PlaceholderForeColor = Color.Gray;
+                txtAdminNRC.FillColor = Color.FromArgb(45, 57, 68);
+                txtAdminNRC.ForeColor = Color.White;
+                txtAdminNRC.PlaceholderForeColor = Color.Gray;
+                txtAdminAddress.FillColor = Color.FromArgb(45, 57, 68);
+                txtAdminAddress.ForeColor = Color.White;
+                txtAdminAddress.PlaceholderForeColor = Color.Gray;
+                txtAdminCity.FillColor = Color.FromArgb(45, 57, 68);
+                txtAdminCity.ForeColor = Color.White;
+                txtAdminCity.PlaceholderForeColor = Color.Gray;
+                txtAdminPostcode.FillColor = Color.FromArgb(45, 57, 68);
+                txtAdminPostcode.ForeColor = Color.White;
+                txtAdminPostcode.PlaceholderForeColor = Color.Gray;
+                cbuserrole.FillColor = Color.FromArgb(45, 57, 68);
+                cbuserrole.ForeColor = Color.White;
+                pictureBoxAdminPhoto.FillColor = Color.FromArgb(68, 87, 96);
+                dgvAdmin.BackgroundColor = Color.FromArgb(68, 87, 96);
+                dgvAdmin.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvAdmin.DefaultCellStyle.ForeColor = Color.White;
+                dgvAdmin.GridColor = Color.FromArgb(41, 47, 57);
+                dgvAdmin.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvAdmin.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                dgvAdmin.DefaultCellStyle.SelectionForeColor = Color.White;
+            }
+
         }
 
         #endregion
@@ -211,7 +275,7 @@ namespace TicketSelling.UI.Configuration
 
         private bool CheckRequireFields()
         {
-            
+
             if (string.IsNullOrEmpty(txtAdminName.Text))
             {
                 MessageBox.Show("Enter your Real Name");
@@ -297,8 +361,8 @@ namespace TicketSelling.UI.Configuration
                 {
                     SaveImageFilePath(res.AdminPhotoName);
                     UpdateAdminPhoto(res.AdminId);
-                     Reset();
-                     BindDgvAdmin();
+                    Reset();
+                    BindDgvAdmin();
                 }
                 else if (res.RespMessageType == CommonResponseMessage.ResErrorType)
                 {
@@ -543,6 +607,101 @@ namespace TicketSelling.UI.Configuration
             txtAdminPassword.UseSystemPasswordChar = true;
             hidepassword.Visible = false;
             showpassword.Visible = true;
+        }
+
+        public List<Role> LstRole { get; set; }
+
+        private void Cbuserrole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int RoleId = Convert.ToInt32(cbuserrole.SelectedValue);
+
+        }
+
+
+        #region Gmail Validation
+
+        private void TxtAdminGmail_Leave(object sender, EventArgs e) //Error provide icon show
+        {
+            string pattern = @"^(?!\.)(""([^""\r\\]|\\[""\r\\])*""|"
+                + @"([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\.)\.)*)(?<!\.)"
+                + @"@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$";
+
+            if (Regex.IsMatch(txtAdminGmail.Text, pattern))
+            {
+                errorProvider1.Clear();
+            }
+            else
+            {
+                errorProvider1.SetError(this.txtAdminGmail, "Please provide valid Gmail Address");
+            }
+        }
+
+        private static Regex email_validation() //Gmail format validation
+        {
+            string pattern = @"^(?!\.)(""([^""\r\\]|\\[""\r\\])*""|"
+                + @"([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\.)\.)*)(?<!\.)"
+                + @"@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$";
+
+            return new Regex(pattern, RegexOptions.IgnoreCase);
+        }
+
+        static Regex validate_emailaddress = email_validation();
+        private void TxtAdminGmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (validate_emailaddress.IsMatch(txtAdminGmail.Text) != true)
+            {
+                MessageBox.Show("Invalid Email Address!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtAdminGmail.Text = "";
+            }
+        }
+
+        #endregion
+
+       
+        private void TxtAdminPhoneNumber_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtAdminPhoneNumber.Text.Length == 11 && txtAdminPhoneNumber.Text.StartsWith("09"))
+            {
+                errorProvider1.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Phone Number! Phone number must be start with 09 and must include 11 numbers.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                errorProvider1.SetError(this.txtAdminPhoneNumber, "Please provide valid Phone Number");
+                txtAdminPhoneNumber.Text = "";
+            }
+        }
+
+        private void TxtAdminPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtAdminPassword.Text.Length >= 8 && txtAdminPassword.Text.Length <= 16)
+            {
+                errorProvider1.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Password! Password must between 8 and 16 letters.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                errorProvider1.SetError(this.txtAdminPassword, "Please provide valid Password");
+                txtAdminPassword.Text = "";
+            }
+        }
+
+
+        private static Regex nrc_validation() //nrc format validation
+        {
+            string patternNRC = @"^([0-9]{1,2})\/([A-Z][a-z]|[A-Z][a-z][a-z])([A-Z][a-z]|[A-Z][a-z][a-z])([A-Z][a-z]|[A-Z][a-z][a-z])\([N,P,E]\)[0-9]{6}$";
+            return new Regex(patternNRC, RegexOptions.IgnoreCase);
+        }
+
+
+        static Regex validate_nrc = nrc_validation();
+        private void TxtAdminNRC_Validating(object sender, CancelEventArgs e)
+        {
+            if (validate_nrc.IsMatch(txtAdminNRC.Text) != true)
+            {
+                MessageBox.Show("Invalid NRC Format!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtAdminNRC.Text = "";
+            }
         }
     }
 }

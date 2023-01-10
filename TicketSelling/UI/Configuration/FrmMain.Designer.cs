@@ -32,13 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.panelleft = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnlogout = new FontAwesome.Sharp.IconButton();
             this.btnReport = new FontAwesome.Sharp.IconButton();
             this.btnTicket = new FontAwesome.Sharp.IconButton();
             this.panelEntry = new System.Windows.Forms.Panel();
             this.btnStaff = new FontAwesome.Sharp.IconButton();
             this.btnAdmin = new FontAwesome.Sharp.IconButton();
             this.btnEntry = new FontAwesome.Sharp.IconButton();
+            this.btnlogout = new FontAwesome.Sharp.IconButton();
             this.panelConfiguration = new System.Windows.Forms.Panel();
             this.btnMovie = new FontAwesome.Sharp.IconButton();
             this.btnSeat = new FontAwesome.Sharp.IconButton();
@@ -95,28 +95,14 @@
             // 
             // panelMenu
             // 
-            this.panelMenu.Controls.Add(this.btnlogout);
             this.panelMenu.Controls.Add(this.btnReport);
             this.panelMenu.Controls.Add(this.btnTicket);
             this.panelMenu.Controls.Add(this.panelEntry);
+            this.panelMenu.Controls.Add(this.btnlogout);
             this.panelMenu.Controls.Add(this.panelConfiguration);
             this.panelMenu.Controls.Add(this.btnDashboard);
             resources.ApplyResources(this.panelMenu, "panelMenu");
             this.panelMenu.Name = "panelMenu";
-            // 
-            // btnlogout
-            // 
-            resources.ApplyResources(this.btnlogout, "btnlogout");
-            this.btnlogout.FlatAppearance.BorderSize = 0;
-            this.btnlogout.ForeColor = System.Drawing.Color.White;
-            this.btnlogout.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
-            this.btnlogout.IconColor = System.Drawing.Color.White;
-            this.btnlogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Tag = "Logout";
-            this.btnlogout.UseVisualStyleBackColor = true;
-            this.btnlogout.Click += new System.EventHandler(this.Btnlogout_Click);
-            this.btnlogout.MouseHover += new System.EventHandler(this.Btnlogout_MouseHover);
             // 
             // btnReport
             // 
@@ -198,6 +184,20 @@
             this.btnEntry.UseVisualStyleBackColor = true;
             this.btnEntry.Click += new System.EventHandler(this.BtnEntry_Click);
             this.btnEntry.MouseHover += new System.EventHandler(this.BtnEntry_MouseHover);
+            // 
+            // btnlogout
+            // 
+            resources.ApplyResources(this.btnlogout, "btnlogout");
+            this.btnlogout.FlatAppearance.BorderSize = 0;
+            this.btnlogout.ForeColor = System.Drawing.Color.White;
+            this.btnlogout.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromBracket;
+            this.btnlogout.IconColor = System.Drawing.Color.White;
+            this.btnlogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Tag = "Logout";
+            this.btnlogout.UseVisualStyleBackColor = true;
+            this.btnlogout.Click += new System.EventHandler(this.Btnlogout_Click);
+            this.btnlogout.MouseHover += new System.EventHandler(this.Btnlogout_MouseHover);
             // 
             // panelConfiguration
             // 
@@ -340,7 +340,7 @@
             this.accountimage.IconChar = FontAwesome.Sharp.IconChar.CircleUser;
             this.accountimage.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.accountimage.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.accountimage.IconSize = 60;
+            this.accountimage.IconSize = 70;
             this.accountimage.Name = "accountimage";
             this.accountimage.UseVisualStyleBackColor = true;
             // 
@@ -354,6 +354,7 @@
             this.btnAccount.IconChar = FontAwesome.Sharp.IconChar.CircleUser;
             this.btnAccount.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.btnAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAccount.IconSize = 60;
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Tag = "Account";
             this.btnAccount.UseVisualStyleBackColor = false;
@@ -369,6 +370,7 @@
             this.btnSetting.IconChar = FontAwesome.Sharp.IconChar.Gear;
             this.btnSetting.IconColor = System.Drawing.Color.Gray;
             this.btnSetting.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSetting.IconSize = 60;
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Tag = "Setting";
             this.btnSetting.UseVisualStyleBackColor = false;
@@ -572,7 +574,6 @@
         private System.Windows.Forms.ToolTip toolTipReport;
         private System.Windows.Forms.ToolTip toolTipStaffs;
         private System.Windows.Forms.ToolTip toolTipTicket;
-        private FontAwesome.Sharp.IconButton btnSetting;
         private System.Windows.Forms.Label lblTitleChildForm;
         private Guna.UI2.WinForms.Guna2Panel panelBody;
         private FontAwesome.Sharp.IconButton iconCurrentChildForm;
@@ -582,7 +583,6 @@
         public FontAwesome.Sharp.IconButton btnAccount;
         public Guna.UI2.WinForms.Guna2Panel panelAccountShow;
         public FontAwesome.Sharp.IconButton accountimage;
-        public System.Windows.Forms.Panel panelEntry;
         public FontAwesome.Sharp.IconButton btnAdmin;
         public FontAwesome.Sharp.IconButton btnStaff;
         public FontAwesome.Sharp.IconButton btnDashboard;
@@ -594,5 +594,7 @@
         public System.Windows.Forms.Panel panelTitle;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label txtLoginNameForMain;
+        public FontAwesome.Sharp.IconButton btnSetting;
+        public System.Windows.Forms.Panel panelEntry;
     }
 }

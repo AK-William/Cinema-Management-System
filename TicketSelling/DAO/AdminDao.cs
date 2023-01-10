@@ -304,7 +304,6 @@ namespace TicketSelling.DAO
                 scom.CommandType = CommandType.Text;
                 scom.Parameters.AddWithValue("@Username", req.Username);
                 scom.Parameters.AddWithValue("@Password", Cryptography.Encrypt(req.Password));
-                //scom.Parameters.AddWithValue("@Role", req.Role);
                 DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(scom);
                 adapter.Fill(ds);
@@ -319,7 +318,7 @@ namespace TicketSelling.DAO
                     return new MessageEntity() { RespCode = "001", RespDesp = "Invalid LoginName and Password", RespMessageType = CommonResponseMessage.ResErrorType };
 
                 dt = ds.Tables[0];
-               
+              
                 return new MessageEntity()
                 {
                     RespCode = dt.Rows[0]["RespCode"].ToString(),

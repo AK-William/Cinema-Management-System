@@ -15,6 +15,10 @@ namespace TicketSelling.UI.Configuration
 {
     public partial class FrmLogin : Form
     {
+        SqlConnection sqlConnection;
+        SqlCommand scom;
+        SqlDataAdapter adapter;
+
         public FrmLogin()
         {
             InitializeComponent();
@@ -53,38 +57,10 @@ namespace TicketSelling.UI.Configuration
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if (!CheckRequireFields()) return;
-            //    MessageEntity res = new StaffDao().Login(new DAO.Entity.Staff()
-            //    {
-            //        Username = txtUsername.Text,
-            //        Password = txtPassword.Text
-            //    });
-            //    if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
-            //    {
-            //        user = txtUsername.Text;
-            //        MessageBox.Show(res.RespDesp);
-            //        FrmMain frm = new FrmMain();
-            //        frm.Show();
-            //        this.Hide();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show(res.RespDesp);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-
-            //}
-
-
             try
             {
                 if (!CheckRequireFields()) return;
-                MessageEntity res = new AdminDao().Login(new DAO.Entity.Admin()
+                MessageEntity res = new StaffDao().Login(new DAO.Entity.Staff()
                 {
                     Username = txtUsername.Text,
                     Password = txtPassword.Text
@@ -108,38 +84,34 @@ namespace TicketSelling.UI.Configuration
 
             }
 
-            //SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-ENSCQA99;Initial Catalog=TicketSellingSystem;Integrated Security=True");
-            //SqlDataAdapter sda = new SqlDataAdapter("Select Type from TblAdmin Where Username='" + txtUsername.Text + "' and Password='" + txtPassword.Text + "'   ", con);
-            //DataTable dt = new System.Data.DataTable();
-            //sda.Fill(dt);
 
-            //if (dt.Rows.Count == 1)
+            //try
             //{
-            //    switch (dt.Rows[0]["Type"] as string)
+            //    if (!CheckRequireFields()) return;
+            //    MessageEntity res = new AdminDao().Login(new DAO.Entity.Admin()
             //    {
-            //        case "Admin":
-            //            {
-            //                this.Hide();
-            //                FrmMain ss = new FrmMain();
-            //                ss.Show();
-            //                break;
-            //            }
-
-            //        case "Staff":
-            //            {
-            //                this.Hide();
-            //                FrmMain ss = new FrmMain();
-            //                ss.Show();
-            //                break;
-            //            }
-
-            //        default:
-            //            {
-            //                // ... handle unexpected roles here...
-            //                break;
-            //            }
+            //        Username = txtUsername.Text,
+            //        Password = txtPassword.Text
+            //    });
+            //    if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
+            //    {
+            //        user = txtUsername.Text;
+            //        MessageBox.Show(res.RespDesp);
+            //        FrmMain frm = new FrmMain();
+            //        frm.Show();
+            //        this.Hide();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show(res.RespDesp);
             //    }
             //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+
+
 
         }
 

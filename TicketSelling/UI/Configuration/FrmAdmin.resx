@@ -117,49 +117,995 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labelRole.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="labelRole.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 16.2pt</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labelRole.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelRole.Location" type="System.Drawing.Point, System.Drawing">
+    <value>206, 115</value>
+  </data>
+  <data name="labelRole.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelRole.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 33</value>
+  </data>
+  <data name="labelRole.TabIndex" type="System.Int32, mscorlib">
+    <value>307</value>
+  </data>
+  <data name="labelRole.Text" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="&gt;&gt;labelRole.Name" xml:space="preserve">
+    <value>labelRole</value>
+  </data>
+  <data name="&gt;&gt;labelRole.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelRole.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;labelRole.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbuserrole.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="cbuserrole.ItemHeight" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="cbuserrole.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 165</value>
+  </data>
+  <data name="cbuserrole.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 36</value>
+  </data>
+  <data name="cbuserrole.TabIndex" type="System.Int32, mscorlib">
+    <value>306</value>
+  </data>
+  <data name="&gt;&gt;cbuserrole.Name" xml:space="preserve">
+    <value>cbuserrole</value>
+  </data>
+  <data name="&gt;&gt;cbuserrole.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;cbuserrole.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;cbuserrole.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="hidepassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="hidepassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>674, 52</value>
+  </data>
+  <data name="hidepassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="hidepassword.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="hidepassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 39</value>
+  </data>
+  <data name="hidepassword.TabIndex" type="System.Int32, mscorlib">
+    <value>305</value>
+  </data>
+  <data name="&gt;&gt;hidepassword.Name" xml:space="preserve">
+    <value>hidepassword</value>
+  </data>
+  <data name="&gt;&gt;hidepassword.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;hidepassword.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;hidepassword.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="showpassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="showpassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>674, 52</value>
+  </data>
+  <data name="showpassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="showpassword.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="showpassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 39</value>
+  </data>
+  <data name="showpassword.TabIndex" type="System.Int32, mscorlib">
+    <value>304</value>
+  </data>
+  <data name="&gt;&gt;showpassword.Name" xml:space="preserve">
+    <value>showpassword</value>
+  </data>
+  <data name="&gt;&gt;showpassword.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;showpassword.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;showpassword.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnUpdate.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 365</value>
+  </data>
+  <data name="btnUpdate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="btnUpdate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 54</value>
+  </data>
+  <data name="btnUpdate.TabIndex" type="System.Int32, mscorlib">
+    <value>303</value>
+  </data>
+  <data name="btnUpdate.Text" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="btnUpdate.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Name" xml:space="preserve">
+    <value>btnUpdate</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;btnUpdate.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnCancel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>936, 365</value>
+  </data>
+  <data name="btnCancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 54</value>
+  </data>
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>302</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnSave.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>810, 365</value>
+  </data>
+  <data name="btnSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 54</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>301</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="labelPhoto.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelPhoto.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 16.2pt</value>
+  </data>
+  <data name="labelPhoto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelPhoto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 11</value>
+  </data>
+  <data name="labelPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelPhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 33</value>
+  </data>
+  <data name="labelPhoto.TabIndex" type="System.Int32, mscorlib">
+    <value>300</value>
+  </data>
+  <data name="labelPhoto.Text" xml:space="preserve">
+    <value>Photo ID</value>
+  </data>
+  <data name="&gt;&gt;labelPhoto.Name" xml:space="preserve">
+    <value>labelPhoto</value>
+  </data>
+  <data name="&gt;&gt;labelPhoto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelPhoto.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;labelPhoto.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="pictureBoxAdminPhoto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBoxAdminPhoto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 58</value>
+  </data>
+  <data name="pictureBoxAdminPhoto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="pictureBoxAdminPhoto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 143</value>
+  </data>
+  <data name="pictureBoxAdminPhoto.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="pictureBoxAdminPhoto.TabIndex" type="System.Int32, mscorlib">
+    <value>299</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxAdminPhoto.Name" xml:space="preserve">
+    <value>pictureBoxAdminPhoto</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxAdminPhoto.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxAdminPhoto.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxAdminPhoto.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="labelAddress.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelAddress.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 16.2pt</value>
+  </data>
+  <data name="labelAddress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>765, 11</value>
+  </data>
+  <data name="labelAddress.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 33</value>
+  </data>
+  <data name="labelAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>298</value>
+  </data>
+  <data name="labelAddress.Text" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="&gt;&gt;labelAddress.Name" xml:space="preserve">
+    <value>labelAddress</value>
+  </data>
+  <data name="&gt;&gt;labelAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelAddress.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;labelAddress.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="txtAdminAddress.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="txtAdminAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>771, 48</value>
+  </data>
+  <data name="txtAdminAddress.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="txtAdminAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 50</value>
+  </data>
+  <data name="txtAdminAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>297</value>
+  </data>
+  <data name="&gt;&gt;txtAdminAddress.Name" xml:space="preserve">
+    <value>txtAdminAddress</value>
+  </data>
+  <data name="&gt;&gt;txtAdminAddress.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;txtAdminAddress.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;txtAdminAddress.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="labelCity.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 16.2pt</value>
+  </data>
+  <data name="labelCity.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelCity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>765, 115</value>
+  </data>
+  <data name="labelCity.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelCity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 33</value>
+  </data>
+  <data name="labelCity.TabIndex" type="System.Int32, mscorlib">
+    <value>296</value>
+  </data>
+  <data name="labelCity.Text" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="&gt;&gt;labelCity.Name" xml:space="preserve">
+    <value>labelCity</value>
+  </data>
+  <data name="&gt;&gt;labelCity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCity.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;labelCity.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="labelAdminNRC.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelAdminNRC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 16.2pt</value>
+  </data>
+  <data name="labelAdminNRC.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelAdminNRC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>389, 332</value>
+  </data>
+  <data name="labelAdminNRC.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelAdminNRC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 33</value>
+  </data>
+  <data name="labelAdminNRC.TabIndex" type="System.Int32, mscorlib">
+    <value>295</value>
+  </data>
+  <data name="labelAdminNRC.Text" xml:space="preserve">
+    <value>NRC</value>
+  </data>
+  <data name="&gt;&gt;labelAdminNRC.Name" xml:space="preserve">
+    <value>labelAdminNRC</value>
+  </data>
+  <data name="&gt;&gt;labelAdminNRC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelAdminNRC.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;labelAdminNRC.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="labelAdminPostcode.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelAdminPostcode.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 16.2pt</value>
+  </data>
+  <data name="labelAdminPostcode.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelAdminPostcode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>765, 229</value>
+  </data>
+  <data name="labelAdminPostcode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelAdminPostcode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 33</value>
+  </data>
+  <data name="labelAdminPostcode.TabIndex" type="System.Int32, mscorlib">
+    <value>294</value>
+  </data>
+  <data name="labelAdminPostcode.Text" xml:space="preserve">
+    <value>Postcode / Zip</value>
+  </data>
+  <data name="&gt;&gt;labelAdminPostcode.Name" xml:space="preserve">
+    <value>labelAdminPostcode</value>
+  </data>
+  <data name="&gt;&gt;labelAdminPostcode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelAdminPostcode.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;labelAdminPostcode.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="labelGmail.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelGmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 16.2pt</value>
+  </data>
+  <data name="labelGmail.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelGmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>389, 115</value>
+  </data>
+  <data name="labelGmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelGmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 33</value>
+  </data>
+  <data name="labelGmail.TabIndex" type="System.Int32, mscorlib">
+    <value>293</value>
+  </data>
+  <data name="labelGmail.Text" xml:space="preserve">
+    <value>Gmail</value>
+  </data>
+  <data name="&gt;&gt;labelGmail.Name" xml:space="preserve">
+    <value>labelGmail</value>
+  </data>
+  <data name="&gt;&gt;labelGmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelGmail.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;labelGmail.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="txtAdminCity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="txtAdminCity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>771, 151</value>
+  </data>
+  <data name="txtAdminCity.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="txtAdminCity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 50</value>
+  </data>
+  <data name="txtAdminCity.TabIndex" type="System.Int32, mscorlib">
+    <value>292</value>
+  </data>
+  <data name="&gt;&gt;txtAdminCity.Name" xml:space="preserve">
+    <value>txtAdminCity</value>
+  </data>
+  <data name="&gt;&gt;txtAdminCity.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;txtAdminCity.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;txtAdminCity.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="txtAdminNRC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="txtAdminNRC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 369</value>
+  </data>
+  <data name="txtAdminNRC.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="txtAdminNRC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 50</value>
+  </data>
+  <data name="txtAdminNRC.TabIndex" type="System.Int32, mscorlib">
+    <value>291</value>
+  </data>
+  <data name="&gt;&gt;txtAdminNRC.Name" xml:space="preserve">
+    <value>txtAdminNRC</value>
+  </data>
+  <data name="&gt;&gt;txtAdminNRC.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;txtAdminNRC.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;txtAdminNRC.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="txtAdminPostcode.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="txtAdminPostcode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>771, 265</value>
+  </data>
+  <data name="txtAdminPostcode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="txtAdminPostcode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 50</value>
+  </data>
+  <data name="txtAdminPostcode.TabIndex" type="System.Int32, mscorlib">
+    <value>290</value>
+  </data>
+  <data name="&gt;&gt;txtAdminPostcode.Name" xml:space="preserve">
+    <value>txtAdminPostcode</value>
+  </data>
+  <data name="&gt;&gt;txtAdminPostcode.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;txtAdminPostcode.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;txtAdminPostcode.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="txtAdminGmail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="txtAdminGmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 151</value>
+  </data>
+  <data name="txtAdminGmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="txtAdminGmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 50</value>
+  </data>
+  <data name="txtAdminGmail.TabIndex" type="System.Int32, mscorlib">
+    <value>289</value>
+  </data>
+  <data name="&gt;&gt;txtAdminGmail.Name" xml:space="preserve">
+    <value>txtAdminGmail</value>
+  </data>
+  <data name="&gt;&gt;txtAdminGmail.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;txtAdminGmail.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;txtAdminGmail.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="labelPhoneNumber.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelPhoneNumber.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 16.2pt</value>
+  </data>
+  <data name="labelPhoneNumber.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelPhoneNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>389, 229</value>
+  </data>
+  <data name="labelPhoneNumber.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelPhoneNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 33</value>
+  </data>
+  <data name="labelPhoneNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>288</value>
+  </data>
+  <data name="labelPhoneNumber.Text" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="&gt;&gt;labelPhoneNumber.Name" xml:space="preserve">
+    <value>labelPhoneNumber</value>
+  </data>
+  <data name="&gt;&gt;labelPhoneNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelPhoneNumber.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;labelPhoneNumber.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="labelPassword.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 16.2pt</value>
+  </data>
+  <data name="labelPassword.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>389, 11</value>
+  </data>
+  <data name="labelPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 33</value>
+  </data>
+  <data name="labelPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>287</value>
+  </data>
+  <data name="labelPassword.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="&gt;&gt;labelPassword.Name" xml:space="preserve">
+    <value>labelPassword</value>
+  </data>
+  <data name="&gt;&gt;labelPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelPassword.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;labelPassword.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="labelUsername.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelUsername.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 16.2pt</value>
+  </data>
+  <data name="labelUsername.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 332</value>
+  </data>
+  <data name="labelUsername.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 33</value>
+  </data>
+  <data name="labelUsername.TabIndex" type="System.Int32, mscorlib">
+    <value>286</value>
+  </data>
+  <data name="labelUsername.Text" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="&gt;&gt;labelUsername.Name" xml:space="preserve">
+    <value>labelUsername</value>
+  </data>
+  <data name="&gt;&gt;labelUsername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelUsername.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;labelUsername.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="labelName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 16.2pt</value>
+  </data>
+  <data name="labelName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 229</value>
+  </data>
+  <data name="labelName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="labelName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 33</value>
+  </data>
+  <data name="labelName.TabIndex" type="System.Int32, mscorlib">
+    <value>285</value>
+  </data>
+  <data name="labelName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="&gt;&gt;labelName.Name" xml:space="preserve">
+    <value>labelName</value>
+  </data>
+  <data name="&gt;&gt;labelName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelName.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;labelName.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="txtAdminPhoneNumber.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="txtAdminPhoneNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 265</value>
+  </data>
+  <data name="txtAdminPhoneNumber.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="txtAdminPhoneNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 50</value>
+  </data>
+  <data name="txtAdminPhoneNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>284</value>
+  </data>
+  <data name="&gt;&gt;txtAdminPhoneNumber.Name" xml:space="preserve">
+    <value>txtAdminPhoneNumber</value>
+  </data>
+  <data name="&gt;&gt;txtAdminPhoneNumber.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;txtAdminPhoneNumber.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;txtAdminPhoneNumber.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="txtAdminPassword.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="txtAdminPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 48</value>
+  </data>
+  <data name="txtAdminPassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="txtAdminPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 50</value>
+  </data>
+  <data name="txtAdminPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>283</value>
+  </data>
+  <data name="&gt;&gt;txtAdminPassword.Name" xml:space="preserve">
+    <value>txtAdminPassword</value>
+  </data>
+  <data name="&gt;&gt;txtAdminPassword.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;txtAdminPassword.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;txtAdminPassword.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="txtAdminUsername.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="txtAdminUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 369</value>
+  </data>
+  <data name="txtAdminUsername.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="txtAdminUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 50</value>
+  </data>
+  <data name="txtAdminUsername.TabIndex" type="System.Int32, mscorlib">
+    <value>282</value>
+  </data>
+  <data name="&gt;&gt;txtAdminUsername.Name" xml:space="preserve">
+    <value>txtAdminUsername</value>
+  </data>
+  <data name="&gt;&gt;txtAdminUsername.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;txtAdminUsername.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;txtAdminUsername.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="txtAdminName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="txtAdminName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 265</value>
+  </data>
+  <data name="txtAdminName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="txtAdminName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 50</value>
+  </data>
+  <data name="txtAdminName.TabIndex" type="System.Int32, mscorlib">
+    <value>281</value>
+  </data>
+  <data name="&gt;&gt;txtAdminName.Name" xml:space="preserve">
+    <value>txtAdminName</value>
+  </data>
+  <data name="&gt;&gt;txtAdminName.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;txtAdminName.Parent" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;txtAdminName.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="guna2Panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="guna2Panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="guna2Panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="guna2Panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1180, 441</value>
+  </data>
+  <data name="guna2Panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel1.Name" xml:space="preserve">
+    <value>guna2Panel1</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dgvAdmin.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
   <metadata name="ColNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="ColNo.HeaderText" xml:space="preserve">
+    <value>No</value>
+  </data>
   <metadata name="ColId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="ColId.HeaderText" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="ColId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <metadata name="ColAdminName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="ColAdminName.HeaderText" xml:space="preserve">
+    <value>Name</value>
+  </data>
   <metadata name="Coluserrole.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="Coluserrole.HeaderText" xml:space="preserve">
+    <value>Role</value>
+  </data>
   <metadata name="ColAdminPhoto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="dataGridViewCellStyle4.NullValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk32AgAAAAAAADYAAAAoAAAADgAAABAAAAABABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEgoTGw8bGw8bGw8bGw8bGw8bGw8bG
+        w8bGw8bGw8bGw8bGw8bGw8YAAAAAAISChP///////////////////////////////////////////8bD
+        xgAAAAAAhIKE////////////////////////////////////////////xsPGAAAAAACEgoT/////////
+        ///////////////////////////////////Gw8YAAAAAAISChP//////////////////////////////
+        /////////////8bDxgAAAAAAhIKE////////////AAD/AAD/////////AAD/AAD/////////xsPGAAAA
+        AACEgoT///////////////8AAP8AAP8AAP8AAP/////////////Gw8YAAAAAAISChP//////////////
+        /////wAA/wAA/////////////////8bDxgAAAAAAhIKE////////////////AAD/AAD/AAD/AAD/////
+        ////////xsPGAAAAAACEgoT///////////8AAP8AAP////////8AAP8AAP/////////Gw8YAAAAAAISC
+        hP///////////////////////////////////////////8bDxgAAAAAAhIKE////////////////////
+        ////////////////////////xsPGAAAAAACEgoT/////////////////////////////////////////
+        ///Gw8YAAAAAAISChP///////////////////////////////////////////8bDxgAAAAAAhIKEhIKE
+        hIKEhIKEhIKEhIKEhIKEhIKEhIKEhIKEhIKEhIKEhIKEhIKEAAA=
+</value>
+  </data>
+  <data name="ColAdminPhoto.HeaderText" xml:space="preserve">
+    <value>Photo</value>
+  </data>
   <metadata name="ColAdminUsername.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="ColAdminUsername.HeaderText" xml:space="preserve">
+    <value>Username</value>
+  </data>
   <metadata name="ColAdminPassword.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="ColAdminPassword.HeaderText" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="ColAdminPassword.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <metadata name="ColAdminGmail.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="ColAdminGmail.HeaderText" xml:space="preserve">
+    <value>Gmail</value>
+  </data>
   <metadata name="ColAdminPhoneNumber.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="ColAdminPhoneNumber.HeaderText" xml:space="preserve">
+    <value>Phone</value>
+  </data>
   <metadata name="ColAdminNRC.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="ColAdminNRC.HeaderText" xml:space="preserve">
+    <value>NRC</value>
+  </data>
   <metadata name="ColAdminAddress.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="ColAdminAddress.HeaderText" xml:space="preserve">
+    <value>Address</value>
+  </data>
   <metadata name="ColAdminCity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="ColAdminCity.HeaderText" xml:space="preserve">
+    <value>City</value>
+  </data>
   <metadata name="ColAdminPostcode.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="ColAdminPostcode.HeaderText" xml:space="preserve">
+    <value>Postcode</value>
+  </data>
   <metadata name="ColDel.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ColDel.HeaderText" xml:space="preserve">
+    <value />
+  </data>
   <data name="ColDel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAABe5JREFUeF7t
@@ -194,6 +1140,195 @@
   <metadata name="ColAdminPhotoString.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="ColAdminPhotoString.HeaderText" xml:space="preserve">
+    <value>AdminPhotoString</value>
+  </data>
+  <data name="ColAdminPhotoString.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dgvAdmin.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dgvAdmin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dgvAdmin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="dgvAdmin.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="dgvAdmin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1180, 227</value>
+  </data>
+  <data name="dgvAdmin.TabIndex" type="System.Int32, mscorlib">
+    <value>282</value>
+  </data>
+  <data name="&gt;&gt;dgvAdmin.Name" xml:space="preserve">
+    <value>dgvAdmin</value>
+  </data>
+  <data name="&gt;&gt;dgvAdmin.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;dgvAdmin.Parent" xml:space="preserve">
+    <value>guna2Panel2</value>
+  </data>
+  <data name="&gt;&gt;dgvAdmin.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="guna2Panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="guna2Panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 441</value>
+  </data>
+  <data name="guna2Panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="guna2Panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1180, 227</value>
+  </data>
+  <data name="guna2Panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel2.Name" xml:space="preserve">
+    <value>guna2Panel2</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel2.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>22, 20</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1180, 668</value>
+  </data>
+  <data name="&gt;&gt;ColNo.Name" xml:space="preserve">
+    <value>ColNo</value>
+  </data>
+  <data name="&gt;&gt;ColNo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColId.Name" xml:space="preserve">
+    <value>ColId</value>
+  </data>
+  <data name="&gt;&gt;ColId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColAdminName.Name" xml:space="preserve">
+    <value>ColAdminName</value>
+  </data>
+  <data name="&gt;&gt;ColAdminName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Coluserrole.Name" xml:space="preserve">
+    <value>Coluserrole</value>
+  </data>
+  <data name="&gt;&gt;Coluserrole.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColAdminPhoto.Name" xml:space="preserve">
+    <value>ColAdminPhoto</value>
+  </data>
+  <data name="&gt;&gt;ColAdminPhoto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColAdminUsername.Name" xml:space="preserve">
+    <value>ColAdminUsername</value>
+  </data>
+  <data name="&gt;&gt;ColAdminUsername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColAdminPassword.Name" xml:space="preserve">
+    <value>ColAdminPassword</value>
+  </data>
+  <data name="&gt;&gt;ColAdminPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColAdminGmail.Name" xml:space="preserve">
+    <value>ColAdminGmail</value>
+  </data>
+  <data name="&gt;&gt;ColAdminGmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColAdminPhoneNumber.Name" xml:space="preserve">
+    <value>ColAdminPhoneNumber</value>
+  </data>
+  <data name="&gt;&gt;ColAdminPhoneNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColAdminNRC.Name" xml:space="preserve">
+    <value>ColAdminNRC</value>
+  </data>
+  <data name="&gt;&gt;ColAdminNRC.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColAdminAddress.Name" xml:space="preserve">
+    <value>ColAdminAddress</value>
+  </data>
+  <data name="&gt;&gt;ColAdminAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColAdminCity.Name" xml:space="preserve">
+    <value>ColAdminCity</value>
+  </data>
+  <data name="&gt;&gt;ColAdminCity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColAdminPostcode.Name" xml:space="preserve">
+    <value>ColAdminPostcode</value>
+  </data>
+  <data name="&gt;&gt;ColAdminPostcode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColDel.Name" xml:space="preserve">
+    <value>ColDel</value>
+  </data>
+  <data name="&gt;&gt;ColDel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColAdminPhotoString.Name" xml:space="preserve">
+    <value>ColAdminPhotoString</value>
+  </data>
+  <data name="&gt;&gt;ColAdminPhotoString.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
+    <value>errorProvider1</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewImageColumn1.Name" xml:space="preserve">
+    <value>dataGridViewImageColumn1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewImageColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmAdmin</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dataGridViewImageColumn1.HeaderText" xml:space="preserve">
+    <value />
+  </data>
   <data name="dataGridViewImageColumn1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAABe5JREFUeF7t

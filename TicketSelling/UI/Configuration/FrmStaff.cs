@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TicketSelling.Common;
 using TicketSelling.DAO.Entity;
+using System.Text.RegularExpressions;
 
 namespace TicketSelling.UI.Configuration
 {
@@ -22,6 +23,7 @@ namespace TicketSelling.UI.Configuration
             txtName.Select();
             dgvStaff.AutoGenerateColumns = false;
             colorchangestaff();
+            colordaynight();
         }
 
         private void Reset()
@@ -82,6 +84,40 @@ namespace TicketSelling.UI.Configuration
                 dgvStaff.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(196, 30, 58);
                 dgvStaff.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(196, 30, 58);
             }
+        }
+
+        public void colordaynight()
+        {
+            if (frmmain.panelTitle.BackColor == Color.FromArgb(41, 47, 57))
+            {
+                this.BackColor = Color.FromArgb(43, 55, 61);
+                lblname.ForeColor = Color.White;
+                lblpassword.ForeColor = Color.White;
+                lblusername.ForeColor = Color.White;
+                lblphonenumber.ForeColor = Color.White;
+               
+                txtName.FillColor = Color.FromArgb(45, 57, 68);
+                txtName.ForeColor = Color.White;
+                txtName.PlaceholderForeColor = Color.Gray;
+                txtUsername.FillColor = Color.FromArgb(45, 57, 68);
+                txtUsername.ForeColor = Color.White;
+                txtUsername.PlaceholderForeColor = Color.Gray;
+                txtPassword.FillColor = Color.FromArgb(45, 57, 68);
+                txtPassword.ForeColor = Color.White;
+                txtPassword.PlaceholderForeColor = Color.Gray;
+                txtPhoneNumber.FillColor = Color.FromArgb(45, 57, 68);
+                txtPhoneNumber.ForeColor = Color.White;
+                txtPhoneNumber.PlaceholderForeColor = Color.Gray;
+
+                dgvStaff.BackgroundColor = Color.FromArgb(68, 87, 96);
+                dgvStaff.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvStaff.DefaultCellStyle.ForeColor = Color.White;
+                dgvStaff.GridColor = Color.FromArgb(41, 47, 57);
+                dgvStaff.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvStaff.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                dgvStaff.DefaultCellStyle.SelectionForeColor = Color.White;
+            }
+
         }
 
         #endregion
@@ -328,6 +364,14 @@ namespace TicketSelling.UI.Configuration
             e.KeyChar = char.ToLower(e.KeyChar);
         }
 
-        
+        private void TxtName_Leave(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void TxtName_Validating(object sender, CancelEventArgs e)
+        {
+           
+        }
     }
     }

@@ -22,6 +22,7 @@ namespace TicketSelling.UI.Configuration
             dgvSeat.AutoGenerateColumns = false;
             this.dgvSeat.Columns["ColPrice"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             colorchangeseat();
+            colordaynight();
         }
 
         #region SeatType
@@ -168,6 +169,54 @@ namespace TicketSelling.UI.Configuration
                 dgvSeatType.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(196, 30, 58);
                 dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(196, 30, 58);
                 dgvSeat.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(196, 30, 58);
+            }
+        }
+
+        public void colordaynight()
+        {
+            if (frmmain.panelTitle.BackColor == Color.FromArgb(41, 47, 57))
+            {
+                tabSeatType.BackColor = Color.FromArgb(43, 55, 61);
+                lblseattypename.ForeColor = Color.White;
+                lblseattypenote.ForeColor = Color.White;
+                txtSeatTypeName.FillColor = Color.FromArgb(45, 57, 68);
+                txtSeatTypeName.ForeColor = Color.White;
+                txtSeatTypeNote.FillColor = Color.FromArgb(45, 57, 68);
+                txtSeatTypeNote.ForeColor = Color.White;
+                dgvSeatType.BackgroundColor = Color.FromArgb(68, 87, 96);
+                dgvSeatType.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvSeatType.DefaultCellStyle.ForeColor = Color.White;
+                dgvSeatType.GridColor = Color.FromArgb(41, 47, 57);
+                dgvSeatType.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvSeatType.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43,55,61);
+                dgvSeatType.DefaultCellStyle.SelectionForeColor = Color.White;
+
+                tabSeat.BackColor = Color.FromArgb(43, 55, 61);
+                lblSeatname.ForeColor = Color.White;
+                lblnote.ForeColor = Color.White;
+                lblnumberofseats.ForeColor = Color.White;
+                lblprice.ForeColor = Color.White;
+                cbSeatType.FillColor = Color.FromArgb(45, 57, 68);
+                txtSeatNote.FillColor = Color.FromArgb(45, 57, 68);
+                txtNumberOfSeats.FillColor = Color.FromArgb(45, 57, 68);
+                txtSeatPrice.FillColor = Color.FromArgb(45, 57, 68);
+                cbSeatType.ForeColor = Color.White;
+                txtSeatNote.ForeColor = Color.White;
+                txtNumberOfSeats.ForeColor = Color.White;
+                txtSeatPrice.ForeColor = Color.White;
+                dgvSeat.BackgroundColor = Color.FromArgb(68, 87, 96);
+                dgvSeat.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvSeat.DefaultCellStyle.ForeColor = Color.White;
+                dgvSeat.GridColor = Color.FromArgb(41, 47, 57);
+                dgvSeat.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvSeat.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                dgvSeat.DefaultCellStyle.SelectionForeColor = Color.White;
+            }
+            else
+            {
+                tabSeatType.BackColor = Color.White;
+                lblseattypename.ForeColor = Color.Black;
+                lblseattypenote.ForeColor = Color.Black;
             }
         }
 

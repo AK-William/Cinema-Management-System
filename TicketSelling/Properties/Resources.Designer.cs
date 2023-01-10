@@ -253,6 +253,16 @@ namespace TicketSelling.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap error_480px {
+            get {
+                object obj = ResourceManager.GetObject("error_480px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eye_500px {
             get {
                 object obj = ResourceManager.GetObject("eye_500px", resourceCulture);

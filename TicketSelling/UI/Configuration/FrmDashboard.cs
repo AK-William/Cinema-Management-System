@@ -29,7 +29,8 @@ namespace TicketSelling.UI.Configuration
             dgvMovieDBN2.AutoGenerateColumns = false;
             dgvMovieDBN3.AutoGenerateColumns = false;
             dgvMovieDBN4.AutoGenerateColumns = false;
-            
+
+            colorchange();
         }
 
        
@@ -179,6 +180,80 @@ namespace TicketSelling.UI.Configuration
             BindDgvMovieDBN2();
             BindDgvMovieDBN3();
             BindDgvMovieDBN4();
+
+           
+        }
+
+       public void colorchange()
+        {
+            if (this.BackColor == Color.FromArgb(41, 47, 57))
+            {
+                lbltitle.ForeColor = Color.White;
+
+                dgvMovieDB1.BackgroundColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDB1.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDB1.DefaultCellStyle.ForeColor = Color.White;
+                dgvMovieDB1.GridColor = Color.FromArgb(41, 47, 57);
+                dgvMovieDB1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDB1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                dgvMovieDB1.DefaultCellStyle.SelectionForeColor = Color.White;
+
+                dgvMovieDB2.BackgroundColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDB2.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDB2.DefaultCellStyle.ForeColor = Color.White;
+                dgvMovieDB2.GridColor = Color.FromArgb(41, 47, 57);
+                dgvMovieDB2.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDB2.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                dgvMovieDB2.DefaultCellStyle.SelectionForeColor = Color.White;
+
+                dgvMovieDB3.BackgroundColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDB3.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDB3.DefaultCellStyle.ForeColor = Color.White;
+                dgvMovieDB3.GridColor = Color.FromArgb(41, 47, 57);
+                dgvMovieDB3.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDB3.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                dgvMovieDB3.DefaultCellStyle.SelectionForeColor = Color.White;
+
+                dgvMovieDB4.BackgroundColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDB4.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDB4.DefaultCellStyle.ForeColor = Color.White;
+                dgvMovieDB4.GridColor = Color.FromArgb(41, 47, 57);
+                dgvMovieDB4.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDB4.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                dgvMovieDB4.DefaultCellStyle.SelectionForeColor = Color.White;
+
+                dgvMovieDBN1.BackgroundColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDBN1.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDBN1.DefaultCellStyle.ForeColor = Color.White;
+                dgvMovieDBN1.GridColor = Color.FromArgb(41, 47, 57);
+                dgvMovieDBN1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDBN1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                dgvMovieDBN1.DefaultCellStyle.SelectionForeColor = Color.White;
+
+                dgvMovieDBN2.BackgroundColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDBN2.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDBN2.DefaultCellStyle.ForeColor = Color.White;
+                dgvMovieDBN2.GridColor = Color.FromArgb(41, 47, 57);
+                dgvMovieDBN2.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDBN2.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                dgvMovieDBN2.DefaultCellStyle.SelectionForeColor = Color.White;
+
+                dgvMovieDBN3.BackgroundColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDBN3.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDBN3.DefaultCellStyle.ForeColor = Color.White;
+                dgvMovieDBN3.GridColor = Color.FromArgb(41, 47, 57);
+                dgvMovieDBN3.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDBN3.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                dgvMovieDBN3.DefaultCellStyle.SelectionForeColor = Color.White;
+
+                dgvMovieDBN4.BackgroundColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDBN4.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDBN4.DefaultCellStyle.ForeColor = Color.White;
+                dgvMovieDBN4.GridColor = Color.FromArgb(41, 47, 57);
+                dgvMovieDBN4.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                dgvMovieDBN4.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                dgvMovieDBN4.DefaultCellStyle.SelectionForeColor = Color.White;
+            }
         }
     }
 }

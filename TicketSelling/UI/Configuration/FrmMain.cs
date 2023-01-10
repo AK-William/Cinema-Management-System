@@ -31,8 +31,7 @@ namespace TicketSelling.UI.Configuration
             txtLoginNameForMain.Text = FrmLogin.user;
             this.Padding = new Padding(borderSize);//Border size
             //this.BackColor = Color.FromArgb(51, 153, 255);//Border color
-            panelBody.Controls.Add(frmdashboard);
-            frmdashboard.Dock = DockStyle.Fill;
+           
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -203,6 +202,8 @@ namespace TicketSelling.UI.Configuration
         private void FrmMain_Load(object sender, EventArgs e)
         {
             formSize = this.ClientSize;
+            panelBody.Controls.Add(frmdashboard);
+            frmdashboard.Dock = DockStyle.Fill;
         }
 
         private void FrmMain_Resize(object sender, EventArgs e)
@@ -320,6 +321,7 @@ namespace TicketSelling.UI.Configuration
             panelBody.Controls.Clear();
             panelBody.Controls.Add(frmdashboard);
             frmdashboard.Dock = DockStyle.Fill;
+            frmdashboard.BackColor = panelTitle.BackColor;
         }
 
         private void BtnConfiguration_Click(object sender, EventArgs e)

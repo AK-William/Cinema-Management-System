@@ -22,6 +22,7 @@ namespace TicketSelling.UI.Configuration
             dayw.Visible = false;
             nightw.Visible = false;
             colorchangesetting();
+           
         }
 
         public void colorchangesetting()
@@ -29,6 +30,7 @@ namespace TicketSelling.UI.Configuration
             if (frmmain.panelTitle.BackColor == Color.FromArgb(41, 47, 57))
             {
                 this.BackColor = Color.FromArgb(41, 47, 57);
+                daynight.Checked = true;
             }
             else 
             {
@@ -207,6 +209,9 @@ namespace TicketSelling.UI.Configuration
                 frmmain.panelTitle.BackColor = Color.FromArgb(41, 47, 57);
                 frmmain.label1.ForeColor = Color.White;
                 frmmain.txtLoginNameForMain.ForeColor = Color.White;
+                frmmain.btnAccount.FlatAppearance.MouseDownBackColor= Color.FromArgb(68, 87, 96);
+                frmmain.btnSetting.FlatAppearance.MouseDownBackColor = Color.FromArgb(68, 87, 96);
+               
             }
             else
             {
@@ -221,6 +226,8 @@ namespace TicketSelling.UI.Configuration
                 frmmain.panelTitle.BackColor = Color.White;
                 frmmain.label1.ForeColor = Color.Black;
                 frmmain.txtLoginNameForMain.ForeColor = Color.Black;
+                frmmain.btnAccount.FlatAppearance.MouseDownBackColor = Color.LightGray;
+                frmmain.btnSetting.FlatAppearance.MouseDownBackColor = Color.LightGray;
             }
         }
 

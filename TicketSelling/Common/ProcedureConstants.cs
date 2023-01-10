@@ -689,5 +689,7 @@ namespace TicketSelling.Common
 
         #endregion
 
+
+        public static string GetRoleNameById = @"SELECT * FROM TblRole where Id = @Id";
     }
 }
