@@ -8,10 +8,10 @@ namespace TicketSelling.Common
 {
     public class ProcedureConstants
     {
-        #region dbStaff
+        #region dbuser
        
 
-        public static string SP_NewStaffSave = @"IF EXISTS (SELECT * FROM TblStaff WHERE Username = @Username
+        public static string SP_NewUserSave = @"IF EXISTS (SELECT * FROM TblUser WHERE Username = @Username
                                                       AND Password = @Password)
                                                     BEGIN
                                                       SELECT
@@ -20,17 +20,18 @@ namespace TicketSelling.Common
                                                         'ME' AS 'RespMessageType'
                                                       SELECT
                                                         *
-                                                      FROM TblStaff
+                                                      FROM TblUser
                                                       WHERE Username = @Username
                                                       AND Password = @Password
                                                     END
                                                     ELSE
                                                     BEGIN
-                                                      INSERT INTO [dbo].[TblStaff] ([Name]
+                                                      INSERT INTO [dbo].[TblUser] ([Name]
                                                       , [Username]
                                                       , [Password]
-                                                      , [PhoneNumber])
-                                                        VALUES (@Name, @Username, @Password, @PhoneNumber);
+                                                      , [PhoneNumber]
+                                                      , [Gmail])
+                                                        VALUES (@Name, @Username, @Password, @PhoneNumber, @Gmail);
 
                                                       SELECT
                                                         '000' AS RespCode,
@@ -38,14 +39,14 @@ namespace TicketSelling.Common
                                                         'MI' AS 'RespMessageType'
                                                       SELECT
                                                         *
-                                                      FROM TblStaff
+                                                      FROM TblUser
                                                       WHERE Username = @Username
                                                       AND Password = @Password
                                                     END";
 
-        public static string GetAllStaff = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblStaff WITH (NOLOCK)";
+        public static string GetAllUser = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblUser WITH (NOLOCK)";
 
-        public static string UpdateStaff = @"IF EXISTS (SELECT * FROM TblStaff WHERE Username = @Username
+        public static string UpdateUser = @"IF EXISTS (SELECT * FROM TblUser WHERE Username = @Username
                                                      AND Id != @Id)
                                                     BEGIN
                                                       SELECT
@@ -54,17 +55,18 @@ namespace TicketSelling.Common
                                                         'ME' AS 'RespMessageType'
                                                       SELECT
                                                         *
-                                                      FROM TblStaff
+                                                      FROM TblUser
                                                       WHERE Username = @Username
                                                       AND Password = @Password
                                                     END
                                                     ELSE
                                                     BEGIN
-                                                      UPDATE [dbo].[TblStaff]
+                                                      UPDATE [dbo].[TblUser]
 														   SET [Name] = @Name
 															  ,[Username] = @Username
 															  ,[Password] = @Password
 															  ,[PhoneNumber] = @PhoneNumber
+                                                              ,[Gmail] = @Gmail
 														 WHERE Id = @Id 
 
                                                       SELECT
@@ -73,19 +75,19 @@ namespace TicketSelling.Common
                                                         'MI' AS 'RespMessageType'
                                                       SELECT
                                                         *
-                                                      FROM TblStaff
+                                                      FROM TblUser
                                                       WHERE Username = @Username
                                                       AND Password = @Password
                                                     END";
 
-        public static string DeleteStaff = @"DELETE TblStaff WHERE Id = @Id; 
+        public static string DeleteUser = @"DELETE TblUser WHERE Id = @Id; 
                                                 SELECT
                                                 '000' AS RespCode,
                                                 'Update Successful' AS RespDesp,
                                                 'MI' AS 'RespMessageType'
                                                 SELECT
                                                 *
-                                                FROM TblStaff;";
+                                                FROM TblUser;";
 
 
         #endregion
@@ -270,7 +272,7 @@ namespace TicketSelling.Common
                                                       INSERT INTO[dbo].[TblAdmin]
                                                         ([Name]
                                                         , [Username]
-                                                        , [Role]
+                                                        , [RoleId]
                                                         , [Password]
                                                         , [Gmail]
                                                         , [PhoneNumber]
@@ -279,7 +281,7 @@ namespace TicketSelling.Common
                                                         , [City]
                                                         , [Postcode]
                                                        ,[CreatedBy])
-                                                       VALUES(@Name, @Username, @Role, @Password, @Gmail, @PhoneNumber, @NRC, @Address, @City, @Postcode, @CreatedBy);
+                                                       VALUES(@Name, @Username, @RoleId, @Password, @Gmail, @PhoneNumber, @NRC, @Address, @City, @Postcode, @CreatedBy);
 
                                                         SELECT
                                                         '000' AS RespCode,
@@ -302,7 +304,22 @@ namespace TicketSelling.Common
                                                     WHERE  Id=@Id
                                                     ";
 
-        public static string GetAllAdmin = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblAdmin WITH (NOLOCK)";
+        public static string GetAllAdmin = @"SELECT
+                                                ROW_NUMBER() OVER (ORDER BY A.Id ASC) AS RowNumber,
+                                                A.Id,
+                                                RoleName,
+                                                A.RoleId,
+                                                Username,
+                                                Password,
+                                                Gmail,
+                                                PhoneNumber,
+                                                NRC,
+                                                Address,
+                                                City,
+                                                Postcode
+                                                FROM TblAdmin AS A WITH (NOLOCK)
+                                                INNER JOIN TblRole AS R
+                                                ON A.RoleId = R.Id";
 
         public static string UpdateAdmin = @"IF EXISTS (SELECT * FROM TblAdmin WHERE Name = @Name
                                                        AND Id != @Id)
@@ -320,7 +337,7 @@ namespace TicketSelling.Common
                                                     BEGIN
                                                       UPDATE [dbo].[TblAdmin]
 														   SET [Name] =  @Name
-                                                        , [Role] = @Role
+                                                        , [RoleId] = @RoleId
                                                         , [Username] = @Username
                                                         , [Password] = @Password
                                                         , [Gmail] = @Gmail
@@ -349,6 +366,8 @@ namespace TicketSelling.Common
                                                 SELECT
                                                 *
                                                 FROM TblAdmin;";
+
+        public static string GetAllRole = @"SELECT * FROM TblRole";
 
         #endregion
 
@@ -650,7 +669,7 @@ namespace TicketSelling.Common
 
         #endregion
 
-        public static string LoginStaff = @"IF EXISTS(SELECT * FROM TblStaff where Username=@Username AND Password=@Password)
+        public static string LoginUser = @"IF EXISTS(SELECT * FROM TblUser where Username=@Username AND Password=@Password)
                                         BEGIN
                                             SELECT
                                             '000' AS RespCode,
@@ -690,6 +709,7 @@ namespace TicketSelling.Common
         #endregion
 
 
-        public static string GetRoleNameById = @"SELECT * FROM TblRole where Id = @Id";
+       
+        
     }
 }

@@ -35,7 +35,7 @@
             this.btnReport = new FontAwesome.Sharp.IconButton();
             this.btnTicket = new FontAwesome.Sharp.IconButton();
             this.panelEntry = new System.Windows.Forms.Panel();
-            this.btnStaff = new FontAwesome.Sharp.IconButton();
+            this.btnUser = new FontAwesome.Sharp.IconButton();
             this.btnAdmin = new FontAwesome.Sharp.IconButton();
             this.btnEntry = new FontAwesome.Sharp.IconButton();
             this.btnlogout = new FontAwesome.Sharp.IconButton();
@@ -134,26 +134,27 @@
             // 
             // panelEntry
             // 
-            this.panelEntry.Controls.Add(this.btnStaff);
+            this.panelEntry.Controls.Add(this.btnUser);
             this.panelEntry.Controls.Add(this.btnAdmin);
             this.panelEntry.Controls.Add(this.btnEntry);
             resources.ApplyResources(this.panelEntry, "panelEntry");
             this.panelEntry.Name = "panelEntry";
             // 
-            // btnStaff
+            // btnUser
             // 
-            this.btnStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            resources.ApplyResources(this.btnStaff, "btnStaff");
-            this.btnStaff.FlatAppearance.BorderSize = 0;
-            this.btnStaff.ForeColor = System.Drawing.Color.White;
-            this.btnStaff.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
-            this.btnStaff.IconColor = System.Drawing.Color.White;
-            this.btnStaff.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnStaff.Name = "btnStaff";
-            this.btnStaff.TabStop = false;
-            this.btnStaff.Tag = "Staff";
-            this.btnStaff.UseVisualStyleBackColor = false;
-            this.btnStaff.Click += new System.EventHandler(this.BtnStaff_Click);
+            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            resources.ApplyResources(this.btnUser, "btnUser");
+            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.ForeColor = System.Drawing.Color.White;
+            this.btnUser.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            this.btnUser.IconColor = System.Drawing.Color.White;
+            this.btnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUser.Name = "btnUser";
+            this.btnUser.TabStop = false;
+            this.btnUser.Tag = "Users";
+            this.btnUser.UseVisualStyleBackColor = false;
+            this.btnUser.Click += new System.EventHandler(this.BtnUser_Click);
+            this.btnUser.MouseHover += new System.EventHandler(this.BtnUser_MouseHover);
             // 
             // btnAdmin
             // 
@@ -584,7 +585,7 @@
         public Guna.UI2.WinForms.Guna2Panel panelAccountShow;
         public FontAwesome.Sharp.IconButton accountimage;
         public FontAwesome.Sharp.IconButton btnAdmin;
-        public FontAwesome.Sharp.IconButton btnStaff;
+        public FontAwesome.Sharp.IconButton btnUser;
         public FontAwesome.Sharp.IconButton btnDashboard;
         public FontAwesome.Sharp.IconButton btnMovie;
         public FontAwesome.Sharp.IconButton btnSeat;

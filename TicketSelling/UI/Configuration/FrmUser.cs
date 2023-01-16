@@ -14,10 +14,10 @@ using System.Text.RegularExpressions;
 
 namespace TicketSelling.UI.Configuration
 {
-    public partial class FrmStaff : UserControl
+    public partial class FrmUser : UserControl
     {
        
-        public FrmStaff()
+        public FrmUser()
         {
             InitializeComponent();
             txtName.Select();
@@ -32,6 +32,7 @@ namespace TicketSelling.UI.Configuration
             txtUsername.Text = "";
             txtPassword.Text = "";
             txtPhoneNumber.Text = "";
+            txtGmail.Text = "";
             btnRegister.Visible = true;
             btnUpdate.Visible = false;
             txtName.Select();
@@ -108,6 +109,9 @@ namespace TicketSelling.UI.Configuration
                 txtPhoneNumber.FillColor = Color.FromArgb(45, 57, 68);
                 txtPhoneNumber.ForeColor = Color.White;
                 txtPhoneNumber.PlaceholderForeColor = Color.Gray;
+                txtGmail.FillColor = Color.FromArgb(45, 57, 68);
+                txtGmail.ForeColor = Color.White;
+                txtGmail.PlaceholderForeColor = Color.Gray;
 
                 dgvStaff.BackgroundColor = Color.FromArgb(68, 87, 96);
                 dgvStaff.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
@@ -144,6 +148,11 @@ namespace TicketSelling.UI.Configuration
                 MessageBox.Show("Enter your phone number");
                 return false;
             }
+            if (string.IsNullOrEmpty(txtGmail.Text))
+            {
+                MessageBox.Show("Enter your gmail");
+                return false;
+            }
             return true;
         }
 
@@ -157,12 +166,13 @@ namespace TicketSelling.UI.Configuration
             try
             {
                 if (!CheckRequireFields()) return;
-                MessageEntity res = new StaffDao().SaveStaff(1, new DAO.Entity.Staff()
+                MessageEntity res = new UserDao().SaveUser(1, new DAO.Entity.User()
                 {
                     Name = txtName.Text,
                     Username = txtUsername.Text,
                     Password = txtPassword.Text,
                     PhoneNumber = txtPhoneNumber.Text,
+                    Gmail = txtGmail.Text,
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
@@ -196,10 +206,10 @@ namespace TicketSelling.UI.Configuration
             try
             {
                 dgvStaff.DataSource = null;
-                ResStaff res = new StaffDao().GetAllStaff();
+                ResUser res = new UserDao().GetAllUser();
                 if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
-                    dgvStaff.DataSource = res.LstStaff;
+                    dgvStaff.DataSource = res.LstUser;
                 }
             }
             catch (Exception ex)
@@ -208,11 +218,33 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
-        private void TxtUsername_KeyDown(object sender, KeyEventArgs e)
+
+        #region keydown
+        private void TxtName_KeyDown(object sender, KeyEventArgs e)
+        {
+            //if (e.KeyCode == Keys.Enter)
+            //{
+            //    SendKeys.Send("{Tab}");
+            //}
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtUsername.Focus();
+            }
+        }
+
+        private void TxtUsername_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                SendKeys.Send("{Tab}");
+                txtPassword.Focus();
+            }
+        }
+
+        private void TxtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPhoneNumber.Focus();
             }
         }
 
@@ -220,14 +252,27 @@ namespace TicketSelling.UI.Configuration
         {
             if (e.KeyCode == Keys.Enter)
             {
+                txtGmail.Focus();
+            }
+        }
+
+        private void TxtGmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
                 btnRegister.Focus();
             }
         }
+
+        #endregion
+
 
         private void FrmStaff_Load(object sender, EventArgs e)
         {
             txtName.Select();
             BindDgvData();
+            txtPassword.UseSystemPasswordChar = true;
+            hidepassword.Visible = false;
         }
 
         private void TxtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
@@ -281,13 +326,14 @@ namespace TicketSelling.UI.Configuration
             try
             {
                 if (!CheckRequireFields()) return;
-                MessageEntity res = new StaffDao().UpdateStaff(1, new DAO.Entity.Staff()
+                MessageEntity res = new UserDao().UpdateUser(1, new DAO.Entity.User()
                 {
                     Id = id,
                     Name = txtName.Text,
                     Username = txtUsername.Text,
                     Password = txtPassword.Text,
                     PhoneNumber = txtPhoneNumber.Text,
+                    Gmail = txtGmail.Text,
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
@@ -325,6 +371,7 @@ namespace TicketSelling.UI.Configuration
             txtUsername.Text = dgvRow.Cells["ColUsername"].Value.ToString();
             txtPassword.Text = Cryptography.Decrypt(dgvRow.Cells["ColPassword"].Value.ToString());
             txtPhoneNumber.Text = dgvRow.Cells["ColPhoneNumber"].Value.ToString();
+            txtGmail.Text = dgvRow.Cells["ColGmail"].Value.ToString();
             btnRegister.Visible = false;
             btnUpdate.Visible = true;
         }
@@ -338,7 +385,7 @@ namespace TicketSelling.UI.Configuration
                     DialogResult res = MessageBox.Show("Are you sure you want to Delete", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                     if (res == DialogResult.OK)
                     {
-                        MessageEntity res1 = new StaffDao().DeleteStaff(Convert.ToInt32(dgvStaff.Rows[e.RowIndex].Cells["ColId"].Value));
+                        MessageEntity res1 = new UserDao().DeleteUser(Convert.ToInt32(dgvStaff.Rows[e.RowIndex].Cells["ColId"].Value));
                         if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
                         {
                             MessageBox.Show("Delete Success");
@@ -364,14 +411,22 @@ namespace TicketSelling.UI.Configuration
             e.KeyChar = char.ToLower(e.KeyChar);
         }
 
-        private void TxtName_Leave(object sender, EventArgs e)
+
+        private void Showpassword_Click(object sender, EventArgs e)
         {
-           
+            txtPassword.UseSystemPasswordChar = false;
+            hidepassword.Visible = true;
+            showpassword.Visible = false;
         }
 
-        private void TxtName_Validating(object sender, CancelEventArgs e)
+        private void Hidepassword_Click(object sender, EventArgs e)
         {
-           
+            txtPassword.UseSystemPasswordChar = true;
+            hidepassword.Visible = false;
+            showpassword.Visible = true;
         }
+
+
+       
     }
-    }
+}

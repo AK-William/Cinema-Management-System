@@ -23,8 +23,56 @@ namespace TicketSelling.DAO
         SqlCommand scom;
         SqlDataAdapter adapter;
 
-        
 
+        public ResRole GetAllRole()
+        {
+            sqlConnection = DbConnector.Connect();
+            if (sqlConnection == null)
+            {
+                return null;
+            }
+            MessageEntity _MessageEntity = null;
+            try
+            {
+                scom = new SqlCommand(ProcedureConstants.GetAllRole, sqlConnection);
+                scom.CommandType = CommandType.Text;
+                DataSet ds = new DataSet();
+                adapter = new SqlDataAdapter(scom);
+                adapter.Fill(ds);
+                sqlConnection.Close();
+
+                _MessageEntity = SqlDataSet.Check(ds, 1);
+                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
+                    return new ResRole() { MessageEntity = _MessageEntity };
+
+                DataTable dt = ds.Tables[0];
+                List<Role> lst = new List<Role>();
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    lst.Add(new Role
+                    {
+                        Id = Convert.ToInt32(dt.Rows[i]["Id"]),
+                        RoleName = dt.Rows[i]["RoleName"].ToString(),
+                    });
+                }
+                return new ResRole()
+                {
+                    MessageEntity = new MessageEntity()
+                    {
+                        RespMessageType = CommonResponseMessage.ResSuccessType
+                    },
+                    LstRole = lst
+                };
+            }
+            catch (Exception ex)
+            {
+                _MessageEntity.RespCode = CommonResponseMessage.ExceptionErrorCode;
+                _MessageEntity.RespDesp = ex.Message;
+                _MessageEntity.RespMessageType = CommonResponseMessage.ResErrorType;
+                return new ResRole() { MessageEntity = _MessageEntity };
+            }
+        }
 
 
     }

@@ -52,7 +52,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.panelMenuBar.BackColor = Color.FromArgb(0, 120, 215);
                     frmmain.paneltitlebar.BackColor = Color.FromArgb(0, 120, 215);
                     frmmain.btnAdmin.BackColor = Color.FromArgb(0, 120, 215);
-                    frmmain.btnStaff.BackColor = Color.FromArgb(0, 120, 215);
+                    frmmain.btnUser.BackColor = Color.FromArgb(0, 120, 215);
                     frmmain.btnMovie.BackColor = Color.FromArgb(0, 120, 215);
                     frmmain.btnSeat.BackColor = Color.FromArgb(0, 120, 215);
                     frmmain.btnDashboard.BackColor = Color.FromArgb(0, 120, 215);
@@ -68,7 +68,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.panelMenuBar.BackColor = Color.FromArgb(253, 73, 131);
                     frmmain.paneltitlebar.BackColor = Color.FromArgb(253, 73, 131);
                     frmmain.btnAdmin.BackColor = Color.FromArgb(253, 73, 131);
-                    frmmain.btnStaff.BackColor = Color.FromArgb(253, 73, 131);
+                    frmmain.btnUser.BackColor = Color.FromArgb(253, 73, 131);
                     frmmain.btnMovie.BackColor = Color.FromArgb(253, 73, 131);
                     frmmain.btnSeat.BackColor = Color.FromArgb(253, 73, 131);
                     frmmain.btnDashboard.BackColor = Color.FromArgb(253, 73, 131);
@@ -84,7 +84,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.panelMenuBar.BackColor = Color.FromArgb(27, 182, 211);
                     frmmain.paneltitlebar.BackColor = Color.FromArgb(27, 182, 211);
                     frmmain.btnAdmin.BackColor = Color.FromArgb(27, 182, 211);
-                    frmmain.btnStaff.BackColor = Color.FromArgb(27, 182, 211);
+                    frmmain.btnUser.BackColor = Color.FromArgb(27, 182, 211);
                     frmmain.btnMovie.BackColor = Color.FromArgb(27, 182, 211);
                     frmmain.btnSeat.BackColor = Color.FromArgb(27, 182, 211);
                     frmmain.btnDashboard.BackColor = Color.FromArgb(27, 182, 211);
@@ -100,7 +100,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.panelMenuBar.BackColor = Color.FromArgb(123, 31, 162);
                     frmmain.paneltitlebar.BackColor = Color.FromArgb(123, 31, 162);
                     frmmain.btnAdmin.BackColor = Color.FromArgb(123, 31, 162);
-                    frmmain.btnStaff.BackColor = Color.FromArgb(123, 31, 162);
+                    frmmain.btnUser.BackColor = Color.FromArgb(123, 31, 162);
                     frmmain.btnMovie.BackColor = Color.FromArgb(123, 31, 162);
                     frmmain.btnSeat.BackColor = Color.FromArgb(123, 31, 162);
                     frmmain.btnDashboard.BackColor = Color.FromArgb(123, 31, 162);
@@ -116,7 +116,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.panelMenuBar.BackColor = Color.FromArgb(84, 110, 122);
                     frmmain.paneltitlebar.BackColor = Color.FromArgb(84, 110, 122);
                     frmmain.btnAdmin.BackColor = Color.FromArgb(84, 110, 122);
-                    frmmain.btnStaff.BackColor = Color.FromArgb(84, 110, 122);
+                    frmmain.btnUser.BackColor = Color.FromArgb(84, 110, 122);
                     frmmain.btnMovie.BackColor = Color.FromArgb(84, 110, 122);
                     frmmain.btnSeat.BackColor = Color.FromArgb(84, 110, 122);
                     frmmain.btnDashboard.BackColor = Color.FromArgb(84, 110, 122);
@@ -132,7 +132,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.panelMenuBar.BackColor = Color.FromArgb(0, 200, 83);
                     frmmain.paneltitlebar.BackColor = Color.FromArgb(0, 200, 83);
                     frmmain.btnAdmin.BackColor = Color.FromArgb(0, 200, 83);
-                    frmmain.btnStaff.BackColor = Color.FromArgb(0, 200, 83);
+                    frmmain.btnUser.BackColor = Color.FromArgb(0, 200, 83);
                     frmmain.btnMovie.BackColor = Color.FromArgb(0, 200, 83);
                     frmmain.btnSeat.BackColor = Color.FromArgb(0, 200, 83);
                     frmmain.btnDashboard.BackColor = Color.FromArgb(0, 200, 83);
@@ -148,7 +148,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.panelMenuBar.BackColor = Color.FromArgb(255, 214, 0);
                     frmmain.paneltitlebar.BackColor = Color.FromArgb(255, 214, 0);
                     frmmain.btnAdmin.BackColor = Color.FromArgb(255, 214, 0);
-                    frmmain.btnStaff.BackColor = Color.FromArgb(255, 214, 0);
+                    frmmain.btnUser.BackColor = Color.FromArgb(255, 214, 0);
                     frmmain.btnMovie.BackColor = Color.FromArgb(255, 214, 0);
                     frmmain.btnSeat.BackColor = Color.FromArgb(255, 214, 0);
                     frmmain.btnDashboard.BackColor = Color.FromArgb(255, 214, 0);
@@ -164,7 +164,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.panelMenuBar.BackColor = Color.FromArgb(196, 30, 58);
                     frmmain.paneltitlebar.BackColor = Color.FromArgb(196, 30, 58);
                     frmmain.btnAdmin.BackColor = Color.FromArgb(196, 30, 58);
-                    frmmain.btnStaff.BackColor = Color.FromArgb(196, 30, 58);
+                    frmmain.btnUser.BackColor = Color.FromArgb(196, 30, 58);
                     frmmain.btnMovie.BackColor = Color.FromArgb(196, 30, 58);
                     frmmain.btnSeat.BackColor = Color.FromArgb(196, 30, 58);
                     frmmain.btnDashboard.BackColor = Color.FromArgb(196, 30, 58);

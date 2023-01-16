@@ -14,7 +14,7 @@ using System.IO;
 using System.Windows.Media.Imaging;
 using System.Text.RegularExpressions;
 using System.Globalization;
-
+using static TicketSelling.DAO.Entity.Role;
 
 namespace TicketSelling.UI.Configuration
 {
@@ -40,8 +40,7 @@ namespace TicketSelling.UI.Configuration
             BindDgvAdmin();
             txtAdminPassword.UseSystemPasswordChar = true;
             hidepassword.Visible = false;
-
-
+            BindRole();
         }
 
         private void Reset()
@@ -253,6 +252,26 @@ namespace TicketSelling.UI.Configuration
 
         #endregion
 
+        private void BindRole()
+        {
+            try
+            {
+                cbuserrole.DataSource = null;
+                ResRole res = new RoleDao().GetAllRole();
+                if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
+                {
+                    cbuserrole.DataSource = null;
+                    cbuserrole.DataSource = res.LstRole;
+                    cbuserrole.DisplayMember = "RoleName";
+                    cbuserrole.ValueMember = "Id";
+                    cbuserrole.SelectedIndex = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         private void PictureBoxAdminPhoto_Click(object sender, EventArgs e)
         {
@@ -348,7 +367,7 @@ namespace TicketSelling.UI.Configuration
                 {
                     Name = txtAdminName.Text,
                     Username = txtAdminUsername.Text,
-                    Role = cbuserrole.Text,
+                    RoleId = Convert.ToInt32(cbuserrole.SelectedValue),
                     Password = txtAdminPassword.Text,
                     Gmail = txtAdminGmail.Text,
                     PhoneNumber = txtAdminPhoneNumber.Text,
@@ -487,7 +506,7 @@ namespace TicketSelling.UI.Configuration
                     Id = id,
                     Name = txtAdminName.Text,
                     Photo = strString,
-                    Role = cbuserrole.Text,
+                    RoleId = Convert.ToInt32(cbuserrole.SelectedValue),
                     Username = txtAdminUsername.Text,
                     Password = txtAdminPassword.Text,
                     Gmail = txtAdminGmail.Text,
@@ -609,14 +628,7 @@ namespace TicketSelling.UI.Configuration
             showpassword.Visible = true;
         }
 
-        public List<Role> LstRole { get; set; }
-
-        private void Cbuserrole_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int RoleId = Convert.ToInt32(cbuserrole.SelectedValue);
-
-        }
-
+        
 
         #region Gmail Validation
 
@@ -687,14 +699,15 @@ namespace TicketSelling.UI.Configuration
         }
 
 
+        #region NRC Validation
         private static Regex nrc_validation() //nrc format validation
         {
             string patternNRC = @"^([0-9]{1,2})\/([A-Z][a-z]|[A-Z][a-z][a-z])([A-Z][a-z]|[A-Z][a-z][a-z])([A-Z][a-z]|[A-Z][a-z][a-z])\([N,P,E]\)[0-9]{6}$";
             return new Regex(patternNRC, RegexOptions.IgnoreCase);
         }
 
-
         static Regex validate_nrc = nrc_validation();
+
         private void TxtAdminNRC_Validating(object sender, CancelEventArgs e)
         {
             if (validate_nrc.IsMatch(txtAdminNRC.Text) != true)
@@ -703,5 +716,20 @@ namespace TicketSelling.UI.Configuration
                 txtAdminNRC.Text = "";
             }
         }
+
+        private void TxtAdminNRC_Leave(object sender, EventArgs e)
+        {
+            string patternNRC = @"^([0-9]{1,2})\/([A-Z][a-z]|[A-Z][a-z][a-z])([A-Z][a-z]|[A-Z][a-z][a-z])([A-Z][a-z]|[A-Z][a-z][a-z])\([N,P,E]\)[0-9]{6}$";
+            if (Regex.IsMatch(txtAdminNRC.Text, patternNRC))
+            {
+                errorProvider1.Clear();
+            }
+            else
+            {
+                errorProvider1.SetError(this.txtAdminNRC, "Please provide valid NRC format");
+            }
+        }
+
+        #endregion
     }
 }

@@ -7,7 +7,7 @@ using TicketSelling.Common;
 
 namespace TicketSelling.DAO.Entity
 {
-    public class Staff
+    public class User
     {
         public string RowNumber { get; set; }
         public int Id { get; set; }
@@ -15,11 +15,12 @@ namespace TicketSelling.DAO.Entity
         public string Username { get; set; }
         public string Password { get; set; }
         public string PhoneNumber { get; set; }
+        public string Gmail { get; set; }
     }
 
-    public class ResStaff
+    public class ResUser
     {
         public MessageEntity MessageEntity { get; set; }
-        public List<Staff> LstStaff { get; set; }
+        public List<User> LstUser { get; set; }
     }
 }

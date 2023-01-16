@@ -1,20 +1,9 @@
 ﻿using FontAwesome.Sharp;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TicketSelling.Common;
-using TicketSelling.Properties;
-using System.Globalization;
-using System.Threading;
-using System.Threading.Tasks;
-using TicketSelling.UI.Configuration;
 
 namespace TicketSelling.UI.Configuration
 {
@@ -31,7 +20,6 @@ namespace TicketSelling.UI.Configuration
             txtLoginNameForMain.Text = FrmLogin.user;
             this.Padding = new Padding(borderSize);//Border size
             //this.BackColor = Color.FromArgb(51, 153, 255);//Border color
-           
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -98,7 +86,7 @@ namespace TicketSelling.UI.Configuration
                     menuButton.ImageAlign = ContentAlignment.MiddleLeft;
                     menuButton.Padding = new Padding(10, 0, 0, 0);
                     btnAdmin.Padding = new Padding(30, 0, 0, 0);
-                    btnStaff.Padding = new Padding(30, 0, 0, 0);
+                    btnUser.Padding = new Padding(30, 0, 0, 0);
                 }
             }
         }
@@ -274,10 +262,10 @@ namespace TicketSelling.UI.Configuration
                     lblTitleChildForm.Text = btnMovie.Tag.ToString();
                     iconCurrentChildForm.IconChar = btnMovie.IconChar;
                     break;
-                case "Staff":
-                    frm = new FrmStaff();
-                    lblTitleChildForm.Text = btnStaff.Tag.ToString();
-                    iconCurrentChildForm.IconChar = btnStaff.IconChar;
+                case "Users":
+                    frm = new FrmUser();
+                    lblTitleChildForm.Text = btnUser.Tag.ToString();
+                    iconCurrentChildForm.IconChar = btnUser.IconChar;
                     break;
                 case "Admin":
                     frm = new FrmAdmin();
@@ -298,10 +286,10 @@ namespace TicketSelling.UI.Configuration
             frm.Dock = DockStyle.Fill;
         }
 
-        private void BtnStaff_Click(object sender, EventArgs e)
+        private void BtnUser_Click(object sender, EventArgs e)
         {
             MenuClick(sender, e);
-            btnStaff.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //staff button white fix
+            btnUser.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //staff button white fix
             ActivateButton(sender); //menu highlight active button
         }
 
@@ -384,6 +372,7 @@ namespace TicketSelling.UI.Configuration
         }
 
         #region tooltip
+
         private void BtnHome_MouseHover(object sender, EventArgs e)
         {
             toolTipHome.Show("Home", btnDashboard);
@@ -429,9 +418,9 @@ namespace TicketSelling.UI.Configuration
             toolTipReport.Show("Report", btnReport);
         }
 
-        private void BtnStaffs_MouseHover(object sender, EventArgs e)
+        private void BtnUser_MouseHover(object sender, EventArgs e)
         {
-            toolTipStaffs.Show("Staffs", btnStaff);
+            toolTipStaffs.Show("Users", btnUser);
         }
 
         private void BtnTicket_MouseHover(object sender, EventArgs e)
@@ -523,7 +512,7 @@ namespace TicketSelling.UI.Configuration
 
         #endregion
 
-
+        
     }
 }
 

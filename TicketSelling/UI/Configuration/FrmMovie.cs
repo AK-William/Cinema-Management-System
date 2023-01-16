@@ -230,7 +230,7 @@ namespace TicketSelling.UI.Configuration
                 dgvST.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
                 dgvST.DefaultCellStyle.SelectionForeColor = Color.White;
             }
-           
+
         }
 
         #endregion
@@ -551,15 +551,15 @@ namespace TicketSelling.UI.Configuration
         {
             try
             {
-                int MovieCount = new MovieDao().CheckMovieBySDId(Convert.ToInt32(dgvMovie.Rows[e.RowIndex].Cells["ColIdMovie"].Value)); //Control delete Movie when date are assign
-                if (MovieCount > 0)
+                if (dgvMovie.Rows[e.RowIndex].Cells["ColDelMovie"].ColumnIndex == e.ColumnIndex)
                 {
-                    MessageBox.Show("Transaction Exists");
-                    return;
-                }
-                else
-                {
-                    if (dgvMovie.Rows[e.RowIndex].Cells["ColDelMovie"].ColumnIndex == e.ColumnIndex)
+                    int MovieCount = new MovieDao().CheckMovieBySDId(Convert.ToInt32(dgvMovie.Rows[e.RowIndex].Cells["ColIdMovie"].Value)); //Control delete Movie when date are assign
+                    if (MovieCount > 0)
+                    {
+                        MessageBox.Show("Transaction Exists");
+                        return;
+                    }
+                    else
                     {
                         DialogResult res = MessageBox.Show("Are you sure you want to Delete", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                         if (res == DialogResult.OK)
@@ -759,10 +759,15 @@ namespace TicketSelling.UI.Configuration
 
         private void CbSTName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            STDate.MinDate = Convert.ToDateTime("1/1/1753");
+            STDate.MaxDate = Convert.ToDateTime("12/31/9998");
             int MovieId = Convert.ToInt32(CbSTName.SelectedValue);
             ResMovieSD res = new MovieDao().GetMovieDateById(MovieId);
-            STDate.MinDate = res.LstMovieSD[0].StartDate;
-            STDate.MaxDate = res.LstMovieSD[0].EndDate;
+            if (res.LstMovieSD.Count > 0) //if condition use to control error in datetime bcoz LstMovieSD have O index 
+            {
+                STDate.MinDate = res.LstMovieSD[0].StartDate;
+                STDate.MaxDate = res.LstMovieSD[0].EndDate;
+            }
         }
 
         int idsd = -1; int MovieId;
@@ -916,8 +921,8 @@ namespace TicketSelling.UI.Configuration
             STTime.Text = "";
             btnSTUpdate.Visible = false;
             btnSTSave.Visible = true;
-            STDate.MinDate = DateTime.Now;
-            STDate.MaxDate = DateTime.Now.AddYears(5);
+            STDate.MinDate = Convert.ToDateTime("1/1/1753");
+            STDate.MaxDate = Convert.ToDateTime("12/31/9998");
         }
 
         private void SaveMovieST()

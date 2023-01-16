@@ -1,6 +1,6 @@
 ﻿namespace TicketSelling.UI.Configuration
 {
-    partial class FrmStaff
+    partial class FrmUser
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStaff));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUser));
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtGmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.showpassword = new Guna.UI2.WinForms.Guna2Button();
+            this.hidepassword = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.lblphonenumber = new System.Windows.Forms.Label();
@@ -53,6 +58,7 @@
             this.ColUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColGmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDel = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -64,6 +70,10 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.label1);
+            this.guna2Panel2.Controls.Add(this.txtGmail);
+            this.guna2Panel2.Controls.Add(this.showpassword);
+            this.guna2Panel2.Controls.Add(this.hidepassword);
             this.guna2Panel2.Controls.Add(this.btnUpdate);
             this.guna2Panel2.Controls.Add(this.btnReset);
             this.guna2Panel2.Controls.Add(this.lblphonenumber);
@@ -79,8 +89,95 @@
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(389, 725);
+            this.guna2Panel2.Size = new System.Drawing.Size(422, 725);
             this.guna2Panel2.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(37, 475);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 33);
+            this.label1.TabIndex = 309;
+            this.label1.Text = "Gmail";
+            // 
+            // txtGmail
+            // 
+            this.txtGmail.Animated = true;
+            this.txtGmail.AutoRoundedCorners = true;
+            this.txtGmail.BorderRadius = 24;
+            this.txtGmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGmail.DefaultText = "";
+            this.txtGmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtGmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtGmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGmail.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.txtGmail.ForeColor = System.Drawing.Color.Black;
+            this.txtGmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGmail.IconLeft = global::TicketSelling.Properties.Resources.gmail_512px;
+            this.txtGmail.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtGmail.Location = new System.Drawing.Point(43, 511);
+            this.txtGmail.Margin = new System.Windows.Forms.Padding(5);
+            this.txtGmail.Name = "txtGmail";
+            this.txtGmail.PasswordChar = '\0';
+            this.txtGmail.PlaceholderText = "Enter your Gmail";
+            this.txtGmail.SelectedText = "";
+            this.txtGmail.Size = new System.Drawing.Size(349, 50);
+            this.txtGmail.TabIndex = 308;
+            this.txtGmail.TextOffset = new System.Drawing.Point(30, 0);
+            this.txtGmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtGmail_KeyDown);
+            // 
+            // showpassword
+            // 
+            this.showpassword.Animated = true;
+            this.showpassword.AutoRoundedCorners = true;
+            this.showpassword.BackColor = System.Drawing.Color.Transparent;
+            this.showpassword.BorderRadius = 17;
+            this.showpassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.showpassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.showpassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.showpassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.showpassword.FillColor = System.Drawing.Color.Transparent;
+            this.showpassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.showpassword.ForeColor = System.Drawing.Color.White;
+            this.showpassword.Image = global::TicketSelling.Properties.Resources.eye_500px;
+            this.showpassword.IndicateFocus = true;
+            this.showpassword.Location = new System.Drawing.Point(342, 293);
+            this.showpassword.Margin = new System.Windows.Forms.Padding(4);
+            this.showpassword.Name = "showpassword";
+            this.showpassword.Padding = new System.Windows.Forms.Padding(2);
+            this.showpassword.Size = new System.Drawing.Size(36, 39);
+            this.showpassword.TabIndex = 307;
+            this.showpassword.UseTransparentBackground = true;
+            this.showpassword.Click += new System.EventHandler(this.Showpassword_Click);
+            // 
+            // hidepassword
+            // 
+            this.hidepassword.Animated = true;
+            this.hidepassword.AutoRoundedCorners = true;
+            this.hidepassword.BackColor = System.Drawing.Color.Transparent;
+            this.hidepassword.BorderRadius = 17;
+            this.hidepassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.hidepassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.hidepassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.hidepassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.hidepassword.FillColor = System.Drawing.Color.Transparent;
+            this.hidepassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.hidepassword.ForeColor = System.Drawing.Color.White;
+            this.hidepassword.Image = global::TicketSelling.Properties.Resources.closed_eye_512px;
+            this.hidepassword.IndicateFocus = true;
+            this.hidepassword.Location = new System.Drawing.Point(342, 293);
+            this.hidepassword.Margin = new System.Windows.Forms.Padding(4);
+            this.hidepassword.Name = "hidepassword";
+            this.hidepassword.Padding = new System.Windows.Forms.Padding(2);
+            this.hidepassword.Size = new System.Drawing.Size(36, 39);
+            this.hidepassword.TabIndex = 306;
+            this.hidepassword.UseTransparentBackground = true;
+            this.hidepassword.Click += new System.EventHandler(this.Hidepassword_Click);
             // 
             // btnUpdate
             // 
@@ -94,7 +191,7 @@
             this.btnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(165)))));
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(98, 500);
+            this.btnUpdate.Location = new System.Drawing.Point(131, 621);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(121, 54);
@@ -115,7 +212,7 @@
             this.btnReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(30)))), ((int)(((byte)(58)))));
             this.btnReset.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(230, 500);
+            this.btnReset.Location = new System.Drawing.Point(263, 621);
             this.btnReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(121, 54);
@@ -127,7 +224,7 @@
             // 
             this.lblphonenumber.AutoSize = true;
             this.lblphonenumber.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblphonenumber.Location = new System.Drawing.Point(25, 366);
+            this.lblphonenumber.Location = new System.Drawing.Point(37, 366);
             this.lblphonenumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblphonenumber.Name = "lblphonenumber";
             this.lblphonenumber.Size = new System.Drawing.Size(181, 33);
@@ -138,7 +235,7 @@
             // 
             this.lblpassword.AutoSize = true;
             this.lblpassword.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpassword.Location = new System.Drawing.Point(25, 251);
+            this.lblpassword.Location = new System.Drawing.Point(37, 251);
             this.lblpassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblpassword.Name = "lblpassword";
             this.lblpassword.Size = new System.Drawing.Size(121, 33);
@@ -149,7 +246,7 @@
             // 
             this.lblusername.AutoSize = true;
             this.lblusername.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblusername.Location = new System.Drawing.Point(25, 138);
+            this.lblusername.Location = new System.Drawing.Point(37, 138);
             this.lblusername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblusername.Name = "lblusername";
             this.lblusername.Size = new System.Drawing.Size(124, 33);
@@ -160,7 +257,7 @@
             // 
             this.lblname.AutoSize = true;
             this.lblname.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblname.Location = new System.Drawing.Point(25, 34);
+            this.lblname.Location = new System.Drawing.Point(37, 34);
             this.lblname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblname.Name = "lblname";
             this.lblname.Size = new System.Drawing.Size(79, 33);
@@ -179,7 +276,7 @@
             this.btnRegister.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(98, 500);
+            this.btnRegister.Location = new System.Drawing.Point(131, 621);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(121, 54);
@@ -204,13 +301,13 @@
             this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPhoneNumber.IconLeft = global::TicketSelling.Properties.Resources.phone_512px;
             this.txtPhoneNumber.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtPhoneNumber.Location = new System.Drawing.Point(31, 402);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(43, 402);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(5);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PasswordChar = '\0';
             this.txtPhoneNumber.PlaceholderText = "Enter your Phone Number";
             this.txtPhoneNumber.SelectedText = "";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(322, 50);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(349, 50);
             this.txtPhoneNumber.TabIndex = 4;
             this.txtPhoneNumber.TextOffset = new System.Drawing.Point(30, 0);
             this.txtPhoneNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPhoneNumber_KeyDown);
@@ -233,16 +330,16 @@
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.IconLeft = global::TicketSelling.Properties.Resources.password_144px;
             this.txtPassword.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtPassword.Location = new System.Drawing.Point(31, 288);
+            this.txtPassword.Location = new System.Drawing.Point(43, 288);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderText = "Enter Password";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(322, 50);
+            this.txtPassword.Size = new System.Drawing.Size(349, 50);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.TextOffset = new System.Drawing.Point(30, 0);
-            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsername_KeyDown);
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPassword_KeyDown);
             // 
             // txtUsername
             // 
@@ -261,16 +358,16 @@
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.IconLeft = global::TicketSelling.Properties.Resources.name_208px;
             this.txtUsername.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtUsername.Location = new System.Drawing.Point(31, 174);
+            this.txtUsername.Location = new System.Drawing.Point(43, 174);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(5);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Enter your username";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(322, 50);
+            this.txtUsername.Size = new System.Drawing.Size(349, 50);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.TextOffset = new System.Drawing.Point(30, 0);
-            this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsername_KeyDown);
+            this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsername_KeyDown_1);
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUsername_KeyPress);
             // 
             // txtName
@@ -290,27 +387,25 @@
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.IconLeft = global::TicketSelling.Properties.Resources.name_208px;
             this.txtName.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtName.Location = new System.Drawing.Point(31, 70);
+            this.txtName.Location = new System.Drawing.Point(43, 70);
             this.txtName.Margin = new System.Windows.Forms.Padding(5);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "Enter your real name";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(322, 50);
+            this.txtName.Size = new System.Drawing.Size(349, 50);
             this.txtName.TabIndex = 1;
             this.txtName.TextOffset = new System.Drawing.Point(30, 0);
-            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsername_KeyDown);
-            this.txtName.Leave += new System.EventHandler(this.TxtName_Leave);
-            this.txtName.Validating += new System.ComponentModel.CancelEventHandler(this.TxtName_Validating);
+            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtName_KeyDown);
             // 
             // guna2Panel3
             // 
             this.guna2Panel3.Controls.Add(this.dgvStaff);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel3.Location = new System.Drawing.Point(389, 0);
+            this.guna2Panel3.Location = new System.Drawing.Point(422, 0);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(722, 725);
+            this.guna2Panel3.Size = new System.Drawing.Size(689, 725);
             this.guna2Panel3.TabIndex = 2;
             // 
             // dgvStaff
@@ -319,17 +414,17 @@
             this.dgvStaff.AllowUserToDeleteRows = false;
             this.dgvStaff.AllowUserToResizeColumns = false;
             this.dgvStaff.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvStaff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvStaff.ColumnHeadersHeight = 35;
             this.dgvStaff.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNo,
@@ -338,15 +433,16 @@
             this.ColUsername,
             this.ColPhoneNumber,
             this.ColPassword,
+            this.ColGmail,
             this.ColDel});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle16;
             this.dgvStaff.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvStaff.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvStaff.Location = new System.Drawing.Point(0, 0);
@@ -355,7 +451,7 @@
             this.dgvStaff.ReadOnly = true;
             this.dgvStaff.RowHeadersVisible = false;
             this.dgvStaff.RowTemplate.Height = 24;
-            this.dgvStaff.Size = new System.Drawing.Size(722, 725);
+            this.dgvStaff.Size = new System.Drawing.Size(689, 725);
             this.dgvStaff.TabIndex = 0;
             this.dgvStaff.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvStaff.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -429,6 +525,16 @@
             this.ColPassword.ReadOnly = true;
             this.ColPassword.Visible = false;
             // 
+            // ColGmail
+            // 
+            this.ColGmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColGmail.DataPropertyName = "Gmail";
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColGmail.DefaultCellStyle = dataGridViewCellStyle15;
+            this.ColGmail.HeaderText = "Gmail";
+            this.ColGmail.Name = "ColGmail";
+            this.ColGmail.ReadOnly = true;
+            // 
             // ColDel
             // 
             this.ColDel.FillWeight = 50.76143F;
@@ -454,13 +560,13 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // FrmStaff
+            // FrmUser
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FrmStaff";
+            this.Name = "FrmUser";
             this.Size = new System.Drawing.Size(1111, 725);
             this.Load += new System.EventHandler(this.FrmStaff_Load);
             this.guna2Panel2.ResumeLayout(false);
@@ -487,14 +593,19 @@
         private Guna.UI2.WinForms.Guna2Button btnReset;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
+        public Guna.UI2.WinForms.Guna2DataGridView dgvStaff;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Guna.UI2.WinForms.Guna2Button hidepassword;
+        private Guna.UI2.WinForms.Guna2Button showpassword;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2TextBox txtGmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColUsername;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPhoneNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPassword;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColGmail;
         private System.Windows.Forms.DataGridViewImageColumn ColDel;
-        public Guna.UI2.WinForms.Guna2DataGridView dgvStaff;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

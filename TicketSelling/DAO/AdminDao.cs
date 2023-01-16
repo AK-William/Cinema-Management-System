@@ -35,7 +35,7 @@ namespace TicketSelling.DAO
                 scom = new SqlCommand(ProcedureConstants.SP_AdminSave, sqlConnection);
                 scom.CommandType = CommandType.Text;
                 scom.Parameters.AddWithValue("@Name", req.Name);
-                scom.Parameters.AddWithValue("@Role", req.Role);
+                scom.Parameters.AddWithValue("@RoleId", req.RoleId);
                 scom.Parameters.AddWithValue("@Username", req.Username);
                 scom.Parameters.AddWithValue("@Password", Cryptography.Encrypt(req.Password));
                 scom.Parameters.AddWithValue("@Gmail", req.Gmail);
@@ -159,7 +159,8 @@ namespace TicketSelling.DAO
                     {
                         RowNumber = dt.Rows[i]["RowNumber"].ToString(),
                         Id = Convert.ToInt32(dt.Rows[i]["Id"]),
-                        Role = dt.Rows[i]["Role"].ToString(),
+                        RoleId = Convert.ToInt32(dt.Rows[i]["RoleId"].ToString()),
+                        RoleName = dt.Rows[i]["RoleName"].ToString(),
                         Name = dt.Rows[i]["Name"].ToString(),
                         Username = dt.Rows[i]["Username"].ToString(),
                         Photo = dt.Rows[i]["Photo"].ToString(),
@@ -205,7 +206,7 @@ namespace TicketSelling.DAO
                 scom.CommandType = CommandType.Text;
                 scom.Parameters.AddWithValue("@Id", req.Id);
                 scom.Parameters.AddWithValue("@Photo", req.Photo);
-                scom.Parameters.AddWithValue("@Role", req.Role);
+                scom.Parameters.AddWithValue("@RoleId", req.RoleId);
                 scom.Parameters.AddWithValue("@Name", req.Name);
                 scom.Parameters.AddWithValue("@Username", req.Username);
                 scom.Parameters.AddWithValue("@Password", Cryptography.Encrypt(req.Password));

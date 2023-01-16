@@ -68,10 +68,13 @@
             this.txtAdminName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvAdmin = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.ColNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAdminName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluserrole = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoleId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAdminPhoto = new System.Windows.Forms.DataGridViewImageColumn();
             this.ColAdminUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAdminPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,8 +86,6 @@
             this.ColAdminPostcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDel = new System.Windows.Forms.DataGridViewImageColumn();
             this.ColAdminPhotoString = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAdminPhoto)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -141,7 +142,7 @@
             resources.ApplyResources(this.cbuserrole, "cbuserrole");
             this.cbuserrole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbuserrole.Name = "cbuserrole";
-            this.cbuserrole.SelectedIndexChanged += new System.EventHandler(this.Cbuserrole_SelectedIndexChanged);
+            
             // 
             // hidepassword
             // 
@@ -337,6 +338,7 @@
             this.txtAdminNRC.SelectedText = "";
             this.txtAdminNRC.TextOffset = new System.Drawing.Point(30, 0);
             this.txtAdminNRC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAdminNRC_KeyDown);
+            this.txtAdminNRC.Leave += new System.EventHandler(this.TxtAdminNRC_Leave);
             this.txtAdminNRC.Validating += new System.ComponentModel.CancelEventHandler(this.TxtAdminNRC_Validating);
             // 
             // txtAdminPostcode
@@ -538,6 +540,7 @@
             this.ColId,
             this.ColAdminName,
             this.Coluserrole,
+            this.RoleId,
             this.ColAdminPhoto,
             this.ColAdminUsername,
             this.ColAdminPassword,
@@ -586,6 +589,21 @@
             this.dgvAdmin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAdmin_CellContentClick);
             this.dgvAdmin.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAdmin_CellDoubleClick);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewImageColumn1.FillWeight = 50.76143F;
+            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // ColNo
             // 
             this.ColNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -614,10 +632,17 @@
             // 
             // Coluserrole
             // 
-            this.Coluserrole.DataPropertyName = "Role";
+            this.Coluserrole.DataPropertyName = "RoleName";
             resources.ApplyResources(this.Coluserrole, "Coluserrole");
             this.Coluserrole.Name = "Coluserrole";
             this.Coluserrole.ReadOnly = true;
+            // 
+            // RoleId
+            // 
+            this.RoleId.DataPropertyName = "RoleId";
+            resources.ApplyResources(this.RoleId, "RoleId");
+            this.RoleId.Name = "RoleId";
+            this.RoleId.ReadOnly = true;
             // 
             // ColAdminPhoto
             // 
@@ -717,21 +742,6 @@
             this.ColAdminPhotoString.Name = "ColAdminPhotoString";
             this.ColAdminPhotoString.ReadOnly = true;
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewImageColumn1.FillWeight = 50.76143F;
-            resources.ApplyResources(this.dataGridViewImageColumn1, "dataGridViewImageColumn1");
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // FrmAdmin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -784,10 +794,12 @@
         public Guna.UI2.WinForms.Guna2DataGridView dgvAdmin;
         private System.Windows.Forms.Label labelRole;
         private Guna.UI2.WinForms.Guna2ComboBox cbuserrole;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAdminName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluserrole;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoleId;
         private System.Windows.Forms.DataGridViewImageColumn ColAdminPhoto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAdminUsername;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAdminPassword;
@@ -799,6 +811,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAdminPostcode;
         private System.Windows.Forms.DataGridViewImageColumn ColDel;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAdminPhotoString;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

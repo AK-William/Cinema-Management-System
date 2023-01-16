@@ -15,9 +15,7 @@ namespace TicketSelling.UI.Configuration
 {
     public partial class FrmLogin : Form
     {
-        SqlConnection sqlConnection;
-        SqlCommand scom;
-        SqlDataAdapter adapter;
+       
 
         public FrmLogin()
         {
@@ -60,7 +58,7 @@ namespace TicketSelling.UI.Configuration
             try
             {
                 if (!CheckRequireFields()) return;
-                MessageEntity res = new StaffDao().Login(new DAO.Entity.Staff()
+                MessageEntity res = new UserDao().Login(new DAO.Entity.User()
                 {
                     Username = txtUsername.Text,
                     Password = txtPassword.Text
