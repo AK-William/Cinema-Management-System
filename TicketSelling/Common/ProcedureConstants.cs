@@ -113,8 +113,9 @@ namespace TicketSelling.Common
                                                       INSERT INTO[dbo].[TblSeatType]
                                                         ([Name]
                                                      , [Note]
-                                                       ,[CreatedBy])
-                                                       VALUES(@Name, @Note , @CreatedBy);
+                                                       ,[CreatedBy]
+													   ,[CreatedDate])
+                                                       VALUES(@Name, @Note , @CreatedBy, GETDATE());
 
                                                         SELECT
                                                         '000' AS RespCode,
@@ -152,6 +153,8 @@ namespace TicketSelling.Common
                                                       UPDATE [dbo].[TblSeatType]
 														   SET [Name] = @Name
 															  ,[Note] = @Note
+                                                              ,[ModifiedBy] = @UserId
+                                                              ,[ModifiedDate] = GETDATE()
 														 WHERE Id = @Id 
 
                                                       SELECT
@@ -191,42 +194,13 @@ namespace TicketSelling.Common
                                                         ([Name]
                                                        ,[Price]
                                                        ,[SeatTypeId]
-                                                       ,[CreatedBy])
-                                                       VALUES(@Name, @Price , @SeatTypeId , @CreatedBy);
+                                                       ,[CreatedBy]
+													   ,[CreatedDate])
+                                                       VALUES(@Name, @Price , @SeatTypeId , @CreatedBy, GETDATE());
 
                                                         SELECT
                                                         '000' AS RespCode,
                                                         'Successful Message' AS RespDesp,
-                                                        'MI' AS 'RespMessageType'
-                                                      SELECT
-                                                        *
-                                                      FROM TblSeat
-                                                      WHERE Name = @Name
-                                                    END";
-
-        public static string UpdateSeat = @"IF EXISTS (SELECT * FROM TblSeat WHERE Name = @Name
-                                                       AND Id != @Id)
-                                                    BEGIN
-                                                      SELECT
-                                                        '001' AS RespCode,
-                                                        'Duplicate Error' AS RespDesp,
-                                                        'ME' AS 'RespMessageType'
-                                                      SELECT
-                                                        *
-                                                      FROM TblSeat
-                                                      WHERE Name = @Name
-                                                    END
-                                                    ELSE
-                                                    BEGIN
-                                                      UPDATE [dbo].[TblSeatType]
-														   SET [Name] = @Name
-															  ,[Price] = @Price
-                                                              ,[SeatTypeId]= @SeatTypeId
-														 WHERE Id = @Id 
-
-                                                      SELECT
-                                                        '000' AS RespCode,
-                                                        'Update Successful' AS RespDesp,
                                                         'MI' AS 'RespMessageType'
                                                       SELECT
                                                         *
@@ -280,8 +254,9 @@ namespace TicketSelling.Common
                                                         , [Address]
                                                         , [City]
                                                         , [Postcode]
-                                                       ,[CreatedBy])
-                                                       VALUES(@Name, @Username, @RoleId, @Password, @Gmail, @PhoneNumber, @NRC, @Address, @City, @Postcode, @CreatedBy);
+                                                       ,[CreatedBy]
+													   ,[CreatedDate])
+                                                       VALUES(@Name, @Username, @RoleId, @Password, @Gmail, @PhoneNumber, @NRC, @Address, @City, @Postcode, @CreatedBy, GETDATE());
 
                                                         SELECT
                                                         '000' AS RespCode,
@@ -307,6 +282,8 @@ namespace TicketSelling.Common
         public static string GetAllAdmin = @"SELECT
                                                 ROW_NUMBER() OVER (ORDER BY A.Id ASC) AS RowNumber,
                                                 A.Id,
+                                                Photo,
+                                                Name,
                                                 RoleName,
                                                 A.RoleId,
                                                 Username,
@@ -346,6 +323,8 @@ namespace TicketSelling.Common
                                                         , [Address] = @Address
                                                         , [City] = @City
                                                         , [Postcode] = @Postcode
+                                                        ,[ModifiedBy] = @UserId
+                                                        ,[ModifiedDate] = GETDATE()
 														 WHERE Id = @Id 
 
                                                       SELECT
@@ -394,8 +373,9 @@ namespace TicketSelling.Common
                                                         , [MovieType]
                                                         , [Description]
                                                         , [TrailerLink]
-                                                       ,[CreatedBy])
-                                                       VALUES(@Name, @Casts, @Runtime, @MovieType, @Description, @TrailerLink , @CreatedBy);
+                                                       ,[CreatedBy]
+                                                       ,[CreatedDate])
+                                                       VALUES(@Name, @Casts, @Runtime, @MovieType, @Description, @TrailerLink , @CreatedBy, GETDATE());
 
                                                         SELECT
                                                         '000' AS RespCode,
@@ -442,6 +422,8 @@ namespace TicketSelling.Common
                                                         , [MovieType] = @MovieType
                                                         , [Description] = @Description
                                                         , [TrailerLink] = @TrailerLink
+                                                        ,[ModifiedBy] = @UserId
+                                                        ,[ModifiedDate] = GETDATE()
 														 WHERE Id = @Id 
 
                                                       SELECT
@@ -465,6 +447,12 @@ namespace TicketSelling.Common
 
         public static string GetMovieCountByMovieId = @"SELECT COUNT(Id) Count FROM  TblScheduleMovie where MovieId=@MovieId;"; //Control delete Movie when date are assign
 
+        public static string GetMovieDateCountByTimeId = @"SELECT COUNT(Id) Count FROM  TblScheduleMovieTime where MovieId=@MovieId;"; //Control delete date when time are assign
+
+        public static string GetMovieName = @"SELECT * FROM TblMovie";
+
+        public static string GetMovieDateByDateForTicket = @"SELECT * FROM TblScheduleMovieTime where CONVERT(char(10),Date,111) = CONVERT(char(10),@Date,111)";
+
         #endregion
 
 
@@ -487,8 +475,9 @@ namespace TicketSelling.Common
                                                         ([MovieId]
                                                         ,[StartDate]
                                                         ,[EndDate]
-                                                       ,[CreatedBy])
-                                                       VALUES(@MovieId, @StartDate , @EndDate , @CreatedBy);
+                                                       ,[CreatedBy]
+													   ,[CreatedDate])
+                                                       VALUES(@MovieId, @StartDate , @EndDate , @CreatedBy, GETDATE());
 
                                                         SELECT
                                                         '000' AS RespCode,
@@ -540,6 +529,8 @@ namespace TicketSelling.Common
 														   SET [MovieId] = @MovieId
 															  ,[StartDate] = @StartDate
                                                               ,[EndDate]= @EndDate
+                                                              ,[ModifiedBy] = @UserId
+                                                              ,[ModifiedDate] = GETDATE()
 														 WHERE Id = @Id 
 
                                                       SELECT
@@ -596,8 +587,9 @@ namespace TicketSelling.Common
                                                         ([MovieId]
                                                         ,[Date]
                                                         ,[Time]
-                                                       ,[CreatedBy])
-                                                       VALUES(@MovieId, @Date , @Time , @CreatedBy);
+                                                       ,[CreatedBy]
+													   ,[CreatedDate])
+                                                       VALUES(@MovieId, @Date , @Time , @CreatedBy, GETDATE());
 
                                                         SELECT
                                                         '000' AS RespCode,
@@ -655,6 +647,8 @@ namespace TicketSelling.Common
 														   SET [MovieId] = @MovieId
 															  ,[Date] = @Date
                                                               ,[Time]= @Time
+                                                              ,[ModifiedBy] = @UserId
+                                                              ,[ModifiedDate] = GETDATE()
 														 WHERE Id = @Id 
 
                                                       SELECT

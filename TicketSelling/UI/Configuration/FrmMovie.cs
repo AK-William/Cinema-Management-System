@@ -131,18 +131,18 @@ namespace TicketSelling.UI.Configuration
                 STDate.FillColor = Color.FromArgb(0, 200, 83);
                 STTime.FillColor = Color.FromArgb(0, 200, 83);
             }
-            else if (frmmain.panelleft.BackColor == Color.FromArgb(255, 214, 0))
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(217, 115, 65))
             {
-                dgvMovie.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 214, 0);
-                dgvMovie.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 214, 0);
-                dgvSD.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 214, 0);
-                dgvSD.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 214, 0);
-                dgvST.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 214, 0);
-                dgvST.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 214, 0);
-                txtSDStartDate.FillColor = Color.FromArgb(255, 214, 0);
-                txtSDEndDate.FillColor = Color.FromArgb(255, 214, 0);
-                STDate.FillColor = Color.FromArgb(255, 214, 0);
-                STTime.FillColor = Color.FromArgb(255, 214, 0);
+                dgvMovie.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(217, 115, 65);
+                dgvMovie.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 115, 65);
+                dgvSD.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(217, 115, 65);
+                dgvSD.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 115, 65);
+                dgvST.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(217, 115, 65);
+                dgvST.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 115, 65);
+                txtSDStartDate.FillColor = Color.FromArgb(217, 115, 65);
+                txtSDEndDate.FillColor = Color.FromArgb(217, 115, 65);
+                STDate.FillColor = Color.FromArgb(217, 115, 65);
+                STTime.FillColor = Color.FromArgb(217, 115, 65);
             }
             else if (frmmain.panelleft.BackColor == Color.FromArgb(196, 30, 58))
             {
@@ -551,9 +551,9 @@ namespace TicketSelling.UI.Configuration
         {
             try
             {
-                if (dgvMovie.Rows[e.RowIndex].Cells["ColDelMovie"].ColumnIndex == e.ColumnIndex)
+                if (dgvMovie.Rows[e.RowIndex].Cells["ColDelMovie"].ColumnIndex == e.ColumnIndex) //Control delete button only in delete delete column
                 {
-                    int MovieCount = new MovieDao().CheckMovieBySDId(Convert.ToInt32(dgvMovie.Rows[e.RowIndex].Cells["ColIdMovie"].Value)); //Control delete Movie when date are assign
+                    int MovieCount = new MovieDao().CheckMovieBySDId(Convert.ToInt32(dgvSD.Rows[e.RowIndex].Cells["ColMovieId"].Value)); //Control delete Movie when date are assign
                     if (MovieCount > 0)
                     {
                         MessageBox.Show("Transaction Exists");
@@ -707,7 +707,7 @@ namespace TicketSelling.UI.Configuration
         private List<Movie> LstMovieSD = new List<Movie>();
         private List<Movie> LstMovieST = new List<Movie>();
 
-        //public List<Movie> LstMovie { get; set; }
+        
         private void TabControlMovie_Click(object sender, EventArgs e)
         {
             if (LstMovieSD != null && LstMovieSD.Count > 0)
@@ -735,26 +735,7 @@ namespace TicketSelling.UI.Configuration
                 BindDgvMovieST();
             }
 
-            //if (LstMovie != null && LstMovie.Count > 0)
-            //{
-            //    //Schedule date combo box
-            //    CbSDName.SelectedIndexChanged -= new EventHandler(CbSDName_SelectedIndexChanged);
-            //    CbSDName.DataSource = null;
-            //    CbSDName.DataSource = LstMovie;
-            //    CbSDName.DisplayMember = "Name";
-            //    CbSDName.ValueMember = "Id";
-            //    CbSDName.SelectedIndex = 0;
-            //    CbSDName.SelectedIndexChanged += new EventHandler(CbSDName_SelectedIndexChanged);
-            //    BindDgvMovieSD();
-
-            //    CbSTName.SelectedIndexChanged -= new EventHandler(CbSTName_SelectedIndexChanged);
-            //    CbSTName.DataSource = null;
-            //    CbSTName.DataSource = LstMovie;
-            //    CbSTName.DisplayMember = "Name";
-            //    CbSTName.ValueMember = "Id";
-            //    CbSTName.SelectedIndex = 0;
-            //    CbSTName.SelectedIndexChanged += new EventHandler(CbSTName_SelectedIndexChanged);
-            //    BindDgvMovieST();
+            
         }
 
         private void CbSTName_SelectedIndexChanged(object sender, EventArgs e)
@@ -776,24 +757,34 @@ namespace TicketSelling.UI.Configuration
         {
             try
             {
-                if (dgvSD.Rows[e.RowIndex].Cells["ColDelSD"].ColumnIndex == e.ColumnIndex)
+                if (dgvSD.Rows[e.RowIndex].Cells["ColDelSD"].ColumnIndex == e.ColumnIndex) //Control delete button only in delete delete column
                 {
-                    DialogResult res = MessageBox.Show("Are you sure you want to Delete", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                    if (res == DialogResult.OK)
+                    int MovieCount = new MovieDao().CheckMovieDateBySTId(Convert.ToInt32(dgvMovie.Rows[e.RowIndex].Cells["ColIdMovie"].Value)); //Control delete Movie when date are assign
+                    if (MovieCount > 0)
                     {
-                        MessageEntity res1 = new MovieSDDao().DeleteMovieSD(Convert.ToInt32(dgvSD.Rows[e.RowIndex].Cells["ColMovieSDId"].Value));
-                        if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
-                        {
-                            MessageBox.Show("Delete Success");
-                            ResetSD();
-                            BindDgvMovieSD();
-                        }
-                        else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
-                        {
-                            MessageBox.Show("Delete Fail");
-                        }
+                        MessageBox.Show("Transaction Exists");
+                        return;
                     }
+                    else
 
+                    {
+                        DialogResult res = MessageBox.Show("Are you sure you want to Delete", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                        if (res == DialogResult.OK)
+                        {
+                            MessageEntity res1 = new MovieSDDao().DeleteMovieSD(Convert.ToInt32(dgvSD.Rows[e.RowIndex].Cells["ColMovieSDId"].Value));
+                            if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
+                            {
+                                MessageBox.Show("Delete Success");
+                                ResetSD();
+                                BindDgvMovieSD();
+                            }
+                            else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
+                            {
+                                MessageBox.Show("Delete Fail");
+                            }
+                        }
+
+                    }
                 }
             }
             catch (Exception ex)

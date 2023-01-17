@@ -60,6 +60,9 @@ namespace TicketSelling.UI.Configuration
             btnUpdate.Visible = false;
             txtAdminName.Select();
             errorProvider1.Clear();
+            errorProvider2.Clear();
+            errorProvider3.Clear();
+            errorProvider4.Clear();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -104,10 +107,10 @@ namespace TicketSelling.UI.Configuration
                 dgvAdmin.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 200, 83);
                 dgvAdmin.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 200, 83);
             }
-            else if (frmmain.panelleft.BackColor == Color.FromArgb(255, 214, 0))
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(217, 115, 65))
             {
-                dgvAdmin.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 214, 0);
-                dgvAdmin.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 214, 0);
+                dgvAdmin.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(217, 115, 65);
+                dgvAdmin.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 115, 65);
             }
             else if (frmmain.panelleft.BackColor == Color.FromArgb(196, 30, 58))
             {
@@ -628,7 +631,22 @@ namespace TicketSelling.UI.Configuration
             showpassword.Visible = true;
         }
 
-        
+
+        #region validating
+
+        private void TxtAdminPhoneNumber_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtAdminPhoneNumber.Text.Length == 11 && txtAdminPhoneNumber.Text.StartsWith("09"))
+            {
+                errorProvider2.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Phone Number! Phone number must be start with 09 and must include 11 numbers.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                errorProvider2.SetError(this.txtAdminPhoneNumber, "Please provide valid Phone Number");
+                txtAdminPhoneNumber.Text = "";
+            }
+        }
 
         #region Gmail Validation
 
@@ -662,42 +680,12 @@ namespace TicketSelling.UI.Configuration
         {
             if (validate_emailaddress.IsMatch(txtAdminGmail.Text) != true)
             {
-                MessageBox.Show("Invalid Email Address!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Invalid Email Address! Examples : cinema@gmail.com", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtAdminGmail.Text = "";
             }
         }
 
         #endregion
-
-       
-        private void TxtAdminPhoneNumber_Validating(object sender, CancelEventArgs e)
-        {
-            if (txtAdminPhoneNumber.Text.Length == 11 && txtAdminPhoneNumber.Text.StartsWith("09"))
-            {
-                errorProvider1.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Invalid Phone Number! Phone number must be start with 09 and must include 11 numbers.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                errorProvider1.SetError(this.txtAdminPhoneNumber, "Please provide valid Phone Number");
-                txtAdminPhoneNumber.Text = "";
-            }
-        }
-
-        private void TxtAdminPassword_Validating(object sender, CancelEventArgs e)
-        {
-            if (txtAdminPassword.Text.Length >= 8 && txtAdminPassword.Text.Length <= 16)
-            {
-                errorProvider1.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Invalid Password! Password must between 8 and 16 letters.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                errorProvider1.SetError(this.txtAdminPassword, "Please provide valid Password");
-                txtAdminPassword.Text = "";
-            }
-        }
-
 
         #region NRC Validation
         private static Regex nrc_validation() //nrc format validation
@@ -712,7 +700,7 @@ namespace TicketSelling.UI.Configuration
         {
             if (validate_nrc.IsMatch(txtAdminNRC.Text) != true)
             {
-                MessageBox.Show("Invalid NRC Format!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Invalid NRC Format! NRC formats examples : 14/HaThaTa(N)111111", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtAdminNRC.Text = "";
             }
         }
@@ -722,13 +710,15 @@ namespace TicketSelling.UI.Configuration
             string patternNRC = @"^([0-9]{1,2})\/([A-Z][a-z]|[A-Z][a-z][a-z])([A-Z][a-z]|[A-Z][a-z][a-z])([A-Z][a-z]|[A-Z][a-z][a-z])\([N,P,E]\)[0-9]{6}$";
             if (Regex.IsMatch(txtAdminNRC.Text, patternNRC))
             {
-                errorProvider1.Clear();
+                errorProvider4.Clear();
             }
             else
             {
-                errorProvider1.SetError(this.txtAdminNRC, "Please provide valid NRC format");
+                errorProvider4.SetError(this.txtAdminNRC, "Please provide valid NRC format");
             }
         }
+
+        #endregion
 
         #endregion
     }

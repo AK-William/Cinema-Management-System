@@ -281,6 +281,11 @@ namespace TicketSelling.UI.Configuration
                     lblTitleChildForm.Text = btnSetting.Tag.ToString();
                     iconCurrentChildForm.IconChar = btnSetting.IconChar;
                     break;
+                case "Ticket":
+                    frm = new FrmTicketSell();
+                    lblTitleChildForm.Text = btnTicket.Tag.ToString();
+                    iconCurrentChildForm.IconChar = btnTicket.IconChar;
+                    break;
             }
             panelBody.Controls.Add(frm);
             frm.Dock = DockStyle.Fill;
@@ -349,6 +354,7 @@ namespace TicketSelling.UI.Configuration
         {
             HideSubMenu();
             ActivateButton(sender); //menu highlight active button
+            MenuClick(sender, e);
         }
 
         public void BtnSeat_Click(object sender, EventArgs e)
@@ -498,9 +504,9 @@ namespace TicketSelling.UI.Configuration
                 {
                     currentBtn.BackColor = Color.FromArgb(0, 200, 83);
                 }
-                else if (panelleft.BackColor == Color.FromArgb(255, 214, 0))
+                else if (panelleft.BackColor == Color.FromArgb(217, 115, 65))
                 {
-                    currentBtn.BackColor = Color.FromArgb(255, 214, 0);
+                    currentBtn.BackColor = Color.FromArgb(217, 115, 65); 
                 }
                 else if (panelleft.BackColor == Color.FromArgb(196, 30, 58))
                 {
@@ -510,9 +516,10 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
+
         #endregion
 
-        
+       
     }
 }
 

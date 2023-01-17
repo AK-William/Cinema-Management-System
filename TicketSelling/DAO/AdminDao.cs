@@ -216,6 +216,7 @@ namespace TicketSelling.DAO
                 scom.Parameters.AddWithValue("@Address", req.Address);
                 scom.Parameters.AddWithValue("@City", req.City);
                 scom.Parameters.AddWithValue("@Postcode", req.Postcode);
+                scom.Parameters.AddWithValue("@UserId", UserID); //modifiedby id 
                 DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(scom);
                 adapter.Fill(ds);

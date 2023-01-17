@@ -100,7 +100,7 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
-        
+
         private void FrmSeat_Load(object sender, EventArgs e)
         {
             BindDgvData();
@@ -156,12 +156,12 @@ namespace TicketSelling.UI.Configuration
                 dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 200, 83);
                 dgvSeat.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 200, 83);
             }
-            else if (frmmain.panelleft.BackColor == Color.FromArgb(255, 214, 0))
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(217, 115, 65))
             {
-                dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 214, 0);
-                dgvSeatType.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 214, 0);
-                dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 214, 0);
-                dgvSeat.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 214, 0);
+                dgvSeatType.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(217, 115, 65);
+                dgvSeatType.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 115, 65);
+                dgvSeat.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(217, 115, 65);
+                dgvSeat.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 115, 65);
             }
             else if (frmmain.panelleft.BackColor == Color.FromArgb(196, 30, 58))
             {
@@ -188,7 +188,7 @@ namespace TicketSelling.UI.Configuration
                 dgvSeatType.DefaultCellStyle.ForeColor = Color.White;
                 dgvSeatType.GridColor = Color.FromArgb(41, 47, 57);
                 dgvSeatType.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvSeatType.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43,55,61);
+                dgvSeatType.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
                 dgvSeatType.DefaultCellStyle.SelectionForeColor = Color.White;
 
                 tabSeat.BackColor = Color.FromArgb(43, 55, 61);
@@ -264,16 +264,17 @@ namespace TicketSelling.UI.Configuration
         {
             try
             {
-                int SeatCount = new SeatTypeDao().CheckSeatBySeatTypeId(Convert.ToInt32(dgvSeatType.Rows[e.RowIndex].Cells["ColIdSeatType"].Value));//Control delete seattype when seats are assign
-                if (SeatCount > 0)
+                if (dgvSeatType.Rows[e.RowIndex].Cells["ColDelSeatType"].ColumnIndex == e.ColumnIndex) //Control delete button only in delete delete column
                 {
-                    MessageBox.Show("Transaction Exists");
-                    return;
-                }
-                else
-                {
-                    if (dgvSeatType.Rows[e.RowIndex].Cells["ColDelSeatType"].ColumnIndex == e.ColumnIndex)
+                    int SeatCount = new SeatTypeDao().CheckSeatBySeatTypeId(Convert.ToInt32(dgvSeatType.Rows[e.RowIndex].Cells["ColIdSeatType"].Value));//Control delete seattype when seats are assign
+                    if (SeatCount > 0)
                     {
+                        MessageBox.Show("Transaction Exists");
+                        return;
+                    }
+                    else
+                    {
+
                         DialogResult res = MessageBox.Show("Are you sure you want to Delete", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                         if (res == DialogResult.OK)
                         {
@@ -564,7 +565,6 @@ namespace TicketSelling.UI.Configuration
 
         #endregion
 
-       
+
     }
 }
-    

@@ -181,6 +181,7 @@ namespace TicketSelling.DAO
                 scom.Parameters.AddWithValue("@MovieId", req.MovieId);
                 scom.Parameters.AddWithValue("@StartDate", req.StartDate);
                 scom.Parameters.AddWithValue("@EndDate", req.EndDate);
+                scom.Parameters.AddWithValue("@UserId", UserID); //modifiedby id 
                 DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(scom);
                 adapter.Fill(ds);

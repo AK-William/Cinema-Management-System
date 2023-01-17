@@ -173,6 +173,7 @@ namespace TicketSelling.DAO
                 scom.Parameters.AddWithValue("@Id", req.Id);
                 scom.Parameters.AddWithValue("@Name", req.Name);
                 scom.Parameters.AddWithValue("@Note", req.Note);
+                scom.Parameters.AddWithValue("@UserId", UserID); //modifiedby id
                 DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(scom);
                 adapter.Fill(ds);

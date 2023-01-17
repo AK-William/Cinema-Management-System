@@ -142,7 +142,7 @@
     <value>dayw</value>
   </data>
   <data name="&gt;&gt;dayw.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;dayw.Parent" xml:space="preserve">
     <value>guna2Panel4</value>
@@ -169,7 +169,7 @@
     <value>nightb</value>
   </data>
   <data name="&gt;&gt;nightb.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;nightb.Parent" xml:space="preserve">
     <value>guna2Panel4</value>
@@ -199,7 +199,7 @@
     <value>lblDayNight</value>
   </data>
   <data name="&gt;&gt;lblDayNight.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;lblDayNight.Parent" xml:space="preserve">
     <value>guna2Panel4</value>
@@ -226,7 +226,7 @@
     <value>dayb</value>
   </data>
   <data name="&gt;&gt;dayb.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;dayb.Parent" xml:space="preserve">
     <value>guna2Panel4</value>
@@ -256,7 +256,7 @@
     <value>nightw</value>
   </data>
   <data name="&gt;&gt;nightw.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;nightw.Parent" xml:space="preserve">
     <value>guna2Panel4</value>
@@ -277,7 +277,7 @@
     <value>daynight</value>
   </data>
   <data name="&gt;&gt;daynight.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2ToggleSwitch, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+    <value>Guna.UI2.WinForms.Guna2ToggleSwitch, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;daynight.Parent" xml:space="preserve">
     <value>guna2Panel4</value>
@@ -301,7 +301,7 @@
     <value>guna2Panel4</value>
   </data>
   <data name="&gt;&gt;guna2Panel4.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2Panel4.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -331,7 +331,7 @@
     <value>lblchangelanguage</value>
   </data>
   <data name="&gt;&gt;lblchangelanguage.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;lblchangelanguage.Parent" xml:space="preserve">
     <value>guna2Panel3</value>
@@ -367,7 +367,7 @@
     <value>cbChangeLanguage</value>
   </data>
   <data name="&gt;&gt;cbChangeLanguage.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;cbChangeLanguage.Parent" xml:space="preserve">
     <value>guna2Panel3</value>
@@ -391,7 +391,7 @@
     <value>guna2Panel3</value>
   </data>
   <data name="&gt;&gt;guna2Panel3.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2Panel3.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -421,7 +421,7 @@
     <value>lblchangecolor</value>
   </data>
   <data name="&gt;&gt;lblchangecolor.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+    <value>Guna.UI2.WinForms.Guna2HtmlLabel, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;lblchangecolor.Parent" xml:space="preserve">
     <value>guna2Panel2</value>
@@ -454,7 +454,7 @@
     <value>Malachite</value>
   </data>
   <data name="cbChangeColor.Items6" xml:space="preserve">
-    <value>Gold</value>
+    <value>Coral</value>
   </data>
   <data name="cbChangeColor.Items7" xml:space="preserve">
     <value>Cardinel Red</value>
@@ -475,7 +475,7 @@
     <value>cbChangeColor</value>
   </data>
   <data name="&gt;&gt;cbChangeColor.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;cbChangeColor.Parent" xml:space="preserve">
     <value>guna2Panel2</value>
@@ -499,7 +499,7 @@
     <value>guna2Panel2</value>
   </data>
   <data name="&gt;&gt;guna2Panel2.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2Panel2.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -526,7 +526,7 @@
     <value>guna2Panel1</value>
   </data>
   <data name="&gt;&gt;guna2Panel1.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4</value>
+    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2Panel1.Parent" xml:space="preserve">
     <value>$this</value>

@@ -197,6 +197,7 @@ namespace TicketSelling.DAO
                 scom.Parameters.AddWithValue("@MovieType", req.MovieType);
                 scom.Parameters.AddWithValue("@Description", req.Description);
                 scom.Parameters.AddWithValue("@TrailerLink", req.TrailerLink);
+                scom.Parameters.AddWithValue("@UserId", UserID); //modifiedby id 
                 DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(scom);
                 adapter.Fill(ds);
@@ -403,6 +404,133 @@ namespace TicketSelling.DAO
             }
         }
 
-       
+        public int CheckMovieDateBySTId(int MovieId)  //Control delete Movie date when time are assign
+        {
+            sqlConnection = DbConnector.Connect();
+            if (sqlConnection == null)
+            {
+                return 0;
+            }
+            MessageEntity _MessageEntity = null;
+            try
+            {
+                int MovieCount = 0;
+                scom = new SqlCommand(ProcedureConstants.GetMovieDateCountByTimeId, sqlConnection);
+                scom.CommandType = CommandType.Text;
+                scom.Parameters.AddWithValue("@MovieId", MovieId);
+                DataSet ds = new DataSet();
+                adapter = new SqlDataAdapter(scom);
+                adapter.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                MovieCount = Convert.ToInt32(dt.Rows[0][0]);
+                sqlConnection.Close();
+                return MovieCount;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
+        public ResMovie GetMovieName()
+        {
+            sqlConnection = DbConnector.Connect();
+            if (sqlConnection == null)
+            {
+                return null;
+            }
+            MessageEntity _MessageEntity = null;
+            try
+            {
+                scom = new SqlCommand(ProcedureConstants.GetMovieName, sqlConnection);
+                scom.CommandType = CommandType.Text;
+                DataSet ds = new DataSet();
+                adapter = new SqlDataAdapter(scom);
+                adapter.Fill(ds);
+                sqlConnection.Close();
+
+                _MessageEntity = SqlDataSet.Check(ds, 1);
+                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
+                    return new ResMovie() { MessageEntity = _MessageEntity };
+
+                DataTable dt = ds.Tables[0];
+                List<Movie> lst = new List<Movie>();
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    lst.Add(new Movie
+                    {
+                        Id = Convert.ToInt32(dt.Rows[i]["Id"]),
+                        Name = dt.Rows[i]["Name"].ToString(),
+                    });
+                }
+                return new ResMovie()
+                {
+                    MessageEntity = new MessageEntity()
+                    {
+                        RespMessageType = CommonResponseMessage.ResSuccessType
+                    },
+                    LstMovie = lst
+                };
+            }
+            catch (Exception ex)
+            {
+                _MessageEntity.RespCode = CommonResponseMessage.ExceptionErrorCode;
+                _MessageEntity.RespDesp = ex.Message;
+                _MessageEntity.RespMessageType = CommonResponseMessage.ResErrorType;
+                return new ResMovie() { MessageEntity = _MessageEntity };
+            }
+        }
+
+        public ResMovieST GetMovieTimeByDateForTicket(DateTime MovieDate)
+        {
+            sqlConnection = DbConnector.Connect();
+            if (sqlConnection == null)
+            {
+                return null;
+            }
+            MessageEntity _MessageEntity = null;
+            try
+            {
+                scom = new SqlCommand(ProcedureConstants.GetMovieDateByDateForTicket, sqlConnection);
+                scom.CommandType = CommandType.Text;
+                scom.Parameters.AddWithValue("@Date", MovieDate);
+                DataSet ds = new DataSet();
+                adapter = new SqlDataAdapter(scom);
+                adapter.Fill(ds);
+                sqlConnection.Close();
+
+                _MessageEntity = SqlDataSet.Check(ds, 1);
+                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
+                    return new ResMovieST() { MessageEntity = _MessageEntity };
+
+                DataTable dt = ds.Tables[0];
+                List<MovieST> lst = new List<MovieST>();
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    lst.Add(new MovieST
+                    {
+                        MovieId = Convert.ToInt32(dt.Rows[i]["MovieId"]),
+                        Time = dt.Rows[i]["Time"].ToString(),
+                    });
+                }
+                return new ResMovieST()
+                {
+                    MessageEntity = new MessageEntity()
+                    {
+                        RespMessageType = CommonResponseMessage.ResSuccessType
+                    },
+                    LstMovieST = lst
+                };
+            }
+            catch (Exception ex)
+            {
+                _MessageEntity.RespCode = CommonResponseMessage.ExceptionErrorCode;
+                _MessageEntity.RespDesp = ex.Message;
+                _MessageEntity.RespMessageType = CommonResponseMessage.ResErrorType;
+                return new ResMovieST() { MessageEntity = _MessageEntity };
+            }
+        }
     }
 }

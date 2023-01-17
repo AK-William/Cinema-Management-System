@@ -75,10 +75,10 @@ namespace TicketSelling.UI.Configuration
                 dgvStaff.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 200, 83);
                 dgvStaff.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(0, 200, 83);
             }
-            else if (frmmain.panelleft.BackColor == Color.FromArgb(255, 214, 0))
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(217, 115, 65))
             {
-                dgvStaff.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 214, 0);
-                dgvStaff.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 214, 0);
+                dgvStaff.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(217, 115, 65);
+                dgvStaff.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 115, 65);
             }
             else if (frmmain.panelleft.BackColor == Color.FromArgb(196, 30, 58))
             {

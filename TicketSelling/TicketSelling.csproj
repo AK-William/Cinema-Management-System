@@ -130,6 +130,12 @@
     <Compile Include="UI\Configuration\FrmSetting.Designer.cs">
       <DependentUpon>FrmSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Configuration\FrmTicketSell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Configuration\FrmTicketSell.Designer.cs">
+      <DependentUpon>FrmTicketSell.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Configuration\FrmUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Configuration\FrmSetting.resx">
       <DependentUpon>FrmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Configuration\FrmTicketSell.resx">
+      <DependentUpon>FrmTicketSell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Configuration\FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>

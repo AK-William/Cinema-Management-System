@@ -144,19 +144,19 @@ namespace TicketSelling.UI.Configuration
                     break;
 
                 case 6:
-                    frmmain.panelleft.BackColor = Color.FromArgb(255, 214, 0);
-                    frmmain.panelMenuBar.BackColor = Color.FromArgb(255, 214, 0);
-                    frmmain.paneltitlebar.BackColor = Color.FromArgb(255, 214, 0);
-                    frmmain.btnAdmin.BackColor = Color.FromArgb(255, 214, 0);
-                    frmmain.btnUser.BackColor = Color.FromArgb(255, 214, 0);
-                    frmmain.btnMovie.BackColor = Color.FromArgb(255, 214, 0);
-                    frmmain.btnSeat.BackColor = Color.FromArgb(255, 214, 0);
-                    frmmain.btnDashboard.BackColor = Color.FromArgb(255, 214, 0);
-                    frmmain.btnTicket.BackColor = Color.FromArgb(255, 214, 0);
-                    frmmain.btnReport.BackColor = Color.FromArgb(255, 214, 0);
-                    frmmain.btnAccount.IconColor = Color.FromArgb(255, 214, 0);
-                    frmmain.accountimage.IconColor = Color.FromArgb(255, 214, 0);
-                    frmmain.panelAccountShow.BorderColor = Color.FromArgb(255, 214, 0);
+                    frmmain.panelleft.BackColor = Color.FromArgb(217,115,65);
+                    frmmain.panelMenuBar.BackColor = Color.FromArgb(217, 115, 65);
+                    frmmain.paneltitlebar.BackColor = Color.FromArgb(217, 115, 65);
+                    frmmain.btnAdmin.BackColor = Color.FromArgb(217, 115, 65);
+                    frmmain.btnUser.BackColor = Color.FromArgb(217, 115, 65);
+                    frmmain.btnMovie.BackColor = Color.FromArgb(217, 115, 65);
+                    frmmain.btnSeat.BackColor = Color.FromArgb(217, 115, 65);
+                    frmmain.btnDashboard.BackColor = Color.FromArgb(217, 115, 65);
+                    frmmain.btnTicket.BackColor = Color.FromArgb(217, 115, 65);
+                    frmmain.btnReport.BackColor = Color.FromArgb(217, 115, 65);
+                    frmmain.btnAccount.IconColor = Color.FromArgb(217, 115, 65);
+                    frmmain.accountimage.IconColor = Color.FromArgb(217, 115, 65);
+                    frmmain.panelAccountShow.BorderColor = Color.FromArgb(217, 115, 65);
                     break;
 
                 case 7:

@@ -55,38 +55,10 @@ namespace TicketSelling.UI.Configuration
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (!CheckRequireFields()) return;
-                MessageEntity res = new UserDao().Login(new DAO.Entity.User()
-                {
-                    Username = txtUsername.Text,
-                    Password = txtPassword.Text
-                });
-                if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
-                {
-                    user = txtUsername.Text;
-                    MessageBox.Show(res.RespDesp);
-                    FrmMain frm = new FrmMain();
-                    frm.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show(res.RespDesp);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
-
-
             //try
             //{
             //    if (!CheckRequireFields()) return;
-            //    MessageEntity res = new AdminDao().Login(new DAO.Entity.Admin()
+            //    MessageEntity res = new UserDao().Login(new DAO.Entity.User()
             //    {
             //        Username = txtUsername.Text,
             //        Password = txtPassword.Text
@@ -107,7 +79,35 @@ namespace TicketSelling.UI.Configuration
             //catch (Exception ex)
             //{
             //    MessageBox.Show(ex.Message);
+
             //}
+
+
+            try
+            {
+                if (!CheckRequireFields()) return;
+                MessageEntity res = new AdminDao().Login(new DAO.Entity.Admin()
+                {
+                    Username = txtUsername.Text,
+                    Password = txtPassword.Text
+                });
+                if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
+                {
+                    user = txtUsername.Text;
+                    MessageBox.Show(res.RespDesp);
+                    FrmMain frm = new FrmMain();
+                    frm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show(res.RespDesp);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
 
 
