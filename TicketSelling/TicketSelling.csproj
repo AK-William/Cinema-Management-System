@@ -63,6 +63,7 @@
     <Compile Include="Common\ProcedureConstants.cs" />
     <Compile Include="Common\ResponseMessage.cs" />
     <Compile Include="Common\ThemeColor.cs" />
+    <Compile Include="DAO\SaleDao.cs" />
     <Compile Include="DAO\AdminDao.cs" />
     <Compile Include="DAO\DashboardDao.cs" />
     <Compile Include="DAO\MovieDao.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Entity\MovieSD.cs" />
     <Compile Include="Entity\MovieST.cs" />
     <Compile Include="Entity\Role.cs" />
+    <Compile Include="Entity\SaleHead.cs" />
     <Compile Include="Entity\Seat.cs" />
     <Compile Include="Entity\SeatType.cs" />
     <Compile Include="Entity\User.cs" />
@@ -130,6 +132,12 @@
     <Compile Include="UI\Configuration\FrmSetting.Designer.cs">
       <DependentUpon>FrmSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Configuration\FrmTicketBuyerInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Configuration\FrmTicketBuyerInformation.Designer.cs">
+      <DependentUpon>FrmTicketBuyerInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Configuration\FrmTicketSell.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,6 +149,42 @@
     </Compile>
     <Compile Include="UI\Configuration\FrmUser.Designer.cs">
       <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmMessageBox\FrmDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmMessageBox\FrmDelete.Designer.cs">
+      <DependentUpon>FrmDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmMessageBox\FrmError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmMessageBox\FrmError.Designer.cs">
+      <DependentUpon>FrmError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmMessageBox\FrmExMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmMessageBox\FrmExMessage.Designer.cs">
+      <DependentUpon>FrmExMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmMessageBox\FrmNormal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmMessageBox\FrmNormal.Designer.cs">
+      <DependentUpon>FrmNormal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmMessageBox\FrmSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmMessageBox\FrmSuccess.Designer.cs">
+      <DependentUpon>FrmSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmMessageBox\FrmWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmMessageBox\FrmWarning.Designer.cs">
+      <DependentUpon>FrmWarning.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -180,11 +224,32 @@
     <EmbeddedResource Include="UI\Configuration\FrmSetting.resx">
       <DependentUpon>FrmSetting.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Configuration\FrmTicketBuyerInformation.resx">
+      <DependentUpon>FrmTicketBuyerInformation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Configuration\FrmTicketSell.resx">
       <DependentUpon>FrmTicketSell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Configuration\FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmMessageBox\FrmDelete.resx">
+      <DependentUpon>FrmDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmMessageBox\FrmError.resx">
+      <DependentUpon>FrmError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmMessageBox\FrmExMessage.resx">
+      <DependentUpon>FrmExMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmMessageBox\FrmNormal.resx">
+      <DependentUpon>FrmNormal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmMessageBox\FrmSuccess.resx">
+      <DependentUpon>FrmSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmMessageBox\FrmWarning.resx">
+      <DependentUpon>FrmWarning.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -229,6 +294,10 @@
     <None Include="Resources\cancel_480px1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\error_512px.png" />
+    <None Include="Resources\multiply_512px.png" />
+    <None Include="Resources\ok_480px.png" />
+    <None Include="Resources\ok_208px.png" />
     <None Include="Resources\error_480px.png" />
     <None Include="Resources\night_500px white.png" />
     <None Include="Resources\sun_512px white.png" />
@@ -266,6 +335,10 @@
     <None Include="Resources\city_512px.png" />
     <None Include="Resources\address_500px.png" />
     <None Include="Resources\closed_eye_512px.png" />
+    <None Include="Resources\Delete_480px.png" />
+    <None Include="Resources\Close_480px.png" />
+    <None Include="Resources\Checkmark_208px.png" />
+    <None Include="Resources\cancel_512px white.png" />
     <Content Include="Resources\drop_arrow.png" />
     <None Include="Resources\undraw_home_cinema_l7yl.png" />
     <None Include="Resources\enlarge_480px.png" />

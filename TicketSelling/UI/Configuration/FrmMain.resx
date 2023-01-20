@@ -1036,13 +1036,13 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 31</value>
+    <value>397, 37</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Hi There!</value>
+    <value>Cinema Management System</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -1249,7 +1249,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="lblTitleChildForm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 23</value>
+    <value>132, 31</value>
   </data>
   <data name="lblTitleChildForm.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1364,9 +1364,6 @@
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1444, 845</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>

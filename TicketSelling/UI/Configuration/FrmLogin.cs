@@ -35,12 +35,16 @@ namespace TicketSelling.UI.Configuration
         {
             if (string.IsNullOrEmpty(txtUsername.Text))
             {
-                MessageBox.Show("Enter your Username");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your username";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtPassword.Text))
             {
-                MessageBox.Show("Enter Password");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your password";
+                fmW.ShowDialog();
                 return false;
             }
             return true;
@@ -94,19 +98,25 @@ namespace TicketSelling.UI.Configuration
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
                     user = txtUsername.Text;
-                    MessageBox.Show(res.RespDesp);
+                    FrmMessageBox.FrmNormal fmN = new FrmMessageBox.FrmNormal();
+                    fmN.lblNormal.Text =res.RespDesp;
+                    fmN.ShowDialog();
                     FrmMain frm = new FrmMain();
                     frm.Show();
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show(res.RespDesp);
+                    FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                    fmE.lblError.Text = res.RespDesp;
+                    fmE.ShowDialog();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
 
 

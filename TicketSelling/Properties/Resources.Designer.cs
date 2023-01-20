@@ -143,6 +143,26 @@ namespace TicketSelling.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancel_512px_white {
+            get {
+                object obj = ResourceManager.GetObject("cancel_512px white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Checkmark_208px {
+            get {
+                object obj = ResourceManager.GetObject("Checkmark_208px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cinema_1 {
             get {
                 object obj = ResourceManager.GetObject("cinema 1", resourceCulture);
@@ -223,6 +243,16 @@ namespace TicketSelling.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Close_480px {
+            get {
+                object obj = ResourceManager.GetObject("Close_480px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap closed_eye_512px {
             get {
                 object obj = ResourceManager.GetObject("closed_eye_512px", resourceCulture);
@@ -253,9 +283,29 @@ namespace TicketSelling.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Delete_480px {
+            get {
+                object obj = ResourceManager.GetObject("Delete_480px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap error_480px {
             get {
                 object obj = ResourceManager.GetObject("error_480px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap error_512px {
+            get {
+                object obj = ResourceManager.GetObject("error_512px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -383,6 +433,16 @@ namespace TicketSelling.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap multiply_512px {
+            get {
+                object obj = ResourceManager.GetObject("multiply_512px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap name_208px {
             get {
                 object obj = ResourceManager.GetObject("name_208px", resourceCulture);
@@ -426,6 +486,26 @@ namespace TicketSelling.Properties {
         internal static System.Drawing.Bitmap note_480px {
             get {
                 object obj = ResourceManager.GetObject("note_480px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ok_208px {
+            get {
+                object obj = ResourceManager.GetObject("ok_208px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ok_480px {
+            get {
+                object obj = ResourceManager.GetObject("ok_480px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

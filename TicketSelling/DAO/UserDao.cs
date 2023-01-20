@@ -136,7 +136,7 @@ namespace TicketSelling.DAO
                 scom.Parameters.AddWithValue("@Username", req.Username);
                 scom.Parameters.AddWithValue("@Password", Cryptography.Encrypt(req.Password));
                 scom.Parameters.AddWithValue("@PhoneNumber", req.PhoneNumber);
-                scom.Parameters.AddWithValue("@Gmail", req.PhoneNumber);
+                scom.Parameters.AddWithValue("@Gmail", req.Gmail);
                 DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(scom);
                 adapter.Fill(ds);

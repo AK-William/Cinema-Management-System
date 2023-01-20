@@ -17,6 +17,7 @@ namespace TicketSelling.DAO.Entity
     {
         public string RowNumber { get; set; }
         public int Id { get; set; }
+        public int SeatId { get; set; }
         public int MovieId { get; set; }
         public string Name { get; set; }
         public DateTime Date { get; set; }

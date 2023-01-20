@@ -100,7 +100,7 @@
             this.label1.Location = new System.Drawing.Point(37, 475);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 25);
+            this.label1.Size = new System.Drawing.Size(82, 33);
             this.label1.TabIndex = 309;
             this.label1.Text = "Gmail";
             // 
@@ -228,7 +228,7 @@
             this.lblphonenumber.Location = new System.Drawing.Point(37, 366);
             this.lblphonenumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblphonenumber.Name = "lblphonenumber";
-            this.lblphonenumber.Size = new System.Drawing.Size(142, 25);
+            this.lblphonenumber.Size = new System.Drawing.Size(181, 33);
             this.lblphonenumber.TabIndex = 11;
             this.lblphonenumber.Text = "Phone Number";
             // 
@@ -239,7 +239,7 @@
             this.lblpassword.Location = new System.Drawing.Point(37, 251);
             this.lblpassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblpassword.Name = "lblpassword";
-            this.lblpassword.Size = new System.Drawing.Size(96, 25);
+            this.lblpassword.Size = new System.Drawing.Size(121, 33);
             this.lblpassword.TabIndex = 7;
             this.lblpassword.Text = "Password";
             // 
@@ -250,7 +250,7 @@
             this.lblusername.Location = new System.Drawing.Point(37, 138);
             this.lblusername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblusername.Name = "lblusername";
-            this.lblusername.Size = new System.Drawing.Size(99, 25);
+            this.lblusername.Size = new System.Drawing.Size(124, 33);
             this.lblusername.TabIndex = 6;
             this.lblusername.Text = "Username";
             // 
@@ -261,7 +261,7 @@
             this.lblname.Location = new System.Drawing.Point(37, 34);
             this.lblname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(64, 25);
+            this.lblname.Size = new System.Drawing.Size(79, 33);
             this.lblname.TabIndex = 5;
             this.lblname.Text = "Name";
             // 
@@ -368,7 +368,7 @@
             this.txtUsername.Size = new System.Drawing.Size(349, 50);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.TextOffset = new System.Drawing.Point(30, 0);
-            this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsername_KeyDown_1);
+            this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsername_KeyDown);
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUsername_KeyPress);
             // 
             // txtName

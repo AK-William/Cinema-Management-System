@@ -31,12 +31,16 @@ namespace TicketSelling.UI.Configuration
         {
             if (string.IsNullOrEmpty(txtSeatTypeName.Text))
             {
-                MessageBox.Show("Enter Seat Type");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter Seat Type Name";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtSeatTypeNote.Text))
             {
-                MessageBox.Show("Enter comment");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter comment for Seat";
+                fmW.ShowDialog();
                 return false;
             }
             return true;
@@ -54,7 +58,9 @@ namespace TicketSelling.UI.Configuration
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
-                    MessageBox.Show("Success");
+                    FrmMessageBox.FrmNormal fmN = new FrmMessageBox.FrmNormal();
+                    fmN.lblNormal.Text = "Seat type name was saved!";
+                    fmN.ShowDialog();
                     Reset();
                     BindDgvData();
                 }
@@ -62,18 +68,24 @@ namespace TicketSelling.UI.Configuration
                 {
                     if (res.RespDesp == "Duplicate Error")
                     {
-                        MessageBox.Show("Name Already Exist");
+                        FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                        fmW.lblWarning.Text = "Seat type name already exists";
+                        fmW.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show("Save Fail");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Save Fail! Please recheck entered information";
+                        fmE.ShowDialog();
+
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -96,7 +108,9 @@ namespace TicketSelling.UI.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -269,7 +283,9 @@ namespace TicketSelling.UI.Configuration
                     int SeatCount = new SeatTypeDao().CheckSeatBySeatTypeId(Convert.ToInt32(dgvSeatType.Rows[e.RowIndex].Cells["ColIdSeatType"].Value));//Control delete seattype when seats are assign
                     if (SeatCount > 0)
                     {
-                        MessageBox.Show("Transaction Exists");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Transaction Exists! This action cannot be done.";
+                        fmE.ShowDialog();
                         return;
                     }
                     else
@@ -281,13 +297,17 @@ namespace TicketSelling.UI.Configuration
                             MessageEntity res1 = new SeatTypeDao().DeleteSeatType(Convert.ToInt32(dgvSeatType.Rows[e.RowIndex].Cells["ColIdSeatType"].Value));
                             if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
                             {
-                                MessageBox.Show("Delete Success");
+                                FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                                fmE.lblError.Text = "Delete Successful";
+                                fmE.ShowDialog();
                                 Reset();
                                 BindDgvData();
                             }
                             else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
                             {
-                                MessageBox.Show("Delete Fail");
+                                FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                                fmE.lblError.Text = "Delete Fail! Please recheck entered information";
+                                fmE.ShowDialog();
                             }
                         }
                     }
@@ -296,7 +316,9 @@ namespace TicketSelling.UI.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -313,7 +335,9 @@ namespace TicketSelling.UI.Configuration
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
-                    MessageBox.Show("Update Success");
+                    FrmMessageBox.FrmSuccess fmS = new FrmMessageBox.FrmSuccess();
+                    fmS.lblSuccess.Text = "Your changes have been successfully saved!";
+                    fmS.ShowDialog();
                     Reset();
                     BindDgvData();
                 }
@@ -321,18 +345,23 @@ namespace TicketSelling.UI.Configuration
                 {
                     if (res.RespDesp == "Duplicate Error")
                     {
-                        MessageBox.Show("Name Already Exist");
+                        FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                        fmW.lblWarning.Text = "Seat type name already exists";
+                        fmW.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show("Save Fail");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Save Fail! Please recheck entered information";
+                        fmE.ShowDialog();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -411,12 +440,16 @@ namespace TicketSelling.UI.Configuration
         {
             if (string.IsNullOrEmpty(txtNumberOfSeats.Text))
             {
-                MessageBox.Show("Enter Number of Seats");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter number of seats";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtSeatPrice.Text))
             {
-                MessageBox.Show("Enter Seats Price");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter seat Price";
+                fmW.ShowDialog();
                 return false;
             }
             return true;
@@ -436,7 +469,9 @@ namespace TicketSelling.UI.Configuration
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
-                    MessageBox.Show("Success");
+                    FrmMessageBox.FrmNormal fmN = new FrmMessageBox.FrmNormal();
+                    fmN.lblNormal.Text = "Seat data was saved!";
+                    fmN.ShowDialog();
                     ResetSeat();
                     BindDgvSeat();
                 }
@@ -444,18 +479,23 @@ namespace TicketSelling.UI.Configuration
                 {
                     if (res.RespDesp == "Duplicate Error")
                     {
-                        MessageBox.Show("Name Already Exist");
+                        FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                        fmW.lblWarning.Text = "Seat already Exists";
+                        fmW.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show("Save Fail");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Save Fail! Please recheck entered information";
+                        fmE.ShowDialog();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -477,7 +517,9 @@ namespace TicketSelling.UI.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -510,7 +552,9 @@ namespace TicketSelling.UI.Configuration
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
-                    MessageBox.Show("Update Success");
+                    FrmMessageBox.FrmSuccess fmS = new FrmMessageBox.FrmSuccess();
+                    fmS.lblSuccess.Text = "Your changes have been successfully saved!";
+                    fmS.ShowDialog();
                     Reset();
                     BindDgvSeat();
                 }
@@ -518,18 +562,23 @@ namespace TicketSelling.UI.Configuration
                 {
                     if (res.RespDesp == "Duplicate Error")
                     {
-                        MessageBox.Show("Name Already Exist");
+                        FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                        fmW.lblWarning.Text = "Seat name already exists!";
+                        fmW.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show("Save Fail");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Update Fail! Please recheck entered information";
+                        fmE.ShowDialog();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -545,13 +594,17 @@ namespace TicketSelling.UI.Configuration
                         MessageEntity res1 = new SeatDao().DeleteSeat(Convert.ToInt32(dgvSeat.Rows[e.RowIndex].Cells["ColId"].Value));
                         if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
                         {
-                            MessageBox.Show("Delete Success");
+                            FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                            fmE.lblError.Text = "Delete successful";
+                            fmE.ShowDialog();
                             Reset();
                             BindDgvSeat();
                         }
                         else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
                         {
-                            MessageBox.Show("Delete Fail");
+                            FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                            fmE.lblError.Text = "Delete Fail! Please recheck entered information";
+                            fmE.ShowDialog();
                         }
                     }
 
@@ -559,7 +612,9 @@ namespace TicketSelling.UI.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 

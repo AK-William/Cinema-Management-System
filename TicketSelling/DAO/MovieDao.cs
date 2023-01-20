@@ -455,6 +455,11 @@ namespace TicketSelling.DAO
 
                 DataTable dt = ds.Tables[0];
                 List<Movie> lst = new List<Movie>();
+                lst.Add(new Movie
+                {
+                    Id = 0,
+                    Name = "--Select One--",
+                });
 
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
@@ -506,12 +511,17 @@ namespace TicketSelling.DAO
 
                 DataTable dt = ds.Tables[0];
                 List<MovieST> lst = new List<MovieST>();
+                lst.Add(new MovieST
+                {
+                    Id =0,
+                    Time ="--Select One--",
+                });
 
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     lst.Add(new MovieST
                     {
-                        MovieId = Convert.ToInt32(dt.Rows[i]["MovieId"]),
+                        Id = Convert.ToInt32(dt.Rows[i]["Id"]),
                         Time = dt.Rows[i]["Time"].ToString(),
                     });
                 }
@@ -532,5 +542,7 @@ namespace TicketSelling.DAO
                 return new ResMovieST() { MessageEntity = _MessageEntity };
             }
         }
+
+
     }
 }

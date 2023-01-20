@@ -136,7 +136,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelRole.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 25</value>
+    <value>68, 33</value>
   </data>
   <data name="labelRole.TabIndex" type="System.Int32, mscorlib">
     <value>307</value>
@@ -352,7 +352,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelPhoto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 25</value>
+    <value>116, 33</value>
   </data>
   <data name="labelPhoto.TabIndex" type="System.Int32, mscorlib">
     <value>300</value>
@@ -418,7 +418,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 25</value>
+    <value>105, 33</value>
   </data>
   <data name="labelAddress.TabIndex" type="System.Int32, mscorlib">
     <value>298</value>
@@ -481,7 +481,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelCity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 25</value>
+    <value>63, 33</value>
   </data>
   <data name="labelCity.TabIndex" type="System.Int32, mscorlib">
     <value>296</value>
@@ -517,7 +517,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelAdminNRC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 25</value>
+    <value>73, 33</value>
   </data>
   <data name="labelAdminNRC.TabIndex" type="System.Int32, mscorlib">
     <value>295</value>
@@ -553,7 +553,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelAdminPostcode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 25</value>
+    <value>177, 33</value>
   </data>
   <data name="labelAdminPostcode.TabIndex" type="System.Int32, mscorlib">
     <value>294</value>
@@ -589,7 +589,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelGmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 25</value>
+    <value>82, 33</value>
   </data>
   <data name="labelGmail.TabIndex" type="System.Int32, mscorlib">
     <value>293</value>
@@ -733,7 +733,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelPhoneNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>142, 25</value>
+    <value>181, 33</value>
   </data>
   <data name="labelPhoneNumber.TabIndex" type="System.Int32, mscorlib">
     <value>288</value>
@@ -769,7 +769,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 25</value>
+    <value>121, 33</value>
   </data>
   <data name="labelPassword.TabIndex" type="System.Int32, mscorlib">
     <value>287</value>
@@ -805,7 +805,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 25</value>
+    <value>124, 33</value>
   </data>
   <data name="labelUsername.TabIndex" type="System.Int32, mscorlib">
     <value>286</value>
@@ -841,7 +841,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="labelName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 25</value>
+    <value>79, 33</value>
   </data>
   <data name="labelName.TabIndex" type="System.Int32, mscorlib">
     <value>285</value>
@@ -996,45 +996,6 @@
   <data name="&gt;&gt;guna2Panel1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;dgvAdmin.Name" xml:space="preserve">
-    <value>dgvAdmin</value>
-  </data>
-  <data name="&gt;&gt;dgvAdmin.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
-  </data>
-  <data name="&gt;&gt;dgvAdmin.Parent" xml:space="preserve">
-    <value>guna2Panel2</value>
-  </data>
-  <data name="&gt;&gt;dgvAdmin.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="guna2Panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="guna2Panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 441</value>
-  </data>
-  <data name="guna2Panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="guna2Panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1180, 227</value>
-  </data>
-  <data name="guna2Panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;guna2Panel2.Name" xml:space="preserve">
-    <value>guna2Panel2</value>
-  </data>
-  <data name="&gt;&gt;guna2Panel2.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
-  </data>
-  <data name="&gt;&gt;guna2Panel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;guna2Panel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="dgvAdmin.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>35</value>
   </data>
@@ -1077,7 +1038,7 @@
   <metadata name="ColAdminPhoto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="dataGridViewCellStyle12.NullValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="dataGridViewCellStyle4.NullValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         Qk32AgAAAAAAADYAAAAoAAAADgAAABAAAAABABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEgoTGw8bGw8bGw8bGw8bGw8bGw8bG
@@ -1222,6 +1183,33 @@
     <value>guna2Panel2</value>
   </data>
   <data name="&gt;&gt;dgvAdmin.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="guna2Panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="guna2Panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 441</value>
+  </data>
+  <data name="guna2Panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="guna2Panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1180, 227</value>
+  </data>
+  <data name="guna2Panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel2.Name" xml:space="preserve">
+    <value>guna2Panel2</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel2.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

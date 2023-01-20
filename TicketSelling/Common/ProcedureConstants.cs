@@ -9,10 +9,10 @@ namespace TicketSelling.Common
     public class ProcedureConstants
     {
         #region dbuser
-       
+
 
         public static string SP_NewUserSave = @"IF EXISTS (SELECT * FROM TblUser WHERE Username = @Username
-                                                      AND Password = @Password)
+                                                      )
                                                     BEGIN
                                                       SELECT
                                                         '001' AS RespCode,
@@ -41,7 +41,6 @@ namespace TicketSelling.Common
                                                         *
                                                       FROM TblUser
                                                       WHERE Username = @Username
-                                                      AND Password = @Password
                                                     END";
 
         public static string GetAllUser = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblUser WITH (NOLOCK)";
@@ -95,7 +94,7 @@ namespace TicketSelling.Common
 
         #region dbSeatType
 
-        public static string GetAllSeatType = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblSeatType WITH (NOLOCK)";
+        public static string GetAllSeatType = @"SELECT  ROW_NUMBER() OVER(ORDER BY Name ASC) AS RowNumber,* FROM TblSeatType WITH (NOLOCK) ORDER BY Name";
 
         public static string SP_NewSeatTypeSave = @"IF EXISTS (SELECT * FROM TblSeatType WHERE Name = @Name)
                                                     BEGIN
@@ -175,7 +174,7 @@ namespace TicketSelling.Common
 
         public static string GetSTNoteById = @"Select * from TblSeatType where Id=@Id";
 
-        public static string GetAllSeat = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblSeat WITH (NOLOCK)";
+        public static string GetAllSeat = @"SELECT  ROW_NUMBER() OVER(ORDER BY SeatTypeId ASC) AS RowNumber,* FROM TblSeat WITH (NOLOCK) ORDER BY SeatTypeId";
 
         public static string SaveSeat = @"IF EXISTS (SELECT * FROM TblSeat WHERE Name = @Name)
                                                     BEGIN
@@ -194,9 +193,10 @@ namespace TicketSelling.Common
                                                         ([Name]
                                                        ,[Price]
                                                        ,[SeatTypeId]
+                                                       ,[NumberOfSeat]
                                                        ,[CreatedBy]
 													   ,[CreatedDate])
-                                                       VALUES(@Name, @Price , @SeatTypeId , @CreatedBy, GETDATE());
+                                                       VALUES(@Name, @Price , @SeatTypeId, @NumberOfSeat , @CreatedBy, GETDATE());
 
                                                         SELECT
                                                         '000' AS RespCode,
@@ -224,6 +224,10 @@ namespace TicketSelling.Common
         public static string GetSeatId = @"SELECT * FROM TblSeat where SeatTypeId=@SeatTypeId";
 
         public static string GetSeatCountBySeatTypeId = @"SELECT COUNT(Id) Count FROM  TblSeat where SeatTypeId=@SeatTypeId;";//Control delete seattype when seat are assign
+
+        public static string GetAllSeatForTicket = @"SELECT  ROW_NUMBER() OVER(ORDER BY SeatTypeId ASC) AS RowNumber,* FROM TblSeat S  WITH (NOLOCK) 
+                                                    inner join TblSeatType ST on S.SeatTypeId = ST.Id
+                                                    ORDER BY SeatTypeId";
 
         #endregion
 
@@ -396,7 +400,7 @@ namespace TicketSelling.Common
                                                     *
                                                     FROM TblMovie
                                                     WHERE  Id=@Id
-                                                    ";  
+                                                    ";
 
         public static string GetAllMovie = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblMovie WITH (NOLOCK)";
 
@@ -615,10 +619,10 @@ namespace TicketSelling.Common
         //                                            ELSE
         //                                            BEGIN
         //                                              UPDATE [dbo].[TblScheduleMovieTime]
-								//						   SET [MovieId] = @MovieId
-								//							  ,[Date] = @Date
+        //						   SET [MovieId] = @MovieId
+        //							  ,[Date] = @Date
         //                                                      ,[Time]= @Time
-								//						 WHERE Id = @Id 
+        //						 WHERE Id = @Id 
 
         //                                              SELECT
         //                                                '000' AS RespCode,
@@ -693,7 +697,7 @@ namespace TicketSelling.Common
                                             'ME' AS 'RespMessageType'
                                         END";
 
-       
+
 
         #region dashboard
 
@@ -702,8 +706,49 @@ namespace TicketSelling.Common
 
         #endregion
 
+        #region Ticket Selling
 
-       
-        
+        public static string SaveSaleHead = @"INSERT INTO [dbo].[TblSaleHead]
+                                                           ([MovieId]
+                                                           ,[MovieDate]
+                                                           ,[MovieTime]
+                                                           ,[CustomerName]
+                                                           ,[Phone]
+                                                           ,[TotalPrice]
+                                                           ,[CreatedBy]
+                                                           ,[CreatedDate])
+                                                     VALUES
+                                                           (@MovieId
+                                                           ,@MovieDate 
+                                                           ,@MovieTime
+                                                           ,@CustomerName
+                                                           ,@Phone
+                                                           ,@TotalPrice
+                                                           ,@CreatedBy
+                                                           ,GETDATE());
+
+                                                SELECT * FROM TblSaleHead WHERE Id IN ( SELECT Max(Id) FROM TblSaleHead);";
+
+        public static string SaveSaleDetail = @"INSERT INTO [dbo].[TblSaleDetail]
+                                                ([HeadId]
+                                                ,[SeatId]
+                                                ,[Price])
+                                                VALUES
+                                                (@HeadId
+                                                ,@SeatId
+                                                ,@Price);
+
+                                                SELECT
+                                                '000' AS RespCode,
+                                                'Successful Message' AS RespDesp,
+                                                'MI' AS 'RespMessageType';
+	
+                                                SELECT * FROM TblSaleDetail WHERE HeadId=@HeadId;";
+
+        public static string GetSellingTicket = @"SELECT HeadId,SeatId,Price FROM TblSaleHead H inner join TblSaleDetail D on H.Id = D.HeadId WHERE MovieId=@MovieId AND CONVERT(char(10),MovieDate,111)=CONVERT(char(10),@MovieDate,111) AND MovieTime=@MovieTime;";
+
+        #endregion
+
+
     }
 }

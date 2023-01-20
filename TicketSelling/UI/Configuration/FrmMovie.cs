@@ -38,7 +38,7 @@ namespace TicketSelling.UI.Configuration
         {
             BindDgvMovieSD();
             BindDgvMovie();
-            txtName.Select();
+            txtName.Focus();
             txtSDStartDate.Value = DateTime.Now;
             txtSDEndDate.Value = DateTime.Now;
             STDate.Value = DateTime.Now;
@@ -334,37 +334,51 @@ namespace TicketSelling.UI.Configuration
         {
             if (string.IsNullOrEmpty(txtName.Text))
             {
-                MessageBox.Show("Enter Movie Name");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter movie name";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtCasts.Text))
             {
-                MessageBox.Show("Enter Casts' Name");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter casts' names";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtRuntime.Text))
             {
-                MessageBox.Show("Enter Movie's Runtime");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter movie's runtime";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtMovieType.Text))
             {
-                MessageBox.Show("Enter Movie Type");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter movie type";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtDescription.Text))
             {
-                MessageBox.Show("Enter Preview Description");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter movie preview";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtMovieLink.Text))
             {
-                MessageBox.Show("Enter Movie Trailer Link");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter trailer link";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(pictureBox.Text))
             {
-                MessageBox.Show("Enter Movie Cover");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter movie cover photo";
+                fmW.ShowDialog();
                 return false;
             }
 
@@ -394,18 +408,23 @@ namespace TicketSelling.UI.Configuration
                 {
                     if (res.RespDesp == "Duplicate Error")
                     {
-                        MessageBox.Show("Name Already Exist");
+                        FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                        fmW.lblWarning.Text = "Movie already Exist!";
+                        fmW.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show("Save Fail");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Save Fail! Please recheck entered information";
+                        fmE.ShowDialog();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -421,7 +440,9 @@ namespace TicketSelling.UI.Configuration
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
-                    MessageBox.Show("Success");
+                    FrmMessageBox.FrmNormal fmN = new FrmMessageBox.FrmNormal();
+                    fmN.lblNormal.Text = "Movie data was saved!";
+                    fmN.ShowDialog();
                     Reset();
                     BindDgvMovie();
                 }
@@ -429,9 +450,11 @@ namespace TicketSelling.UI.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
+
         }
 
         private void SaveImageFilePath(string MovieCoverName)
@@ -490,8 +513,11 @@ namespace TicketSelling.UI.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
+
         }
 
         private void ShowImage(string fileName) //show image in datagridview
@@ -524,7 +550,9 @@ namespace TicketSelling.UI.Configuration
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
-                    MessageBox.Show("Update Success");
+                    FrmMessageBox.FrmSuccess fmS = new FrmMessageBox.FrmSuccess();
+                    fmS.lblSuccess.Text = "Your changes have been successfully saved!";
+                    fmS.ShowDialog();
                     Reset();
                     BindDgvMovie();
                 }
@@ -532,19 +560,25 @@ namespace TicketSelling.UI.Configuration
                 {
                     if (res.RespDesp == "Duplicate Error")
                     {
-                        MessageBox.Show("Name Already Exist");
+                        FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                        fmW.lblWarning.Text = "Movie already exists. Please add another movie";
+                        fmW.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show("Save Fail");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Update Fail! Please recheck entered information";
+                        fmE.ShowDialog();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
+
         }
 
         private void DgvMovie_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -556,7 +590,9 @@ namespace TicketSelling.UI.Configuration
                     int MovieCount = new MovieDao().CheckMovieBySDId(Convert.ToInt32(dgvSD.Rows[e.RowIndex].Cells["ColMovieId"].Value)); //Control delete Movie when date are assign
                     if (MovieCount > 0)
                     {
-                        MessageBox.Show("Transaction Exists");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Transaction Exists! This action cannot be done.";
+                        fmE.ShowDialog();
                         return;
                     }
                     else
@@ -567,13 +603,17 @@ namespace TicketSelling.UI.Configuration
                             MessageEntity res1 = new MovieDao().DeleteMovie(Convert.ToInt32(dgvMovie.Rows[e.RowIndex].Cells["ColIdMovie"].Value));
                             if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
                             {
-                                MessageBox.Show("Delete Success");
+                                FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                                fmE.lblError.Text = "Delete Successful";
+                                fmE.ShowDialog();
                                 Reset();
                                 BindDgvMovie();
                             }
                             else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
                             {
-                                MessageBox.Show("Delete Fail");
+                                FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                                fmE.lblError.Text = "Delete Fail";
+                                fmE.ShowDialog();
                             }
                         }
 
@@ -582,7 +622,9 @@ namespace TicketSelling.UI.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -634,7 +676,9 @@ namespace TicketSelling.UI.Configuration
         {
             if (string.IsNullOrEmpty(CbSDName.Text))
             {
-                MessageBox.Show("Choose Movie Name");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please choose Movie";
+                fmW.ShowDialog();
                 return false;
             }
             return true;
@@ -658,7 +702,9 @@ namespace TicketSelling.UI.Configuration
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
-                    MessageBox.Show("Success");
+                    FrmMessageBox.FrmNormal fmN = new FrmMessageBox.FrmNormal();
+                    fmN.lblNormal.Text = "Movie date was saved!";
+                    fmN.ShowDialog();
                     ResetSD();
                     BindDgvMovieSD();
                 }
@@ -666,18 +712,23 @@ namespace TicketSelling.UI.Configuration
                 {
                     if (res.RespDesp == "Duplicate Error")
                     {
-                        MessageBox.Show("Name Already Exist");
+                        FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                        fmW.lblWarning.Text = "Date already Exists! Try another!";
+                        fmW.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show("Save Fail");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Save Fail! Please recheck entered information";
+                        fmE.ShowDialog();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -694,7 +745,9 @@ namespace TicketSelling.UI.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -762,7 +815,9 @@ namespace TicketSelling.UI.Configuration
                     int MovieCount = new MovieDao().CheckMovieDateBySTId(Convert.ToInt32(dgvMovie.Rows[e.RowIndex].Cells["ColIdMovie"].Value)); //Control delete Movie when date are assign
                     if (MovieCount > 0)
                     {
-                        MessageBox.Show("Transaction Exists");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Transaction Exists! This action cannot be done.";
+                        fmE.ShowDialog();
                         return;
                     }
                     else
@@ -774,13 +829,17 @@ namespace TicketSelling.UI.Configuration
                             MessageEntity res1 = new MovieSDDao().DeleteMovieSD(Convert.ToInt32(dgvSD.Rows[e.RowIndex].Cells["ColMovieSDId"].Value));
                             if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
                             {
-                                MessageBox.Show("Delete Success");
+                                FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                                fmE.lblError.Text = "Delete Successful";
+                                fmE.ShowDialog();
                                 ResetSD();
                                 BindDgvMovieSD();
                             }
                             else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
                             {
-                                MessageBox.Show("Delete Fail");
+                                FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                                fmE.lblError.Text = "Delete Fail";
+                                fmE.ShowDialog();
                             }
                         }
 
@@ -789,7 +848,9 @@ namespace TicketSelling.UI.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -820,7 +881,9 @@ namespace TicketSelling.UI.Configuration
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
-                    MessageBox.Show("Update Success");
+                    FrmMessageBox.FrmSuccess fmS = new FrmMessageBox.FrmSuccess();
+                    fmS.lblSuccess.Text = "Your changes have been successfully saved!";
+                    fmS.ShowDialog();
                     Reset();
                     BindDgvMovieSD();
                 }
@@ -828,18 +891,23 @@ namespace TicketSelling.UI.Configuration
                 {
                     if (res.RespDesp == "Duplicate Error")
                     {
-                        MessageBox.Show("Name Already Exist");
+                        FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                        fmW.lblWarning.Text = "Date already exists! Please enter another date!";
+                        fmW.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show("Save Fail");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Update Fail! Please recheck entered information";
+                        fmE.ShowDialog();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -860,13 +928,17 @@ namespace TicketSelling.UI.Configuration
                         MessageEntity res1 = new MovieSTDao().DeleteMovieST(Convert.ToInt32(dgvST.Rows[e.RowIndex].Cells["ColIDST"].Value));
                         if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
                         {
-                            MessageBox.Show("Delete Success");
+                            FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                            fmE.lblError.Text = "Delete successful";
+                            fmE.ShowDialog();
                             ResetST();
                             BindDgvMovieST();
                         }
                         else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
                         {
-                            MessageBox.Show("Delete Fail");
+                            FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                            fmE.lblError.Text = "Delete Fail! Please recheck information";
+                            fmE.ShowDialog();
                         }
                     }
 
@@ -874,7 +946,9 @@ namespace TicketSelling.UI.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -882,7 +956,9 @@ namespace TicketSelling.UI.Configuration
         {
             if (string.IsNullOrEmpty(CbSTName.Text))
             {
-                MessageBox.Show("Choose Movie Name");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please choose movie";
+                fmW.ShowDialog();
                 return false;
             }
             return true;
@@ -901,7 +977,9 @@ namespace TicketSelling.UI.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -929,7 +1007,9 @@ namespace TicketSelling.UI.Configuration
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
-                    MessageBox.Show("Success");
+                    FrmMessageBox.FrmNormal fmN = new FrmMessageBox.FrmNormal();
+                    fmN.lblNormal.Text = "Movie show time was saved!";
+                    fmN.ShowDialog();
                     ResetST();
                     BindDgvMovieST();
                 }
@@ -937,18 +1017,23 @@ namespace TicketSelling.UI.Configuration
                 {
                     if (res.RespDesp == "Duplicate Error")
                     {
-                        MessageBox.Show("Name Already Exist");
+                        FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                        fmW.lblWarning.Text = "show time already exists! please enter another time";
+                        fmW.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show("Save Fail");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Save Fail! Please recheck entered information";
+                        fmE.ShowDialog();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -992,7 +1077,9 @@ namespace TicketSelling.UI.Configuration
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
-                    MessageBox.Show("Update Success");
+                    FrmMessageBox.FrmSuccess fmS = new FrmMessageBox.FrmSuccess();
+                    fmS.lblSuccess.Text = "Your changes have been successfully saved!";
+                    fmS.ShowDialog();
                     ResetST();
                     BindDgvMovieST();
                 }
@@ -1000,18 +1087,23 @@ namespace TicketSelling.UI.Configuration
                 {
                     if (res.RespDesp == "Duplicate Error")
                     {
-                        MessageBox.Show("Name Already Exist");
+                        FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                        fmW.lblWarning.Text = "Show time already exist! Please enter another time";
+                        fmW.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show("Save Fail");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Update Fail! Please recheck entered information";
+                        fmE.ShowDialog();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 

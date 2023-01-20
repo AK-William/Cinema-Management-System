@@ -34,6 +34,7 @@ namespace TicketSelling.DAO
                     scom.Parameters.AddWithValue("@Name", req.SeatTypeName + "-" + i);
                     scom.Parameters.AddWithValue("@Price", req.Price);
                     scom.Parameters.AddWithValue("@SeatTypeId",req.SeatTypeId);
+                    scom.Parameters.AddWithValue("@NumberOfSeat", req.NumberOfSeat);
                     scom.Parameters.AddWithValue("@CreatedBy", UserID);
                     ds = new DataSet();
                     adapter = new SqlDataAdapter(scom);
@@ -101,7 +102,6 @@ namespace TicketSelling.DAO
                         SeatTypeId =Convert.ToInt32(dt.Rows[i]["SeatTypeId"]),
                         Name = dt.Rows[i]["Name"].ToString(),
                         Price = Convert.ToInt32(dt.Rows[i]["Price"].ToString()),
-                        
                     });
                 }
                 return new ResSeat()
@@ -146,6 +146,7 @@ namespace TicketSelling.DAO
                     scom.Parameters.AddWithValue("@Name", req.SeatTypeName + "-" + i);
                     scom.Parameters.AddWithValue("@Price", req.Price);
                     scom.Parameters.AddWithValue("@SeatTypeId", req.SeatTypeId);
+                    scom.Parameters.AddWithValue("@NumberOfSeat", req.NumberOfSeat);
                     scom.Parameters.AddWithValue("@CreatedBy", UserID);
                     ds = new DataSet();
                     adapter = new SqlDataAdapter(scom);
@@ -241,5 +242,60 @@ namespace TicketSelling.DAO
             sqlConnection.Close();
             return NumberOfSeat;
         }
+
+        public ResSeat GetAllSeatForTicket()
+        {
+            sqlConnection = DbConnector.Connect();
+            if (sqlConnection == null)
+            {
+                return null;
+            }
+            MessageEntity _MessageEntity = null;
+            try
+            {
+                scom = new SqlCommand(ProcedureConstants.GetAllSeatForTicket, sqlConnection);
+                scom.CommandType = CommandType.Text;
+                DataSet ds = new DataSet();
+                adapter = new SqlDataAdapter(scom);
+                adapter.Fill(ds);
+                sqlConnection.Close();
+
+                _MessageEntity = SqlDataSet.Check(ds, 1);
+                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
+                    return new ResSeat() { MessageEntity = _MessageEntity };
+
+                DataTable dt = ds.Tables[0];
+                List<Seat> lst = new List<Seat>();
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    lst.Add(new Seat
+                    {
+                        RowNumber = dt.Rows[i]["RowNumber"].ToString(),
+                        Id = Convert.ToInt32(dt.Rows[i]["Id"]),
+                        SeatTypeId = Convert.ToInt32(dt.Rows[i]["SeatTypeId"]),
+                        Name = dt.Rows[i]["Name"].ToString(),
+                        Price = Convert.ToInt32(dt.Rows[i]["Price"].ToString()),
+                        NumberOfSeat = Convert.ToInt32(dt.Rows[i]["NumberOfSeat"].ToString()),
+                    });
+                }
+                return new ResSeat()
+                {
+                    MessageEntity = new MessageEntity()
+                    {
+                        RespMessageType = CommonResponseMessage.ResSuccessType
+                    },
+                    LstSeat = lst
+                };
+            }
+            catch (Exception ex)
+            {
+                _MessageEntity.RespCode = CommonResponseMessage.ExceptionErrorCode;
+                _MessageEntity.RespDesp = ex.Message;
+                _MessageEntity.RespMessageType = CommonResponseMessage.ResErrorType;
+                return new ResSeat() { MessageEntity = _MessageEntity };
+            }
+        }
+
     }
 }

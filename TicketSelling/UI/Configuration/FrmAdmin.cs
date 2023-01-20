@@ -36,7 +36,7 @@ namespace TicketSelling.UI.Configuration
 
         private void Frm_Load(object sender, EventArgs e)
         {
-            txtAdminName.Select();
+            txtAdminName.Focus();
             BindDgvAdmin();
             txtAdminPassword.UseSystemPasswordChar = true;
             hidepassword.Visible = false;
@@ -272,7 +272,9 @@ namespace TicketSelling.UI.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -300,62 +302,79 @@ namespace TicketSelling.UI.Configuration
 
             if (string.IsNullOrEmpty(txtAdminName.Text))
             {
-                MessageBox.Show("Enter your Real Name");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your name";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtAdminUsername.Text))
             {
-                MessageBox.Show("Enter username");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your username";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtAdminPassword.Text))
             {
-                MessageBox.Show("Enter your Password");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter password";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtAdminGmail.Text))
             {
-                MessageBox.Show("Enter your Gmail");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your Gmail";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtAdminPhoneNumber.Text))
             {
-                MessageBox.Show("Enter your Phone Number");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your Phone Number";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtAdminNRC.Text))
             {
-                MessageBox.Show("Enter your National ID card");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your National ID card Number";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtAdminAddress.Text))
             {
-                MessageBox.Show("Enter your Address");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your address";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtAdminCity.Text))
             {
-                MessageBox.Show("Enter your City");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your current City";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtAdminPostcode.Text))
             {
-                MessageBox.Show("Enter your Postcode");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your current City Postcode";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(pictureBoxAdminPhoto.Text))
             {
-                MessageBox.Show("Enter your photo");
-                return false;
-            }
-            if (string.IsNullOrEmpty(pictureBoxAdminPhoto.Text))
-            {
-                MessageBox.Show("Enter your ID Photo");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your ID photo";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(cbuserrole.Text))
             {
-                MessageBox.Show("Enter your role");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your role";
+                fmW.ShowDialog();
                 return false;
             }
             return true;
@@ -390,18 +409,23 @@ namespace TicketSelling.UI.Configuration
                 {
                     if (res.RespDesp == "Duplicate Error")
                     {
-                        MessageBox.Show("Name Already Exist");
+                        FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                        fmW.lblWarning.Text = "Username already exist! Please enter another username";
+                        fmW.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show("Save Fail");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Save Fail! Please recheck entered information";
+                        fmE.ShowDialog();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -416,7 +440,9 @@ namespace TicketSelling.UI.Configuration
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
-                    MessageBox.Show("Success");
+                    FrmMessageBox.FrmNormal fmN = new FrmMessageBox.FrmNormal();
+                    fmN.lblNormal.Text = "Your data was saved!";
+                    fmN.ShowDialog();
                     Reset();
                     BindDgvAdmin();
                 }
@@ -424,8 +450,9 @@ namespace TicketSelling.UI.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -483,7 +510,9 @@ namespace TicketSelling.UI.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -521,7 +550,9 @@ namespace TicketSelling.UI.Configuration
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
-                    MessageBox.Show("Update Success");
+                    FrmMessageBox.FrmSuccess fmS = new FrmMessageBox.FrmSuccess();
+                    fmS.lblSuccess.Text = "Your changes have been successfully saved!";
+                    fmS.ShowDialog();
                     Reset();
                     BindDgvAdmin();
                 }
@@ -529,18 +560,23 @@ namespace TicketSelling.UI.Configuration
                 {
                     if (res.RespDesp == "Duplicate Error")
                     {
-                        MessageBox.Show("Name Already Exist");
+                        FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                        fmW.lblWarning.Text = "Username already exists. Please use another username";
+                        fmW.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show("Save Fail");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Update Fail! Please recheck entered information";
+                        fmE.ShowDialog();
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -556,13 +592,17 @@ namespace TicketSelling.UI.Configuration
                         MessageEntity res1 = new AdminDao().DeleteAdmin(Convert.ToInt32(dgvAdmin.Rows[e.RowIndex].Cells["ColId"].Value));
                         if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
                         {
-                            MessageBox.Show("Delete Success");
+                            FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                            fmE.lblError.Text = "Data have been deleted";
+                            fmE.ShowDialog();
                             Reset();
                             BindDgvAdmin();
                         }
                         else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
                         {
-                            MessageBox.Show("Delete Fail");
+                            FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                            fmE.lblError.Text = "Deleteing Fail! Please recheck entered information";
+                            fmE.ShowDialog();
                         }
                     }
 
@@ -570,7 +610,9 @@ namespace TicketSelling.UI.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -642,7 +684,9 @@ namespace TicketSelling.UI.Configuration
             }
             else
             {
-                MessageBox.Show("Invalid Phone Number! Phone number must be start with 09 and must include 11 numbers.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Phone number must be start with 09 and must include 11 numbers.";
+                fmW.ShowDialog();
                 errorProvider2.SetError(this.txtAdminPhoneNumber, "Please provide valid Phone Number");
                 txtAdminPhoneNumber.Text = "";
             }
@@ -680,7 +724,9 @@ namespace TicketSelling.UI.Configuration
         {
             if (validate_emailaddress.IsMatch(txtAdminGmail.Text) != true)
             {
-                MessageBox.Show("Invalid Email Address! Examples : cinema@gmail.com", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Invalid Gmail address!";
+                fmW.ShowDialog();
                 txtAdminGmail.Text = "";
             }
         }
@@ -700,7 +746,9 @@ namespace TicketSelling.UI.Configuration
         {
             if (validate_nrc.IsMatch(txtAdminNRC.Text) != true)
             {
-                MessageBox.Show("Invalid NRC Format! NRC formats examples : 14/HaThaTa(N)111111", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Invalid NRC Format! NRC formats examples : 14/HaThaTa(N)111111";
+                fmW.ShowDialog();
                 txtAdminNRC.Text = "";
             }
         }
@@ -721,5 +769,7 @@ namespace TicketSelling.UI.Configuration
         #endregion
 
         #endregion
+
+
     }
 }

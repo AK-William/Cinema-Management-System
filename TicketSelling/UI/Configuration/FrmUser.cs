@@ -20,7 +20,6 @@ namespace TicketSelling.UI.Configuration
         public FrmUser()
         {
             InitializeComponent();
-            txtName.Select();
             dgvStaff.AutoGenerateColumns = false;
             colorchangestaff();
             colordaynight();
@@ -130,27 +129,37 @@ namespace TicketSelling.UI.Configuration
         {
             if (string.IsNullOrEmpty(txtName.Text))
             {
-                MessageBox.Show("Enter your real name");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your name";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtUsername.Text))
             {
-                MessageBox.Show("Enter your Username or nickname");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your Username or nickname";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtPassword.Text))
             {
-                MessageBox.Show("Enter Your Password");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter password";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtPhoneNumber.Text))
             {
-                MessageBox.Show("Enter your phone number");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your Phone number";
+                fmW.ShowDialog();
                 return false;
             }
             if (string.IsNullOrEmpty(txtGmail.Text))
             {
-                MessageBox.Show("Enter your gmail");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please enter your Gmail";
+                fmW.ShowDialog();
                 return false;
             }
             return true;
@@ -176,7 +185,9 @@ namespace TicketSelling.UI.Configuration
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
-                    MessageBox.Show("Success");
+                    FrmMessageBox.FrmNormal fmN = new FrmMessageBox.FrmNormal();
+                    fmN.lblNormal.Text = "Your data was saved!";
+                    fmN.ShowDialog();
                     Reset();
                     BindDgvData();
                     txtName.Select();
@@ -185,14 +196,17 @@ namespace TicketSelling.UI.Configuration
                 {
                     if (res.RespDesp == "Duplicate Error")
                     {
-                        MessageBox.Show("Name Already Exist");
+                        FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                        fmW.lblWarning.Text = "Userame already exists. Please use another username";
+                        fmW.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show("Save Fail");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Save Fail! Please recheck entered information";
+                        fmE.ShowDialog();
                     }
                 }
-
             }
             catch (Exception ex)
             {
@@ -232,7 +246,7 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
-        private void TxtUsername_KeyDown_1(object sender, KeyEventArgs e)
+        private void TxtUsername_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -337,7 +351,9 @@ namespace TicketSelling.UI.Configuration
                 });
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
-                    MessageBox.Show("Update Success");
+                    FrmMessageBox.FrmSuccess fmS = new FrmMessageBox.FrmSuccess();
+                    fmS.lblSuccess.Text = "Your changes have been successfully saved!";
+                    fmS.ShowDialog();
                     Reset();
                     BindDgvData();
                 }
@@ -345,11 +361,15 @@ namespace TicketSelling.UI.Configuration
                 {
                     if (res.RespDesp == "Duplicate Error")
                     {
-                        MessageBox.Show("Name Already Exist");
+                        FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                        fmW.lblWarning.Text = "Username already exists. Please use another username";
+                        fmW.ShowDialog();
                     }
                     else
                     {
-                        MessageBox.Show("Save Fail");
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Update Fail! Please recheck entered information";
+                        fmE.ShowDialog();
                     }
                 }
 
@@ -388,13 +408,17 @@ namespace TicketSelling.UI.Configuration
                         MessageEntity res1 = new UserDao().DeleteUser(Convert.ToInt32(dgvStaff.Rows[e.RowIndex].Cells["ColId"].Value));
                         if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
                         {
-                            MessageBox.Show("Delete Success");
+                            FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                            fmE.lblError.Text = "Data have been deleted";
+                            fmE.ShowDialog();
                             Reset();
                             BindDgvData();
                         }
                         else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
                         {
-                            MessageBox.Show("Delete Fail");
+                            FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                            fmE.lblError.Text = "Deleteing Fail! Please recheck entered information";
+                            fmE.ShowDialog();
                         }
                     }
 
@@ -425,7 +449,6 @@ namespace TicketSelling.UI.Configuration
             hidepassword.Visible = false;
             showpassword.Visible = true;
         }
-
 
        
     }
