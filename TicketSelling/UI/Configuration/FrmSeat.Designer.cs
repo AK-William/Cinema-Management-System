@@ -32,16 +32,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSeat));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSeat));
             this.tabcontrolSeat = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabSeatType = new System.Windows.Forms.TabPage();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvSeatType = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColIdSeatType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSeatTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSeatTypeNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDelSeatType = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnSeatTypeSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnSeatTypeUpdate = new Guna.UI2.WinForms.Guna2Button();
@@ -53,12 +58,6 @@
             this.tabSeat = new System.Windows.Forms.TabPage();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvSeat = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ColNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSeatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDelSeat = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ColTypeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblnote = new System.Windows.Forms.Label();
             this.txtSeatNote = new Guna.UI2.WinForms.Guna2TextBox();
@@ -74,11 +73,12 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColIdSeatType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSeatTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSeatTypeNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDelSeatType = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ColNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSeatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDelSeat = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ColTypeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabcontrolSeat.SuspendLayout();
             this.tabSeatType.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
@@ -214,6 +214,51 @@
             this.dgvSeatType.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvSeatType.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSeatType_CellContentClick);
             this.dgvSeatType.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSeatType_CellDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "RowNumber";
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn1.FillWeight = 37.70802F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "No";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // ColIdSeatType
+            // 
+            this.ColIdSeatType.DataPropertyName = "Id";
+            this.ColIdSeatType.HeaderText = "ID";
+            this.ColIdSeatType.Name = "ColIdSeatType";
+            this.ColIdSeatType.ReadOnly = true;
+            this.ColIdSeatType.Visible = false;
+            // 
+            // ColSeatTypeName
+            // 
+            this.ColSeatTypeName.DataPropertyName = "Name";
+            this.ColSeatTypeName.FillWeight = 85.67786F;
+            this.ColSeatTypeName.HeaderText = "Seat Name";
+            this.ColSeatTypeName.Name = "ColSeatTypeName";
+            this.ColSeatTypeName.ReadOnly = true;
+            // 
+            // ColSeatTypeNote
+            // 
+            this.ColSeatTypeNote.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColSeatTypeNote.DataPropertyName = "Note";
+            this.ColSeatTypeNote.FillWeight = 161.6986F;
+            this.ColSeatTypeNote.HeaderText = "Note";
+            this.ColSeatTypeNote.Name = "ColSeatTypeNote";
+            this.ColSeatTypeNote.ReadOnly = true;
+            // 
+            // ColDelSeatType
+            // 
+            this.ColDelSeatType.FillWeight = 52.48624F;
+            this.ColDelSeatType.HeaderText = "";
+            this.ColDelSeatType.Image = ((System.Drawing.Image)(resources.GetObject("ColDelSeatType.Image")));
+            this.ColDelSeatType.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColDelSeatType.Name = "ColDelSeatType";
+            this.ColDelSeatType.ReadOnly = true;
+            this.ColDelSeatType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // guna2Panel4
             // 
@@ -456,56 +501,6 @@
             this.dgvSeat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSeat_CellContentClick);
             this.dgvSeat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSeat_CellDoubleClick);
             // 
-            // ColNo
-            // 
-            this.ColNo.DataPropertyName = "RowNumber";
-            this.ColNo.FillWeight = 86.80939F;
-            this.ColNo.HeaderText = "No";
-            this.ColNo.Name = "ColNo";
-            this.ColNo.ReadOnly = true;
-            // 
-            // ColId
-            // 
-            this.ColId.DataPropertyName = "Id";
-            this.ColId.HeaderText = "ID";
-            this.ColId.Name = "ColId";
-            this.ColId.ReadOnly = true;
-            this.ColId.Visible = false;
-            // 
-            // ColSeatName
-            // 
-            this.ColSeatName.DataPropertyName = "Name";
-            this.ColSeatName.HeaderText = "Seat Name";
-            this.ColSeatName.Name = "ColSeatName";
-            this.ColSeatName.ReadOnly = true;
-            // 
-            // ColPrice
-            // 
-            this.ColPrice.DataPropertyName = "Price";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.ColPrice.DefaultCellStyle = dataGridViewCellStyle7;
-            this.ColPrice.HeaderText = "Price";
-            this.ColPrice.Name = "ColPrice";
-            this.ColPrice.ReadOnly = true;
-            // 
-            // ColDelSeat
-            // 
-            this.ColDelSeat.FillWeight = 50.76143F;
-            this.ColDelSeat.HeaderText = "";
-            this.ColDelSeat.Image = ((System.Drawing.Image)(resources.GetObject("ColDelSeat.Image")));
-            this.ColDelSeat.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ColDelSeat.Name = "ColDelSeat";
-            this.ColDelSeat.ReadOnly = true;
-            this.ColDelSeat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // ColTypeId
-            // 
-            this.ColTypeId.DataPropertyName = "SeatTypeId";
-            this.ColTypeId.HeaderText = "TypeID";
-            this.ColTypeId.Name = "ColTypeId";
-            this.ColTypeId.ReadOnly = true;
-            this.ColTypeId.Visible = false;
-            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.lblnote);
@@ -697,6 +692,7 @@
             this.txtSeatPrice.SelectedText = "";
             this.txtSeatPrice.Size = new System.Drawing.Size(381, 50);
             this.txtSeatPrice.TabIndex = 23;
+            this.txtSeatPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSeatPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSeatPrice_KeyPress);
             // 
             // txtNumberOfSeats
@@ -752,50 +748,55 @@
             this.dataGridViewImageColumn2.Visible = false;
             this.dataGridViewImageColumn2.Width = 104;
             // 
-            // dataGridViewTextBoxColumn1
+            // ColNo
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "RowNumber";
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn1.FillWeight = 37.70802F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "No";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.ColNo.DataPropertyName = "RowNumber";
+            this.ColNo.FillWeight = 86.80939F;
+            this.ColNo.HeaderText = "No";
+            this.ColNo.Name = "ColNo";
+            this.ColNo.ReadOnly = true;
             // 
-            // ColIdSeatType
+            // ColId
             // 
-            this.ColIdSeatType.DataPropertyName = "Id";
-            this.ColIdSeatType.HeaderText = "ID";
-            this.ColIdSeatType.Name = "ColIdSeatType";
-            this.ColIdSeatType.ReadOnly = true;
-            this.ColIdSeatType.Visible = false;
+            this.ColId.DataPropertyName = "Id";
+            this.ColId.HeaderText = "ID";
+            this.ColId.Name = "ColId";
+            this.ColId.ReadOnly = true;
+            this.ColId.Visible = false;
             // 
-            // ColSeatTypeName
+            // ColSeatName
             // 
-            this.ColSeatTypeName.DataPropertyName = "Name";
-            this.ColSeatTypeName.FillWeight = 85.67786F;
-            this.ColSeatTypeName.HeaderText = "Seat Name";
-            this.ColSeatTypeName.Name = "ColSeatTypeName";
-            this.ColSeatTypeName.ReadOnly = true;
+            this.ColSeatName.DataPropertyName = "Name";
+            this.ColSeatName.HeaderText = "Seat Name";
+            this.ColSeatName.Name = "ColSeatName";
+            this.ColSeatName.ReadOnly = true;
             // 
-            // ColSeatTypeNote
+            // ColPrice
             // 
-            this.ColSeatTypeNote.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColSeatTypeNote.DataPropertyName = "Note";
-            this.ColSeatTypeNote.FillWeight = 161.6986F;
-            this.ColSeatTypeNote.HeaderText = "Note";
-            this.ColSeatTypeNote.Name = "ColSeatTypeNote";
-            this.ColSeatTypeNote.ReadOnly = true;
+            this.ColPrice.DataPropertyName = "Price";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.ColPrice.DefaultCellStyle = dataGridViewCellStyle7;
+            this.ColPrice.HeaderText = "Price";
+            this.ColPrice.Name = "ColPrice";
+            this.ColPrice.ReadOnly = true;
             // 
-            // ColDelSeatType
+            // ColDelSeat
             // 
-            this.ColDelSeatType.FillWeight = 52.48624F;
-            this.ColDelSeatType.HeaderText = "";
-            this.ColDelSeatType.Image = ((System.Drawing.Image)(resources.GetObject("ColDelSeatType.Image")));
-            this.ColDelSeatType.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ColDelSeatType.Name = "ColDelSeatType";
-            this.ColDelSeatType.ReadOnly = true;
-            this.ColDelSeatType.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColDelSeat.FillWeight = 30F;
+            this.ColDelSeat.HeaderText = "";
+            this.ColDelSeat.Image = global::TicketSelling.Properties.Resources.delete;
+            this.ColDelSeat.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColDelSeat.Name = "ColDelSeat";
+            this.ColDelSeat.ReadOnly = true;
+            this.ColDelSeat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // ColTypeId
+            // 
+            this.ColTypeId.DataPropertyName = "SeatTypeId";
+            this.ColTypeId.HeaderText = "TypeID";
+            this.ColTypeId.Name = "ColTypeId";
+            this.ColTypeId.ReadOnly = true;
+            this.ColTypeId.Visible = false;
             // 
             // FrmSeat
             // 
@@ -839,12 +840,6 @@
         private System.Windows.Forms.Label lblSeatname;
         private System.Windows.Forms.Label lblnote;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColSeatName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrice;
-        private System.Windows.Forms.DataGridViewImageColumn ColDelSeat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColTypeId;
         private Guna.UI2.WinForms.Guna2Button btnSeatTypeSave;
         public Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         public System.Windows.Forms.TabPage tabSeatType;
@@ -863,5 +858,11 @@
         private Guna.UI2.WinForms.Guna2ComboBox cbSeatType;
         private Guna.UI2.WinForms.Guna2TextBox txtSeatNote;
         private Guna.UI2.WinForms.Guna2DataGridView dgvSeat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSeatName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrice;
+        private System.Windows.Forms.DataGridViewImageColumn ColDelSeat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTypeId;
     }
 }

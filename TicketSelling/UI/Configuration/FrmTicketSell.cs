@@ -144,12 +144,17 @@ namespace TicketSelling.UI.Configuration
                     var item = lstSeat[i];
                     Guna2Button btnSeat = new Guna2Button();
                     var res = lstSeatId.Where(x => x.Id == item.Id).FirstOrDefault(); //Color selection change 
+                    var res1 = lstCustomerSeat.Where(x => x.Id == item.Id).FirstOrDefault();
                     btnSeat.BorderThickness = 1;
                     btnSeat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
                     btnSeat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
                     btnSeat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
                     btnSeat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
                     btnSeat.FillColor = (res == null) ? originalColor : selectionColor;
+                    if (res1!=null)
+                    {
+                        btnSeat.FillColor = ExistColor;
+                    }
                     btnSeat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     btnSeat.ForeColor = System.Drawing.Color.Black;
                     btnSeat.Location = new System.Drawing.Point(X, Y);
@@ -192,6 +197,12 @@ namespace TicketSelling.UI.Configuration
             try
             {
                 Guna2Button btn = sender as Guna2Button;
+                if (btn.FillColor == ExistColor)
+                {
+                    FrmMessageBox.FrmWarning FrW = new FrmMessageBox.FrmWarning();
+                    FrW.lblWarning.Text = "This seat has been already bought";
+                    FrW.ShowDialog();
+                }
                 int id = Convert.ToInt32(((Guna2Button)sender).Tag);
                 int price = Convert.ToInt32(((Guna2Button)sender).Name);
                 if (btn.FillColor == selectionColor)

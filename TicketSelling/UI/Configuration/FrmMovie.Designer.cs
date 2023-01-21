@@ -94,17 +94,6 @@
             this.tabMovie = new System.Windows.Forms.TabPage();
             this.panelMoviedgv = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvMovie = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColIdMovie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMovieName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMovieCover = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ColCasts = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColRuntime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMovieType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMovieLink = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDelMovie = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ColMovieCoverString = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMovieTop = new Guna.UI2.WinForms.Guna2Panel();
             this.lbltrailerlink = new System.Windows.Forms.Label();
             this.txtMovieLink = new Guna.UI2.WinForms.Guna2TextBox();
@@ -125,6 +114,17 @@
             this.txtCasts = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.TabControlMovie = new Guna.UI2.WinForms.Guna2TabControl();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColIdMovie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMovieName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMovieCover = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ColCasts = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColRuntime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMovieType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMovieLink = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDelMovie = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ColMovieCoverString = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabScheduleTime.SuspendLayout();
             this.panelrightST.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvST)).BeginInit();
@@ -859,7 +859,7 @@
             dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvMovie.DefaultCellStyle = dataGridViewCellStyle19;
             this.dgvMovie.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMovie.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -868,7 +868,7 @@
             this.dgvMovie.Name = "dgvMovie";
             this.dgvMovie.ReadOnly = true;
             this.dgvMovie.RowHeadersVisible = false;
-            this.dgvMovie.RowHeadersWidth = 45;
+            this.dgvMovie.RowHeadersWidth = 50;
             dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvMovie.RowsDefaultCellStyle = dataGridViewCellStyle20;
             this.dgvMovie.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -898,122 +898,6 @@
             this.dgvMovie.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvMovie.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMovie_CellContentClick);
             this.dgvMovie.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMovie_CellDoubleClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "RowNumber";
-            this.dataGridViewTextBoxColumn1.FillWeight = 30.30549F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "No";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // ColIdMovie
-            // 
-            this.ColIdMovie.DataPropertyName = "Id";
-            this.ColIdMovie.HeaderText = "ID";
-            this.ColIdMovie.Name = "ColIdMovie";
-            this.ColIdMovie.ReadOnly = true;
-            this.ColIdMovie.Visible = false;
-            // 
-            // ColMovieName
-            // 
-            this.ColMovieName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColMovieName.DataPropertyName = "Name";
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMovieName.DefaultCellStyle = dataGridViewCellStyle13;
-            this.ColMovieName.FillWeight = 90.63343F;
-            this.ColMovieName.HeaderText = "Movie Name";
-            this.ColMovieName.Name = "ColMovieName";
-            this.ColMovieName.ReadOnly = true;
-            // 
-            // ColMovieCover
-            // 
-            this.ColMovieCover.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColMovieCover.DataPropertyName = "MovieCoverByte";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle14.NullValue")));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMovieCover.DefaultCellStyle = dataGridViewCellStyle14;
-            this.ColMovieCover.HeaderText = "Movie Cover";
-            this.ColMovieCover.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ColMovieCover.Name = "ColMovieCover";
-            this.ColMovieCover.ReadOnly = true;
-            this.ColMovieCover.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMovieCover.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // ColCasts
-            // 
-            this.ColCasts.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColCasts.DataPropertyName = "Casts";
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColCasts.DefaultCellStyle = dataGridViewCellStyle15;
-            this.ColCasts.FillWeight = 90.63343F;
-            this.ColCasts.HeaderText = "Casts";
-            this.ColCasts.Name = "ColCasts";
-            this.ColCasts.ReadOnly = true;
-            // 
-            // ColRuntime
-            // 
-            this.ColRuntime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColRuntime.DataPropertyName = "Runtime";
-            this.ColRuntime.FillWeight = 60F;
-            this.ColRuntime.HeaderText = "Runtime";
-            this.ColRuntime.Name = "ColRuntime";
-            this.ColRuntime.ReadOnly = true;
-            // 
-            // ColMovieType
-            // 
-            this.ColMovieType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColMovieType.DataPropertyName = "MovieType";
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMovieType.DefaultCellStyle = dataGridViewCellStyle16;
-            this.ColMovieType.FillWeight = 90.63343F;
-            this.ColMovieType.HeaderText = "Movie Type";
-            this.ColMovieType.Name = "ColMovieType";
-            this.ColMovieType.ReadOnly = true;
-            // 
-            // ColDescription
-            // 
-            this.ColDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColDescription.DataPropertyName = "Description";
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColDescription.DefaultCellStyle = dataGridViewCellStyle17;
-            this.ColDescription.FillWeight = 90.63343F;
-            this.ColDescription.HeaderText = "Description";
-            this.ColDescription.Name = "ColDescription";
-            this.ColDescription.ReadOnly = true;
-            // 
-            // ColMovieLink
-            // 
-            this.ColMovieLink.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColMovieLink.DataPropertyName = "TrailerLink";
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMovieLink.DefaultCellStyle = dataGridViewCellStyle18;
-            this.ColMovieLink.FillWeight = 90.63343F;
-            this.ColMovieLink.HeaderText = "Trailer Link";
-            this.ColMovieLink.Name = "ColMovieLink";
-            this.ColMovieLink.ReadOnly = true;
-            // 
-            // ColDelMovie
-            // 
-            this.ColDelMovie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColDelMovie.FillWeight = 15F;
-            this.ColDelMovie.HeaderText = "";
-            this.ColDelMovie.Image = global::TicketSelling.Properties.Resources.delete;
-            this.ColDelMovie.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ColDelMovie.Name = "ColDelMovie";
-            this.ColDelMovie.ReadOnly = true;
-            this.ColDelMovie.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColDelMovie.ToolTipText = "Delete";
-            // 
-            // ColMovieCoverString
-            // 
-            this.ColMovieCoverString.DataPropertyName = "MovieCover";
-            this.ColMovieCoverString.HeaderText = "MovieCoverString";
-            this.ColMovieCoverString.Name = "ColMovieCoverString";
-            this.ColMovieCoverString.ReadOnly = true;
-            this.ColMovieCoverString.Visible = false;
             // 
             // panelMovieTop
             // 
@@ -1063,7 +947,7 @@
             this.txtMovieLink.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMovieLink.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMovieLink.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMovieLink.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMovieLink.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMovieLink.ForeColor = System.Drawing.Color.Black;
             this.txtMovieLink.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMovieLink.IconLeft = global::TicketSelling.Properties.Resources.link_500px;
@@ -1100,7 +984,7 @@
             this.txtMovieType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMovieType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMovieType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMovieType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMovieType.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMovieType.ForeColor = System.Drawing.Color.Black;
             this.txtMovieType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMovieType.IconLeft = global::TicketSelling.Properties.Resources.british_movies_144px;
@@ -1111,7 +995,7 @@
             this.txtMovieType.PasswordChar = '\0';
             this.txtMovieType.PlaceholderText = "Enter Movie\'s genre";
             this.txtMovieType.SelectedText = "";
-            this.txtMovieType.Size = new System.Drawing.Size(328, 50);
+            this.txtMovieType.Size = new System.Drawing.Size(327, 50);
             this.txtMovieType.TabIndex = 103;
             this.txtMovieType.TextOffset = new System.Drawing.Point(10, 0);
             this.txtMovieType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtMovieType_KeyDown);
@@ -1245,7 +1129,7 @@
             this.txtDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescription.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescription.IconLeft = global::TicketSelling.Properties.Resources.note_480px;
@@ -1283,7 +1167,7 @@
             this.txtRuntime.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtRuntime.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtRuntime.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRuntime.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRuntime.Font = new System.Drawing.Font("Times New Roman", 13.8F);
             this.txtRuntime.ForeColor = System.Drawing.Color.Black;
             this.txtRuntime.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRuntime.IconLeft = global::TicketSelling.Properties.Resources.clock_512px;
@@ -1292,7 +1176,7 @@
             this.txtRuntime.Margin = new System.Windows.Forms.Padding(5);
             this.txtRuntime.Name = "txtRuntime";
             this.txtRuntime.PasswordChar = '\0';
-            this.txtRuntime.PlaceholderText = "Enter the length of the film";
+            this.txtRuntime.PlaceholderText = "Enter duration of movie";
             this.txtRuntime.SelectedText = "";
             this.txtRuntime.Size = new System.Drawing.Size(322, 50);
             this.txtRuntime.TabIndex = 102;
@@ -1332,7 +1216,7 @@
             this.txtCasts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCasts.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCasts.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCasts.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCasts.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCasts.ForeColor = System.Drawing.Color.Black;
             this.txtCasts.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCasts.IconLeft = global::TicketSelling.Properties.Resources.team_480px;
@@ -1359,7 +1243,7 @@
             this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.Black;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.IconLeft = global::TicketSelling.Properties.Resources.movie_500px;
@@ -1409,6 +1293,126 @@
             this.TabControlMovie.TabMenuBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
             this.TabControlMovie.TabMenuOrientation = Guna.UI2.WinForms.TabMenuOrientation.HorizontalTop;
             this.TabControlMovie.Click += new System.EventHandler(this.TabControlMovie_Click);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "RowNumber";
+            this.dataGridViewTextBoxColumn1.FillWeight = 30.30549F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "No";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // ColIdMovie
+            // 
+            this.ColIdMovie.DataPropertyName = "Id";
+            this.ColIdMovie.HeaderText = "ID";
+            this.ColIdMovie.Name = "ColIdMovie";
+            this.ColIdMovie.ReadOnly = true;
+            this.ColIdMovie.Visible = false;
+            // 
+            // ColMovieName
+            // 
+            this.ColMovieName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColMovieName.DataPropertyName = "Name";
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColMovieName.DefaultCellStyle = dataGridViewCellStyle13;
+            this.ColMovieName.FillWeight = 90.63343F;
+            this.ColMovieName.HeaderText = "Movie Name";
+            this.ColMovieName.Name = "ColMovieName";
+            this.ColMovieName.ReadOnly = true;
+            this.ColMovieName.Width = 165;
+            // 
+            // ColMovieCover
+            // 
+            this.ColMovieCover.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColMovieCover.DataPropertyName = "MovieCoverByte";
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle14.NullValue")));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColMovieCover.DefaultCellStyle = dataGridViewCellStyle14;
+            this.ColMovieCover.HeaderText = "Movie Cover";
+            this.ColMovieCover.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColMovieCover.Name = "ColMovieCover";
+            this.ColMovieCover.ReadOnly = true;
+            this.ColMovieCover.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColMovieCover.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColMovieCover.Width = 167;
+            // 
+            // ColCasts
+            // 
+            this.ColCasts.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColCasts.DataPropertyName = "Casts";
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColCasts.DefaultCellStyle = dataGridViewCellStyle15;
+            this.ColCasts.FillWeight = 90.63343F;
+            this.ColCasts.HeaderText = "Casts";
+            this.ColCasts.Name = "ColCasts";
+            this.ColCasts.ReadOnly = true;
+            // 
+            // ColRuntime
+            // 
+            this.ColRuntime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColRuntime.DataPropertyName = "Runtime";
+            this.ColRuntime.FillWeight = 60F;
+            this.ColRuntime.HeaderText = "Runtime";
+            this.ColRuntime.Name = "ColRuntime";
+            this.ColRuntime.ReadOnly = true;
+            this.ColRuntime.Width = 122;
+            // 
+            // ColMovieType
+            // 
+            this.ColMovieType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColMovieType.DataPropertyName = "MovieType";
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColMovieType.DefaultCellStyle = dataGridViewCellStyle16;
+            this.ColMovieType.FillWeight = 90.63343F;
+            this.ColMovieType.HeaderText = "Movie Type";
+            this.ColMovieType.Name = "ColMovieType";
+            this.ColMovieType.ReadOnly = true;
+            this.ColMovieType.Width = 155;
+            // 
+            // ColDescription
+            // 
+            this.ColDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColDescription.DataPropertyName = "Description";
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColDescription.DefaultCellStyle = dataGridViewCellStyle17;
+            this.ColDescription.FillWeight = 90.63343F;
+            this.ColDescription.HeaderText = "Description";
+            this.ColDescription.Name = "ColDescription";
+            this.ColDescription.ReadOnly = true;
+            // 
+            // ColMovieLink
+            // 
+            this.ColMovieLink.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColMovieLink.DataPropertyName = "TrailerLink";
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColMovieLink.DefaultCellStyle = dataGridViewCellStyle18;
+            this.ColMovieLink.FillWeight = 80F;
+            this.ColMovieLink.HeaderText = "Trailer Link";
+            this.ColMovieLink.Name = "ColMovieLink";
+            this.ColMovieLink.ReadOnly = true;
+            // 
+            // ColDelMovie
+            // 
+            this.ColDelMovie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColDelMovie.FillWeight = 15F;
+            this.ColDelMovie.HeaderText = "";
+            this.ColDelMovie.Image = global::TicketSelling.Properties.Resources.delete;
+            this.ColDelMovie.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColDelMovie.Name = "ColDelMovie";
+            this.ColDelMovie.ReadOnly = true;
+            this.ColDelMovie.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColDelMovie.ToolTipText = "Delete";
+            // 
+            // ColMovieCoverString
+            // 
+            this.ColMovieCoverString.DataPropertyName = "MovieCover";
+            this.ColMovieCoverString.HeaderText = "MovieCoverString";
+            this.ColMovieCoverString.Name = "ColMovieCoverString";
+            this.ColMovieCoverString.ReadOnly = true;
+            this.ColMovieCoverString.Visible = false;
             // 
             // FrmMovie
             // 
