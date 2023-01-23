@@ -61,6 +61,14 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnAccount.IconColor = Color.FromArgb(0, 120, 215);
                     frmmain.accountimage.IconColor = Color.FromArgb(0, 120, 215);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(0, 120, 215);
+                    frmmain.pbLochmara.Visible = true;
+                    frmmain.pbCeriseRed.Visible = false;
+                    frmmain.pbJava.Visible = false;
+                    frmmain.pbSeance.Visible = false;
+                    frmmain.pbCuttySark.Visible = false;
+                    frmmain.pbMalachite.Visible = false;
+                    frmmain.pbCoral.Visible = false;
+                    frmmain.pbCardinelRed.Visible = false;
                     break;
 
                 case 1:
@@ -77,6 +85,14 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnAccount.IconColor = Color.FromArgb(253, 73, 131);
                     frmmain.accountimage.IconColor = Color.FromArgb(253, 73, 131);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(253, 73, 131);
+                    frmmain.pbLochmara.Visible = false;
+                    frmmain.pbCeriseRed.Visible = true;
+                    frmmain.pbJava.Visible = false;
+                    frmmain.pbSeance.Visible = false;
+                    frmmain.pbCuttySark.Visible = false;
+                    frmmain.pbMalachite.Visible = false;
+                    frmmain.pbCoral.Visible = false;
+                    frmmain.pbCardinelRed.Visible = false;
                     break;
 
                 case 2:
@@ -93,6 +109,14 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnAccount.IconColor = Color.FromArgb(27, 182, 211);
                     frmmain.accountimage.IconColor = Color.FromArgb(27, 182, 211);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(27, 182, 211);
+                    frmmain.pbLochmara.Visible = false;
+                    frmmain.pbCeriseRed.Visible = false;
+                    frmmain.pbJava.Visible = true;
+                    frmmain.pbSeance.Visible = false;
+                    frmmain.pbCuttySark.Visible = false;
+                    frmmain.pbMalachite.Visible = false;
+                    frmmain.pbCoral.Visible = false;
+                    frmmain.pbCardinelRed.Visible = false;
                     break;
                     
                 case 3:
@@ -109,6 +133,14 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnAccount.IconColor = Color.FromArgb(123, 31, 162);
                     frmmain.accountimage.IconColor = Color.FromArgb(123, 31, 162);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(123, 31, 162);
+                    frmmain.pbLochmara.Visible = false;
+                    frmmain.pbCeriseRed.Visible = false;
+                    frmmain.pbJava.Visible = false;
+                    frmmain.pbSeance.Visible = true;
+                    frmmain.pbCuttySark.Visible = false;
+                    frmmain.pbMalachite.Visible = false;
+                    frmmain.pbCoral.Visible = false;
+                    frmmain.pbCardinelRed.Visible = false;
                     break;
                     
                 case 4:
@@ -125,6 +157,14 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnAccount.IconColor = Color.FromArgb(84, 110, 122);
                     frmmain.accountimage.IconColor = Color.FromArgb(84, 110, 122);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(84, 110, 122);
+                    frmmain.pbLochmara.Visible = false;
+                    frmmain.pbCeriseRed.Visible = false;
+                    frmmain.pbJava.Visible = false;
+                    frmmain.pbSeance.Visible = false;
+                    frmmain.pbCuttySark.Visible = true;
+                    frmmain.pbMalachite.Visible = false;
+                    frmmain.pbCoral.Visible = false;
+                    frmmain.pbCardinelRed.Visible = false;
                     break;
 
                 case 5:
@@ -141,6 +181,14 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnAccount.IconColor = Color.FromArgb(0, 200, 83);
                     frmmain.accountimage.IconColor = Color.FromArgb(0, 200, 83);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(0, 200, 83);
+                    frmmain.pbLochmara.Visible = false;
+                    frmmain.pbCeriseRed.Visible = false;
+                    frmmain.pbJava.Visible = false;
+                    frmmain.pbSeance.Visible = false;
+                    frmmain.pbCuttySark.Visible = false;
+                    frmmain.pbMalachite.Visible = true;
+                    frmmain.pbCoral.Visible = false;
+                    frmmain.pbCardinelRed.Visible = false;
                     break;
 
                 case 6:
@@ -157,6 +205,14 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnAccount.IconColor = Color.FromArgb(217, 115, 65);
                     frmmain.accountimage.IconColor = Color.FromArgb(217, 115, 65);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(217, 115, 65);
+                    frmmain.pbLochmara.Visible = false;
+                    frmmain.pbCeriseRed.Visible = false;
+                    frmmain.pbJava.Visible = false;
+                    frmmain.pbSeance.Visible = false;
+                    frmmain.pbCuttySark.Visible = false;
+                    frmmain.pbMalachite.Visible = false;
+                    frmmain.pbCoral.Visible = true;
+                    frmmain.pbCardinelRed.Visible = false;
                     break;
 
                 case 7:
@@ -173,6 +229,14 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnAccount.IconColor = Color.FromArgb(196, 30, 58);
                     frmmain.accountimage.IconColor = Color.FromArgb(196, 30, 58);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(196, 30, 58);
+                    frmmain.pbLochmara.Visible = false;
+                    frmmain.pbCeriseRed.Visible = false;
+                    frmmain.pbJava.Visible = false;
+                    frmmain.pbSeance.Visible = false;
+                    frmmain.pbCuttySark.Visible = false;
+                    frmmain.pbMalachite.Visible = false;
+                    frmmain.pbCoral.Visible = false;
+                    frmmain.pbCardinelRed.Visible = true;
                     break;
             }
         }

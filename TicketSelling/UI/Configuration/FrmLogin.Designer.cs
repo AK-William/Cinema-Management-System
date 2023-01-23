@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.chkSP = new Guna.UI2.WinForms.Guna2CheckBox();
             this.btnLogin = new FontAwesome.Sharp.IconButton();
@@ -38,31 +40,66 @@
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2Panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackgroundImage = global::TicketSelling.Properties.Resources.gradient;
             this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(31)))), ((int)(((byte)(162)))));
             this.guna2Panel1.BorderRadius = 2;
             this.guna2Panel1.BorderThickness = 2;
-            this.guna2Panel1.Controls.Add(this.guna2Panel2);
-            this.guna2Panel1.Controls.Add(this.btnExit);
+            this.guna2Panel1.Controls.Add(this.guna2Panel3);
+            this.guna2Panel1.Controls.Add(this.guna2Panel4);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(859, 644);
+            this.guna2Panel1.Size = new System.Drawing.Size(791, 644);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Controls.Add(this.btnExit);
+            this.guna2Panel3.Controls.Add(this.guna2Panel2);
+            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel3.Location = new System.Drawing.Point(326, 0);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(465, 644);
+            this.guna2Panel3.TabIndex = 17;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnExit.HoverState.Image = global::TicketSelling.Properties.Resources.cancel_512px;
+            this.btnExit.HoverState.ImageSize = new System.Drawing.Size(47, 47);
+            this.btnExit.Image = global::TicketSelling.Properties.Resources.cancel_480px;
+            this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnExit.ImageRotate = 0F;
+            this.btnExit.ImageSize = new System.Drawing.Size(45, 45);
+            this.btnExit.Location = new System.Drawing.Point(413, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.PressedState.Image = global::TicketSelling.Properties.Resources.cancel_480px;
+            this.btnExit.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btnExit.Size = new System.Drawing.Size(50, 50);
+            this.btnExit.TabIndex = 15;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2Panel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(31)))), ((int)(((byte)(162)))));
+            this.guna2Panel2.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.guna2Panel2.BorderThickness = 2;
             this.guna2Panel2.Controls.Add(this.chkSP);
             this.guna2Panel2.Controls.Add(this.btnLogin);
@@ -72,8 +109,10 @@
             this.guna2Panel2.Controls.Add(this.txtUsername);
             this.guna2Panel2.Controls.Add(this.label5);
             this.guna2Panel2.Controls.Add(this.label6);
-            this.guna2Panel2.Location = new System.Drawing.Point(232, 62);
+            this.guna2Panel2.Location = new System.Drawing.Point(35, 66);
             this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Color = System.Drawing.SystemColors.MenuHighlight;
+            this.guna2Panel2.ShadowDecoration.Enabled = true;
             this.guna2Panel2.Size = new System.Drawing.Size(397, 526);
             this.guna2Panel2.TabIndex = 16;
             // 
@@ -193,7 +232,7 @@
             this.txtUsername.IconLeft = global::TicketSelling.Properties.Resources.person_480px;
             this.txtUsername.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtUsername.Location = new System.Drawing.Point(50, 233);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderText = "Enter your username";
@@ -226,30 +265,33 @@
             this.label6.TabIndex = 80;
             this.label6.Text = "LOGIN";
             // 
-            // btnExit
+            // guna2Panel4
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnExit.HoverState.Image = global::TicketSelling.Properties.Resources.cancel_512px;
-            this.btnExit.HoverState.ImageSize = new System.Drawing.Size(47, 47);
-            this.btnExit.Image = global::TicketSelling.Properties.Resources.cancel_480px;
-            this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnExit.ImageRotate = 0F;
-            this.btnExit.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnExit.Location = new System.Drawing.Point(807, 2);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.PressedState.Image = global::TicketSelling.Properties.Resources.cancel_480px;
-            this.btnExit.PressedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnExit.Size = new System.Drawing.Size(50, 50);
-            this.btnExit.TabIndex = 15;
-            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            this.guna2Panel4.Controls.Add(this.pictureBox2);
+            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.guna2Panel4.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(326, 644);
+            this.guna2Panel4.TabIndex = 18;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::TicketSelling.Properties.Resources.POPCORN_PLACE;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 149);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(289, 346);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 88;
+            this.pictureBox2.TabStop = false;
             // 
             // FrmLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(859, 644);
+            this.ClientSize = new System.Drawing.Size(791, 644);
             this.ControlBox = false;
             this.Controls.Add(this.guna2Panel1);
             this.DoubleBuffered = true;
@@ -261,9 +303,12 @@
             this.Text = "FrmLogin";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2Panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -281,5 +326,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

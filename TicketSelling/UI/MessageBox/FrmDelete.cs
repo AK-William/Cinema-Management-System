@@ -26,18 +26,38 @@ namespace TicketSelling.UI.FrmMessageBox
         }
 
         #endregion
-        public FrmDelete()
+
+        string strMessage = "";
+        string strTitle = "";
+        public bool isYesOrNo;
+        bool SystemErrorORUserError;
+
+        public FrmDelete(string message, string title, bool systemErrorORUserError = false)
         {
             InitializeComponent();
+            strMessage = message;
+            SystemErrorORUserError = systemErrorORUserError;
         }
 
         private void BtnDeleteCancel_Click(object sender, EventArgs e)
         {
+            isYesOrNo = false;
             this.Close();
         }
         public void show()
         {
 
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            isYesOrNo = true;
+            this.Close();
+        }
+
+        private void FrmDelete_Load(object sender, EventArgs e)
+        {
+            label2.Text = strMessage;
         }
     }
 }

@@ -21,21 +21,31 @@ namespace TicketSelling.Entity
         public List<SaleDetail> lstSaleDetail { get; set; }
 
     }
-    
+
     public class SaleDetail
     {
         public int Id { get; set; }
         public int HeadId { get; set; }
+        public int SeatTypeId { get; set; }
         public int SeatId { get; set; }
         public int Price { get; set; }
 
+    }
+
+    public class SaleReport
+    {
+        public string MovieName { get; set; }
+        public DateTime MovieDate { get; set; }
+        public string MovieTime { get; set; }
+        public string SeatName { get; set; }
+        public int Price { get; set; }
     }
 
     public class ResSale
     {
         public MessageEntity MessageEntity { get; set; }
         public List<SaleHead> lstSale { get; set; }
-
         public List<SaleDetail> lstSaleDetail { get; set; }
+        public List<SaleReport> lstSaleReport { get; set; }
     }
 }

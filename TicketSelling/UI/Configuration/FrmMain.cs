@@ -11,8 +11,9 @@ namespace TicketSelling.UI.Configuration
     {
         private int borderSize = 2;
         private Size formSize;
+        int RoleId = 0;
 
-        public FrmMain()
+        public FrmMain(int _RoleId)
         {
             InitializeComponent();
             CollapseMenu();
@@ -20,6 +21,7 @@ namespace TicketSelling.UI.Configuration
             txtLoginNameForMain.Text = FrmLogin.user;
             this.Padding = new Padding(borderSize);//Border size
             //this.BackColor = Color.FromArgb(51, 153, 255);//Border color
+            RoleId = _RoleId;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -38,7 +40,7 @@ namespace TicketSelling.UI.Configuration
             if (this.panelleft.Width > 200) //Collapse menu
             {
                 panelleft.Width = 100;
-                pictureBox1.Visible = false;
+                //pbLochmara.Visible = false;
                 btnMenu.Dock = DockStyle.Top;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
@@ -62,7 +64,7 @@ namespace TicketSelling.UI.Configuration
             else
             { //Expand menu
                 panelleft.Width = 330;
-                pictureBox1.Visible = true;
+               // pbLochmara.Visible = true;
                 btnMenu.Dock = DockStyle.None;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
@@ -192,6 +194,9 @@ namespace TicketSelling.UI.Configuration
             formSize = this.ClientSize;
             panelBody.Controls.Add(frmdashboard);
             frmdashboard.Dock = DockStyle.Fill;
+            pbLochmara.Visible = true;
+            panelConfiguration.Visible = (RoleId == 2) ? false : true;
+            panelEntry.Visible = (RoleId == 2) ? false : true;
         }
 
         private void FrmMain_Resize(object sender, EventArgs e)
@@ -286,6 +291,11 @@ namespace TicketSelling.UI.Configuration
                     lblTitleChildForm.Text = btnTicket.Tag.ToString();
                     iconCurrentChildForm.IconChar = btnTicket.IconChar;
                     break;
+                case "Report":
+                    frm = new Report.FrmTicketSellReportByDate();
+                    lblTitleChildForm.Text = btnReport.Tag.ToString();
+                    iconCurrentChildForm.IconChar = btnReport.IconChar;
+                    break;
             }
             panelBody.Controls.Add(frm);
             frm.Dock = DockStyle.Fill;
@@ -348,6 +358,7 @@ namespace TicketSelling.UI.Configuration
         {
             HideSubMenu();
             ActivateButton(sender); //menu highlight active button
+            MenuClick(sender, e);
         }
 
         private void BtnTicket_Click(object sender, EventArgs e)
@@ -506,7 +517,7 @@ namespace TicketSelling.UI.Configuration
                 }
                 else if (panelleft.BackColor == Color.FromArgb(217, 115, 65))
                 {
-                    currentBtn.BackColor = Color.FromArgb(217, 115, 65); 
+                    currentBtn.BackColor = Color.FromArgb(217, 115, 65);
                 }
                 else if (panelleft.BackColor == Color.FromArgb(196, 30, 58))
                 {
@@ -519,7 +530,7 @@ namespace TicketSelling.UI.Configuration
 
         #endregion
 
-       
+
     }
 }
 

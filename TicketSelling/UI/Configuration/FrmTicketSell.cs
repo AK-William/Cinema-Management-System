@@ -151,7 +151,7 @@ namespace TicketSelling.UI.Configuration
                     btnSeat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
                     btnSeat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
                     btnSeat.FillColor = (res == null) ? originalColor : selectionColor;
-                    if (res1!=null)
+                    if (res1 != null)
                     {
                         btnSeat.FillColor = ExistColor;
                     }
@@ -159,7 +159,7 @@ namespace TicketSelling.UI.Configuration
                     btnSeat.ForeColor = System.Drawing.Color.Black;
                     btnSeat.Location = new System.Drawing.Point(X, Y);
                     btnSeat.Name = item.Price.ToString();
-                    btnSeat.Tag = item.Id;
+                    btnSeat.Tag = item.SeatTypeId + "," + item.Id;
                     btnSeat.ShadowDecoration.BorderRadius = 3;
                     btnSeat.ShadowDecoration.Depth = 10;
                     btnSeat.ShadowDecoration.Enabled = true;
@@ -203,7 +203,11 @@ namespace TicketSelling.UI.Configuration
                     FrW.lblWarning.Text = "This seat has been already bought";
                     FrW.ShowDialog();
                 }
-                int id = Convert.ToInt32(((Guna2Button)sender).Tag);
+                string IdAndTypeId = ((Guna2Button)sender).Tag.ToString();
+                string[] strArray = new string[2];
+                strArray = IdAndTypeId.Split(',');
+                int typeId = Convert.ToInt32(strArray[0]);
+                int id = Convert.ToInt32(strArray[1]);
                 int price = Convert.ToInt32(((Guna2Button)sender).Name);
                 if (btn.FillColor == selectionColor)
                 {
@@ -215,7 +219,7 @@ namespace TicketSelling.UI.Configuration
                 {
                     if (btn != null)
                     {
-                        lstSeatId.Add(new Seat() { Id = id, Price = price });
+                        lstSeatId.Add(new Seat() { SeatTypeId = typeId, Id = id, Price = price });
                     }
 
                 }
@@ -250,7 +254,7 @@ namespace TicketSelling.UI.Configuration
                 MessageBox.Show("Please choose seat!");
                 return;
             }
-            FrmTicketBuyerInformation frm = new FrmTicketBuyerInformation(lstSeatId,lstCustomerSeat, movieST);
+            FrmTicketBuyerInformation frm = new FrmTicketBuyerInformation(lstSeatId, lstCustomerSeat, movieST);
             frm.ShowDialog();
             GetSellingTicket();
         }
@@ -281,8 +285,8 @@ namespace TicketSelling.UI.Configuration
                     for (int i = 0; i < res.lstSaleDetail.Count; i++)
                     {
                         var item = res.lstSaleDetail[i];
-                        lstSeatId.Add(new Seat() { Id = item.SeatId, Price = item.Price });
-                        lstTmpCustomerSeat.Add(new Seat() { Id = item.SeatId, Price = item.Price });
+                        lstSeatId.Add(new Seat() { SeatTypeId = item.SeatTypeId, Id = item.SeatId, Price = item.Price });
+                        lstTmpCustomerSeat.Add(new Seat() { SeatTypeId = item.SeatTypeId, Id = item.SeatId, Price = item.Price });
                     }
                 }
                 lstCustomerSeat = lstTmpCustomerSeat;

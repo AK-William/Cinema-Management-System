@@ -12,6 +12,7 @@ using TicketSelling.Common;
 using TicketSelling.DAO.Entity;
 using System.IO;
 using System.Windows.Media.Imaging;
+using TicketSelling.UI.FrmMessageBox;
 
 namespace TicketSelling.UI.Configuration
 {
@@ -597,8 +598,9 @@ namespace TicketSelling.UI.Configuration
                     }
                     else
                     {
-                        DialogResult res = MessageBox.Show("Are you sure you want to Delete", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                        if (res == DialogResult.OK)
+                        FrmDelete frm = new FrmDelete("Are you sure you want to Delete?", "Delete", true);
+                        frm.ShowDialog();
+                        if (frm.isYesOrNo)
                         {
                             MessageEntity res1 = new MovieDao().DeleteMovie(Convert.ToInt32(dgvMovie.Rows[e.RowIndex].Cells["ColIdMovie"].Value));
                             if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
@@ -617,6 +619,32 @@ namespace TicketSelling.UI.Configuration
                             }
                         }
 
+                    }
+                }
+
+                else if (dgvMovie.Rows[e.RowIndex].Cells["ColFinish"].ColumnIndex == e.ColumnIndex) //To view data only that is not finished movie
+                {
+                    //DialogResult res = MessageBox.Show("Are you sure you want to finish", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    //if (res == DialogResult.OK)
+                    ConfirmMessageBox frm = new ConfirmMessageBox("Are you sure you want to Finish?", "OK", true);
+                    frm.ShowDialog();
+                    if (frm.isYesOrNo)
+                    {
+                        MessageEntity res1 = new MovieDao().MovieFinish(Convert.ToInt32(dgvMovie.Rows[e.RowIndex].Cells["ColIdMovie"].Value));
+                        if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
+                        {
+                            FrmMessageBox.FrmNormal fmE = new FrmMessageBox.FrmNormal();
+                            fmE.lblNormal.Text = "Movie Finished";
+                            fmE.ShowDialog();
+                            Reset();
+                            BindDgvMovie();
+                        }
+                        else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
+                        {
+                            FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                            fmE.lblError.Text = "Movie Finished Fail";
+                            fmE.ShowDialog();
+                        }
                     }
                 }
             }
@@ -760,7 +788,7 @@ namespace TicketSelling.UI.Configuration
         private List<Movie> LstMovieSD = new List<Movie>();
         private List<Movie> LstMovieST = new List<Movie>();
 
-        
+
         private void TabControlMovie_Click(object sender, EventArgs e)
         {
             if (LstMovieSD != null && LstMovieSD.Count > 0)
@@ -788,7 +816,7 @@ namespace TicketSelling.UI.Configuration
                 BindDgvMovieST();
             }
 
-            
+
         }
 
         private void CbSTName_SelectedIndexChanged(object sender, EventArgs e)
@@ -823,8 +851,9 @@ namespace TicketSelling.UI.Configuration
                     else
 
                     {
-                        DialogResult res = MessageBox.Show("Are you sure you want to Delete", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                        if (res == DialogResult.OK)
+                        FrmDelete frm = new FrmDelete("Are you sure you want to Delete?", "Delete", true);
+                        frm.ShowDialog();
+                        if (frm.isYesOrNo)
                         {
                             MessageEntity res1 = new MovieSDDao().DeleteMovieSD(Convert.ToInt32(dgvSD.Rows[e.RowIndex].Cells["ColMovieSDId"].Value));
                             if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
@@ -922,26 +951,38 @@ namespace TicketSelling.UI.Configuration
             {
                 if (dgvST.Rows[e.RowIndex].Cells["ColDelST"].ColumnIndex == e.ColumnIndex)
                 {
-                    DialogResult res = MessageBox.Show("Are you sure you want to Delete", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                    if (res == DialogResult.OK)
+                    int MovieCount = new MovieDao().CheckMovieTimeBySTId(Convert.ToInt32(dgvST.Rows[e.RowIndex].Cells["ColIDST"].Value)); //Control delete Movie time when ticket are selling
+                    if (MovieCount > 0)
                     {
-                        MessageEntity res1 = new MovieSTDao().DeleteMovieST(Convert.ToInt32(dgvST.Rows[e.RowIndex].Cells["ColIDST"].Value));
-                        if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Transaction Exists! This action cannot be done.";
+                        fmE.ShowDialog();
+                        return;
+                    }
+                    else
+
+                    {
+                        FrmDelete frm = new FrmDelete("Are you sure you want to Delete?", "Delete", true);
+                        frm.ShowDialog();
+                        if (frm.isYesOrNo)
                         {
-                            FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
-                            fmE.lblError.Text = "Delete successful";
-                            fmE.ShowDialog();
-                            ResetST();
-                            BindDgvMovieST();
-                        }
-                        else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
-                        {
-                            FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
-                            fmE.lblError.Text = "Delete Fail! Please recheck information";
-                            fmE.ShowDialog();
+                            MessageEntity res1 = new MovieSTDao().DeleteMovieST(Convert.ToInt32(dgvST.Rows[e.RowIndex].Cells["ColIDST"].Value));
+                            if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
+                            {
+                                FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                                fmE.lblError.Text = "Delete successful";
+                                fmE.ShowDialog();
+                                ResetST();
+                                BindDgvMovieST();
+                            }
+                            else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
+                            {
+                                FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                                fmE.lblError.Text = "Delete Fail! Please recheck information";
+                                fmE.ShowDialog();
+                            }
                         }
                     }
-
                 }
             }
             catch (Exception ex)

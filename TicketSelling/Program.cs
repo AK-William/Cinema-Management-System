@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TicketSelling.DAO;
 using TicketSelling.UI.Configuration;
+using TicketSelling.UI.Report;
 
 namespace TicketSelling
 {
@@ -19,7 +20,7 @@ namespace TicketSelling
             DbConnector.ConnectionString = "Data Source=LAPTOP-ENSCQA99;Initial Catalog=TicketSellingSystem;Integrated Security=True";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new FrmLogin()); 
         }
     }
 }

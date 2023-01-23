@@ -10,12 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TicketSelling.Common;
 using TicketSelling.DAO;
+using TicketSelling.DAO.Entity;
 
 namespace TicketSelling.UI.Configuration
 {
     public partial class FrmLogin : Form
     {
-       
+
 
         public FrmLogin()
         {
@@ -55,60 +56,37 @@ namespace TicketSelling.UI.Configuration
             Application.Exit();
         }
 
-        
+
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if (!CheckRequireFields()) return;
-            //    MessageEntity res = new UserDao().Login(new DAO.Entity.User()
-            //    {
-            //        Username = txtUsername.Text,
-            //        Password = txtPassword.Text
-            //    });
-            //    if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
-            //    {
-            //        user = txtUsername.Text;
-            //        MessageBox.Show(res.RespDesp);
-            //        FrmMain frm = new FrmMain();
-            //        frm.Show();
-            //        this.Hide();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show(res.RespDesp);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-
-            //}
-
-
             try
             {
+                int RoleId = 0;
                 if (!CheckRequireFields()) return;
-                MessageEntity res = new AdminDao().Login(new DAO.Entity.Admin()
+                ResAdmin res = new AdminDao().Login(new DAO.Entity.Admin()
                 {
                     Username = txtUsername.Text,
                     Password = txtPassword.Text
                 });
-                if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
+                if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
                     user = txtUsername.Text;
                     FrmMessageBox.FrmNormal fmN = new FrmMessageBox.FrmNormal();
-                    fmN.lblNormal.Text =res.RespDesp;
+                    fmN.lblNormal.Text = "Login Successful. Welcome!";
                     fmN.ShowDialog();
-                    FrmMain frm = new FrmMain();
+                    if (res.LstAdmin.Count > 0)
+                    {
+                        RoleId = res.LstAdmin[0].RoleId;
+                    }
+                    FrmMain frm = new FrmMain(RoleId);
                     frm.Show();
                     this.Hide();
                 }
                 else
                 {
                     FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
-                    fmE.lblError.Text = res.RespDesp;
+                    fmE.lblError.Text = "Invalid Username and Password";
                     fmE.ShowDialog();
                 }
             }
@@ -118,8 +96,6 @@ namespace TicketSelling.UI.Configuration
                 frmExMessage.lblExMessage.Text = ex.Message;
                 frmExMessage.ShowDialog();
             }
-
-
 
         }
 

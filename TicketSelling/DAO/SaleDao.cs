@@ -56,6 +56,7 @@ namespace TicketSelling.DAO
                     scom = new SqlCommand(ProcedureConstants.SaveSaleDetail, sqlConnection);
                     scom.CommandType = CommandType.Text;
                     scom.Parameters.AddWithValue("@HeadId", HeadId);
+                    scom.Parameters.AddWithValue("@SeatTypeId", item.SeatTypeId);
                     scom.Parameters.AddWithValue("@SeatId", item.SeatId);
                     scom.Parameters.AddWithValue("@Price", item.Price);
                     ds1 = new DataSet();
@@ -90,7 +91,6 @@ namespace TicketSelling.DAO
             }
         }
 
-
         public ResSale GetSellingTicket(int MovieId, DateTime MovieDate, int TimeId)
         {
             sqlConnection = DbConnector.Connect();
@@ -123,6 +123,7 @@ namespace TicketSelling.DAO
                     lst.Add(new SaleDetail
                     {
                         HeadId = Convert.ToInt32(dt.Rows[i]["HeadId"].ToString()),
+                        SeatTypeId = Convert.ToInt32(dt.Rows[i]["SeatTypeId"].ToString()),
                         SeatId = Convert.ToInt32(dt.Rows[i]["SeatId"].ToString()),
                         Price = Convert.ToInt32(dt.Rows[i]["Price"].ToString())
                     });
@@ -134,6 +135,61 @@ namespace TicketSelling.DAO
                         RespMessageType = CommonResponseMessage.ResSuccessType
                     },
                     lstSaleDetail = lst
+                };
+            }
+            catch (Exception ex)
+            {
+                _MessageEntity.RespCode = CommonResponseMessage.ExceptionErrorCode;
+                _MessageEntity.RespDesp = ex.Message;
+                _MessageEntity.RespMessageType = CommonResponseMessage.ResErrorType;
+                return new ResSale() { MessageEntity = _MessageEntity };
+            }
+        }
+
+        public ResSale GetSaleReportByDate(string str,int MovieId,DateTime StartDate, Nullable<DateTime> EndDate=null)
+        {
+            MessageEntity _MessageEntity = null;
+            sqlConnection = DbConnector.Connect();
+            try
+            {
+                scom = new SqlCommand(str, sqlConnection);
+                scom.CommandType = CommandType.Text;
+                if (StartDate != null && EndDate == null)
+                {
+                    scom.Parameters.AddWithValue("@StartDate", StartDate);
+                }
+                else
+                {
+                    scom.Parameters.AddWithValue("@StartDate", StartDate);
+                    scom.Parameters.AddWithValue("@EndDate", EndDate);
+                }
+                DataSet ds = new DataSet();
+                adapter = new SqlDataAdapter(scom);
+                adapter.Fill(ds);
+                sqlConnection.Close();
+                _MessageEntity = SqlDataSet.Check(ds, 1);
+                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
+                    return new ResSale() { MessageEntity = _MessageEntity };
+
+                DataTable dt = ds.Tables[0];
+                List<SaleReport> lst = new List<SaleReport>();
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    SaleReport item = new SaleReport();
+                    item.MovieName = dt.Rows[i]["MovieName"].ToString();
+                    item.MovieDate = Convert.ToDateTime(dt.Rows[i]["MovieDate"].ToString());
+                    item.MovieTime = dt.Rows[i]["MovieTime"].ToString();
+                    item.SeatName = dt.Rows[i]["SeatName"].ToString();
+                    item.Price = Convert.ToInt32(dt.Rows[i]["TotalPassenger"].ToString());
+                    lst.Add(item);
+                }
+                return new ResSale()
+                {
+                    MessageEntity = new MessageEntity()
+                    {
+                        RespMessageType = CommonResponseMessage.ResSuccessType
+                    },
+                    lstSaleReport = lst
                 };
             }
             catch (Exception ex)

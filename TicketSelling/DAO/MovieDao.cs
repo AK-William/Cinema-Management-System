@@ -177,6 +177,56 @@ namespace TicketSelling.DAO
             }
         }
 
+        public ResMovie GetMovieNameForReport()
+        {
+            sqlConnection = DbConnector.Connect();
+            if (sqlConnection == null)
+            {
+                return null;
+            }
+            MessageEntity _MessageEntity = null;
+            try
+            {
+                scom = new SqlCommand(ProcedureConstants.GetMovieNameForReport, sqlConnection);
+                scom.CommandType = CommandType.Text;
+                DataSet ds = new DataSet();
+                adapter = new SqlDataAdapter(scom);
+                adapter.Fill(ds);
+                sqlConnection.Close();
+
+                _MessageEntity = SqlDataSet.Check(ds, 1);
+                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
+                    return new ResMovie() { MessageEntity = _MessageEntity };
+
+                DataTable dt = ds.Tables[0];
+                List<Movie> lst = new List<Movie>();
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    lst.Add(new Movie
+                    {
+                        Id = Convert.ToInt32(dt.Rows[i]["Id"]),
+                        Name = dt.Rows[i]["Name"].ToString(),
+                    });
+                }
+                return new ResMovie()
+                {
+                    MessageEntity = new MessageEntity()
+                    {
+                        RespMessageType = CommonResponseMessage.ResSuccessType
+                    },
+                    LstMovie = lst
+                };
+            }
+            catch (Exception ex)
+            {
+                _MessageEntity.RespCode = CommonResponseMessage.ExceptionErrorCode;
+                _MessageEntity.RespDesp = ex.Message;
+                _MessageEntity.RespMessageType = CommonResponseMessage.ResErrorType;
+                return new ResMovie() { MessageEntity = _MessageEntity };
+            }
+        }
+
         public MessageEntity UpdateMovie(int UserID, Movie req)
         {
             sqlConnection = DbConnector.Connect();
@@ -272,6 +322,51 @@ namespace TicketSelling.DAO
                 return _MessageEntity;
             }
         }
+
+        public MessageEntity MovieFinish(int Id)
+        {
+            sqlConnection = DbConnector.Connect();
+            if (sqlConnection == null)
+            {
+                return null;
+            }
+            MessageEntity _MessageEntity = null;
+            try
+            {
+                scom = new SqlCommand(ProcedureConstants.MovieFinish, sqlConnection);
+                scom.CommandType = CommandType.Text;
+                scom.Parameters.AddWithValue("@Id", Id);
+                DataSet ds = new DataSet();
+                adapter = new SqlDataAdapter(scom);
+                adapter.Fill(ds);
+                sqlConnection.Close();
+                _MessageEntity = SqlDataSet.Check(ds, 2);
+                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
+                    return _MessageEntity;
+
+                DataTable dt = ds.Tables[1];
+                _MessageEntity = SqlDataTable.Check(dt, 1);
+                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
+                    return new MessageEntity() { RespCode = "001", RespDesp = "Delete Error!", RespMessageType = CommonResponseMessage.ResErrorType };
+
+                dt = ds.Tables[0];
+
+                return new MessageEntity()
+                {
+                    RespCode = dt.Rows[0]["RespCode"].ToString(),
+                    RespDesp = dt.Rows[0]["RespDesp"].ToString(),
+                    RespMessageType = dt.Rows[0]["RespMessageType"].ToString()
+                };
+            }
+            catch (Exception ex)
+            {
+                _MessageEntity.RespCode = CommonResponseMessage.ExceptionErrorCode;
+                _MessageEntity.RespDesp = ex.Message;
+                _MessageEntity.RespMessageType = CommonResponseMessage.ResErrorType;
+                return _MessageEntity;
+            }
+        }
+
 
         public ResMovie GetMovieNameById(int MovieId)
         {
@@ -431,6 +526,35 @@ namespace TicketSelling.DAO
                 return 0;
             }
         }
+
+        public int CheckMovieTimeBySTId(int Id)  //Control delete Movie time when ticket are selling
+        {
+            sqlConnection = DbConnector.Connect();
+            if (sqlConnection == null)
+            {
+                return 0;
+            }
+            MessageEntity _MessageEntity = null;
+            try
+            {
+                int MovieCount = 0;
+                scom = new SqlCommand(ProcedureConstants.GetMovieTimeCountById, sqlConnection);
+                scom.CommandType = CommandType.Text;
+                scom.Parameters.AddWithValue("@Id", Id);
+                DataSet ds = new DataSet();
+                adapter = new SqlDataAdapter(scom);
+                adapter.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                MovieCount = Convert.ToInt32(dt.Rows[0][0]);
+                sqlConnection.Close();
+                return MovieCount;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
 
         public ResMovie GetMovieName()
         {

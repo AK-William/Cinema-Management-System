@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using TicketSelling.Common;
 using TicketSelling.DAO.Entity;
 using System.Text.RegularExpressions;
+using TicketSelling.UI.FrmMessageBox;
 
 namespace TicketSelling.UI.Configuration
 {
@@ -186,7 +187,7 @@ namespace TicketSelling.UI.Configuration
                 if (res.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
                     FrmMessageBox.FrmNormal fmN = new FrmMessageBox.FrmNormal();
-                    fmN.lblNormal.Text = "Your data was saved!";
+                    fmN.lblNormal.Text = "New User is successfully added";
                     fmN.ShowDialog();
                     Reset();
                     BindDgvData();
@@ -402,8 +403,11 @@ namespace TicketSelling.UI.Configuration
             {
                 if (dgvStaff.Rows[e.RowIndex].Cells["ColDel"].ColumnIndex == e.ColumnIndex)
                 {
-                    DialogResult res = MessageBox.Show("Are you sure you want to Delete", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                    if (res == DialogResult.OK)
+                    //DialogResult res = MessageBox.Show("Are you sure you want to Delete", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    //if (res == DialogResult.OK)
+                    FrmDelete frm = new FrmDelete("Are you sure you want to Delete?", "Delete", true);
+                    frm.ShowDialog();
+                    if (frm.isYesOrNo)
                     {
                         MessageEntity res1 = new UserDao().DeleteUser(Convert.ToInt32(dgvStaff.Rows[e.RowIndex].Cells["ColId"].Value));
                         if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)

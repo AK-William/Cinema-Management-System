@@ -73,6 +73,7 @@ namespace TicketSelling.UI.Configuration
                 var item = lstSeat[i];
                 lstDetail.Add(new SaleDetail()
                 {
+                    SeatTypeId=item.SeatTypeId,
                     SeatId = item.Id,
                     Price = item.Price,
                 });

@@ -285,6 +285,34 @@ namespace TicketSelling.DAO
             } 
         }
 
+        public int CheckCustomerSeatById(int SeatTypeId)  //Control delete seat when ticket are selling
+        {
+            sqlConnection = DbConnector.Connect();
+            if (sqlConnection == null)
+            {
+                return 0;
+            }
+            MessageEntity _MessageEntity = null;
+            try
+            {
+                int SeatCount = 0;
+                scom = new SqlCommand(ProcedureConstants.GetCustomerSeatCountBySeatTypeId, sqlConnection);
+                scom.CommandType = CommandType.Text;
+                scom.Parameters.AddWithValue("@Id", SeatTypeId);
+                DataSet ds = new DataSet();
+                adapter = new SqlDataAdapter(scom);
+                adapter.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                SeatCount = Convert.ToInt32(dt.Rows[0][0]);
+                sqlConnection.Close();
+                return SeatCount;
+            }
+            catch
+            {
+                return 0;
+            }
+        }
+
     }
 }
 

@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using static TicketSelling.DAO.Entity.Role;
+using TicketSelling.UI.FrmMessageBox;
 
 namespace TicketSelling.UI.Configuration
 {
@@ -586,23 +587,35 @@ namespace TicketSelling.UI.Configuration
             {
                 if (dgvAdmin.Rows[e.RowIndex].Cells["ColDel"].ColumnIndex == e.ColumnIndex)
                 {
-                    DialogResult res = MessageBox.Show("Are you sure you want to Delete", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                    if (res == DialogResult.OK)
+                    FrmDelete frm = new FrmDelete("Are you sure you want to Delete?", "Delete",true);
+                    frm.ShowDialog();
+                    if (frm.isYesOrNo)
                     {
-                        MessageEntity res1 = new AdminDao().DeleteAdmin(Convert.ToInt32(dgvAdmin.Rows[e.RowIndex].Cells["ColId"].Value));
-                        if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
+                        bool IsDeleteUser = new AdminDao().CheckUserRoleById(Convert.ToInt32(dgvAdmin.Rows[e.RowIndex].Cells["ColId"].Value)); //Control delete when only one admin
+                        if (!IsDeleteUser)
                         {
                             FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
-                            fmE.lblError.Text = "Data have been deleted";
+                            fmE.lblError.Text = "System need at least one admin!";
                             fmE.ShowDialog();
-                            Reset();
-                            BindDgvAdmin();
+                            return;
                         }
-                        else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
+                        else
                         {
-                            FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
-                            fmE.lblError.Text = "Deleteing Fail! Please recheck entered information";
-                            fmE.ShowDialog();
+                            MessageEntity res1 = new AdminDao().DeleteAdmin(Convert.ToInt32(dgvAdmin.Rows[e.RowIndex].Cells["ColId"].Value));
+                            if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
+                            {
+                                FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                                fmE.lblError.Text = "Data have been deleted";
+                                fmE.ShowDialog();
+                                Reset();
+                                BindDgvAdmin();
+                            }
+                            else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
+                            {
+                                FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                                fmE.lblError.Text = "Deleteing Fail! Please recheck entered information";
+                                fmE.ShowDialog();
+                            }
                         }
                     }
 
@@ -755,7 +768,7 @@ namespace TicketSelling.UI.Configuration
 
         private void TxtAdminNRC_Leave(object sender, EventArgs e)
         {
-            string patternNRC = @"^([0-9]{1,2})\/([A-Z][a-z]|[A-Z][a-z][a-z])([A-Z][a-z]|[A-Z][a-z][a-z])([A-Z][a-z]|[A-Z][a-z][a-z])\([N,P,E]\)[0-9]{6}$";
+            string patternNRC = @"^([0-9]{1,2})\/([A-Z][A-Z]|[A-Z][A-Z][A-Z])([A-Z][A-Z]|[A-Z][A-Z][A-Z])([A-Z][A-Z]|[A-Z][A-Z][A-Z])\([N,P,E]\)[0-9]{6}$";
             if (Regex.IsMatch(txtAdminNRC.Text, patternNRC))
             {
                 errorProvider4.Clear();

@@ -229,12 +229,15 @@ namespace TicketSelling.Common
                                                     inner join TblSeatType ST on S.SeatTypeId = ST.Id
                                                     ORDER BY SeatTypeId";
 
+        public static string GetCustomerSeatCountBySeatTypeId = @"SELECT COUNT(Id) Count FROM  TblSaleDetail where SeatTypeId=@Id;";//Control delete seat when Ticket are assign
+
+
         #endregion
 
 
         #region dbAdmin
 
-        public static string SP_AdminSave = @"IF EXISTS (SELECT * FROM TblAdmin WHERE Name = @Name)
+        public static string SP_AdminSave = @"IF EXISTS (SELECT * FROM TblAdmin WHERE Username = @Username)
                                                     BEGIN
                                                       SELECT
                                                         '001' AS RespCode,
@@ -243,7 +246,7 @@ namespace TicketSelling.Common
                                                       SELECT
                                                         *
                                                       FROM TblAdmin
-                                                      WHERE Name = @Name
+                                                      WHERE Username = @Username
                                                     END
                                                     ELSE
                                                     BEGIN
@@ -269,7 +272,7 @@ namespace TicketSelling.Common
                                                       SELECT
                                                         *
                                                       FROM TblAdmin
-                                                      WHERE Name = @Name
+                                                      WHERE Username = @Username
                                                     END";
 
         public static string UpdateAdminPhoto = @"Update TblAdmin set Photo=@Photo where Id=@Id;
@@ -302,7 +305,7 @@ namespace TicketSelling.Common
                                                 INNER JOIN TblRole AS R
                                                 ON A.RoleId = R.Id";
 
-        public static string UpdateAdmin = @"IF EXISTS (SELECT * FROM TblAdmin WHERE Name = @Name
+        public static string UpdateAdmin = @"IF EXISTS (SELECT * FROM TblAdmin WHERE Username = @Username
                                                        AND Id != @Id)
                                                     BEGIN
                                                       SELECT
@@ -312,7 +315,7 @@ namespace TicketSelling.Common
                                                       SELECT
                                                         *
                                                       FROM TblAdmin
-                                                      WHERE Name = @Name
+                                                      WHERE Username = @Username
                                                     END
                                                     ELSE
                                                     BEGIN
@@ -338,7 +341,6 @@ namespace TicketSelling.Common
                                                       SELECT
                                                         *
                                                       FROM TblAdmin
-                                                      WHERE Name = @Name
                                                     END";
 
         public static string DeleteAdmin = @"DELETE TblAdmin WHERE Id = @Id; 
@@ -351,6 +353,9 @@ namespace TicketSelling.Common
                                                 FROM TblAdmin;";
 
         public static string GetAllRole = @"SELECT * FROM TblRole";
+
+        public static string CheckUserRoleAndCountById = @"SELECT Count(Id) FROM TBLAdmin WITH(NOLOCK) WHERE RoleId=1;
+                                                    SELECT RoleId FROM TblAdmin WHERE Id=@Id;";  //Control delete when only one admin
 
         #endregion
 
@@ -402,7 +407,7 @@ namespace TicketSelling.Common
                                                     WHERE  Id=@Id
                                                     ";
 
-        public static string GetAllMovie = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblMovie WITH (NOLOCK)";
+        public static string GetAllMovie = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblMovie WITH (NOLOCK) WHERE Finish IS NULL";
 
         public static string UpdateMovie = @"IF EXISTS (SELECT * FROM TblMovie WHERE Name = @Name
                                                        AND Id != @Id)
@@ -449,13 +454,26 @@ namespace TicketSelling.Common
                                                 *
                                                 FROM TblMovie;";
 
+        public static string MovieFinish = @"UPDATE TblMovie SET Finish='Finish' WHERE Id = @Id;
+                                                SELECT
+                                                '000' AS RespCode,
+                                                'Movie Finished Successful' AS RespDesp,
+                                                'MI' AS 'RespMessageType'
+                                                SELECT
+                                                *
+                                                FROM TblMovie;";
+
         public static string GetMovieCountByMovieId = @"SELECT COUNT(Id) Count FROM  TblScheduleMovie where MovieId=@MovieId;"; //Control delete Movie when date are assign
 
         public static string GetMovieDateCountByTimeId = @"SELECT COUNT(Id) Count FROM  TblScheduleMovieTime where MovieId=@MovieId;"; //Control delete date when time are assign
 
-        public static string GetMovieName = @"SELECT * FROM TblMovie";
+        public static string GetMovieName = @"SELECT * FROM TblMovie WITH(NOLOCK) WHERE Finish Is NULL";
 
         public static string GetMovieDateByDateForTicket = @"SELECT * FROM TblScheduleMovieTime where CONVERT(char(10),Date,111) = CONVERT(char(10),@Date,111)";
+
+        public static string GetMovieTimeCountById = @"SELECT COUNT(Id) Count FROM  TblSaleHead where MovieTime=@Id;"; //Control delete time when Ticket are selling
+
+        public static string GetMovieNameForReport = @"SELECT * FROM TblMovie WITH(NOLOCK)";
 
         #endregion
 
@@ -605,35 +623,6 @@ namespace TicketSelling.Common
                                                       WHERE MovieId = @MovieId
                                                     END";
 
-        //public static string UpdateMovieST = @"IF EXISTS (SELECT * FROM TblScheduleMovieTime WHERE MovieId != @MovieId)
-        //                                            BEGIN
-        //                                              SELECT
-        //                                                '001' AS RespCode,
-        //                                                'Duplicate Error' AS RespDesp,
-        //                                                'ME' AS 'RespMessageType'
-        //                                              SELECT
-        //                                                *
-        //                                              FROM TblScheduleMovieTime
-        //                                              WHERE MovieId = @MovieId
-        //                                            END
-        //                                            ELSE
-        //                                            BEGIN
-        //                                              UPDATE [dbo].[TblScheduleMovieTime]
-        //						   SET [MovieId] = @MovieId
-        //							  ,[Date] = @Date
-        //                                                      ,[Time]= @Time
-        //						 WHERE Id = @Id 
-
-        //                                              SELECT
-        //                                                '000' AS RespCode,
-        //                                                'Update Successful' AS RespDesp,
-        //                                                'MI' AS 'RespMessageType'
-        //                                              SELECT
-        //                                                *
-        //                                              FROM TblScheduleMovieTime
-        //                                              WHERE MovieId = @MovieId
-        //                                            END";
-
         public static string UpdateMovieST = @"IF EXISTS (SELECT * FROM TblScheduleMovieTime WHERE MovieId = @MovieId AND Time = @Time AND Date = @Date)
                                                     BEGIN
                                                       SELECT
@@ -684,10 +673,7 @@ namespace TicketSelling.Common
 
         public static string Login = @"IF EXISTS(SELECT * FROM TblAdmin where Username=@Username AND Password=@Password)
                                         BEGIN
-                                            SELECT
-                                            '000' AS RespCode,
-                                            'Login Successful. Welcome Back!' AS RespDesp,
-                                            'MI' AS 'RespMessageType'
+                                             SELECT * FROM TblAdmin  where Username=@Username AND Password=@Password;
                                         END
                                         ELSE
                                         BEGIN
@@ -702,7 +688,7 @@ namespace TicketSelling.Common
         #region dashboard
 
 
-        public static string GetAllMovieDB = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblMovie WITH (NOLOCK)";
+        public static string GetAllMovieDB = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblMovie WITH (NOLOCK) WHERE Finish IS NULL";
 
         #endregion
 
@@ -731,10 +717,12 @@ namespace TicketSelling.Common
 
         public static string SaveSaleDetail = @"INSERT INTO [dbo].[TblSaleDetail]
                                                 ([HeadId]
+                                                ,[SeatTypeId]
                                                 ,[SeatId]
                                                 ,[Price])
                                                 VALUES
                                                 (@HeadId
+                                                ,@SeatTypeId
                                                 ,@SeatId
                                                 ,@Price);
 
@@ -745,10 +733,30 @@ namespace TicketSelling.Common
 	
                                                 SELECT * FROM TblSaleDetail WHERE HeadId=@HeadId;";
 
-        public static string GetSellingTicket = @"SELECT HeadId,SeatId,Price FROM TblSaleHead H inner join TblSaleDetail D on H.Id = D.HeadId WHERE MovieId=@MovieId AND CONVERT(char(10),MovieDate,111)=CONVERT(char(10),@MovieDate,111) AND MovieTime=@MovieTime;";
+        public static string GetSellingTicket = @"SELECT HeadId,SeatTypeId,SeatId,Price FROM TblSaleHead H inner join TblSaleDetail D on H.Id = D.HeadId WHERE MovieId=@MovieId AND CONVERT(char(10),MovieDate,111)=CONVERT(char(10),@MovieDate,111) AND MovieTime=@MovieTime;";
 
         #endregion
 
+        #region Report
 
+        public static string SP_GetSaleReportByDate = @"SELECT
+                                                          M.Name MovieName,
+                                                          MovieDate,
+                                                          MT.Time MovieTime,
+                                                          S.Name SeatName,
+                                                          D.Price,
+                                                          TotalPrice
+                                                        FROM TblSaleHead H
+                                                        INNER JOIN TblSaleDetail D
+                                                          ON H.Id = D.HeadId
+                                                        INNER JOIN TblMovie M
+                                                          ON H.MovieId = M.Id
+                                                        INNER JOIN TblScheduleMovieTime MT
+                                                          ON H.MovieTime = MT.Id
+                                                        INNER JOIN TblSeat S
+                                                          ON D.SeatId = S.Id
+                                                        WHERE CONVERT(char(10), H.CreatedDate, 111) = CONVERT(char(10), @SellDate, 111) ORDER By MovieDate";
+
+        #endregion
     }
 }

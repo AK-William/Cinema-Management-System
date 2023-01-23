@@ -372,6 +372,9 @@
   <data name="&gt;&gt;labelPhoto.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="pictureBoxAdminPhoto.ErrorImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="pictureBoxAdminPhoto.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1026,6 +1029,9 @@
   <data name="Coluserrole.HeaderText" xml:space="preserve">
     <value>Role</value>
   </data>
+  <data name="Coluserrole.Width" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
   <metadata name="RoleId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1038,7 +1044,7 @@
   <metadata name="ColAdminPhoto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="dataGridViewCellStyle4.NullValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="dataGridViewCellStyle5.NullValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         Qk32AgAAAAAAADYAAAAoAAAADgAAABAAAAABABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEgoTGw8bGw8bGw8bGw8bGw8bGw8bG
@@ -1064,6 +1070,9 @@
   <data name="ColAdminUsername.HeaderText" xml:space="preserve">
     <value>Username</value>
   </data>
+  <data name="ColAdminUsername.Width" type="System.Int32, mscorlib">
+    <value>152</value>
+  </data>
   <metadata name="ColAdminPassword.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1079,17 +1088,26 @@
   <data name="ColAdminGmail.HeaderText" xml:space="preserve">
     <value>Gmail</value>
   </data>
+  <data name="ColAdminGmail.Width" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
   <metadata name="ColAdminPhoneNumber.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="ColAdminPhoneNumber.HeaderText" xml:space="preserve">
     <value>Phone</value>
   </data>
+  <data name="ColAdminPhoneNumber.Width" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
   <metadata name="ColAdminNRC.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="ColAdminNRC.HeaderText" xml:space="preserve">
     <value>NRC</value>
+  </data>
+  <data name="ColAdminNRC.Width" type="System.Int32, mscorlib">
+    <value>93</value>
   </data>
   <metadata name="ColAdminAddress.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1103,11 +1121,17 @@
   <data name="ColAdminCity.HeaderText" xml:space="preserve">
     <value>City</value>
   </data>
+  <data name="ColAdminCity.Width" type="System.Int32, mscorlib">
+    <value>81</value>
+  </data>
   <metadata name="ColAdminPostcode.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="ColAdminPostcode.HeaderText" xml:space="preserve">
     <value>Postcode</value>
+  </data>
+  <data name="ColAdminPostcode.Width" type="System.Int32, mscorlib">
+    <value>143</value>
   </data>
   <metadata name="ColDel.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1227,6 +1251,30 @@
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>1180, 668</value>
   </data>
+  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
+    <value>errorProvider1</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorProvider2.Name" xml:space="preserve">
+    <value>errorProvider2</value>
+  </data>
+  <data name="&gt;&gt;errorProvider2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorProvider3.Name" xml:space="preserve">
+    <value>errorProvider3</value>
+  </data>
+  <data name="&gt;&gt;errorProvider3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorProvider4.Name" xml:space="preserve">
+    <value>errorProvider4</value>
+  </data>
+  <data name="&gt;&gt;errorProvider4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;ColNo.Name" xml:space="preserve">
     <value>ColNo</value>
   </data>
@@ -1316,30 +1364,6 @@
   </data>
   <data name="&gt;&gt;ColAdminPhotoString.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
-    <value>errorProvider1</value>
-  </data>
-  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;errorProvider2.Name" xml:space="preserve">
-    <value>errorProvider2</value>
-  </data>
-  <data name="&gt;&gt;errorProvider2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;errorProvider3.Name" xml:space="preserve">
-    <value>errorProvider3</value>
-  </data>
-  <data name="&gt;&gt;errorProvider3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;errorProvider4.Name" xml:space="preserve">
-    <value>errorProvider4</value>
-  </data>
-  <data name="&gt;&gt;errorProvider4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataGridViewImageColumn1.Name" xml:space="preserve">
     <value>dataGridViewImageColumn1</value>

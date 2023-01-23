@@ -103,6 +103,16 @@ namespace TicketSelling.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap approval_480px {
+            get {
+                object obj = ResourceManager.GetObject("approval_480px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap beautiful_color_gradients_backgrounds_076_premium_dark {
             get {
                 object obj = ResourceManager.GetObject("beautiful-color-gradients-backgrounds-076-premium-dark", resourceCulture);
@@ -146,6 +156,16 @@ namespace TicketSelling.Properties {
         internal static System.Drawing.Bitmap cancel_512px_white {
             get {
                 object obj = ResourceManager.GetObject("cancel_512px white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checked_checkbox_512px {
+            get {
+                object obj = ResourceManager.GetObject("checked_checkbox_512px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -383,6 +403,16 @@ namespace TicketSelling.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Magnetic_Card_500px {
             get {
                 object obj = ResourceManager.GetObject("Magnetic Card_500px", resourceCulture);
@@ -556,6 +586,96 @@ namespace TicketSelling.Properties {
         internal static System.Drawing.Bitmap phone_512px {
             get {
                 object obj = ResourceManager.GetObject("phone_512px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap popcorn_256px {
+            get {
+                object obj = ResourceManager.GetObject("popcorn_256px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap POPCORN_PLACE {
+            get {
+                object obj = ResourceManager.GetObject("POPCORN PLACE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap POPCORN_PLACE_Cardinel_Red {
+            get {
+                object obj = ResourceManager.GetObject("POPCORN PLACE Cardinel Red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap POPCORN_PLACE_Cerise_Red {
+            get {
+                object obj = ResourceManager.GetObject("POPCORN PLACE Cerise Red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap POPCORN_PLACE_Coral {
+            get {
+                object obj = ResourceManager.GetObject("POPCORN PLACE Coral", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap POPCORN_PLACE_Cutty_Sark {
+            get {
+                object obj = ResourceManager.GetObject("POPCORN PLACE Cutty Sark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap POPCORN_PLACE_Java {
+            get {
+                object obj = ResourceManager.GetObject("POPCORN PLACE Java", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap POPCORN_PLACE_Malachite {
+            get {
+                object obj = ResourceManager.GetObject("POPCORN PLACE Malachite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap POPCORN_PLACE_Seance {
+            get {
+                object obj = ResourceManager.GetObject("POPCORN PLACE Seance", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

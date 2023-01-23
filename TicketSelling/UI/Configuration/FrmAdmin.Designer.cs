@@ -32,12 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdmin));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.labelRole = new System.Windows.Forms.Label();
             this.cbuserrole = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -56,6 +61,10 @@
             this.labelName = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvAdmin = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.ColNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAdminName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,10 +80,6 @@
             this.ColAdminCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAdminPostcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAdminPhotoString = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.hidepassword = new Guna.UI2.WinForms.Guna2Button();
             this.showpassword = new Guna.UI2.WinForms.Guna2Button();
@@ -285,14 +290,14 @@
             this.ColAdminPostcode,
             this.ColDel,
             this.ColAdminPhotoString});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAdmin.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAdmin.DefaultCellStyle = dataGridViewCellStyle13;
             this.dgvAdmin.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAdmin.Name = "dgvAdmin";
             this.dgvAdmin.ReadOnly = true;
@@ -322,6 +327,22 @@
             this.dgvAdmin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAdmin_CellContentClick);
             this.dgvAdmin.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAdmin_CellDoubleClick);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
+            // 
             // ColNo
             // 
             this.ColNo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -350,7 +371,11 @@
             // 
             // Coluserrole
             // 
+            this.Coluserrole.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Coluserrole.DataPropertyName = "RoleName";
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Coluserrole.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Coluserrole.FillWeight = 50F;
             resources.ApplyResources(this.Coluserrole, "Coluserrole");
             this.Coluserrole.Name = "Coluserrole";
             this.Coluserrole.ReadOnly = true;
@@ -366,10 +391,10 @@
             // 
             this.ColAdminPhoto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColAdminPhoto.DataPropertyName = "PhotoByte";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle4.NullValue")));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColAdminPhoto.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle5.NullValue")));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminPhoto.DefaultCellStyle = dataGridViewCellStyle5;
             resources.ApplyResources(this.ColAdminPhoto, "ColAdminPhoto");
             this.ColAdminPhoto.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.ColAdminPhoto.Name = "ColAdminPhoto";
@@ -379,7 +404,10 @@
             // 
             // ColAdminUsername
             // 
+            this.ColAdminUsername.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColAdminUsername.DataPropertyName = "Username";
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminUsername.DefaultCellStyle = dataGridViewCellStyle6;
             this.ColAdminUsername.FillWeight = 120.8097F;
             resources.ApplyResources(this.ColAdminUsername, "ColAdminUsername");
             this.ColAdminUsername.Name = "ColAdminUsername";
@@ -394,16 +422,20 @@
             // 
             // ColAdminGmail
             // 
+            this.ColAdminGmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColAdminGmail.DataPropertyName = "Gmail";
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColAdminGmail.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminGmail.DefaultCellStyle = dataGridViewCellStyle7;
             resources.ApplyResources(this.ColAdminGmail, "ColAdminGmail");
             this.ColAdminGmail.Name = "ColAdminGmail";
             this.ColAdminGmail.ReadOnly = true;
             // 
             // ColAdminPhoneNumber
             // 
+            this.ColAdminPhoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColAdminPhoneNumber.DataPropertyName = "PhoneNumber";
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminPhoneNumber.DefaultCellStyle = dataGridViewCellStyle8;
             this.ColAdminPhoneNumber.FillWeight = 120.8097F;
             resources.ApplyResources(this.ColAdminPhoneNumber, "ColAdminPhoneNumber");
             this.ColAdminPhoneNumber.Name = "ColAdminPhoneNumber";
@@ -411,9 +443,10 @@
             // 
             // ColAdminNRC
             // 
+            this.ColAdminNRC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColAdminNRC.DataPropertyName = "NRC";
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColAdminNRC.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminNRC.DefaultCellStyle = dataGridViewCellStyle9;
             resources.ApplyResources(this.ColAdminNRC, "ColAdminNRC");
             this.ColAdminNRC.Name = "ColAdminNRC";
             this.ColAdminNRC.ReadOnly = true;
@@ -422,22 +455,28 @@
             // 
             this.ColAdminAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColAdminAddress.DataPropertyName = "Address";
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColAdminAddress.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminAddress.DefaultCellStyle = dataGridViewCellStyle10;
             resources.ApplyResources(this.ColAdminAddress, "ColAdminAddress");
             this.ColAdminAddress.Name = "ColAdminAddress";
             this.ColAdminAddress.ReadOnly = true;
             // 
             // ColAdminCity
             // 
+            this.ColAdminCity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColAdminCity.DataPropertyName = "City";
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminCity.DefaultCellStyle = dataGridViewCellStyle11;
             resources.ApplyResources(this.ColAdminCity, "ColAdminCity");
             this.ColAdminCity.Name = "ColAdminCity";
             this.ColAdminCity.ReadOnly = true;
             // 
             // ColAdminPostcode
             // 
+            this.ColAdminPostcode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColAdminPostcode.DataPropertyName = "Postcode";
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminPostcode.DefaultCellStyle = dataGridViewCellStyle12;
             resources.ApplyResources(this.ColAdminPostcode, "ColAdminPostcode");
             this.ColAdminPostcode.Name = "ColAdminPostcode";
             this.ColAdminPostcode.ReadOnly = true;
@@ -448,22 +487,6 @@
             resources.ApplyResources(this.ColAdminPhotoString, "ColAdminPhotoString");
             this.ColAdminPhotoString.Name = "ColAdminPhotoString";
             this.ColAdminPhotoString.ReadOnly = true;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // errorProvider2
-            // 
-            this.errorProvider2.ContainerControl = this;
-            // 
-            // errorProvider3
-            // 
-            this.errorProvider3.ContainerControl = this;
-            // 
-            // errorProvider4
-            // 
-            this.errorProvider4.ContainerControl = this;
             // 
             // dataGridViewImageColumn1
             // 
@@ -517,9 +540,9 @@
             // pictureBoxAdminPhoto
             // 
             this.pictureBoxAdminPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.pictureBoxAdminPhoto, "pictureBoxAdminPhoto");
             this.pictureBoxAdminPhoto.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBoxAdminPhoto.ImageRotate = 0F;
-            resources.ApplyResources(this.pictureBoxAdminPhoto, "pictureBoxAdminPhoto");
             this.pictureBoxAdminPhoto.Name = "pictureBoxAdminPhoto";
             this.pictureBoxAdminPhoto.TabStop = false;
             this.pictureBoxAdminPhoto.Click += new System.EventHandler(this.PictureBoxAdminPhoto_Click);
@@ -814,6 +837,9 @@
         private System.Windows.Forms.Label labelRole;
         private Guna.UI2.WinForms.Guna2ComboBox cbuserrole;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAdminName;
@@ -830,8 +856,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAdminPostcode;
         private System.Windows.Forms.DataGridViewImageColumn ColDel;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAdminPhotoString;
-        private System.Windows.Forms.ErrorProvider errorProvider2;
-        private System.Windows.Forms.ErrorProvider errorProvider3;
-        private System.Windows.Forms.ErrorProvider errorProvider4;
     }
 }

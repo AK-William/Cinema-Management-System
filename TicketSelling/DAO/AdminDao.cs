@@ -292,7 +292,52 @@ namespace TicketSelling.DAO
             }
         }
 
-        public MessageEntity Login(Admin req)
+        //public MessageEntity Login(Admin req)
+        //{
+        //    sqlConnection = DbConnector.Connect();
+        //    if (sqlConnection == null)
+        //    {
+        //        return null;
+        //    }
+        //    MessageEntity _MessageEntity = null;
+        //    try
+        //    {
+        //        scom = new SqlCommand(ProcedureConstants.Login, sqlConnection);
+        //        scom.CommandType = CommandType.Text;
+        //        scom.Parameters.AddWithValue("@Username", req.Username);
+        //        scom.Parameters.AddWithValue("@Password", Cryptography.Encrypt(req.Password));
+        //        DataSet ds = new DataSet();
+        //        adapter = new SqlDataAdapter(scom);
+        //        adapter.Fill(ds);
+        //        sqlConnection.Close();
+        //        _MessageEntity = SqlDataSet.Check(ds, 1);
+        //        if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
+        //            return _MessageEntity;
+
+        //        DataTable dt = ds.Tables[0];
+        //        _MessageEntity = SqlDataTable.Check(dt, 1);
+        //        if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
+        //            return new MessageEntity() { RespCode = "001", RespDesp = "Invalid LoginName and Password", RespMessageType = CommonResponseMessage.ResErrorType };
+
+        //        dt = ds.Tables[0];
+              
+        //        return new MessageEntity()
+        //        {
+        //            RespCode = dt.Rows[0]["RespCode"].ToString(),
+        //            RespDesp = dt.Rows[0]["RespDesp"].ToString(),
+        //            RespMessageType = dt.Rows[0]["RespMessageType"].ToString()
+        //        };
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _MessageEntity.RespCode = CommonResponseMessage.ExceptionErrorCode;
+        //        _MessageEntity.RespDesp = ex.Message;
+        //        _MessageEntity.RespMessageType = CommonResponseMessage.ResErrorType;
+        //        return _MessageEntity;
+        //    }
+        //}
+
+        public ResAdmin Login(Admin req)
         {
             sqlConnection = DbConnector.Connect();
             if (sqlConnection == null)
@@ -310,22 +355,31 @@ namespace TicketSelling.DAO
                 adapter = new SqlDataAdapter(scom);
                 adapter.Fill(ds);
                 sqlConnection.Close();
+
                 _MessageEntity = SqlDataSet.Check(ds, 1);
                 if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
-                    return _MessageEntity;
+                    return new ResAdmin() { MessageEntity = _MessageEntity };
 
                 DataTable dt = ds.Tables[0];
-                _MessageEntity = SqlDataTable.Check(dt, 1);
-                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
-                    return new MessageEntity() { RespCode = "001", RespDesp = "Invalid LoginName and Password", RespMessageType = CommonResponseMessage.ResErrorType };
+                List<Admin> lst = new List<Admin>();
 
-                dt = ds.Tables[0];
-              
-                return new MessageEntity()
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    RespCode = dt.Rows[0]["RespCode"].ToString(),
-                    RespDesp = dt.Rows[0]["RespDesp"].ToString(),
-                    RespMessageType = dt.Rows[0]["RespMessageType"].ToString()
+                    lst.Add(new Admin
+                    {
+                        Id = Convert.ToInt32(dt.Rows[i]["Id"]),
+                        RoleId = Convert.ToInt32(dt.Rows[i]["RoleId"].ToString()),
+                        Name = dt.Rows[i]["Name"].ToString(),
+                        Username = dt.Rows[i]["Username"].ToString()
+                    });
+                }
+                return new ResAdmin()
+                {
+                    MessageEntity = new MessageEntity()
+                    {
+                        RespMessageType = CommonResponseMessage.ResSuccessType
+                    },
+                    LstAdmin = lst
                 };
             }
             catch (Exception ex)
@@ -333,8 +387,46 @@ namespace TicketSelling.DAO
                 _MessageEntity.RespCode = CommonResponseMessage.ExceptionErrorCode;
                 _MessageEntity.RespDesp = ex.Message;
                 _MessageEntity.RespMessageType = CommonResponseMessage.ResErrorType;
-                return _MessageEntity;
+                return new ResAdmin() { MessageEntity = _MessageEntity };
             }
         }
+
+        public bool CheckUserRoleById(int Id)  //Control delete when only one admin
+        {
+            sqlConnection = DbConnector.Connect();
+            bool IsDeleteUser = true;
+            if (sqlConnection == null)
+            {
+                return false;
+            }
+            MessageEntity _MessageEntity = null;
+            try
+            {
+                int UserCount = 0;
+                int RoleId = 0;
+                scom = new SqlCommand(ProcedureConstants.CheckUserRoleAndCountById, sqlConnection);
+                scom.CommandType = CommandType.Text;
+                scom.Parameters.AddWithValue("@Id", Id);
+                DataSet ds = new DataSet();
+                adapter = new SqlDataAdapter(scom);
+                adapter.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                DataTable dt1 = ds.Tables[1];
+                UserCount = Convert.ToInt32(dt.Rows[0][0]);
+                RoleId = Convert.ToInt32(dt1.Rows[0][0]);
+                if(RoleId==1 && UserCount == 1)
+                {
+                    IsDeleteUser = false;
+                }
+                sqlConnection.Close();
+                return IsDeleteUser;
+            }
+            catch
+            {
+                return true;
+            }
+        }
+
+
     }
 }

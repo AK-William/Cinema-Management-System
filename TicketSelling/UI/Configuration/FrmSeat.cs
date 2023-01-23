@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TicketSelling.Common;
 using TicketSelling.DAO.Entity;
+using TicketSelling.UI.FrmMessageBox;
 
 namespace TicketSelling.UI.Configuration
 {
@@ -291,8 +292,9 @@ namespace TicketSelling.UI.Configuration
                     else
                     {
 
-                        DialogResult res = MessageBox.Show("Are you sure you want to Delete", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                        if (res == DialogResult.OK)
+                        FrmDelete frm = new FrmDelete("Are you sure you want to Delete?", "Delete", true);
+                        frm.ShowDialog();
+                        if (frm.isYesOrNo)
                         {
                             MessageEntity res1 = new SeatTypeDao().DeleteSeatType(Convert.ToInt32(dgvSeatType.Rows[e.RowIndex].Cells["ColIdSeatType"].Value));
                             if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
@@ -527,15 +529,26 @@ namespace TicketSelling.UI.Configuration
 
         private void DgvSeat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow dgvRow = dgvSeat.SelectedRows[0];
-            idseat = Convert.ToInt32(dgvRow.Cells["ColId"].Value);
-            cbSeatType.SelectedValue = Convert.ToInt32(dgvRow.Cells["ColTypeId"].Value.ToString());
-            SeatTypeId = Convert.ToInt32(dgvRow.Cells["ColTypeId"].Value.ToString());
-            int NumberOfSeat = new SeatDao().GetNumberOfSeatBySeatTypeId(Convert.ToInt32(dgvRow.Cells["ColTypeId"].Value.ToString()));
-            txtNumberOfSeats.Text = NumberOfSeat.ToString();
-            txtSeatPrice.Text = dgvRow.Cells["ColPrice"].Value.ToString();
-            btnSeatSave.Visible = false;
-            btnSeatUpdate.Visible = true;
+            int SeatCount = new SeatTypeDao().CheckCustomerSeatById(Convert.ToInt32(dgvSeat.Rows[e.RowIndex].Cells["ColTypeId"].Value));//Control update seat when  ticket are selling
+            if (SeatCount > 0)
+            {
+                FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                fmE.lblError.Text = "Transaction Exists! This action cannot be done.";
+                fmE.ShowDialog();
+                return;
+            }
+            else
+            {
+                DataGridViewRow dgvRow = dgvSeat.SelectedRows[0];
+                idseat = Convert.ToInt32(dgvRow.Cells["ColId"].Value);
+                cbSeatType.SelectedValue = Convert.ToInt32(dgvRow.Cells["ColTypeId"].Value.ToString());
+                SeatTypeId = Convert.ToInt32(dgvRow.Cells["ColTypeId"].Value.ToString());
+                int NumberOfSeat = new SeatDao().GetNumberOfSeatBySeatTypeId(Convert.ToInt32(dgvRow.Cells["ColTypeId"].Value.ToString()));
+                txtNumberOfSeats.Text = NumberOfSeat.ToString();
+                txtSeatPrice.Text = dgvRow.Cells["ColPrice"].Value.ToString();
+                btnSeatSave.Visible = false;
+                btnSeatUpdate.Visible = true;
+            }
         }
 
         private void BtnSeatUpdate_Click(object sender, EventArgs e)
@@ -588,26 +601,37 @@ namespace TicketSelling.UI.Configuration
             {
                 if (dgvSeat.Rows[e.RowIndex].Cells["ColDelSeat"].ColumnIndex == e.ColumnIndex)
                 {
-                    DialogResult res = MessageBox.Show("Are you sure you want to Delete", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                    if (res == DialogResult.OK)
+                    int SeatCount = new SeatTypeDao().CheckCustomerSeatById(Convert.ToInt32(dgvSeat.Rows[e.RowIndex].Cells["ColTypeId"].Value));//Control delete seat when ticket are selling
+                    if (SeatCount > 0)
                     {
-                        MessageEntity res1 = new SeatDao().DeleteSeat(Convert.ToInt32(dgvSeat.Rows[e.RowIndex].Cells["ColId"].Value));
-                        if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
+                        FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                        fmE.lblError.Text = "Transaction Exists! This action cannot be done.";
+                        fmE.ShowDialog();
+                        return;
+                    }
+                    else
+                    {
+                        FrmDelete frm = new FrmDelete("Are you sure you want to Delete?", "Delete", true);
+                        frm.ShowDialog();
+                        if (frm.isYesOrNo)
                         {
-                            FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
-                            fmE.lblError.Text = "Delete successful";
-                            fmE.ShowDialog();
-                            Reset();
-                            BindDgvSeat();
-                        }
-                        else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
-                        {
-                            FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
-                            fmE.lblError.Text = "Delete Fail! Please recheck entered information";
-                            fmE.ShowDialog();
+                            MessageEntity res1 = new SeatDao().DeleteSeat(Convert.ToInt32(dgvSeat.Rows[e.RowIndex].Cells["ColId"].Value));
+                            if (res1.RespMessageType == CommonResponseMessage.ResSuccessType)
+                            {
+                                FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                                fmE.lblError.Text = "Delete successful";
+                                fmE.ShowDialog();
+                                Reset();
+                                BindDgvSeat();
+                            }
+                            else if (res1.RespMessageType == CommonResponseMessage.ResErrorType)
+                            {
+                                FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                                fmE.lblError.Text = "Delete Fail! Please recheck entered information";
+                                fmE.ShowDialog();
+                            }
                         }
                     }
-
                 }
             }
             catch (Exception ex)

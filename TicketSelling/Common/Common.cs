@@ -17,6 +17,9 @@ namespace TicketSelling.Common
 {
    public class CommonFormat
     {
+        public static string DateFormat = "dd-MM-yyyy";
+        public static string MonthFormat = "MM-yyyy";
+
         public static Bitmap ConvertTo16bpp(Image img)
         {
             var bmp = new Bitmap(img.Width, img.Height, System.Drawing.Imaging.PixelFormat.Format16bppRgb555);
@@ -116,4 +119,6 @@ namespace TicketSelling.Common
         }
 
     }
+
+
 }
