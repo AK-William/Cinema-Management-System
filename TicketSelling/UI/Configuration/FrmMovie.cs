@@ -404,6 +404,7 @@ namespace TicketSelling.UI.Configuration
                 {
                     SaveImageFilePath(res.MovieCoverName);
                     UpdateMovieCover(res.MovieId);
+                    BindDgvMovie();
                 }
                 else if (res.RespMessageType == CommonResponseMessage.ResErrorType)
                 {
@@ -588,7 +589,8 @@ namespace TicketSelling.UI.Configuration
             {
                 if (dgvMovie.Rows[e.RowIndex].Cells["ColDelMovie"].ColumnIndex == e.ColumnIndex) //Control delete button only in delete delete column
                 {
-                    int MovieCount = new MovieDao().CheckMovieBySDId(Convert.ToInt32(dgvSD.Rows[e.RowIndex].Cells["ColMovieId"].Value)); //Control delete Movie when date are assign
+                    int MovieId = Convert.ToInt32(dgvMovie.Rows[e.RowIndex].Cells["ColIdMovie"].Value);
+                    int MovieCount = new MovieDao().CheckMovieBySDId(MovieId); //Control delete Movie when date are assign
                     if (MovieCount > 0)
                     {
                         FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();

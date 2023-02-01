@@ -58,7 +58,6 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnDashboard.BackColor = Color.FromArgb(0, 120, 215);
                     frmmain.btnTicket.BackColor = Color.FromArgb(0, 120, 215);
                     frmmain.btnReport.BackColor = Color.FromArgb(0, 120, 215);
-                    frmmain.btnAccount.IconColor = Color.FromArgb(0, 120, 215);
                     frmmain.accountimage.IconColor = Color.FromArgb(0, 120, 215);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(0, 120, 215);
                     frmmain.pbLochmara.Visible = true;
@@ -82,7 +81,6 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnDashboard.BackColor = Color.FromArgb(253, 73, 131);
                     frmmain.btnTicket.BackColor = Color.FromArgb(253, 73, 131);
                     frmmain.btnReport.BackColor = Color.FromArgb(253, 73, 131);
-                    frmmain.btnAccount.IconColor = Color.FromArgb(253, 73, 131);
                     frmmain.accountimage.IconColor = Color.FromArgb(253, 73, 131);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(253, 73, 131);
                     frmmain.pbLochmara.Visible = false;
@@ -106,7 +104,6 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnDashboard.BackColor = Color.FromArgb(27, 182, 211);
                     frmmain.btnTicket.BackColor = Color.FromArgb(27, 182, 211);
                     frmmain.btnReport.BackColor = Color.FromArgb(27, 182, 211);
-                    frmmain.btnAccount.IconColor = Color.FromArgb(27, 182, 211);
                     frmmain.accountimage.IconColor = Color.FromArgb(27, 182, 211);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(27, 182, 211);
                     frmmain.pbLochmara.Visible = false;
@@ -130,7 +127,6 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnDashboard.BackColor = Color.FromArgb(123, 31, 162);
                     frmmain.btnTicket.BackColor = Color.FromArgb(123, 31, 162);
                     frmmain.btnReport.BackColor = Color.FromArgb(123, 31, 162);
-                    frmmain.btnAccount.IconColor = Color.FromArgb(123, 31, 162);
                     frmmain.accountimage.IconColor = Color.FromArgb(123, 31, 162);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(123, 31, 162);
                     frmmain.pbLochmara.Visible = false;
@@ -154,7 +150,6 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnDashboard.BackColor = Color.FromArgb(84, 110, 122);
                     frmmain.btnTicket.BackColor = Color.FromArgb(84, 110, 122);
                     frmmain.btnReport.BackColor = Color.FromArgb(84, 110, 122);
-                    frmmain.btnAccount.IconColor = Color.FromArgb(84, 110, 122);
                     frmmain.accountimage.IconColor = Color.FromArgb(84, 110, 122);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(84, 110, 122);
                     frmmain.pbLochmara.Visible = false;
@@ -178,7 +173,6 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnDashboard.BackColor = Color.FromArgb(0, 200, 83);
                     frmmain.btnTicket.BackColor = Color.FromArgb(0, 200, 83);
                     frmmain.btnReport.BackColor = Color.FromArgb(0, 200, 83);
-                    frmmain.btnAccount.IconColor = Color.FromArgb(0, 200, 83);
                     frmmain.accountimage.IconColor = Color.FromArgb(0, 200, 83);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(0, 200, 83);
                     frmmain.pbLochmara.Visible = false;
@@ -202,7 +196,6 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnDashboard.BackColor = Color.FromArgb(217, 115, 65);
                     frmmain.btnTicket.BackColor = Color.FromArgb(217, 115, 65);
                     frmmain.btnReport.BackColor = Color.FromArgb(217, 115, 65);
-                    frmmain.btnAccount.IconColor = Color.FromArgb(217, 115, 65);
                     frmmain.accountimage.IconColor = Color.FromArgb(217, 115, 65);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(217, 115, 65);
                     frmmain.pbLochmara.Visible = false;
@@ -226,7 +219,6 @@ namespace TicketSelling.UI.Configuration
                     frmmain.btnDashboard.BackColor = Color.FromArgb(196, 30, 58);
                     frmmain.btnTicket.BackColor = Color.FromArgb(196, 30, 58);
                     frmmain.btnReport.BackColor = Color.FromArgb(196, 30, 58);
-                    frmmain.btnAccount.IconColor = Color.FromArgb(196, 30, 58);
                     frmmain.accountimage.IconColor = Color.FromArgb(196, 30, 58);
                     frmmain.panelAccountShow.BorderColor = Color.FromArgb(196, 30, 58);
                     frmmain.pbLochmara.Visible = false;
@@ -273,7 +265,6 @@ namespace TicketSelling.UI.Configuration
                 frmmain.panelTitle.BackColor = Color.FromArgb(41, 47, 57);
                 frmmain.label1.ForeColor = Color.White;
                 frmmain.txtLoginNameForMain.ForeColor = Color.White;
-                frmmain.btnAccount.FlatAppearance.MouseDownBackColor= Color.FromArgb(68, 87, 96);
                 frmmain.btnSetting.FlatAppearance.MouseDownBackColor = Color.FromArgb(68, 87, 96);
                
             }
@@ -290,7 +281,6 @@ namespace TicketSelling.UI.Configuration
                 frmmain.panelTitle.BackColor = Color.White;
                 frmmain.label1.ForeColor = Color.Black;
                 frmmain.txtLoginNameForMain.ForeColor = Color.Black;
-                frmmain.btnAccount.FlatAppearance.MouseDownBackColor = Color.LightGray;
                 frmmain.btnSetting.FlatAppearance.MouseDownBackColor = Color.LightGray;
             }
         }

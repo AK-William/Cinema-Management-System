@@ -145,12 +145,6 @@
     <Compile Include="UI\MessageBox\ConfirmMessageBox.Designer.cs">
       <DependentUpon>ConfirmMessageBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Report\FrmReportViewer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Report\FrmReportViewer.Designer.cs">
-      <DependentUpon>FrmReportViewer.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Configuration\FrmSeat.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -223,9 +217,6 @@
     <Compile Include="UI\Report\FrmTicketSellReportByDate.Designer.cs">
       <DependentUpon>FrmTicketSellReportByDate.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Report\RPT\CashInSummaryReport.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -257,9 +248,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MessageBox\ConfirmMessageBox.resx">
       <DependentUpon>ConfirmMessageBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Report\FrmReportViewer.resx">
-      <DependentUpon>FrmReportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Configuration\FrmSeat.resx">
       <DependentUpon>FrmSeat.cs</DependentUpon>
@@ -309,7 +297,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="UI\Report\RPT\CashInSummaryReport.rpt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

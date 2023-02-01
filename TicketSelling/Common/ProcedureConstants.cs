@@ -362,16 +362,17 @@ namespace TicketSelling.Common
 
         #region dbMovie
 
-        public static string SP_MovieSave = @"IF EXISTS (SELECT * FROM TblMovie WHERE Name = @Name)
+        public static string SP_MovieSave = @"IF EXISTS (SELECT * FROM TblMovie WHERE Name = @Name AND  Finish IS NULL)
                                                     BEGIN
                                                       SELECT
                                                         '001' AS RespCode,
                                                         'Duplicate Error' AS RespDesp,
                                                         'ME' AS 'RespMessageType'
+                                                     
                                                       SELECT
-                                                        *
+                                                        Max(Id) Id,Name
                                                       FROM TblMovie
-                                                      WHERE Name = @Name
+                                                      WHERE Name = @Name GROUP BY Name
                                                     END
                                                     ELSE
                                                     BEGIN
@@ -391,9 +392,9 @@ namespace TicketSelling.Common
                                                         'Successful Message' AS RespDesp,
                                                         'MI' AS 'RespMessageType'
                                                       SELECT
-                                                        *
+                                                        Max(Id) Id,Name
                                                       FROM TblMovie
-                                                      WHERE Name = @Name
+                                                      WHERE Name = @Name GROUP BY Name
                                                     END";
 
         public static string UpdateMovieCover = @"Update TblMovie set MovieCover=@MovieCover where Id=@Id;
@@ -410,7 +411,7 @@ namespace TicketSelling.Common
         public static string GetAllMovie = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblMovie WITH (NOLOCK) WHERE Finish IS NULL";
 
         public static string UpdateMovie = @"IF EXISTS (SELECT * FROM TblMovie WHERE Name = @Name
-                                                       AND Id != @Id)
+                                                       AND Id != @Id AND  Finish IS NULL)
                                                     BEGIN
                                                       SELECT
                                                         '001' AS RespCode,
@@ -514,15 +515,16 @@ namespace TicketSelling.Common
         public static string GetMovieNameById = @"Select * from TblMovie where Id=@Id";
 
         public static string GetAllMovieSD = @"SELECT
-                                                ROW_NUMBER() OVER (ORDER BY SM.Id ASC) AS RowNumber,
+                                                ROW_NUMBER() OVER(ORDER BY SM.Id ASC) AS RowNumber,
                                                 SM.Id,
                                                 Name,
                                                 SM.MovieId,
                                                 StartDate,
                                                 EndDate
-                                                FROM TblScheduleMovie AS SM WITH (NOLOCK)
+                                                FROM TblScheduleMovie AS SM WITH(NOLOCK)
                                                 INNER JOIN TblMovie AS M
-                                                ON SM.MovieId = M.Id";   //inner join movie with schedule date to show name on Schedule date's data grid view
+                                                ON SM.MovieId = M.Id
+                                                WHERE M.Finish IS NULL";   //inner join movie with schedule date to show name on Schedule date's data grid view
 
         public static string DeleteMovieSD = @"DELETE TblScheduleMovie WHERE Id = @Id; 
                                                 SELECT
@@ -590,7 +592,7 @@ namespace TicketSelling.Common
                                                 Time
                                                 FROM TblScheduleMovieTime AS SMT WITH (NOLOCK)
                                                 INNER JOIN TblMovie AS M
-                                                ON SMT.MovieId = M.Id";
+                                                ON SMT.MovieId = M.Id WHERE M.Finish IS NULL";
 
         public static string SaveMovieST = @"IF EXISTS (SELECT * FROM TblScheduleMovieTime WHERE MovieId = @MovieId AND Time = @Time AND Date = @Date)
                                                     BEGIN
@@ -739,7 +741,7 @@ namespace TicketSelling.Common
 
         #region Report
 
-        public static string SP_GetSaleReportByDate = @"SELECT
+        public static string SP_GetSaleReportByDate = @"SELECT  ROW_NUMBER() OVER(ORDER BY D.HeadId ASC) AS RowNumber,
                                                           M.Name MovieName,
                                                           MovieDate,
                                                           MT.Time MovieTime,
@@ -755,7 +757,46 @@ namespace TicketSelling.Common
                                                           ON H.MovieTime = MT.Id
                                                         INNER JOIN TblSeat S
                                                           ON D.SeatId = S.Id
-                                                        WHERE CONVERT(char(10), H.CreatedDate, 111) = CONVERT(char(10), @SellDate, 111) ORDER By MovieDate";
+                                                        WHERE CONVERT(char(10), MovieDate, 111) = CONVERT(char(10), @StartDate, 111) AND M.Id=@MovieId ORDER By MovieDate";
+
+
+        public static string SP_GetSaleReportByWeek = @"SELECT  ROW_NUMBER() OVER(ORDER BY D.HeadId ASC) AS RowNumber,
+                                                          M.Name MovieName,
+                                                          MovieDate,
+                                                          MT.Time MovieTime,
+                                                          S.Name SeatName,
+                                                          D.Price,
+                                                          TotalPrice
+                                                        FROM TblSaleHead H
+                                                        INNER JOIN TblSaleDetail D
+                                                          ON H.Id = D.HeadId
+                                                        INNER JOIN TblMovie M
+                                                          ON H.MovieId = M.Id
+                                                        INNER JOIN TblScheduleMovieTime MT
+                                                          ON H.MovieTime = MT.Id
+                                                        INNER JOIN TblSeat S
+                                                          ON D.SeatId = S.Id
+                                                        WHERE CONVERT(char(10), MovieDate, 111) BETWEEN CONVERT(char(10), @StartDate, 111) AND  CONVERT(char(10), @EndDate, 111) AND M.Id=@MovieId ORDER By MovieDate";
+
+
+
+        public static string SP_GetSaleReportByMonth = @"SELECT  ROW_NUMBER() OVER(ORDER BY D.HeadId ASC) AS RowNumber,
+                                                          M.Name MovieName,
+                                                          MovieDate,
+                                                          MT.Time MovieTime,
+                                                          S.Name SeatName,
+                                                          D.Price,
+                                                          TotalPrice
+                                                        FROM TblSaleHead H
+                                                        INNER JOIN TblSaleDetail D
+                                                          ON H.Id = D.HeadId
+                                                        INNER JOIN TblMovie M
+                                                          ON H.MovieId = M.Id
+                                                        INNER JOIN TblScheduleMovieTime MT
+                                                          ON H.MovieTime = MT.Id
+                                                        INNER JOIN TblSeat S
+                                                          ON D.SeatId = S.Id
+                                                        WHERE CONVERT(char(7), MovieDate, 111) = CONVERT(char(7), @StartDate, 111) AND M.Id=@MovieId ORDER By MovieDate";
 
         #endregion
     }

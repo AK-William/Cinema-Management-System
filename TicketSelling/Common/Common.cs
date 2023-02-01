@@ -120,5 +120,19 @@ namespace TicketSelling.Common
 
     }
 
+    public class GetWeekDay
+    {
+        public static int GetDayNum(string DayName)
+        {
+            if (DayName.ToLower() == "sunday") return 0;
+            else if (DayName.ToLower() == "monday") return 1;
+            else if (DayName.ToLower() == "tuesday") return 2;
+            else if (DayName.ToLower() == "wednesday") return 3;
+            else if (DayName.ToLower() == "thursday") return 4;
+            else if (DayName.ToLower() == "friday") return 5;
+            else return 6;
+        }
+    }
+
 
 }

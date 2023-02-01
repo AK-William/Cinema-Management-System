@@ -180,7 +180,7 @@
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.IconLeft = global::TicketSelling.Properties.Resources.password_480px;
-            this.txtPassword.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtPassword.IconLeftOffset = new System.Drawing.Point(20, 0);
             this.txtPassword.Location = new System.Drawing.Point(50, 333);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
@@ -230,7 +230,7 @@
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.IconLeft = global::TicketSelling.Properties.Resources.person_480px;
-            this.txtUsername.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtUsername.IconLeftOffset = new System.Drawing.Point(20, 0);
             this.txtUsername.Location = new System.Drawing.Point(50, 233);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
@@ -250,9 +250,9 @@
             this.label5.Location = new System.Drawing.Point(45, 202);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 27);
+            this.label5.Size = new System.Drawing.Size(108, 27);
             this.label5.TabIndex = 81;
-            this.label5.Text = "Name";
+            this.label5.Text = "Username";
             // 
             // label6
             // 

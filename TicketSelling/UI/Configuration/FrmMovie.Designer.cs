@@ -30,26 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMovie));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tabScheduleTime = new System.Windows.Forms.TabPage();
             this.panelrightST = new System.Windows.Forms.Panel();
@@ -60,6 +60,7 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSTDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColSTTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDelST = new System.Windows.Forms.DataGridViewImageColumn();
             this.panelleftST = new System.Windows.Forms.Panel();
             this.STTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.STDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -79,6 +80,7 @@
             this.ColNameSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColStartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDelSD = new System.Windows.Forms.DataGridViewImageColumn();
             this.panelSDLeft = new Guna.UI2.WinForms.Guna2Panel();
             this.CbSDName = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnSDSave = new Guna.UI2.WinForms.Guna2Button();
@@ -92,32 +94,6 @@
             this.tabMovie = new System.Windows.Forms.TabPage();
             this.panelMoviedgv = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvMovie = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panelMovieTop = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbltrailerlink = new System.Windows.Forms.Label();
-            this.lblmovietype = new System.Windows.Forms.Label();
-            this.btnMovieSave = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMovieUpdate = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMovieCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.lblmoviecover = new System.Windows.Forms.Label();
-            this.lbldescription = new System.Windows.Forms.Label();
-            this.lblruntime = new System.Windows.Forms.Label();
-            this.lblcasts = new System.Windows.Forms.Label();
-            this.lblname = new System.Windows.Forms.Label();
-            this.TabControlMovie = new Guna.UI2.WinForms.Guna2TabControl();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.txtMovieLink = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMovieType = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnMovieSearch = new FontAwesome.Sharp.IconButton();
-            this.pictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtRuntime = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCasts = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.ColDelSD = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ColDelST = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColIdMovie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColMovieName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -130,6 +106,30 @@
             this.ColFinish = new System.Windows.Forms.DataGridViewImageColumn();
             this.ColDelMovie = new System.Windows.Forms.DataGridViewImageColumn();
             this.ColMovieCoverString = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelMovieTop = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbltrailerlink = new System.Windows.Forms.Label();
+            this.txtMovieLink = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblmovietype = new System.Windows.Forms.Label();
+            this.txtMovieType = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnMovieSearch = new FontAwesome.Sharp.IconButton();
+            this.pictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnMovieSave = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMovieUpdate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMovieCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.lblmoviecover = new System.Windows.Forms.Label();
+            this.lbldescription = new System.Windows.Forms.Label();
+            this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblruntime = new System.Windows.Forms.Label();
+            this.txtRuntime = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblcasts = new System.Windows.Forms.Label();
+            this.lblname = new System.Windows.Forms.Label();
+            this.txtCasts = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TabControlMovie = new Guna.UI2.WinForms.Guna2TabControl();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tabScheduleTime.SuspendLayout();
             this.panelrightST.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvST)).BeginInit();
@@ -142,8 +142,8 @@
             this.panelMoviedgv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMovie)).BeginInit();
             this.panelMovieTop.SuspendLayout();
-            this.TabControlMovie.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.TabControlMovie.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -183,17 +183,17 @@
             this.dgvST.AllowUserToDeleteRows = false;
             this.dgvST.AllowUserToResizeColumns = false;
             this.dgvST.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvST.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.White;
+            this.dgvST.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
             this.dgvST.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvST.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvST.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
             this.dgvST.ColumnHeadersHeight = 35;
             this.dgvST.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
@@ -203,14 +203,14 @@
             this.ColSTDate,
             this.ColSTTime,
             this.ColDelST});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvST.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle45.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvST.DefaultCellStyle = dataGridViewCellStyle45;
             this.dgvST.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvST.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvST.Location = new System.Drawing.Point(0, 0);
@@ -281,9 +281,9 @@
             // ColSTDate
             // 
             this.ColSTDate.DataPropertyName = "Date";
-            dataGridViewCellStyle3.Format = "D";
-            dataGridViewCellStyle3.NullValue = null;
-            this.ColSTDate.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle43.Format = "D";
+            dataGridViewCellStyle43.NullValue = null;
+            this.ColSTDate.DefaultCellStyle = dataGridViewCellStyle43;
             this.ColSTDate.FillWeight = 105.7516F;
             this.ColSTDate.HeaderText = "Date";
             this.ColSTDate.Name = "ColSTDate";
@@ -292,13 +292,23 @@
             // ColSTTime
             // 
             this.ColSTTime.DataPropertyName = "Time";
-            dataGridViewCellStyle4.Format = "T";
-            dataGridViewCellStyle4.NullValue = null;
-            this.ColSTTime.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle44.Format = "T";
+            dataGridViewCellStyle44.NullValue = null;
+            this.ColSTTime.DefaultCellStyle = dataGridViewCellStyle44;
             this.ColSTTime.FillWeight = 105.7516F;
             this.ColSTTime.HeaderText = "Time";
             this.ColSTTime.Name = "ColSTTime";
             this.ColSTTime.ReadOnly = true;
+            // 
+            // ColDelST
+            // 
+            this.ColDelST.FillWeight = 53.681F;
+            this.ColDelST.HeaderText = "";
+            this.ColDelST.Image = ((System.Drawing.Image)(resources.GetObject("ColDelST.Image")));
+            this.ColDelST.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColDelST.Name = "ColDelST";
+            this.ColDelST.ReadOnly = true;
+            this.ColDelST.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // panelleftST
             // 
@@ -498,17 +508,17 @@
             this.dgvSD.AllowUserToDeleteRows = false;
             this.dgvSD.AllowUserToResizeColumns = false;
             this.dgvSD.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            this.dgvSD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle46.BackColor = System.Drawing.Color.White;
+            this.dgvSD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle46;
             this.dgvSD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle47;
             this.dgvSD.ColumnHeadersHeight = 35;
             this.dgvSD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
@@ -518,14 +528,14 @@
             this.ColStartDate,
             this.ColEndDate,
             this.ColDelSD});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSD.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle50.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSD.DefaultCellStyle = dataGridViewCellStyle50;
             this.dgvSD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvSD.Location = new System.Drawing.Point(0, 0);
@@ -597,9 +607,9 @@
             // ColStartDate
             // 
             this.ColStartDate.DataPropertyName = "StartDate";
-            dataGridViewCellStyle8.Format = "D";
-            dataGridViewCellStyle8.NullValue = null;
-            this.ColStartDate.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle48.Format = "D";
+            dataGridViewCellStyle48.NullValue = null;
+            this.ColStartDate.DefaultCellStyle = dataGridViewCellStyle48;
             this.ColStartDate.FillWeight = 105.7516F;
             this.ColStartDate.HeaderText = "Start Date";
             this.ColStartDate.Name = "ColStartDate";
@@ -608,13 +618,23 @@
             // ColEndDate
             // 
             this.ColEndDate.DataPropertyName = "EndDate";
-            dataGridViewCellStyle9.Format = "D";
-            dataGridViewCellStyle9.NullValue = null;
-            this.ColEndDate.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle49.Format = "D";
+            dataGridViewCellStyle49.NullValue = null;
+            this.ColEndDate.DefaultCellStyle = dataGridViewCellStyle49;
             this.ColEndDate.FillWeight = 105.7516F;
             this.ColEndDate.HeaderText = "End Date";
             this.ColEndDate.Name = "ColEndDate";
             this.ColEndDate.ReadOnly = true;
+            // 
+            // ColDelSD
+            // 
+            this.ColDelSD.FillWeight = 53.681F;
+            this.ColDelSD.HeaderText = "";
+            this.ColDelSD.Image = ((System.Drawing.Image)(resources.GetObject("ColDelSD.Image")));
+            this.ColDelSD.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColDelSD.Name = "ColDelSD";
+            this.ColDelSD.ReadOnly = true;
+            this.ColDelSD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // panelSDLeft
             // 
@@ -814,17 +834,17 @@
             this.dgvMovie.AllowUserToDeleteRows = false;
             this.dgvMovie.AllowUserToResizeColumns = false;
             this.dgvMovie.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            this.dgvMovie.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle51.BackColor = System.Drawing.Color.White;
+            this.dgvMovie.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle51;
             this.dgvMovie.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMovie.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle52.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle52.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMovie.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle52;
             this.dgvMovie.ColumnHeadersHeight = 45;
             this.dgvMovie.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -839,14 +859,14 @@
             this.ColFinish,
             this.ColDelMovie,
             this.ColMovieCoverString});
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMovie.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle59.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle59.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle59.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMovie.DefaultCellStyle = dataGridViewCellStyle59;
             this.dgvMovie.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMovie.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMovie.Location = new System.Drawing.Point(0, 0);
@@ -855,8 +875,8 @@
             this.dgvMovie.ReadOnly = true;
             this.dgvMovie.RowHeadersVisible = false;
             this.dgvMovie.RowHeadersWidth = 50;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMovie.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMovie.RowsDefaultCellStyle = dataGridViewCellStyle60;
             this.dgvMovie.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvMovie.RowTemplate.Height = 100;
             this.dgvMovie.Size = new System.Drawing.Size(1230, 306);
@@ -884,6 +904,137 @@
             this.dgvMovie.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvMovie.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMovie_CellContentClick);
             this.dgvMovie.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvMovie_CellDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "RowNumber";
+            this.dataGridViewTextBoxColumn1.FillWeight = 20F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "No";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 69;
+            // 
+            // ColIdMovie
+            // 
+            this.ColIdMovie.DataPropertyName = "Id";
+            this.ColIdMovie.HeaderText = "ID";
+            this.ColIdMovie.Name = "ColIdMovie";
+            this.ColIdMovie.ReadOnly = true;
+            this.ColIdMovie.Visible = false;
+            // 
+            // ColMovieName
+            // 
+            this.ColMovieName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColMovieName.DataPropertyName = "Name";
+            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColMovieName.DefaultCellStyle = dataGridViewCellStyle53;
+            this.ColMovieName.FillWeight = 90.63343F;
+            this.ColMovieName.HeaderText = "Movie Name";
+            this.ColMovieName.Name = "ColMovieName";
+            this.ColMovieName.ReadOnly = true;
+            this.ColMovieName.Width = 165;
+            // 
+            // ColMovieCover
+            // 
+            this.ColMovieCover.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColMovieCover.DataPropertyName = "MovieCoverByte";
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle54.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle54.NullValue")));
+            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColMovieCover.DefaultCellStyle = dataGridViewCellStyle54;
+            this.ColMovieCover.HeaderText = "Movie Cover";
+            this.ColMovieCover.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColMovieCover.Name = "ColMovieCover";
+            this.ColMovieCover.ReadOnly = true;
+            this.ColMovieCover.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColMovieCover.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColMovieCover.Width = 167;
+            // 
+            // ColCasts
+            // 
+            this.ColCasts.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColCasts.DataPropertyName = "Casts";
+            dataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColCasts.DefaultCellStyle = dataGridViewCellStyle55;
+            this.ColCasts.FillWeight = 90.63343F;
+            this.ColCasts.HeaderText = "Casts";
+            this.ColCasts.Name = "ColCasts";
+            this.ColCasts.ReadOnly = true;
+            // 
+            // ColRuntime
+            // 
+            this.ColRuntime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColRuntime.DataPropertyName = "Runtime";
+            this.ColRuntime.FillWeight = 60F;
+            this.ColRuntime.HeaderText = "Runtime";
+            this.ColRuntime.Name = "ColRuntime";
+            this.ColRuntime.ReadOnly = true;
+            this.ColRuntime.Width = 122;
+            // 
+            // ColMovieType
+            // 
+            this.ColMovieType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColMovieType.DataPropertyName = "MovieType";
+            dataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColMovieType.DefaultCellStyle = dataGridViewCellStyle56;
+            this.ColMovieType.FillWeight = 90.63343F;
+            this.ColMovieType.HeaderText = "Movie Type";
+            this.ColMovieType.Name = "ColMovieType";
+            this.ColMovieType.ReadOnly = true;
+            this.ColMovieType.Width = 155;
+            // 
+            // ColDescription
+            // 
+            this.ColDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColDescription.DataPropertyName = "Description";
+            dataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColDescription.DefaultCellStyle = dataGridViewCellStyle57;
+            this.ColDescription.FillWeight = 90.63343F;
+            this.ColDescription.HeaderText = "Description";
+            this.ColDescription.Name = "ColDescription";
+            this.ColDescription.ReadOnly = true;
+            // 
+            // ColMovieLink
+            // 
+            this.ColMovieLink.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColMovieLink.DataPropertyName = "TrailerLink";
+            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColMovieLink.DefaultCellStyle = dataGridViewCellStyle58;
+            this.ColMovieLink.FillWeight = 80F;
+            this.ColMovieLink.HeaderText = "Trailer Link";
+            this.ColMovieLink.Name = "ColMovieLink";
+            this.ColMovieLink.ReadOnly = true;
+            // 
+            // ColFinish
+            // 
+            this.ColFinish.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColFinish.FillWeight = 15F;
+            this.ColFinish.HeaderText = "";
+            this.ColFinish.Image = global::TicketSelling.Properties.Resources.checked_checkbox_512px;
+            this.ColFinish.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColFinish.Name = "ColFinish";
+            this.ColFinish.ReadOnly = true;
+            // 
+            // ColDelMovie
+            // 
+            this.ColDelMovie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColDelMovie.FillWeight = 15F;
+            this.ColDelMovie.HeaderText = "";
+            this.ColDelMovie.Image = global::TicketSelling.Properties.Resources.delete;
+            this.ColDelMovie.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColDelMovie.Name = "ColDelMovie";
+            this.ColDelMovie.ReadOnly = true;
+            this.ColDelMovie.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColDelMovie.ToolTipText = "Delete";
+            // 
+            // ColMovieCoverString
+            // 
+            this.ColMovieCoverString.DataPropertyName = "MovieCover";
+            this.ColMovieCoverString.HeaderText = "MovieCoverString";
+            this.ColMovieCoverString.Name = "ColMovieCoverString";
+            this.ColMovieCoverString.ReadOnly = true;
+            this.ColMovieCoverString.Visible = false;
             // 
             // panelMovieTop
             // 
@@ -923,6 +1074,35 @@
             this.lbltrailerlink.TabIndex = 117;
             this.lbltrailerlink.Text = "Trailer Link";
             // 
+            // txtMovieLink
+            // 
+            this.txtMovieLink.Animated = true;
+            this.txtMovieLink.AutoRoundedCorners = true;
+            this.txtMovieLink.AutoSize = true;
+            this.txtMovieLink.BorderRadius = 24;
+            this.txtMovieLink.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMovieLink.DefaultText = "";
+            this.txtMovieLink.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMovieLink.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMovieLink.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMovieLink.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMovieLink.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMovieLink.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.txtMovieLink.ForeColor = System.Drawing.Color.Black;
+            this.txtMovieLink.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMovieLink.IconLeft = global::TicketSelling.Properties.Resources.link_500px;
+            this.txtMovieLink.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtMovieLink.Location = new System.Drawing.Point(396, 248);
+            this.txtMovieLink.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMovieLink.Name = "txtMovieLink";
+            this.txtMovieLink.PasswordChar = '\0';
+            this.txtMovieLink.PlaceholderText = "";
+            this.txtMovieLink.SelectedText = "";
+            this.txtMovieLink.Size = new System.Drawing.Size(328, 50);
+            this.txtMovieLink.TabIndex = 105;
+            this.txtMovieLink.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtMovieLink.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtMovieLink_KeyDown);
+            // 
             // lblmovietype
             // 
             this.lblmovietype.AutoSize = true;
@@ -933,6 +1113,71 @@
             this.lblmovietype.Size = new System.Drawing.Size(145, 33);
             this.lblmovietype.TabIndex = 116;
             this.lblmovietype.Text = "Movie Type";
+            // 
+            // txtMovieType
+            // 
+            this.txtMovieType.AutoRoundedCorners = true;
+            this.txtMovieType.AutoSize = true;
+            this.txtMovieType.BorderRadius = 24;
+            this.txtMovieType.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMovieType.DefaultText = "";
+            this.txtMovieType.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMovieType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMovieType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMovieType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMovieType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMovieType.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.txtMovieType.ForeColor = System.Drawing.Color.Black;
+            this.txtMovieType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMovieType.IconLeft = global::TicketSelling.Properties.Resources.british_movies_144px;
+            this.txtMovieType.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtMovieType.Location = new System.Drawing.Point(396, 49);
+            this.txtMovieType.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtMovieType.Name = "txtMovieType";
+            this.txtMovieType.PasswordChar = '\0';
+            this.txtMovieType.PlaceholderText = "";
+            this.txtMovieType.SelectedText = "";
+            this.txtMovieType.Size = new System.Drawing.Size(327, 50);
+            this.txtMovieType.TabIndex = 103;
+            this.txtMovieType.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtMovieType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtMovieType_KeyDown);
+            // 
+            // btnMovieSearch
+            // 
+            this.btnMovieSearch.BackColor = System.Drawing.Color.DarkGray;
+            this.btnMovieSearch.FlatAppearance.BorderSize = 0;
+            this.btnMovieSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMovieSearch.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMovieSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnMovieSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnMovieSearch.IconColor = System.Drawing.Color.Black;
+            this.btnMovieSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMovieSearch.IconSize = 30;
+            this.btnMovieSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMovieSearch.Location = new System.Drawing.Point(1061, 52);
+            this.btnMovieSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMovieSearch.Name = "btnMovieSearch";
+            this.btnMovieSearch.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnMovieSearch.Size = new System.Drawing.Size(154, 50);
+            this.btnMovieSearch.TabIndex = 115;
+            this.btnMovieSearch.Tag = "";
+            this.btnMovieSearch.Text = "Search";
+            this.btnMovieSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMovieSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMovieSearch.UseVisualStyleBackColor = false;
+            this.btnMovieSearch.Click += new System.EventHandler(this.BtnMovieSearch_Click);
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pictureBox.ImageRotate = 0F;
+            this.pictureBox.Location = new System.Drawing.Point(745, 19);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(289, 279);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox.TabIndex = 114;
+            this.pictureBox.TabStop = false;
             // 
             // btnMovieSave
             // 
@@ -1016,6 +1261,35 @@
             this.lbldescription.TabIndex = 109;
             this.lbldescription.Text = "Description";
             // 
+            // txtDescription
+            // 
+            this.txtDescription.Animated = true;
+            this.txtDescription.AutoRoundedCorners = true;
+            this.txtDescription.AutoSize = true;
+            this.txtDescription.BorderRadius = 24;
+            this.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescription.DefaultText = "";
+            this.txtDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescription.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.txtDescription.ForeColor = System.Drawing.Color.Black;
+            this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescription.IconLeft = global::TicketSelling.Properties.Resources.note_480px;
+            this.txtDescription.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtDescription.Location = new System.Drawing.Point(395, 142);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.PasswordChar = '\0';
+            this.txtDescription.PlaceholderText = "";
+            this.txtDescription.SelectedText = "";
+            this.txtDescription.Size = new System.Drawing.Size(328, 50);
+            this.txtDescription.TabIndex = 104;
+            this.txtDescription.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtDescription.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDescription_KeyDown);
+            // 
             // lblruntime
             // 
             this.lblruntime.AutoSize = true;
@@ -1026,6 +1300,35 @@
             this.lblruntime.Size = new System.Drawing.Size(110, 33);
             this.lblruntime.TabIndex = 108;
             this.lblruntime.Text = "Runtime";
+            // 
+            // txtRuntime
+            // 
+            this.txtRuntime.Animated = true;
+            this.txtRuntime.AutoRoundedCorners = true;
+            this.txtRuntime.AutoSize = true;
+            this.txtRuntime.BorderRadius = 24;
+            this.txtRuntime.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRuntime.DefaultText = "";
+            this.txtRuntime.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRuntime.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRuntime.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRuntime.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRuntime.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRuntime.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.txtRuntime.ForeColor = System.Drawing.Color.Black;
+            this.txtRuntime.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtRuntime.IconLeft = global::TicketSelling.Properties.Resources.clock_512px;
+            this.txtRuntime.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtRuntime.Location = new System.Drawing.Point(44, 248);
+            this.txtRuntime.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtRuntime.Name = "txtRuntime";
+            this.txtRuntime.PasswordChar = '\0';
+            this.txtRuntime.PlaceholderText = "";
+            this.txtRuntime.SelectedText = "";
+            this.txtRuntime.Size = new System.Drawing.Size(322, 50);
+            this.txtRuntime.TabIndex = 102;
+            this.txtRuntime.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtRuntime.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtRuntime_KeyDown);
             // 
             // lblcasts
             // 
@@ -1048,6 +1351,64 @@
             this.lblname.Size = new System.Drawing.Size(79, 33);
             this.lblname.TabIndex = 106;
             this.lblname.Text = "Name";
+            // 
+            // txtCasts
+            // 
+            this.txtCasts.Animated = true;
+            this.txtCasts.AutoRoundedCorners = true;
+            this.txtCasts.AutoSize = true;
+            this.txtCasts.BorderRadius = 24;
+            this.txtCasts.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCasts.DefaultText = "";
+            this.txtCasts.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCasts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCasts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCasts.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCasts.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCasts.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.txtCasts.ForeColor = System.Drawing.Color.Black;
+            this.txtCasts.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCasts.IconLeft = global::TicketSelling.Properties.Resources.team_480px;
+            this.txtCasts.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtCasts.Location = new System.Drawing.Point(44, 142);
+            this.txtCasts.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtCasts.Name = "txtCasts";
+            this.txtCasts.PasswordChar = '\0';
+            this.txtCasts.PlaceholderText = "";
+            this.txtCasts.SelectedText = "";
+            this.txtCasts.Size = new System.Drawing.Size(322, 50);
+            this.txtCasts.TabIndex = 101;
+            this.txtCasts.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtCasts.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCasts_KeyDown);
+            // 
+            // txtName
+            // 
+            this.txtName.Animated = true;
+            this.txtName.AutoRoundedCorners = true;
+            this.txtName.AutoSize = true;
+            this.txtName.BorderRadius = 24;
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName.DefaultText = "";
+            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.Font = new System.Drawing.Font("Times New Roman", 13.8F);
+            this.txtName.ForeColor = System.Drawing.Color.Black;
+            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.IconLeft = global::TicketSelling.Properties.Resources.movie_500px;
+            this.txtName.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtName.Location = new System.Drawing.Point(44, 49);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtName.Name = "txtName";
+            this.txtName.PasswordChar = '\0';
+            this.txtName.PlaceholderText = "";
+            this.txtName.SelectedText = "";
+            this.txtName.Size = new System.Drawing.Size(322, 50);
+            this.txtName.TabIndex = 100;
+            this.txtName.TextOffset = new System.Drawing.Point(10, 0);
+            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtName_KeyDown);
             // 
             // TabControlMovie
             // 
@@ -1127,353 +1488,6 @@
             this.dataGridViewImageColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn4.Width = 95;
             // 
-            // txtMovieLink
-            // 
-            this.txtMovieLink.AutoSize = true;
-            this.txtMovieLink.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMovieLink.DefaultText = "";
-            this.txtMovieLink.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMovieLink.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMovieLink.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMovieLink.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMovieLink.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMovieLink.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMovieLink.ForeColor = System.Drawing.Color.Black;
-            this.txtMovieLink.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMovieLink.IconLeft = global::TicketSelling.Properties.Resources.link_500px;
-            this.txtMovieLink.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtMovieLink.Location = new System.Drawing.Point(396, 248);
-            this.txtMovieLink.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtMovieLink.Name = "txtMovieLink";
-            this.txtMovieLink.PasswordChar = '\0';
-            this.txtMovieLink.PlaceholderText = "Enter Trailer Link";
-            this.txtMovieLink.SelectedText = "";
-            this.txtMovieLink.Size = new System.Drawing.Size(328, 50);
-            this.txtMovieLink.TabIndex = 105;
-            this.txtMovieLink.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtMovieLink.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtMovieLink_KeyDown);
-            // 
-            // txtMovieType
-            // 
-            this.txtMovieType.AutoSize = true;
-            this.txtMovieType.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMovieType.DefaultText = "";
-            this.txtMovieType.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMovieType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMovieType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMovieType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMovieType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMovieType.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMovieType.ForeColor = System.Drawing.Color.Black;
-            this.txtMovieType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMovieType.IconLeft = global::TicketSelling.Properties.Resources.british_movies_144px;
-            this.txtMovieType.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtMovieType.Location = new System.Drawing.Point(396, 49);
-            this.txtMovieType.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtMovieType.Name = "txtMovieType";
-            this.txtMovieType.PasswordChar = '\0';
-            this.txtMovieType.PlaceholderText = "Enter Movie\'s genre";
-            this.txtMovieType.SelectedText = "";
-            this.txtMovieType.Size = new System.Drawing.Size(327, 50);
-            this.txtMovieType.TabIndex = 103;
-            this.txtMovieType.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtMovieType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtMovieType_KeyDown);
-            // 
-            // btnMovieSearch
-            // 
-            this.btnMovieSearch.BackColor = System.Drawing.Color.DarkGray;
-            this.btnMovieSearch.FlatAppearance.BorderSize = 0;
-            this.btnMovieSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMovieSearch.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMovieSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnMovieSearch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnMovieSearch.IconColor = System.Drawing.Color.Black;
-            this.btnMovieSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMovieSearch.IconSize = 30;
-            this.btnMovieSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMovieSearch.Location = new System.Drawing.Point(1061, 52);
-            this.btnMovieSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMovieSearch.Name = "btnMovieSearch";
-            this.btnMovieSearch.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnMovieSearch.Size = new System.Drawing.Size(154, 50);
-            this.btnMovieSearch.TabIndex = 115;
-            this.btnMovieSearch.Tag = "";
-            this.btnMovieSearch.Text = "Search";
-            this.btnMovieSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMovieSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMovieSearch.UseVisualStyleBackColor = false;
-            this.btnMovieSearch.Click += new System.EventHandler(this.BtnMovieSearch_Click);
-            // 
-            // pictureBox
-            // 
-            this.pictureBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox.ImageRotate = 0F;
-            this.pictureBox.Location = new System.Drawing.Point(745, 19);
-            this.pictureBox.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(289, 279);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox.TabIndex = 114;
-            this.pictureBox.TabStop = false;
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.AutoSize = true;
-            this.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDescription.DefaultText = "";
-            this.txtDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescription.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.ForeColor = System.Drawing.Color.Black;
-            this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescription.IconLeft = global::TicketSelling.Properties.Resources.note_480px;
-            this.txtDescription.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtDescription.Location = new System.Drawing.Point(395, 142);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.PasswordChar = '\0';
-            this.txtDescription.PlaceholderText = "Enter Movie\'s preview";
-            this.txtDescription.SelectedText = "";
-            this.txtDescription.Size = new System.Drawing.Size(328, 50);
-            this.txtDescription.TabIndex = 104;
-            this.txtDescription.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtDescription.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDescription_KeyDown);
-            // 
-            // txtRuntime
-            // 
-            this.txtRuntime.Animated = true;
-            this.txtRuntime.AutoSize = true;
-            this.txtRuntime.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtRuntime.DefaultText = "";
-            this.txtRuntime.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtRuntime.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtRuntime.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRuntime.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRuntime.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRuntime.Font = new System.Drawing.Font("Times New Roman", 13.8F);
-            this.txtRuntime.ForeColor = System.Drawing.Color.Black;
-            this.txtRuntime.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRuntime.IconLeft = global::TicketSelling.Properties.Resources.clock_512px;
-            this.txtRuntime.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtRuntime.Location = new System.Drawing.Point(44, 248);
-            this.txtRuntime.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtRuntime.Name = "txtRuntime";
-            this.txtRuntime.PasswordChar = '\0';
-            this.txtRuntime.PlaceholderText = "Enter duration of movie";
-            this.txtRuntime.SelectedText = "";
-            this.txtRuntime.Size = new System.Drawing.Size(322, 50);
-            this.txtRuntime.TabIndex = 102;
-            this.txtRuntime.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtRuntime.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtRuntime_KeyDown);
-            // 
-            // txtCasts
-            // 
-            this.txtCasts.Animated = true;
-            this.txtCasts.AutoSize = true;
-            this.txtCasts.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCasts.DefaultText = "";
-            this.txtCasts.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCasts.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCasts.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCasts.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCasts.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCasts.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCasts.ForeColor = System.Drawing.Color.Black;
-            this.txtCasts.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCasts.IconLeft = global::TicketSelling.Properties.Resources.team_480px;
-            this.txtCasts.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtCasts.Location = new System.Drawing.Point(44, 142);
-            this.txtCasts.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtCasts.Name = "txtCasts";
-            this.txtCasts.PasswordChar = '\0';
-            this.txtCasts.PlaceholderText = "Enter Actor and Actress";
-            this.txtCasts.SelectedText = "";
-            this.txtCasts.Size = new System.Drawing.Size(322, 50);
-            this.txtCasts.TabIndex = 101;
-            this.txtCasts.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtCasts.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCasts_KeyDown);
-            // 
-            // txtName
-            // 
-            this.txtName.Animated = true;
-            this.txtName.AutoSize = true;
-            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtName.DefaultText = "";
-            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.Black;
-            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.IconLeft = global::TicketSelling.Properties.Resources.movie_500px;
-            this.txtName.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtName.Location = new System.Drawing.Point(44, 49);
-            this.txtName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtName.Name = "txtName";
-            this.txtName.PasswordChar = '\0';
-            this.txtName.PlaceholderText = "Enter Movie\'s Name";
-            this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(322, 50);
-            this.txtName.TabIndex = 100;
-            this.txtName.TextOffset = new System.Drawing.Point(10, 0);
-            this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtName_KeyDown);
-            // 
-            // ColDelSD
-            // 
-            this.ColDelSD.FillWeight = 53.681F;
-            this.ColDelSD.HeaderText = "";
-            this.ColDelSD.Image = ((System.Drawing.Image)(resources.GetObject("ColDelSD.Image")));
-            this.ColDelSD.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ColDelSD.Name = "ColDelSD";
-            this.ColDelSD.ReadOnly = true;
-            this.ColDelSD.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // ColDelST
-            // 
-            this.ColDelST.FillWeight = 53.681F;
-            this.ColDelST.HeaderText = "";
-            this.ColDelST.Image = ((System.Drawing.Image)(resources.GetObject("ColDelST.Image")));
-            this.ColDelST.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ColDelST.Name = "ColDelST";
-            this.ColDelST.ReadOnly = true;
-            this.ColDelST.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "RowNumber";
-            this.dataGridViewTextBoxColumn1.FillWeight = 20F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "No";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 69;
-            // 
-            // ColIdMovie
-            // 
-            this.ColIdMovie.DataPropertyName = "Id";
-            this.ColIdMovie.HeaderText = "ID";
-            this.ColIdMovie.Name = "ColIdMovie";
-            this.ColIdMovie.ReadOnly = true;
-            this.ColIdMovie.Visible = false;
-            // 
-            // ColMovieName
-            // 
-            this.ColMovieName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColMovieName.DataPropertyName = "Name";
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMovieName.DefaultCellStyle = dataGridViewCellStyle13;
-            this.ColMovieName.FillWeight = 90.63343F;
-            this.ColMovieName.HeaderText = "Movie Name";
-            this.ColMovieName.Name = "ColMovieName";
-            this.ColMovieName.ReadOnly = true;
-            this.ColMovieName.Width = 165;
-            // 
-            // ColMovieCover
-            // 
-            this.ColMovieCover.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColMovieCover.DataPropertyName = "MovieCoverByte";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle14.NullValue")));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMovieCover.DefaultCellStyle = dataGridViewCellStyle14;
-            this.ColMovieCover.HeaderText = "Movie Cover";
-            this.ColMovieCover.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ColMovieCover.Name = "ColMovieCover";
-            this.ColMovieCover.ReadOnly = true;
-            this.ColMovieCover.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMovieCover.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColMovieCover.Width = 167;
-            // 
-            // ColCasts
-            // 
-            this.ColCasts.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColCasts.DataPropertyName = "Casts";
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColCasts.DefaultCellStyle = dataGridViewCellStyle15;
-            this.ColCasts.FillWeight = 90.63343F;
-            this.ColCasts.HeaderText = "Casts";
-            this.ColCasts.Name = "ColCasts";
-            this.ColCasts.ReadOnly = true;
-            // 
-            // ColRuntime
-            // 
-            this.ColRuntime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColRuntime.DataPropertyName = "Runtime";
-            this.ColRuntime.FillWeight = 60F;
-            this.ColRuntime.HeaderText = "Runtime";
-            this.ColRuntime.Name = "ColRuntime";
-            this.ColRuntime.ReadOnly = true;
-            this.ColRuntime.Width = 122;
-            // 
-            // ColMovieType
-            // 
-            this.ColMovieType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColMovieType.DataPropertyName = "MovieType";
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMovieType.DefaultCellStyle = dataGridViewCellStyle16;
-            this.ColMovieType.FillWeight = 90.63343F;
-            this.ColMovieType.HeaderText = "Movie Type";
-            this.ColMovieType.Name = "ColMovieType";
-            this.ColMovieType.ReadOnly = true;
-            this.ColMovieType.Width = 155;
-            // 
-            // ColDescription
-            // 
-            this.ColDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColDescription.DataPropertyName = "Description";
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColDescription.DefaultCellStyle = dataGridViewCellStyle17;
-            this.ColDescription.FillWeight = 90.63343F;
-            this.ColDescription.HeaderText = "Description";
-            this.ColDescription.Name = "ColDescription";
-            this.ColDescription.ReadOnly = true;
-            // 
-            // ColMovieLink
-            // 
-            this.ColMovieLink.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColMovieLink.DataPropertyName = "TrailerLink";
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMovieLink.DefaultCellStyle = dataGridViewCellStyle18;
-            this.ColMovieLink.FillWeight = 80F;
-            this.ColMovieLink.HeaderText = "Trailer Link";
-            this.ColMovieLink.Name = "ColMovieLink";
-            this.ColMovieLink.ReadOnly = true;
-            // 
-            // ColFinish
-            // 
-            this.ColFinish.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColFinish.FillWeight = 15F;
-            this.ColFinish.HeaderText = "";
-            this.ColFinish.Image = global::TicketSelling.Properties.Resources.checked_checkbox_512px;
-            this.ColFinish.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ColFinish.Name = "ColFinish";
-            this.ColFinish.ReadOnly = true;
-            // 
-            // ColDelMovie
-            // 
-            this.ColDelMovie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColDelMovie.FillWeight = 15F;
-            this.ColDelMovie.HeaderText = "";
-            this.ColDelMovie.Image = global::TicketSelling.Properties.Resources.delete;
-            this.ColDelMovie.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ColDelMovie.Name = "ColDelMovie";
-            this.ColDelMovie.ReadOnly = true;
-            this.ColDelMovie.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ColDelMovie.ToolTipText = "Delete";
-            // 
-            // ColMovieCoverString
-            // 
-            this.ColMovieCoverString.DataPropertyName = "MovieCover";
-            this.ColMovieCoverString.HeaderText = "MovieCoverString";
-            this.ColMovieCoverString.Name = "ColMovieCoverString";
-            this.ColMovieCoverString.ReadOnly = true;
-            this.ColMovieCoverString.Visible = false;
-            // 
             // FrmMovie
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1497,8 +1511,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMovie)).EndInit();
             this.panelMovieTop.ResumeLayout(false);
             this.panelMovieTop.PerformLayout();
-            this.TabControlMovie.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            this.TabControlMovie.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

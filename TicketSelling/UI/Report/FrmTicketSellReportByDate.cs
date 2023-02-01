@@ -19,9 +19,9 @@ namespace TicketSelling.UI.Report
     public partial class FrmTicketSellReportByDate : UserControl
     {
         ResSale res = new ResSale();
-        List<SaleReport> lstaleReport = new List<SaleReport>();
+        List<SaleReport> lstSaleReport = new List<SaleReport>();
         string StartDate = "", EndDate = "";
-       
+
         public FrmTicketSellReportByDate()
         {
             InitializeComponent();
@@ -30,10 +30,9 @@ namespace TicketSelling.UI.Report
         private void FrmTicketSellReportByDate_Load(object sender, EventArgs e)
         {
             rbByDay.Checked = true;
-            dpFromDate.Value = DateTime.Now;
-            dpToDate.Value = DateTime.Now;
             BindName();
-            
+            dgvReport.AutoGenerateColumns = false;
+            CheckDataByDate();
         }
 
         #region Form Move
@@ -74,11 +73,13 @@ namespace TicketSelling.UI.Report
                 ResMovie res = new MovieDao().GetMovieNameForReport();
                 if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
+                    cbMovie.SelectedIndexChanged -= new EventHandler(CbMovie_SelectedIndexChanged);
                     cbMovie.DataSource = null;
                     cbMovie.DataSource = res.LstMovie;
                     cbMovie.DisplayMember = "Name";
                     cbMovie.ValueMember = "Id";
                     cbMovie.SelectedIndex = 0;
+                    cbMovie.SelectedIndexChanged += new EventHandler(CbMovie_SelectedIndexChanged);
                 }
             }
             catch (Exception ex)
@@ -98,15 +99,24 @@ namespace TicketSelling.UI.Report
 
                 if (rbByDay.Checked)
                 {
-                    res = new SaleDao().GetSaleReportByDate(ProcedureConstants.SP_GetSaleReportByDate,MovieId,dpFromDate.Value);
-                    lstaleReport = res.lstSaleReport.ToList();
+                    res = new SaleDao().GetSaleReportByDate(ProcedureConstants.SP_GetSaleReportByDate, MovieId, dpFromDate.Value);
+                    lstSaleReport = res.lstSaleReport.ToList();
                     StartDate = dpFromDate.Value.ToString(Common.CommonFormat.DateFormat);
                     EndDate = "";
                 }
-                if (lstaleReport.Count > 0)
+                
+                else
                 {
-                    FrmReportViewer frm = new FrmReportViewer(lblTitle.Text, lstaleReport, ReportNameConstants.TICKET_SELL_REPORT_BY_DATE, StartDate, EndDate);
-                    frm.ShowDialog();
+                    StartDate = dpFromDate.Value.ToString(CommonFormat.DateFormat);
+                    EndDate = dpToDate.Value.ToString(CommonFormat.DateFormat);
+                    res = new SaleDao().GetSaleReportByDate(ProcedureConstants.SP_GetSaleReportByWeek, MovieId, dpFromDate.Value, dpToDate.Value);
+                    lstSaleReport = res.lstSaleReport.ToList();
+                }
+                if (lstSaleReport.Count > 0)
+                {
+
+                    dgvReport.DataSource = lstSaleReport;
+                    txtTotalPrice.Text = lstSaleReport.Sum(x => x.Price).ToString();
                 }
                 else
                 {
@@ -127,37 +137,78 @@ namespace TicketSelling.UI.Report
 
         private void RbByDay_CheckedChanged(object sender, EventArgs e)
         {
-            lblFromDate.Visible = lblToDate.Visible = dpToDate.Visible = false;
-            lblDate.Visible = dpFromDate.Visible = true;
-            dpFromDate.CustomFormat = Common.CommonFormat.DateFormat;
-            dpFromDate.Value = DateTime.Now;
+            CheckDataByDate();
+
         }
 
-        private void RbByWeek_CheckedChanged(object sender, EventArgs e)
+        private void CheckDataByDate()
         {
             lblFromDate.Visible = lblToDate.Visible = dpToDate.Visible = false;
             lblDate.Visible = dpFromDate.Visible = true;
             dpFromDate.CustomFormat = Common.CommonFormat.DateFormat;
-            dpFromDate.Value = DateTime.Now;
+            dpFromDate.MinDate = Convert.ToDateTime("1/1/1753");
+            dpFromDate.MaxDate = Convert.ToDateTime("12/31/9998");
+            dpToDate.MinDate = Convert.ToDateTime("1/1/1753");
+            dpToDate.MaxDate = Convert.ToDateTime("12/31/9998");
+            int MovieId = Convert.ToInt32(cbMovie.SelectedValue);
+            ResMovieSD res = new MovieDao().GetMovieDateById(MovieId);
+            if (res.LstMovieSD.Count > 0) //if condition use to control error in datetime bcoz LstMovieSD have O index 
+            {
+                dpFromDate.MinDate = res.LstMovieSD[0].StartDate;
+                dpFromDate.MaxDate = res.LstMovieSD[0].EndDate;
+                dpToDate.MinDate = res.LstMovieSD[0].StartDate;
+                dpToDate.MaxDate = res.LstMovieSD[0].EndDate;
+            }
+            btnView.Location = new Point(402, 132);
         }
 
-        private void RbByMonth_CheckedChanged(object sender, EventArgs e)
-        {
-            lblFromDate.Visible = lblToDate.Visible = dpToDate.Visible = false;
-            lblDate.Visible = dpFromDate.Visible = true;
-            dpFromDate.Format = DateTimePickerFormat.Custom;
-            dpFromDate.CustomFormat = Common.CommonFormat.MonthFormat;
-        }
 
         private void RbByCustom_CheckedChanged(object sender, EventArgs e)
         {
             lblFromDate.Visible = dpFromDate.Visible = lblToDate.Visible = dpToDate.Visible = true;
-            lblDate.Visible =  false;
+            lblDate.Visible = false;
+            dpFromDate.MinDate = Convert.ToDateTime("1/1/1753");
+            dpFromDate.MaxDate = Convert.ToDateTime("12/31/9998");
+            dpToDate.MinDate = Convert.ToDateTime("1/1/1753");
+            dpToDate.MaxDate = Convert.ToDateTime("12/31/9998");
             dpFromDate.CustomFormat = Common.CommonFormat.DateFormat;
-            dpFromDate.Value = DateTime.Now;
+            int MovieId = Convert.ToInt32(cbMovie.SelectedValue);
+            ResMovieSD res = new MovieDao().GetMovieDateById(MovieId);
+            if (res.LstMovieSD.Count > 0) //if condition use to control error in datetime bcoz LstMovieSD have O index 
+            {
+                dpFromDate.MinDate = res.LstMovieSD[0].StartDate;
+                dpFromDate.MaxDate = res.LstMovieSD[0].EndDate;
+                dpToDate.MinDate = res.LstMovieSD[0].StartDate;
+                dpToDate.MaxDate = res.LstMovieSD[0].EndDate;
+            }
+            btnView.Location = new Point(767, 132);
         }
 
-        
+
+        private void CbMovie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                dpFromDate.MinDate = Convert.ToDateTime("1/1/1753");
+                dpFromDate.MaxDate = Convert.ToDateTime("12/31/9998");
+                dpToDate.MinDate = Convert.ToDateTime("1/1/1753");
+                dpToDate.MaxDate = Convert.ToDateTime("12/31/9998");
+                int MovieId = Convert.ToInt32(cbMovie.SelectedValue);
+                ResMovieSD res = new MovieDao().GetMovieDateById(MovieId);
+                if (res.LstMovieSD.Count > 0) //if condition use to control error in datetime bcoz LstMovieSD have O index 
+                {
+                    dpFromDate.MinDate = res.LstMovieSD[0].StartDate;
+                    dpFromDate.MaxDate = res.LstMovieSD[0].EndDate;
+                }
+            }
+            catch (Exception ex)
+            {
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
+            }
+        }
+
 
     }
 }

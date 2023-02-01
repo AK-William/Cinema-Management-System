@@ -189,6 +189,8 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
+        
+
         private void FrmMain_Load(object sender, EventArgs e)
         {
             formSize = this.ClientSize;
@@ -197,6 +199,7 @@ namespace TicketSelling.UI.Configuration
             pbLochmara.Visible = true;
             panelConfiguration.Visible = (RoleId == 2) ? false : true;
             panelEntry.Visible = (RoleId == 2) ? false : true;
+            panelEntry.Visible = (RoleId == 3) ? false : true;
         }
 
         private void FrmMain_Resize(object sender, EventArgs e)

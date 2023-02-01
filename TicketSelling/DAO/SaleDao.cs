@@ -146,7 +146,7 @@ namespace TicketSelling.DAO
             }
         }
 
-        public ResSale GetSaleReportByDate(string str,int MovieId,DateTime StartDate, Nullable<DateTime> EndDate=null)
+        public ResSale GetSaleReportByDate(string str,int MovieId, Nullable<DateTime> StartDate=null, Nullable<DateTime> EndDate=null)
         {
             MessageEntity _MessageEntity = null;
             sqlConnection = DbConnector.Connect();
@@ -163,6 +163,8 @@ namespace TicketSelling.DAO
                     scom.Parameters.AddWithValue("@StartDate", StartDate);
                     scom.Parameters.AddWithValue("@EndDate", EndDate);
                 }
+
+                scom.Parameters.AddWithValue("@MovieId", MovieId);
                 DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(scom);
                 adapter.Fill(ds);
@@ -176,11 +178,12 @@ namespace TicketSelling.DAO
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     SaleReport item = new SaleReport();
+                    item.RowNumber = dt.Rows[i]["RowNumber"].ToString();
                     item.MovieName = dt.Rows[i]["MovieName"].ToString();
                     item.MovieDate = Convert.ToDateTime(dt.Rows[i]["MovieDate"].ToString());
                     item.MovieTime = dt.Rows[i]["MovieTime"].ToString();
                     item.SeatName = dt.Rows[i]["SeatName"].ToString();
-                    item.Price = Convert.ToInt32(dt.Rows[i]["TotalPassenger"].ToString());
+                    item.Price = Convert.ToInt32(dt.Rows[i]["Price"].ToString());
                     lst.Add(item);
                 }
                 return new ResSale()

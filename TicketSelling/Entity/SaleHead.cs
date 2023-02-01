@@ -34,6 +34,7 @@ namespace TicketSelling.Entity
 
     public class SaleReport
     {
+        public string RowNumber { get; set; }
         public string MovieName { get; set; }
         public DateTime MovieDate { get; set; }
         public string MovieTime { get; set; }
