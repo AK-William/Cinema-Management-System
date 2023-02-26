@@ -30,5 +30,15 @@ namespace TicketSelling.DAO.Entity
     {
         public MessageEntity MessageEntity { get; set; }
         public List<Movie> LstMovie { get; set; }
+
+        public List<MovieSummary> lstMovieSummary { get; set; }
+    }
+
+    public class MovieSummary
+    {
+        public string RowNumber { get; set; }
+        public string MovieName { get; set; }
+        public int TotalAmount { get; set; }
+
     }
 }

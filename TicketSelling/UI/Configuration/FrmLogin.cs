@@ -25,6 +25,7 @@ namespace TicketSelling.UI.Configuration
         }
 
         public static string user;
+        public static byte[] UserImage;
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
@@ -69,9 +70,10 @@ namespace TicketSelling.UI.Configuration
                     Username = txtUsername.Text,
                     Password = txtPassword.Text
                 });
-                if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
+                if (res.LstAdmin != null && res.LstAdmin.Count > 0)
                 {
                     user = txtUsername.Text;
+                    UserImage = res.LstAdmin[0].PhotoByte;
                     FrmMessageBox.FrmNormal fmN = new FrmMessageBox.FrmNormal();
                     fmN.lblNormal.Text = "Login Successful. Welcome!";
                     fmN.ShowDialog();

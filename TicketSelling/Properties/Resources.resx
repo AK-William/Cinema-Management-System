@@ -127,6 +127,12 @@
   <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="account_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\account_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user-profile-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-profile-icon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sun_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sun_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,8 +163,8 @@
   <data name="living_room_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\living_room_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="account_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\account_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="multiply_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\multiply_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cinema 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cinema 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,6 +208,9 @@
   <data name="toggle_full_screen_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\toggle_full_screen_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cinema-time-cineworld" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cinema-time-cineworld.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="couple-watching-tv" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\couple-watching-tv.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,14 +232,14 @@
   <data name="cinema_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cinema_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="POPCORN PLACE Cardinel Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\POPCORN PLACE Cardinel Red.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Close_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Close_480px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="note_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\note_480px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="POPCORN PLACE Cardinel Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\POPCORN PLACE Cardinel Red.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="name_208px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\name_208px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -243,6 +252,9 @@
   </data>
   <data name="130718-movie" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\130718-movie.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WELCOME TO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WELCOME TO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="POPCORN PLACE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\POPCORN PLACE.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,6 +274,9 @@
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="approval_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\approval_480px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="movie_camera_256px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\movie_camera_256px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -270,9 +285,6 @@
   </data>
   <data name="sun_512px white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sun_512px white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="password_144px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\password_144px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="error_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\error_480px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -285,9 +297,6 @@
   </data>
   <data name="cancel_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel_480px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="multiply_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\multiply_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Menu_512px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu_512px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -310,8 +319,8 @@
   <data name="POPCORN PLACE Malachite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\POPCORN PLACE Malachite.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cinema-time-cineworld" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cinema-time-cineworld.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="password_144px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password_144px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="night_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\night_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,7 +337,7 @@
   <data name="zip_code_500px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zip_code_500px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="approval_480px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\approval_480px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WELCOME TO1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WELCOME TO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

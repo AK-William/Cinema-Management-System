@@ -56,6 +56,7 @@
             this.pbCeriseRed = new System.Windows.Forms.PictureBox();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.panelAccountShow = new Guna.UI2.WinForms.Guna2Panel();
+            this.accountImg = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.txtLoginNameForMain = new System.Windows.Forms.Label();
             this.accountimage = new FontAwesome.Sharp.IconButton();
@@ -63,10 +64,10 @@
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
-            this.btnSetting = new FontAwesome.Sharp.IconButton();
             this.toolTipHome = new System.Windows.Forms.ToolTip(this.components);
             this.paneltitlebar = new Guna.UI2.WinForms.Guna2Panel();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconButton();
+            this.btnSetting = new FontAwesome.Sharp.IconButton();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.panelBody = new Guna.UI2.WinForms.Guna2Panel();
             this.toolTipConfiguration = new System.Windows.Forms.ToolTip(this.components);
@@ -94,6 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbCeriseRed)).BeginInit();
             this.panelTitle.SuspendLayout();
             this.panelAccountShow.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.accountImg)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.paneltitlebar.SuspendLayout();
             this.SuspendLayout();
@@ -381,11 +383,20 @@
             this.panelAccountShow.BackColor = System.Drawing.Color.Transparent;
             this.panelAccountShow.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.panelAccountShow.BorderThickness = 2;
+            this.panelAccountShow.Controls.Add(this.accountImg);
             this.panelAccountShow.Controls.Add(this.guna2Panel1);
             this.panelAccountShow.Controls.Add(this.accountimage);
             this.panelAccountShow.Name = "panelAccountShow";
             this.panelAccountShow.Tag = "AS";
             this.panelAccountShow.UseTransparentBackground = true;
+            // 
+            // accountImg
+            // 
+            this.accountImg.ImageRotate = 0F;
+            resources.ApplyResources(this.accountImg, "accountImg");
+            this.accountImg.Name = "accountImg";
+            this.accountImg.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.accountImg.TabStop = false;
             // 
             // guna2Panel1
             // 
@@ -457,22 +468,6 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // btnSetting
-            // 
-            resources.ApplyResources(this.btnSetting, "btnSetting");
-            this.btnSetting.AutoEllipsis = true;
-            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.btnSetting.FlatAppearance.BorderSize = 0;
-            this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnSetting.IconChar = FontAwesome.Sharp.IconChar.Gear;
-            this.btnSetting.IconColor = System.Drawing.Color.White;
-            this.btnSetting.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSetting.IconSize = 50;
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Tag = "Setting";
-            this.btnSetting.UseVisualStyleBackColor = false;
-            this.btnSetting.Click += new System.EventHandler(this.BtnSetting_Click);
-            // 
             // toolTipHome
             // 
             this.toolTipHome.AutomaticDelay = 100;
@@ -496,6 +491,22 @@
             this.iconCurrentChildForm.IconSize = 40;
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
             this.iconCurrentChildForm.UseVisualStyleBackColor = true;
+            // 
+            // btnSetting
+            // 
+            resources.ApplyResources(this.btnSetting, "btnSetting");
+            this.btnSetting.AutoEllipsis = true;
+            this.btnSetting.BackColor = System.Drawing.Color.Transparent;
+            this.btnSetting.FlatAppearance.BorderSize = 0;
+            this.btnSetting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btnSetting.IconChar = FontAwesome.Sharp.IconChar.Gear;
+            this.btnSetting.IconColor = System.Drawing.Color.White;
+            this.btnSetting.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSetting.IconSize = 50;
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Tag = "Setting";
+            this.btnSetting.UseVisualStyleBackColor = false;
+            this.btnSetting.Click += new System.EventHandler(this.BtnSetting_Click);
             // 
             // lblTitleChildForm
             // 
@@ -605,6 +616,7 @@
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             this.panelAccountShow.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.accountImg)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.paneltitlebar.ResumeLayout(false);
             this.paneltitlebar.PerformLayout();
@@ -662,5 +674,6 @@
         public System.Windows.Forms.PictureBox pbMalachite;
         public System.Windows.Forms.PictureBox pbCoral;
         public System.Windows.Forms.PictureBox pbCardinelRed;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox accountImg;
     }
 }

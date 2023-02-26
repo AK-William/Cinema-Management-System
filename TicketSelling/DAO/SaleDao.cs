@@ -80,6 +80,7 @@ namespace TicketSelling.DAO
                     RespCode = dt1.Rows[0]["RespCode"].ToString(),
                     RespDesp = dt1.Rows[0]["RespDesp"].ToString(),
                     RespMessageType = dt1.Rows[0]["RespMessageType"].ToString(),
+                    HeadId = Convert.ToInt32(ds1.Tables[1].Rows[0][0])
                 };
             }
             catch (Exception ex)
@@ -90,6 +91,63 @@ namespace TicketSelling.DAO
                 return _MessageEntity;
             }
         }
+
+        public ResTicketData GetTicketData(int HeadId)
+        {
+            sqlConnection = DbConnector.Connect();
+            if (sqlConnection == null)
+            {
+                return null;
+            }
+            MessageEntity _MessageEntity = null;
+            try
+            {
+                scom = new SqlCommand(ProcedureConstants.GetExportDataById, sqlConnection);
+                scom.CommandType = CommandType.Text;
+                scom.Parameters.AddWithValue("@HeadId", HeadId);
+                DataSet ds = new DataSet();
+                adapter = new SqlDataAdapter(scom);
+                adapter.Fill(ds);
+                sqlConnection.Close();
+
+                _MessageEntity = SqlDataSet.Check(ds, 1);
+                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
+                    return new ResTicketData() { MessageEntity = _MessageEntity };
+
+                DataTable dt = ds.Tables[0];
+                List<TicketData> lst = new List<TicketData>();
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    lst.Add(new TicketData
+                    {
+                        MovieName = dt.Rows[i]["MovieName"].ToString(),
+                        MovieDate = Convert.ToDateTime(dt.Rows[i]["MovieDate"].ToString()),
+                        MovieTime = dt.Rows[i]["MovieTime"].ToString(),
+                        CustomerName = dt.Rows[i]["CustomerName"].ToString(),
+                        Phone = dt.Rows[i]["Phone"].ToString(),
+                        SeatName = dt.Rows[i]["SeatName"].ToString(),
+                        TotalPrice = Convert.ToInt32(dt.Rows[i]["TotalPrice"].ToString()),
+                    });
+                }
+                return new ResTicketData()
+                {
+                    MessageEntity = new MessageEntity()
+                    {
+                        RespMessageType = CommonResponseMessage.ResSuccessType
+                    },
+                    lstTicketData = lst
+                };
+            }
+            catch (Exception ex)
+            {
+                _MessageEntity.RespCode = CommonResponseMessage.ExceptionErrorCode;
+                _MessageEntity.RespDesp = ex.Message;
+                _MessageEntity.RespMessageType = CommonResponseMessage.ResErrorType;
+                return new ResTicketData() { MessageEntity = _MessageEntity };
+            }
+        }
+
 
         public ResSale GetSellingTicket(int MovieId, DateTime MovieDate, int TimeId)
         {
@@ -146,7 +204,7 @@ namespace TicketSelling.DAO
             }
         }
 
-        public ResSale GetSaleReportByDate(string str,int MovieId, Nullable<DateTime> StartDate=null, Nullable<DateTime> EndDate=null)
+        public ResSale GetSaleReportByDate(string str, int MovieId, Nullable<DateTime> StartDate = null, Nullable<DateTime> EndDate = null)
         {
             MessageEntity _MessageEntity = null;
             sqlConnection = DbConnector.Connect();
@@ -203,6 +261,5 @@ namespace TicketSelling.DAO
                 return new ResSale() { MessageEntity = _MessageEntity };
             }
         }
-
     }
 }

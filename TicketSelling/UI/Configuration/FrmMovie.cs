@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using TicketSelling.Common;
 using TicketSelling.DAO.Entity;
 using System.IO;
-using System.Windows.Media.Imaging;
 using TicketSelling.UI.FrmMessageBox;
 
 namespace TicketSelling.UI.Configuration
@@ -793,7 +792,7 @@ namespace TicketSelling.UI.Configuration
 
         private void TabControlMovie_Click(object sender, EventArgs e)
         {
-            if (LstMovieSD != null && LstMovieSD.Count > 0)
+            if (LstMovieSD != null && LstMovieSD.Count > 0) //no data entry error control
             {
                 //Schedule date combo box
                 CbSDName.SelectedIndexChanged -= new EventHandler(CbSDName_SelectedIndexChanged);
@@ -805,7 +804,7 @@ namespace TicketSelling.UI.Configuration
                 CbSDName.SelectedIndexChanged += new EventHandler(CbSDName_SelectedIndexChanged);
                 BindDgvMovieSD();
             }
-            if (LstMovieST != null && LstMovieST.Count > 0)
+            if (LstMovieST != null && LstMovieST.Count > 0) //no data entry error control
             {
                 //Schedule time combo box
                 CbSTName.SelectedIndexChanged -= new EventHandler(CbSTName_SelectedIndexChanged);

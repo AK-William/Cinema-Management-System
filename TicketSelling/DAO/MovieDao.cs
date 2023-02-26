@@ -150,7 +150,7 @@ namespace TicketSelling.DAO
                         RowNumber = dt.Rows[i]["RowNumber"].ToString(),
                         Id = Convert.ToInt32(dt.Rows[i]["Id"]),
                         Name = dt.Rows[i]["Name"].ToString(),
-                        MovieCover= dt.Rows[i]["MovieCover"].ToString(),
+                        MovieCover = dt.Rows[i]["MovieCover"].ToString(),
                         MovieCoverByte = File.ReadAllBytes(dt.Rows[i]["MovieCover"].ToString()),
                         Casts = dt.Rows[i]["Casts"].ToString(),
                         Runtime = dt.Rows[i]["Runtime"].ToString(),
@@ -301,9 +301,12 @@ namespace TicketSelling.DAO
                     return _MessageEntity;
 
                 DataTable dt = ds.Tables[1];
-                _MessageEntity = SqlDataTable.Check(dt, 1);
-                if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
-                    return new MessageEntity() { RespCode = "001", RespDesp = "Delete Error!", RespMessageType = CommonResponseMessage.ResErrorType };
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    _MessageEntity = SqlDataTable.Check(dt, 1);
+                    if (_MessageEntity.RespMessageType != CommonResponseMessage.ResSuccessType)
+                        return new MessageEntity() { RespCode = "001", RespDesp = "Delete Error!", RespMessageType = CommonResponseMessage.ResErrorType };
+                }
 
                 dt = ds.Tables[0];
 
@@ -637,8 +640,8 @@ namespace TicketSelling.DAO
                 List<MovieST> lst = new List<MovieST>();
                 lst.Add(new MovieST
                 {
-                    Id =0,
-                    Time ="--Select One--",
+                    Id = 0,
+                    Time = "--Select One--",
                 });
 
                 for (int i = 0; i < dt.Rows.Count; i++)

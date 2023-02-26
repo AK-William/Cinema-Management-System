@@ -743,6 +743,16 @@ namespace TicketSelling.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap user_profile_icon {
+            get {
+                object obj = ResourceManager.GetObject("user-profile-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap watching_movies_popcorn {
             get {
                 object obj = ResourceManager.GetObject("watching-movies-popcorn", resourceCulture);
@@ -756,6 +766,26 @@ namespace TicketSelling.Properties {
         internal static System.Drawing.Bitmap welcome_cinema_neon_sign_popcorn_260nw_1178142151 {
             get {
                 object obj = ResourceManager.GetObject("welcome-cinema-neon-sign-popcorn-260nw-1178142151", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WELCOME_TO {
+            get {
+                object obj = ResourceManager.GetObject("WELCOME TO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WELCOME_TO1 {
+            get {
+                object obj = ResourceManager.GetObject("WELCOME TO1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

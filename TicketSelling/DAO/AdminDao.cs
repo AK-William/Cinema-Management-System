@@ -370,7 +370,9 @@ namespace TicketSelling.DAO
                         Id = Convert.ToInt32(dt.Rows[i]["Id"]),
                         RoleId = Convert.ToInt32(dt.Rows[i]["RoleId"].ToString()),
                         Name = dt.Rows[i]["Name"].ToString(),
-                        Username = dt.Rows[i]["Username"].ToString()
+                        Username = dt.Rows[i]["Username"].ToString(),
+                        Photo= dt.Rows[i]["Photo"].ToString(),
+                        PhotoByte = File.ReadAllBytes(dt.Rows[i]["Photo"].ToString()),
                     });
                 }
                 return new ResAdmin()

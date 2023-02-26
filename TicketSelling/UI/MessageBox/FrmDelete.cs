@@ -44,10 +44,7 @@ namespace TicketSelling.UI.FrmMessageBox
             isYesOrNo = false;
             this.Close();
         }
-        public void show()
-        {
-
-        }
+       
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {

@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using TicketSelling.Common;
 using TicketSelling.DAO.Entity;
 using System.IO;
-using System.Windows.Media.Imaging;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using static TicketSelling.DAO.Entity.Role;

@@ -1,6 +1,7 @@
 ﻿using FontAwesome.Sharp;
 using System;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -19,6 +20,7 @@ namespace TicketSelling.UI.Configuration
             CollapseMenu();
             HideSubMenu();
             txtLoginNameForMain.Text = FrmLogin.user;
+            accountImg.Image = Image.FromStream(new MemoryStream(FrmLogin.UserImage));
             this.Padding = new Padding(borderSize);//Border size
             //this.BackColor = Color.FromArgb(51, 153, 255);//Border color
             RoleId = _RoleId;
@@ -199,7 +201,11 @@ namespace TicketSelling.UI.Configuration
             pbLochmara.Visible = true;
             panelConfiguration.Visible = (RoleId == 2) ? false : true;
             panelEntry.Visible = (RoleId == 2) ? false : true;
-            panelEntry.Visible = (RoleId == 3) ? false : true;
+            if (RoleId == 3)
+            {
+                btnAdmin.Visible = false;
+                btnSeat.Visible = false;
+            }
         }
 
         private void FrmMain_Resize(object sender, EventArgs e)
@@ -281,6 +287,7 @@ namespace TicketSelling.UI.Configuration
                     iconCurrentChildForm.IconChar = btnAdmin.IconChar;
                     break;
                 case "Dashboard":
+                    frm = new FrmDashboard();
                     lblTitleChildForm.Text = btnDashboard.Tag.ToString();
                     iconCurrentChildForm.IconChar = btnDashboard.IconChar;
                     break;
@@ -324,10 +331,10 @@ namespace TicketSelling.UI.Configuration
             MenuClick(sender, e);
             HideSubMenu();
             ActivateButton(sender); //menu highlight active button
-            panelBody.Controls.Clear();
-            panelBody.Controls.Add(frmdashboard);
-            frmdashboard.Dock = DockStyle.Fill;
-            frmdashboard.BackColor = panelTitle.BackColor;
+            //panelBody.Controls.Clear();
+            //panelBody.Controls.Add(frmdashboard);
+            //frmdashboard.Dock = DockStyle.Fill;
+            //frmdashboard.BackColor = panelTitle.BackColor;
         }
 
         private void BtnConfiguration_Click(object sender, EventArgs e)

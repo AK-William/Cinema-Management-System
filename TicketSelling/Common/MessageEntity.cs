@@ -20,6 +20,7 @@ namespace TicketSelling.Common
         public int AdminId { get; set; }
 
         public string AdminPhotoName { get; set; }
+        public int HeadId { get; set; }
     }
 
     public static class SqlDataSet

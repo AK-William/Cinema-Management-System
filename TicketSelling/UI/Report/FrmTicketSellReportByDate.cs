@@ -71,15 +71,18 @@ namespace TicketSelling.UI.Report
             {
                 cbMovie.DataSource = null;
                 ResMovie res = new MovieDao().GetMovieNameForReport();
-                if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
+                //if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
+                if (res.LstMovie.Count > 0) //no data entry error control
                 {
-                    cbMovie.SelectedIndexChanged -= new EventHandler(CbMovie_SelectedIndexChanged);
-                    cbMovie.DataSource = null;
-                    cbMovie.DataSource = res.LstMovie;
-                    cbMovie.DisplayMember = "Name";
-                    cbMovie.ValueMember = "Id";
-                    cbMovie.SelectedIndex = 0;
-                    cbMovie.SelectedIndexChanged += new EventHandler(CbMovie_SelectedIndexChanged);
+                    {
+                        cbMovie.SelectedIndexChanged -= new EventHandler(CbMovie_SelectedIndexChanged);
+                        cbMovie.DataSource = null;
+                        cbMovie.DataSource = res.LstMovie;
+                        cbMovie.DisplayMember = "Name";
+                        cbMovie.ValueMember = "Id";
+                        cbMovie.SelectedIndex = 0;
+                        cbMovie.SelectedIndexChanged += new EventHandler(CbMovie_SelectedIndexChanged);
+                    }
                 }
             }
             catch (Exception ex)
@@ -104,7 +107,7 @@ namespace TicketSelling.UI.Report
                     StartDate = dpFromDate.Value.ToString(Common.CommonFormat.DateFormat);
                     EndDate = "";
                 }
-                
+
                 else
                 {
                     StartDate = dpFromDate.Value.ToString(CommonFormat.DateFormat);
@@ -199,6 +202,9 @@ namespace TicketSelling.UI.Report
                 {
                     dpFromDate.MinDate = res.LstMovieSD[0].StartDate;
                     dpFromDate.MaxDate = res.LstMovieSD[0].EndDate;
+
+                    dpToDate.MinDate = res.LstMovieSD[0].StartDate;
+                    dpToDate.MaxDate = res.LstMovieSD[0].EndDate;
                 }
             }
             catch (Exception ex)

@@ -418,14 +418,17 @@ namespace TicketSelling.UI.Configuration
 
         private void TabcontrolSeat_Click(object sender, EventArgs e)
         {
-            cbSeatType.SelectedIndexChanged -= new EventHandler(CbSeatType_SelectedIndexChanged);
-            cbSeatType.DataSource = null;
-            cbSeatType.DataSource = LstSeatType;
-            cbSeatType.DisplayMember = "Name";
-            cbSeatType.ValueMember = "Id";
-            cbSeatType.SelectedIndex = 0;
-            cbSeatType.SelectedIndexChanged += new EventHandler(CbSeatType_SelectedIndexChanged);
-            BindDgvData();
+            if (LstSeatType.Count > 0)
+            {
+                cbSeatType.SelectedIndexChanged -= new EventHandler(CbSeatType_SelectedIndexChanged);
+                cbSeatType.DataSource = null;
+                cbSeatType.DataSource = LstSeatType;
+                cbSeatType.DisplayMember = "Name";
+                cbSeatType.ValueMember = "Id";
+                cbSeatType.SelectedIndex = 0;
+                cbSeatType.SelectedIndexChanged += new EventHandler(CbSeatType_SelectedIndexChanged);
+                BindDgvData();
+            }
         }
 
         private void CbSeatType_SelectedIndexChanged(object sender, EventArgs e)

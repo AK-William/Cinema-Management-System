@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -12,248 +14,147 @@ using System.Windows.Forms;
 using TicketSelling.Common;
 using TicketSelling.DAO;
 using TicketSelling.DAO.Entity;
+using TicketSelling.UI.FrmMessageBox;
 
 namespace TicketSelling.UI.Configuration
 {
     public partial class FrmDashboard : UserControl
     {
+        public List<Movie> lstMovie = new List<Movie>();
+        int X = 30, Y = 23;
         public FrmDashboard()
         {
             InitializeComponent();
-            dgvMovieDB2.AutoGenerateColumns = false;
-            dgvMovieDB1.AutoGenerateColumns = false;
-            dgvMovieDB3.AutoGenerateColumns = false;
-            dgvMovieDB4.AutoGenerateColumns = false;
-
-            dgvMovieDBN1.AutoGenerateColumns = false;
-            dgvMovieDBN2.AutoGenerateColumns = false;
-            dgvMovieDBN3.AutoGenerateColumns = false;
-            dgvMovieDBN4.AutoGenerateColumns = false;
-
-            colorchange();
-        }
-
-       
-        public void BindDgvMovieDB1()
-        {
-            try
-            {
-                dgvMovieDB1.DataSource = null;
-                ResMovie res = new DashboardDao().GetAllMovieDB1();
-                if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
-                {
-                    dgvMovieDB1.DataSource = res.LstMovie;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void BindDgvMovieDB2()
-        {
-            try
-            {
-                dgvMovieDB2.DataSource = null;
-                ResMovie res = new DashboardDao().GetAllMovieDB2();
-                if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
-                {
-                    dgvMovieDB2.DataSource = res.LstMovie;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void BindDgvMovieDB3()
-        {
-            try
-            {
-                dgvMovieDB3.DataSource = null;
-                ResMovie res = new DashboardDao().GetAllMovieDB3();
-                if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
-                {
-                    dgvMovieDB3.DataSource = res.LstMovie;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void BindDgvMovieDB4()
-        {
-            try
-            {
-                dgvMovieDB4.DataSource = null;
-                ResMovie res = new DashboardDao().GetAllMovieDB4();
-                if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
-                {
-                    dgvMovieDB4.DataSource = res.LstMovie;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void BindDgvMovieDBN1()
-        {
-            try
-            {
-                dgvMovieDBN1.DataSource = null;
-                ResMovie res = new DashboardDao().GetAllMovieDB1();
-                if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
-                {
-                    dgvMovieDBN1.DataSource = res.LstMovie;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void BindDgvMovieDBN2()
-        {
-            try
-            {
-                dgvMovieDBN2.DataSource = null;
-                ResMovie res = new DashboardDao().GetAllMovieDB2();
-                if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
-                {
-                    dgvMovieDBN2.DataSource = res.LstMovie;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void BindDgvMovieDBN3()
-        {
-            try
-            {
-                dgvMovieDBN3.DataSource = null;
-                ResMovie res = new DashboardDao().GetAllMovieDB3();
-                if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
-                {
-                    dgvMovieDBN3.DataSource = res.LstMovie;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void BindDgvMovieDBN4()
-        {
-            try
-            {
-                dgvMovieDBN4.DataSource = null;
-                ResMovie res = new DashboardDao().GetAllMovieDB4();
-                if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
-                {
-                    dgvMovieDBN4.DataSource = res.LstMovie;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         private void FrmDashboard_Load(object sender, EventArgs e)
         {
-            BindDgvMovieDB1();
-            BindDgvMovieDB2();
-            BindDgvMovieDB3();
-            BindDgvMovieDB4();
-            BindDgvMovieDBN1();
-            BindDgvMovieDBN2();
-            BindDgvMovieDBN3();
-            BindDgvMovieDBN4();
+            GetAllMovie();
 
-           
+            if (lstMovie != null)
+            {
+                CreateMovie();
+            }
+
+            GetAllMovieSummary();
         }
 
-       public void colorchange()
+        public void GetAllMovie()
         {
-            if (this.BackColor == Color.FromArgb(41, 47, 57))
+            try
             {
-                lbltitle.ForeColor = Color.White;
-
-                dgvMovieDB1.BackgroundColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDB1.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDB1.DefaultCellStyle.ForeColor = Color.White;
-                dgvMovieDB1.GridColor = Color.FromArgb(41, 47, 57);
-                dgvMovieDB1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDB1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
-                dgvMovieDB1.DefaultCellStyle.SelectionForeColor = Color.White;
-
-                dgvMovieDB2.BackgroundColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDB2.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDB2.DefaultCellStyle.ForeColor = Color.White;
-                dgvMovieDB2.GridColor = Color.FromArgb(41, 47, 57);
-                dgvMovieDB2.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDB2.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
-                dgvMovieDB2.DefaultCellStyle.SelectionForeColor = Color.White;
-
-                dgvMovieDB3.BackgroundColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDB3.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDB3.DefaultCellStyle.ForeColor = Color.White;
-                dgvMovieDB3.GridColor = Color.FromArgb(41, 47, 57);
-                dgvMovieDB3.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDB3.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
-                dgvMovieDB3.DefaultCellStyle.SelectionForeColor = Color.White;
-
-                dgvMovieDB4.BackgroundColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDB4.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDB4.DefaultCellStyle.ForeColor = Color.White;
-                dgvMovieDB4.GridColor = Color.FromArgb(41, 47, 57);
-                dgvMovieDB4.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDB4.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
-                dgvMovieDB4.DefaultCellStyle.SelectionForeColor = Color.White;
-
-                dgvMovieDBN1.BackgroundColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDBN1.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDBN1.DefaultCellStyle.ForeColor = Color.White;
-                dgvMovieDBN1.GridColor = Color.FromArgb(41, 47, 57);
-                dgvMovieDBN1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDBN1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
-                dgvMovieDBN1.DefaultCellStyle.SelectionForeColor = Color.White;
-
-                dgvMovieDBN2.BackgroundColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDBN2.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDBN2.DefaultCellStyle.ForeColor = Color.White;
-                dgvMovieDBN2.GridColor = Color.FromArgb(41, 47, 57);
-                dgvMovieDBN2.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDBN2.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
-                dgvMovieDBN2.DefaultCellStyle.SelectionForeColor = Color.White;
-
-                dgvMovieDBN3.BackgroundColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDBN3.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDBN3.DefaultCellStyle.ForeColor = Color.White;
-                dgvMovieDBN3.GridColor = Color.FromArgb(41, 47, 57);
-                dgvMovieDBN3.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDBN3.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
-                dgvMovieDBN3.DefaultCellStyle.SelectionForeColor = Color.White;
-
-                dgvMovieDBN4.BackgroundColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDBN4.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDBN4.DefaultCellStyle.ForeColor = Color.White;
-                dgvMovieDBN4.GridColor = Color.FromArgb(41, 47, 57);
-                dgvMovieDBN4.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
-                dgvMovieDBN4.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
-                dgvMovieDBN4.DefaultCellStyle.SelectionForeColor = Color.White;
+                lstMovie = null;
+                ResMovie res = new DashboardDao().GetAllMovie();
+                if (res.LstMovie.Count > 0)
+                {
+                    lstMovie = res.LstMovie;
+                }
+            }
+            catch (Exception ex)
+            {
+                FrmError frm = new FrmError();
+                frm.lblError.Text = ex.Message;
+                frm.ShowDialog();
             }
         }
+
+        public void GetAllMovieSummary()
+        {
+            try
+            {
+                dgvSummary.DataSource = null;
+                ResMovie res = new DashboardDao().GetAllMovieSummary();
+                if (res.lstMovieSummary.Count > 0)
+                {
+                    dgvSummary.DataSource = res.lstMovieSummary;
+                }
+            }
+            catch (Exception ex)
+            {
+                FrmError frm = new FrmError();
+                frm.lblError.Text = ex.Message;
+                frm.ShowDialog();
+            }
+        }
+
+        public void CreateMovie()
+        {
+            try
+            {
+                pnlAllMovie.Controls.Clear();
+                for (int i = 0; i < lstMovie.Count; i++)
+                {
+                    var item = lstMovie[i];
+                    Guna2Panel pnlMovie = new Guna2Panel();
+                    Guna2Panel pnlMovieCover = new Guna2Panel();
+                    Guna2Panel pnlMovieName = new Guna2Panel();
+                    Label lblMovie = new Label();
+                    PictureBox PictureBox = new PictureBox();
+
+                    // lblMovie
+                    lblMovie.Dock = System.Windows.Forms.DockStyle.Fill;
+                    lblMovie.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    lblMovie.Location = new System.Drawing.Point(0, 0);
+                    lblMovie.Name = "lblMovie";
+                    lblMovie.Size = new System.Drawing.Size(257, 60);
+                    lblMovie.TabIndex = 0;
+                    lblMovie.Text = item.Name;
+                    lblMovie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+
+                    pnlMovieName.Controls.Add(lblMovie);
+                    pnlMovieName.Dock = System.Windows.Forms.DockStyle.Fill;
+                    pnlMovieName.Location = new System.Drawing.Point(0, 233);
+                    pnlMovieName.Name = "pnlMovieName";
+                    pnlMovieName.Size = new System.Drawing.Size(257, 60);
+                    pnlMovieName.TabIndex = 1;
+
+                    //PictureBox
+                    PictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
+                    PictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                    PictureBox.Location = new System.Drawing.Point(0, 0);
+                    PictureBox.Name = "PictureBox";
+                    PictureBox.Size = new System.Drawing.Size(257, 233);
+                    PictureBox.TabIndex = 0;
+                    PictureBox.TabStop = false;
+                    PictureBox.Image = Image.FromStream(new MemoryStream(item.MovieCoverByte));
+
+                    // pnlMovieCover
+                    pnlMovieCover.BackColor = System.Drawing.Color.Transparent;
+                    pnlMovieCover.Controls.Add(PictureBox);
+                    pnlMovieCover.Dock = System.Windows.Forms.DockStyle.Top;
+                    pnlMovieCover.Location = new System.Drawing.Point(0, 0);
+                    pnlMovieCover.Name = "pnlMovieCover";
+                    pnlMovieCover.Size = new System.Drawing.Size(257, 233);
+                    pnlMovieCover.TabIndex = 0;
+
+                    pnlMovie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+                    pnlMovie.Controls.Add(pnlMovieName);
+                    pnlMovie.Controls.Add(pnlMovieCover);
+                    pnlMovie.Location = new System.Drawing.Point(X, Y);
+                    pnlMovie.Name = "pnlMovie";
+                    pnlMovie.ShadowDecoration.Color = System.Drawing.Color.Aqua;
+                    pnlMovie.ShadowDecoration.Enabled = true;
+                    pnlMovie.Size = new System.Drawing.Size(257, 293);
+                    pnlMovie.TabIndex = 0;
+
+                    pnlAllMovie.Controls.Add(pnlMovie);
+
+                    X += pnlMovie.Width + 50;
+
+                    if (((i + 1) % 5) == 0)
+                    {
+                        X = 7;
+                        Y += pnlMovie.Height + 20;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                FrmError frm = new FrmError();
+                frm.lblError.Text = ex.Message;
+                frm.ShowDialog();
+            }
+        }
+
     }
 }

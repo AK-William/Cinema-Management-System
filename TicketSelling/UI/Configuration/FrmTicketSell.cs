@@ -99,7 +99,7 @@ namespace TicketSelling.UI.Configuration
             {
                 cboTime.DataSource = null;
                 ResMovieST res = new MovieDao().GetMovieTimeByDateForTicket(Convert.ToDateTime(dpMovieDate.Value));
-                if (res.LstMovieST.Count > 0)
+                if (res.LstMovieST.Count > 0)  //no data entry error control
                 {
                     cboTime.SelectedIndexChanged -= new EventHandler(CboTime_SelectedIndexChanged);
                     cboTime.DataSource = res.LstMovieST;
@@ -240,23 +240,35 @@ namespace TicketSelling.UI.Configuration
             if (string.IsNullOrEmpty(cboTime.Text.ToString()))
             {
                 FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
-                fmW.lblWarning.Text = "Please choose movie show time";
+                fmW.lblWarning.Text = "Please choose movie name and movie date";
                 fmW.ShowDialog();
                 return;
             }
-            MovieST movieST = new MovieST();
-            movieST.MovieId = Convert.ToInt32(cboMovieName.SelectedValue);
-            movieST.Date = Convert.ToDateTime(dpMovieDate.Value);
-            movieST.Time = cboTime.SelectedValue.ToString();
-
-            if (lstSeatId.Count == 0)
+            if (cboTime.Text == "--Select One--")
             {
-                MessageBox.Show("Please choose seat!");
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please choose movie time";
+                fmW.ShowDialog();
                 return;
             }
-            FrmTicketBuyerInformation frm = new FrmTicketBuyerInformation(lstSeatId, lstCustomerSeat, movieST);
-            frm.ShowDialog();
-            GetSellingTicket();
+            if (lstSeat.Count > 0)
+            {
+                MovieST movieST = new MovieST();
+                movieST.MovieId = Convert.ToInt32(cboMovieName.SelectedValue);
+                movieST.Date = Convert.ToDateTime(dpMovieDate.Value);
+                movieST.Time = cboTime.SelectedValue.ToString();
+
+                if (lstSeatId.Count == 0)
+                {
+                    FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                    fmW.lblWarning.Text = "Please choose seat";
+                    fmW.ShowDialog();
+                    return;
+                }
+                FrmTicketBuyerInformation frm = new FrmTicketBuyerInformation(lstSeatId, lstCustomerSeat, movieST);
+                frm.ShowDialog();
+                GetSellingTicket();
+            }
         }
 
         private void CboTime_SelectedIndexChanged(object sender, EventArgs e)

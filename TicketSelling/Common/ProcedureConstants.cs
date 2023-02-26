@@ -685,15 +685,6 @@ namespace TicketSelling.Common
                                             'ME' AS 'RespMessageType'
                                         END";
 
-
-
-        #region dashboard
-
-
-        public static string GetAllMovieDB = @"SELECT  ROW_NUMBER() OVER(ORDER BY Id ASC) AS RowNumber,* FROM TblMovie WITH (NOLOCK) WHERE Finish IS NULL";
-
-        #endregion
-
         #region Ticket Selling
 
         public static string SaveSaleHead = @"INSERT INTO [dbo].[TblSaleHead]
@@ -733,10 +724,20 @@ namespace TicketSelling.Common
                                                 'Successful Message' AS RespDesp,
                                                 'MI' AS 'RespMessageType';
 	
-                                                SELECT * FROM TblSaleDetail WHERE HeadId=@HeadId;";
+                                                SELECT * FROM TblSaleHead WHERE Id IN (SELECT Max(Id) FROM TblSaleHead);";
 
         public static string GetSellingTicket = @"SELECT HeadId,SeatTypeId,SeatId,Price FROM TblSaleHead H inner join TblSaleDetail D on H.Id = D.HeadId WHERE MovieId=@MovieId AND CONVERT(char(10),MovieDate,111)=CONVERT(char(10),@MovieDate,111) AND MovieTime=@MovieTime;";
 
+        public static string GetExportDataById = @"SELECT M.Name MovieName,MovieDate,MovieTime,CustomerName,Phone,S.Name SeatName,TotalPrice FROM TblSaleHead H
+                                                    INNER JOIN TblSaleDetail D
+                                                    ON H.Id=D.HeadId
+                                                    INNER JOIN TblMovie M
+                                                    ON H.MovieId=M.Id
+                                                    INNER JOIN TblSeat S
+                                                    ON S.Id=D.SeatId
+                                                    WHERE H.Id=@HeadId";
+      
+        
         #endregion
 
         #region Report
@@ -799,5 +800,11 @@ namespace TicketSelling.Common
                                                         WHERE CONVERT(char(7), MovieDate, 111) = CONVERT(char(7), @StartDate, 111) AND M.Id=@MovieId ORDER By MovieDate";
 
         #endregion
+
+        public static string SP_GetAllMovieSummary = @"SELECT ROW_NUMBER() OVER(ORDER BY MovieId ASC) AS RowNumber,MovieId,M.Name MovieName,Sum(TotalPrice) TotalAmount  FROM TblSaleHead H
+                                                        INNER JOIN TblMovie M
+                                                        ON H.MovieId=M.Id
+                                                        WHERE M.Finish IS NULL
+                                                        GROUP BY MovieId,Name ";
     }
 }
