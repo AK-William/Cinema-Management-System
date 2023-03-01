@@ -139,13 +139,13 @@ namespace TicketSelling.UI.Configuration
 
                     pnlAllMovie.Controls.Add(pnlMovie);
 
-                    X += pnlMovie.Width + 50;
+                    X += pnlMovie.Width + 45;
 
-                    if (((i + 1) % 5) == 0)
-                    {
-                        X = 7;
-                        Y += pnlMovie.Height + 20;
-                    }
+                    //if (((i + 1) % 5) == 0)
+                    //{
+                    //    X = 7;
+                    //    Y += pnlMovie.Height + 20;
+                    //}
                 }
             }
             catch (Exception ex)

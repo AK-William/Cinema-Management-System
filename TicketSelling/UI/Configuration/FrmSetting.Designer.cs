@@ -43,6 +43,9 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblchangecolor = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cbChangeColor = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnUserManual = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dayw)).BeginInit();
@@ -51,10 +54,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.nightw)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            this.guna2Panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.guna2Panel5);
             this.guna2Panel1.Controls.Add(this.guna2Panel4);
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
@@ -202,6 +207,33 @@
             this.cbChangeColor.StartIndex = 0;
             this.cbChangeColor.SelectedIndexChanged += new System.EventHandler(this.CbChangeColor_SelectedIndexChanged);
             // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.Controls.Add(this.btnUserManual);
+            this.guna2Panel5.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2Panel5.CustomBorderColor = System.Drawing.Color.Gray;
+            this.guna2Panel5.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.guna2Panel5, "guna2Panel5");
+            this.guna2Panel5.Name = "guna2Panel5";
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.guna2HtmlLabel1, "guna2HtmlLabel1");
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            // 
+            // btnUserManual
+            // 
+            this.btnUserManual.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUserManual.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUserManual.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUserManual.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUserManual.FillColor = System.Drawing.SystemColors.MenuHighlight;
+            resources.ApplyResources(this.btnUserManual, "btnUserManual");
+            this.btnUserManual.ForeColor = System.Drawing.Color.White;
+            this.btnUserManual.Name = "btnUserManual";
+            this.btnUserManual.Click += new System.EventHandler(this.BtnUserManual_Click);
+            // 
             // FrmSetting
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -220,6 +252,8 @@
             this.guna2Panel3.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            this.guna2Panel5.ResumeLayout(false);
+            this.guna2Panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -240,5 +274,8 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDayNight;
         private Guna.UI2.WinForms.Guna2PictureBox dayw;
         private Guna.UI2.WinForms.Guna2PictureBox nightb;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
+        private Guna.UI2.WinForms.Guna2Button btnUserManual;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

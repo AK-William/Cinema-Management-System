@@ -121,7 +121,7 @@ namespace TicketSelling.UI.Configuration
                     FrmMessageBox.FrmSuccess fmS = new FrmMessageBox.FrmSuccess();
                     fmS.lblSuccess.Text = "Saving Successfully";
                     fmS.ShowDialog();
-                    PrintData(res.HeadId);
+                    //PrintData(res.HeadId);
                     this.Close();
                 }
                 else if (res.RespMessageType == CommonResponseMessage.ResErrorType)

@@ -614,7 +614,7 @@ namespace TicketSelling.DAO
             }
         }
 
-        public ResMovieST GetMovieTimeByDateForTicket(DateTime MovieDate)
+        public ResMovieST GetMovieTimeByDateForTicket(int MovieId,DateTime MovieDate)
         {
             sqlConnection = DbConnector.Connect();
             if (sqlConnection == null)
@@ -626,6 +626,7 @@ namespace TicketSelling.DAO
             {
                 scom = new SqlCommand(ProcedureConstants.GetMovieDateByDateForTicket, sqlConnection);
                 scom.CommandType = CommandType.Text;
+                scom.Parameters.AddWithValue("@MovieId", MovieId);
                 scom.Parameters.AddWithValue("@Date", MovieDate);
                 DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(scom);

@@ -98,7 +98,8 @@ namespace TicketSelling.UI.Configuration
             try
             {
                 cboTime.DataSource = null;
-                ResMovieST res = new MovieDao().GetMovieTimeByDateForTicket(Convert.ToDateTime(dpMovieDate.Value));
+                int MovieId = Convert.ToInt32(cboMovieName.SelectedValue);
+                ResMovieST res = new MovieDao().GetMovieTimeByDateForTicket(MovieId, Convert.ToDateTime(dpMovieDate.Value));
                 if (res.LstMovieST.Count > 0)  //no data entry error control
                 {
                     cboTime.SelectedIndexChanged -= new EventHandler(CboTime_SelectedIndexChanged);
@@ -155,7 +156,7 @@ namespace TicketSelling.UI.Configuration
                     {
                         btnSeat.FillColor = ExistColor;
                     }
-                    btnSeat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    btnSeat.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     btnSeat.ForeColor = System.Drawing.Color.Black;
                     btnSeat.Location = new System.Drawing.Point(X, Y);
                     btnSeat.Name = item.Price.ToString();
@@ -168,7 +169,7 @@ namespace TicketSelling.UI.Configuration
                     btnSeat.Text = item.Name;
                     btnSeat.Click += new EventHandler(BtnSeat_Click);
                     panelMid.Controls.Add(btnSeat);
-                    X += btnSeat.Width + 10;
+                    X += btnSeat.Width + 15;
                     if ((i + 1) % item.NumberOfSeat == 0)
                     {
                         X = 40;

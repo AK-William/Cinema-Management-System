@@ -269,10 +269,12 @@ namespace TicketSelling.UI.Configuration
 
         private void TxtSeatTypeName_KeyPress(object sender, KeyPressEventArgs e)
         {
+            e.KeyChar = char.ToUpper(e.KeyChar);
             if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
             {
                 e.Handled = true;
             }
+            
         }
 
         private void DgvSeatType_CellContentClick(object sender, DataGridViewCellEventArgs e)

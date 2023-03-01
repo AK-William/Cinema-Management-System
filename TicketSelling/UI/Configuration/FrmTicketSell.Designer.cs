@@ -88,7 +88,9 @@
             this.btnCheck.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCheck.IconSize = 30;
             this.btnCheck.Location = new System.Drawing.Point(1258, 3);
+            this.btnCheck.Margin = new System.Windows.Forms.Padding(3, 3, 3, 8);
             this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.btnCheck.Size = new System.Drawing.Size(129, 59);
             this.btnCheck.TabIndex = 2;
             this.btnCheck.Text = "CHECK";

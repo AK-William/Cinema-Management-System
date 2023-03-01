@@ -30,26 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMovie));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle85 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle86 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle87 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle90 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle88 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle89 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle91 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle92 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle99 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle100 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle93 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle94 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle95 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle96 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle97 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle98 = new System.Windows.Forms.DataGridViewCellStyle();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tabScheduleTime = new System.Windows.Forms.TabPage();
             this.panelrightST = new System.Windows.Forms.Panel();
@@ -62,7 +62,6 @@
             this.ColSTTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDelST = new System.Windows.Forms.DataGridViewImageColumn();
             this.panelleftST = new System.Windows.Forms.Panel();
-            this.STTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.STDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.lblSTtime = new System.Windows.Forms.Label();
             this.lblSTdate = new System.Windows.Forms.Label();
@@ -130,6 +129,7 @@
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.STTime = new System.Windows.Forms.DateTimePicker();
             this.tabScheduleTime.SuspendLayout();
             this.panelrightST.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvST)).BeginInit();
@@ -183,17 +183,17 @@
             this.dgvST.AllowUserToDeleteRows = false;
             this.dgvST.AllowUserToResizeColumns = false;
             this.dgvST.AllowUserToResizeRows = false;
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.White;
-            this.dgvST.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle81.BackColor = System.Drawing.Color.White;
+            this.dgvST.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle81;
             this.dgvST.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvST.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle82.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle82.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle82.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle82.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle82.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle82.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle82.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvST.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle82;
             this.dgvST.ColumnHeadersHeight = 35;
             this.dgvST.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2,
@@ -203,14 +203,14 @@
             this.ColSTDate,
             this.ColSTTime,
             this.ColDelST});
-            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle45.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle45.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvST.DefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle85.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle85.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle85.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle85.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle85.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle85.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle85.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvST.DefaultCellStyle = dataGridViewCellStyle85;
             this.dgvST.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvST.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvST.Location = new System.Drawing.Point(0, 0);
@@ -281,9 +281,9 @@
             // ColSTDate
             // 
             this.ColSTDate.DataPropertyName = "Date";
-            dataGridViewCellStyle43.Format = "D";
-            dataGridViewCellStyle43.NullValue = null;
-            this.ColSTDate.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle83.Format = "D";
+            dataGridViewCellStyle83.NullValue = null;
+            this.ColSTDate.DefaultCellStyle = dataGridViewCellStyle83;
             this.ColSTDate.FillWeight = 105.7516F;
             this.ColSTDate.HeaderText = "Date";
             this.ColSTDate.Name = "ColSTDate";
@@ -292,9 +292,9 @@
             // ColSTTime
             // 
             this.ColSTTime.DataPropertyName = "Time";
-            dataGridViewCellStyle44.Format = "T";
-            dataGridViewCellStyle44.NullValue = null;
-            this.ColSTTime.DefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle84.Format = "T";
+            dataGridViewCellStyle84.NullValue = null;
+            this.ColSTTime.DefaultCellStyle = dataGridViewCellStyle84;
             this.ColSTTime.FillWeight = 105.7516F;
             this.ColSTTime.HeaderText = "Time";
             this.ColSTTime.Name = "ColSTTime";
@@ -328,25 +328,6 @@
             this.panelleftST.Size = new System.Drawing.Size(468, 633);
             this.panelleftST.TabIndex = 0;
             // 
-            // STTime
-            // 
-            this.STTime.Animated = true;
-            this.STTime.AutoRoundedCorners = true;
-            this.STTime.BorderRadius = 26;
-            this.STTime.Checked = true;
-            this.STTime.FillColor = System.Drawing.SystemColors.MenuHighlight;
-            this.STTime.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.STTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.STTime.Location = new System.Drawing.Point(45, 345);
-            this.STTime.Margin = new System.Windows.Forms.Padding(4);
-            this.STTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.STTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.STTime.Name = "STTime";
-            this.STTime.ShowUpDown = true;
-            this.STTime.Size = new System.Drawing.Size(364, 55);
-            this.STTime.TabIndex = 89;
-            this.STTime.Value = new System.DateTime(2022, 12, 24, 23, 43, 0, 0);
-            // 
             // STDate
             // 
             this.STDate.Animated = true;
@@ -355,6 +336,7 @@
             this.STDate.Checked = true;
             this.STDate.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.STDate.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STDate.ForeColor = System.Drawing.Color.White;
             this.STDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.STDate.Location = new System.Drawing.Point(45, 202);
             this.STDate.Margin = new System.Windows.Forms.Padding(4);
@@ -508,17 +490,17 @@
             this.dgvSD.AllowUserToDeleteRows = false;
             this.dgvSD.AllowUserToResizeColumns = false;
             this.dgvSD.AllowUserToResizeRows = false;
-            dataGridViewCellStyle46.BackColor = System.Drawing.Color.White;
-            this.dgvSD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle86.BackColor = System.Drawing.Color.White;
+            this.dgvSD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle86;
             this.dgvSD.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle47.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle87.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle87.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle87.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle87.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle87.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle87.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle87.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSD.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle87;
             this.dgvSD.ColumnHeadersHeight = 35;
             this.dgvSD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
@@ -528,14 +510,14 @@
             this.ColStartDate,
             this.ColEndDate,
             this.ColDelSD});
-            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle50.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle50.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSD.DefaultCellStyle = dataGridViewCellStyle50;
+            dataGridViewCellStyle90.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle90.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle90.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle90.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle90.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle90.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle90.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSD.DefaultCellStyle = dataGridViewCellStyle90;
             this.dgvSD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSD.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvSD.Location = new System.Drawing.Point(0, 0);
@@ -607,9 +589,9 @@
             // ColStartDate
             // 
             this.ColStartDate.DataPropertyName = "StartDate";
-            dataGridViewCellStyle48.Format = "D";
-            dataGridViewCellStyle48.NullValue = null;
-            this.ColStartDate.DefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle88.Format = "D";
+            dataGridViewCellStyle88.NullValue = null;
+            this.ColStartDate.DefaultCellStyle = dataGridViewCellStyle88;
             this.ColStartDate.FillWeight = 105.7516F;
             this.ColStartDate.HeaderText = "Start Date";
             this.ColStartDate.Name = "ColStartDate";
@@ -618,9 +600,9 @@
             // ColEndDate
             // 
             this.ColEndDate.DataPropertyName = "EndDate";
-            dataGridViewCellStyle49.Format = "D";
-            dataGridViewCellStyle49.NullValue = null;
-            this.ColEndDate.DefaultCellStyle = dataGridViewCellStyle49;
+            dataGridViewCellStyle89.Format = "D";
+            dataGridViewCellStyle89.NullValue = null;
+            this.ColEndDate.DefaultCellStyle = dataGridViewCellStyle89;
             this.ColEndDate.FillWeight = 105.7516F;
             this.ColEndDate.HeaderText = "End Date";
             this.ColEndDate.Name = "ColEndDate";
@@ -742,6 +724,7 @@
             this.txtSDEndDate.Checked = true;
             this.txtSDEndDate.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtSDEndDate.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDEndDate.ForeColor = System.Drawing.Color.White;
             this.txtSDEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.txtSDEndDate.Location = new System.Drawing.Point(45, 342);
             this.txtSDEndDate.Margin = new System.Windows.Forms.Padding(4);
@@ -760,6 +743,7 @@
             this.txtSDStartDate.Checked = true;
             this.txtSDStartDate.FillColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtSDStartDate.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDStartDate.ForeColor = System.Drawing.Color.White;
             this.txtSDStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.txtSDStartDate.Location = new System.Drawing.Point(45, 198);
             this.txtSDStartDate.Margin = new System.Windows.Forms.Padding(4);
@@ -834,17 +818,17 @@
             this.dgvMovie.AllowUserToDeleteRows = false;
             this.dgvMovie.AllowUserToResizeColumns = false;
             this.dgvMovie.AllowUserToResizeRows = false;
-            dataGridViewCellStyle51.BackColor = System.Drawing.Color.White;
-            this.dgvMovie.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle51;
+            dataGridViewCellStyle91.BackColor = System.Drawing.Color.White;
+            this.dgvMovie.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle91;
             this.dgvMovie.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle52.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle52.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMovie.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle52;
+            dataGridViewCellStyle92.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle92.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle92.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle92.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle92.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle92.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle92.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMovie.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle92;
             this.dgvMovie.ColumnHeadersHeight = 45;
             this.dgvMovie.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -859,14 +843,14 @@
             this.ColFinish,
             this.ColDelMovie,
             this.ColMovieCoverString});
-            dataGridViewCellStyle59.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle59.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle59.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle59.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle59.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMovie.DefaultCellStyle = dataGridViewCellStyle59;
+            dataGridViewCellStyle99.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle99.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle99.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle99.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle99.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle99.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle99.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMovie.DefaultCellStyle = dataGridViewCellStyle99;
             this.dgvMovie.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMovie.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvMovie.Location = new System.Drawing.Point(0, 0);
@@ -875,8 +859,8 @@
             this.dgvMovie.ReadOnly = true;
             this.dgvMovie.RowHeadersVisible = false;
             this.dgvMovie.RowHeadersWidth = 50;
-            dataGridViewCellStyle60.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMovie.RowsDefaultCellStyle = dataGridViewCellStyle60;
+            dataGridViewCellStyle100.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMovie.RowsDefaultCellStyle = dataGridViewCellStyle100;
             this.dgvMovie.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvMovie.RowTemplate.Height = 100;
             this.dgvMovie.Size = new System.Drawing.Size(1230, 306);
@@ -927,8 +911,8 @@
             // 
             this.ColMovieName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColMovieName.DataPropertyName = "Name";
-            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMovieName.DefaultCellStyle = dataGridViewCellStyle53;
+            dataGridViewCellStyle93.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColMovieName.DefaultCellStyle = dataGridViewCellStyle93;
             this.ColMovieName.FillWeight = 90.63343F;
             this.ColMovieName.HeaderText = "Movie Name";
             this.ColMovieName.Name = "ColMovieName";
@@ -939,10 +923,10 @@
             // 
             this.ColMovieCover.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColMovieCover.DataPropertyName = "MovieCoverByte";
-            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle54.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle54.NullValue")));
-            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMovieCover.DefaultCellStyle = dataGridViewCellStyle54;
+            dataGridViewCellStyle94.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle94.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle94.NullValue")));
+            dataGridViewCellStyle94.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColMovieCover.DefaultCellStyle = dataGridViewCellStyle94;
             this.ColMovieCover.HeaderText = "Movie Cover";
             this.ColMovieCover.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.ColMovieCover.Name = "ColMovieCover";
@@ -955,8 +939,8 @@
             // 
             this.ColCasts.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColCasts.DataPropertyName = "Casts";
-            dataGridViewCellStyle55.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColCasts.DefaultCellStyle = dataGridViewCellStyle55;
+            dataGridViewCellStyle95.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColCasts.DefaultCellStyle = dataGridViewCellStyle95;
             this.ColCasts.FillWeight = 90.63343F;
             this.ColCasts.HeaderText = "Casts";
             this.ColCasts.Name = "ColCasts";
@@ -976,8 +960,8 @@
             // 
             this.ColMovieType.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColMovieType.DataPropertyName = "MovieType";
-            dataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMovieType.DefaultCellStyle = dataGridViewCellStyle56;
+            dataGridViewCellStyle96.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColMovieType.DefaultCellStyle = dataGridViewCellStyle96;
             this.ColMovieType.FillWeight = 90.63343F;
             this.ColMovieType.HeaderText = "Movie Type";
             this.ColMovieType.Name = "ColMovieType";
@@ -988,8 +972,8 @@
             // 
             this.ColDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColDescription.DataPropertyName = "Description";
-            dataGridViewCellStyle57.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColDescription.DefaultCellStyle = dataGridViewCellStyle57;
+            dataGridViewCellStyle97.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColDescription.DefaultCellStyle = dataGridViewCellStyle97;
             this.ColDescription.FillWeight = 90.63343F;
             this.ColDescription.HeaderText = "Description";
             this.ColDescription.Name = "ColDescription";
@@ -999,8 +983,8 @@
             // 
             this.ColMovieLink.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColMovieLink.DataPropertyName = "TrailerLink";
-            dataGridViewCellStyle58.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColMovieLink.DefaultCellStyle = dataGridViewCellStyle58;
+            dataGridViewCellStyle98.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColMovieLink.DefaultCellStyle = dataGridViewCellStyle98;
             this.ColMovieLink.FillWeight = 80F;
             this.ColMovieLink.HeaderText = "Trailer Link";
             this.ColMovieLink.Name = "ColMovieLink";
@@ -1488,6 +1472,16 @@
             this.dataGridViewImageColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn4.Width = 95;
             // 
+            // STTime
+            // 
+            this.STTime.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.STTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.STTime.Location = new System.Drawing.Point(45, 354);
+            this.STTime.Name = "STTime";
+            this.STTime.ShowUpDown = true;
+            this.STTime.Size = new System.Drawing.Size(364, 42);
+            this.STTime.TabIndex = 90;
+            // 
             // FrmMovie
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1530,7 +1524,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColSTTime;
         private System.Windows.Forms.DataGridViewImageColumn ColDelST;
         private System.Windows.Forms.Panel panelleftST;
-        public Guna.UI2.WinForms.Guna2DateTimePicker STTime;
         public Guna.UI2.WinForms.Guna2DateTimePicker STDate;
         private System.Windows.Forms.Label lblSTtime;
         private System.Windows.Forms.Label lblSTdate;
@@ -1598,5 +1591,6 @@
         private System.Windows.Forms.DataGridViewImageColumn ColFinish;
         private System.Windows.Forms.DataGridViewImageColumn ColDelMovie;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMovieCoverString;
+        private System.Windows.Forms.DateTimePicker STTime;
     }
 }

@@ -68,6 +68,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.pbMalachite.Visible = false;
                     frmmain.pbCoral.Visible = false;
                     frmmain.pbCardinelRed.Visible = false;
+                    btnUserManual.FillColor = Color.FromArgb(0, 120, 215);
                     break;
 
                 case 1:
@@ -91,6 +92,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.pbMalachite.Visible = false;
                     frmmain.pbCoral.Visible = false;
                     frmmain.pbCardinelRed.Visible = false;
+                    btnUserManual.FillColor = Color.FromArgb(253, 73, 131);
                     break;
 
                 case 2:
@@ -114,6 +116,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.pbMalachite.Visible = false;
                     frmmain.pbCoral.Visible = false;
                     frmmain.pbCardinelRed.Visible = false;
+                    btnUserManual.FillColor = Color.FromArgb(27, 182, 211);
                     break;
                     
                 case 3:
@@ -137,6 +140,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.pbMalachite.Visible = false;
                     frmmain.pbCoral.Visible = false;
                     frmmain.pbCardinelRed.Visible = false;
+                    btnUserManual.FillColor = Color.FromArgb(123, 31, 162);
                     break;
                     
                 case 4:
@@ -160,6 +164,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.pbMalachite.Visible = false;
                     frmmain.pbCoral.Visible = false;
                     frmmain.pbCardinelRed.Visible = false;
+                    btnUserManual.FillColor = Color.FromArgb(84, 110, 122);
                     break;
 
                 case 5:
@@ -183,6 +188,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.pbMalachite.Visible = true;
                     frmmain.pbCoral.Visible = false;
                     frmmain.pbCardinelRed.Visible = false;
+                    btnUserManual.FillColor = Color.FromArgb(0, 200, 83);
                     break;
 
                 case 6:
@@ -206,6 +212,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.pbMalachite.Visible = false;
                     frmmain.pbCoral.Visible = true;
                     frmmain.pbCardinelRed.Visible = false;
+                    btnUserManual.FillColor = Color.FromArgb(217, 115, 65);
                     break;
 
                 case 7:
@@ -229,6 +236,7 @@ namespace TicketSelling.UI.Configuration
                     frmmain.pbMalachite.Visible = false;
                     frmmain.pbCoral.Visible = false;
                     frmmain.pbCardinelRed.Visible = true;
+                    btnUserManual.FillColor = Color.FromArgb(196, 30, 58);
                     break;
             }
         }
@@ -285,6 +293,9 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
-       
+        private void BtnUserManual_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"C:\Users\WILLIAM\source\repos\TS\TicketSelling\User Manual\Index.html");
+        }
     }
 }

@@ -226,10 +226,10 @@ namespace TicketSelling.Common
         public static string GetSeatCountBySeatTypeId = @"SELECT COUNT(Id) Count FROM  TblSeat where SeatTypeId=@SeatTypeId;";//Control delete seattype when seat are assign
 
         public static string GetAllSeatForTicket = @"SELECT  ROW_NUMBER() OVER(ORDER BY SeatTypeId ASC) AS RowNumber,* FROM TblSeat S  WITH (NOLOCK) 
-                                                    inner join TblSeatType ST on S.SeatTypeId = ST.Id
+                                                    inner join TblSeatType ST WITH (NOLOCK)  on S.SeatTypeId = ST.Id
                                                     ORDER BY SeatTypeId";
 
-        public static string GetCustomerSeatCountBySeatTypeId = @"SELECT COUNT(Id) Count FROM  TblSaleDetail where SeatTypeId=@Id;";//Control delete seat when Ticket are assign
+        public static string GetCustomerSeatCountBySeatTypeId = @"SELECT COUNT(Id) Count FROM  TblSaleDetail WITH (NOLOCK) where SeatTypeId=@Id;";//Control delete seat when Ticket are assign
 
 
         #endregion
@@ -470,7 +470,7 @@ namespace TicketSelling.Common
 
         public static string GetMovieName = @"SELECT * FROM TblMovie WITH(NOLOCK) WHERE Finish Is NULL";
 
-        public static string GetMovieDateByDateForTicket = @"SELECT * FROM TblScheduleMovieTime where CONVERT(char(10),Date,111) = CONVERT(char(10),@Date,111)";
+        public static string GetMovieDateByDateForTicket = @"SELECT * FROM TblScheduleMovieTime WITH (NOLOCK) where MovieId=@MovieId AND CONVERT(char(10),Date,111) = CONVERT(char(10),@Date,111)";
 
         public static string GetMovieTimeCountById = @"SELECT COUNT(Id) Count FROM  TblSaleHead where MovieTime=@Id;"; //Control delete time when Ticket are selling
 
@@ -591,7 +591,7 @@ namespace TicketSelling.Common
                                                 Date,
                                                 Time
                                                 FROM TblScheduleMovieTime AS SMT WITH (NOLOCK)
-                                                INNER JOIN TblMovie AS M
+                                                INNER JOIN TblMovie AS M WITH (NOLOCK)
                                                 ON SMT.MovieId = M.Id WHERE M.Finish IS NULL";
 
         public static string SaveMovieST = @"IF EXISTS (SELECT * FROM TblScheduleMovieTime WHERE MovieId = @MovieId AND Time = @Time AND Date = @Date)

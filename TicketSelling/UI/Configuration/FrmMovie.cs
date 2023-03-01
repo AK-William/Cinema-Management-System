@@ -64,7 +64,7 @@ namespace TicketSelling.UI.Configuration
                 txtSDStartDate.FillColor = Color.FromArgb(253, 73, 131);
                 txtSDEndDate.FillColor = Color.FromArgb(253, 73, 131);
                 STDate.FillColor = Color.FromArgb(253, 73, 131);
-                STTime.FillColor = Color.FromArgb(253, 73, 131);
+
             }
             else if (frmmain.panelleft.BackColor == Color.FromArgb(0, 120, 215))
             {
@@ -77,7 +77,7 @@ namespace TicketSelling.UI.Configuration
                 txtSDStartDate.FillColor = Color.FromArgb(0, 120, 215);
                 txtSDEndDate.FillColor = Color.FromArgb(0, 120, 215);
                 STDate.FillColor = Color.FromArgb(0, 120, 215);
-                STTime.FillColor = Color.FromArgb(0, 120, 215);
+
             }
             else if (frmmain.panelleft.BackColor == Color.FromArgb(27, 182, 211))
             {
@@ -90,7 +90,7 @@ namespace TicketSelling.UI.Configuration
                 txtSDStartDate.FillColor = Color.FromArgb(27, 182, 211);
                 txtSDEndDate.FillColor = Color.FromArgb(27, 182, 211);
                 STDate.FillColor = Color.FromArgb(27, 182, 211);
-                STTime.FillColor = Color.FromArgb(27, 182, 211);
+
             }
             else if (frmmain.panelleft.BackColor == Color.FromArgb(123, 31, 162))
             {
@@ -103,7 +103,7 @@ namespace TicketSelling.UI.Configuration
                 txtSDStartDate.FillColor = Color.FromArgb(123, 31, 162);
                 txtSDEndDate.FillColor = Color.FromArgb(123, 31, 162);
                 STDate.FillColor = Color.FromArgb(123, 31, 162);
-                STTime.FillColor = Color.FromArgb(123, 31, 162);
+
             }
             else if (frmmain.panelleft.BackColor == Color.FromArgb(84, 110, 122))
             {
@@ -116,7 +116,6 @@ namespace TicketSelling.UI.Configuration
                 txtSDStartDate.FillColor = Color.FromArgb(84, 110, 122);
                 txtSDEndDate.FillColor = Color.FromArgb(84, 110, 122);
                 STDate.FillColor = Color.FromArgb(84, 110, 122);
-                STTime.FillColor = Color.FromArgb(84, 110, 122);
             }
             else if (frmmain.panelleft.BackColor == Color.FromArgb(0, 200, 83))
             {
@@ -129,7 +128,6 @@ namespace TicketSelling.UI.Configuration
                 txtSDStartDate.FillColor = Color.FromArgb(0, 200, 83);
                 txtSDEndDate.FillColor = Color.FromArgb(0, 200, 83);
                 STDate.FillColor = Color.FromArgb(0, 200, 83);
-                STTime.FillColor = Color.FromArgb(0, 200, 83);
             }
             else if (frmmain.panelleft.BackColor == Color.FromArgb(217, 115, 65))
             {
@@ -142,7 +140,6 @@ namespace TicketSelling.UI.Configuration
                 txtSDStartDate.FillColor = Color.FromArgb(217, 115, 65);
                 txtSDEndDate.FillColor = Color.FromArgb(217, 115, 65);
                 STDate.FillColor = Color.FromArgb(217, 115, 65);
-                STTime.FillColor = Color.FromArgb(217, 115, 65);
             }
             else if (frmmain.panelleft.BackColor == Color.FromArgb(196, 30, 58))
             {
@@ -155,7 +152,6 @@ namespace TicketSelling.UI.Configuration
                 txtSDStartDate.FillColor = Color.FromArgb(196, 30, 58);
                 txtSDEndDate.FillColor = Color.FromArgb(196, 30, 58);
                 STDate.FillColor = Color.FromArgb(196, 30, 58);
-                STTime.FillColor = Color.FromArgb(196, 30, 58);
             }
         }
 
@@ -508,6 +504,27 @@ namespace TicketSelling.UI.Configuration
                 if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
                     dgvMovie.DataSource = res.LstMovie;
+                }
+            }
+            catch (Exception ex)
+            {
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
+            }
+
+        }
+
+        public void GetMovie()
+        {
+            try
+            {
+                LstMovieSD = new List<Movie>();
+                LstMovieST = new List<Movie>();
+                ResMovie res = new ResMovie();
+                res = new MovieDao().GetAllMovie();
+                if (res.LstMovie != null && res.LstMovie.Count > 0)
+                {
                     LstMovieSD = res.LstMovie; //forCombobox
                     LstMovieST = res.LstMovie; //forCombobox
                 }
@@ -703,6 +720,13 @@ namespace TicketSelling.UI.Configuration
 
         private bool CheckRequireFieldsSD()
         {
+            if (CbSDName.Text == "--Select One--")
+            {
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please choose Movie";
+                fmW.ShowDialog();
+                return false;
+            }
             if (string.IsNullOrEmpty(CbSDName.Text))
             {
                 FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
@@ -792,6 +816,8 @@ namespace TicketSelling.UI.Configuration
 
         private void TabControlMovie_Click(object sender, EventArgs e)
         {
+
+            GetMovie();
             if (LstMovieSD != null && LstMovieSD.Count > 0) //no data entry error control
             {
                 //Schedule date combo box
@@ -817,19 +843,33 @@ namespace TicketSelling.UI.Configuration
                 BindDgvMovieST();
             }
 
-
+            GetMovieDateById();
         }
 
         private void CbSTName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            STDate.MinDate = Convert.ToDateTime("1/1/1753");
-            STDate.MaxDate = Convert.ToDateTime("12/31/9998");
-            int MovieId = Convert.ToInt32(CbSTName.SelectedValue);
-            ResMovieSD res = new MovieDao().GetMovieDateById(MovieId);
-            if (res.LstMovieSD.Count > 0) //if condition use to control error in datetime bcoz LstMovieSD have O index 
+            GetMovieDateById();
+        }
+
+        private void GetMovieDateById()
+        {
+            try
             {
-                STDate.MinDate = res.LstMovieSD[0].StartDate;
-                STDate.MaxDate = res.LstMovieSD[0].EndDate;
+                STDate.MinDate = Convert.ToDateTime("1/1/1753");
+                STDate.MaxDate = Convert.ToDateTime("12/31/9998");
+                int MovieId = Convert.ToInt32(CbSTName.SelectedValue);
+                ResMovieSD res = new MovieDao().GetMovieDateById(MovieId);
+                if (res.LstMovieSD.Count > 0) //if condition use to control error in datetime bcoz LstMovieSD have O index 
+                {
+                    STDate.MinDate = res.LstMovieSD[0].StartDate;
+                    STDate.MaxDate = res.LstMovieSD[0].EndDate;
+                }
+            }
+            catch (Exception ex)
+            {
+                FrmMessageBox.FrmExMessage frmExMessage = new FrmMessageBox.FrmExMessage();
+                frmExMessage.lblExMessage.Text = ex.Message;
+                frmExMessage.ShowDialog();
             }
         }
 
@@ -914,7 +954,7 @@ namespace TicketSelling.UI.Configuration
                     FrmMessageBox.FrmSuccess fmS = new FrmMessageBox.FrmSuccess();
                     fmS.lblSuccess.Text = "Your changes have been successfully saved!";
                     fmS.ShowDialog();
-                    Reset();
+                    ResetSD();
                     BindDgvMovieSD();
                 }
                 else if (res.RespMessageType == CommonResponseMessage.ResErrorType)
@@ -996,6 +1036,13 @@ namespace TicketSelling.UI.Configuration
 
         private bool CheckRequireFieldsST()
         {
+            if (CbSTName.Text == "--Select One--")
+            {
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Please choose Movie";
+                fmW.ShowDialog();
+                return false;
+            }
             if (string.IsNullOrEmpty(CbSTName.Text))
             {
                 FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
@@ -1099,7 +1146,18 @@ namespace TicketSelling.UI.Configuration
             CbSTName.SelectedValue = Convert.ToInt32(dgvRow.Cells["ColMovieIdST"].Value.ToString());
             MovieId = Convert.ToInt32(dgvRow.Cells["ColMovieIdST"].Value.ToString());
 
-            STDate.Text = dgvRow.Cells["ColSTDate"].Value.ToString();
+            if (Convert.ToDateTime(dgvRow.Cells["ColSTDate"].Value) < STDate.MinDate)
+            {
+                STDate.Text = STDate.MinDate.ToString();
+            }
+            else if (Convert.ToDateTime(dgvRow.Cells["ColSTDate"].Value) > STDate.MaxDate)
+            {
+                STDate.Text = STDate.MaxDate.ToString();
+            }
+            else
+            {
+                STDate.Text = dgvRow.Cells["ColSTDate"].Value.ToString();
+            }
             STTime.Text = dgvRow.Cells["ColSTTime"].Value.ToString();
 
             btnSTSave.Visible = false;

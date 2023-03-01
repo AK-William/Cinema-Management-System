@@ -361,6 +361,21 @@
     <None Include="Resources\cancel_480px1.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="User Manual\app.js" />
+    <Content Include="User Manual\img\admin.png" />
+    <Content Include="User Manual\img\dashboard.png" />
+    <Content Include="User Manual\img\Design.jpg" />
+    <Content Include="User Manual\img\hero-bg.jpg" />
+    <Content Include="User Manual\img\img-1.png" />
+    <Content Include="User Manual\img\img-2.png" />
+    <Content Include="User Manual\img\movie.png" />
+    <Content Include="User Manual\img\receipt.png" />
+    <Content Include="User Manual\img\Report.png" />
+    <Content Include="User Manual\img\seat.png" />
+    <Content Include="User Manual\img\ticket.png" />
+    <Content Include="User Manual\img\user.png" />
+    <Content Include="User Manual\Index.html" />
+    <Content Include="User Manual\style.css" />
     <None Include="Resources\WELCOME TO.png" />
     <None Include="Resources\user-profile-icon.jpg" />
     <None Include="Resources\POPCORN PLACE Cardinel Red.gif" />
