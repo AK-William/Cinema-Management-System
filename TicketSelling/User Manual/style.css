@@ -279,6 +279,9 @@ p {
 	max-width: 500px;
 	margin: 0 auto;
 }
+#services .service-top p{
+	font-size: 1.8rem;
+}
 #services .service-bottom {
 	display: flex;
 	align-items: center;
@@ -326,13 +329,14 @@ p {
 #services .service-item p {
 	color: white;
 	text-align: left;
+	font-size: 1.5rem;
 }
 /* End Services Section */
 
 /* Entry section */
 #entrys .entrys {
 	flex-direction: column;
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
@@ -350,10 +354,10 @@ p {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 80%;
+	width: 90%;
 	margin: 20px auto;
 	overflow: hidden;
-	border-radius: 10px;
+	border-radius: 0;
 }
 #entrys .entry-info {
 	padding: 30px;
@@ -365,6 +369,11 @@ p {
 	flex-direction: column;
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	color: white;
+}
+
+#entrys .entry-info .entry-info-b{
+	font-size: 15px;
+	font-weight: 500;
 }
 #entrys .entry-info h1 {
 	font-size: 4rem;
@@ -379,33 +388,24 @@ p {
 	color: white;
 }
 #entrys .entry-img {
-	flex-basis: 50%;
-	height: 300px;
+	flex-basis: 100%;
+	height: 100%;
 	overflow: hidden;
 	position: relative;
+	display: block;
+		float: left;
+		padding: 5px 5px 5px 5px;
+		border: 1px solid;
+		border-color: #29323c;
 }
-#entrys .entry-img:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.7;
-}
-#entrys .entry-img img {
-	transition: 0.3s ease transform;
-}
-#entrys .entry-item:hover .entry-img img {
-	transform: scale(1.1);
-}
+
+
 /* End Entry section */
 
 /* Seat section */
 #seats .seats {
 	flex-direction: column;
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
@@ -423,10 +423,10 @@ p {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 80%;
+	width: 90%;
 	margin: 20px auto;
 	overflow: hidden;
-	border-radius: 10px;
+	border-radius: 0;
 }
 #seats .seat-info {
 	padding: 30px;
@@ -438,6 +438,11 @@ p {
 	flex-direction: column;
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	color: white;
+}
+
+#seats .seat-info .seat-info-b{
+	font-size: 15px;
+	font-weight: 500;
 }
 #seats .seat-info h1 {
 	font-size: 4rem;
@@ -452,26 +457,15 @@ p {
 	color: white;
 }
 #seats .seat-img {
-	flex-basis: 50%;
-	height: 300px;
+	flex-basis: 100%;
+	height: 100%;
 	overflow: hidden;
 	position: relative;
-}
-#seats .seat-img:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.7;
-}
-#seats .seat-img img {
-	transition: 0.3s ease transform;
-}
-#seats .seat-item:hover .seat-img img {
-	transform: scale(1.1);
+	display: block;
+	float: left;
+	padding: 5px 5px 5px 5px;
+	border: 1px solid;
+	border-color: #29323c;
 }
 /* End Seat section */
 
@@ -799,7 +793,7 @@ p {
 		flex-direction: row-reverse;
 	}
 	#entrys .entry-item {
-		height: 400px;
+		height: 100%;
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
@@ -808,8 +802,24 @@ p {
 		height: 100%;
 	}
 	#entrys .all-entrys .entry-img {
-		height: 100%;
+		display: block;
+		float: left;
+		padding: 5px 5px 5px 5px;
+		border: 1px solid;
+		border-color: #29323c;
 	}
+	#entrys .entry-info .entry-info-1p{
+		text-align: justify;
+	}
+	#entrys .entry-info .entry-info-2p{
+		text-align: justify;
+		height: 400px;
+	}
+	#entrys .entry-info .entry-info-3p{
+		text-align: justify;
+		height: 400px;
+	}
+	
 	/* End entrys */
 
 	/* seats */
@@ -820,7 +830,7 @@ p {
 		flex-direction: row-reverse;
 	}
 	#seats .seat-item {
-		height: 400px;
+		height: 100%;
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
@@ -829,7 +839,31 @@ p {
 		height: 100%;
 	}
 	#seats .all-seats .seat-img {
-		height: 100%;
+		display: block;
+		float: left;
+		padding: 5px 5px 5px 5px;
+		border: 1px solid;
+		border-color: #29323c;
+	}
+	#seats .seat-info .seat-info-1p{
+		text-align: justify;
+		height: 340px;
+	}
+	#seats .seat-info .seat-info-2p{
+		text-align: justify;
+		height: 400px;
+	}
+	#seats .seat-info .seat-info-3p{
+		text-align: justify;
+		height: 400px;
+	}
+	#seats .seat-info .seat-info-4p{
+		text-align: justify;
+		height: 400px;
+	}
+	#seats .seat-info .seat-info-5p{
+		text-align: justify;
+		height: 430px;
 	}
 	/* End seats */
 
@@ -841,7 +875,7 @@ p {
 		flex-direction: row-reverse;
 	}
 	#movies .movie-item {
-		height: 400px;
+		height: 410px;
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
@@ -862,7 +896,7 @@ p {
 		flex-direction: row-reverse;
 	}
 	#tickets .ticket-item {
-		height: 400px;
+		height: 410px;
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
@@ -883,7 +917,7 @@ p {
 		flex-direction: row-reverse;
 	}
 	#reports .report-item {
-		height: 400px;
+		height: 410px;
 		margin: 0;
 		width: 100%;
 		border-radius: 0;

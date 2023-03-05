@@ -175,7 +175,7 @@
     <value>cbuserrole</value>
   </data>
   <data name="&gt;&gt;cbuserrole.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2ComboBox, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;cbuserrole.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -205,7 +205,7 @@
     <value>hidepassword</value>
   </data>
   <data name="&gt;&gt;hidepassword.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;hidepassword.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -235,7 +235,7 @@
     <value>showpassword</value>
   </data>
   <data name="&gt;&gt;showpassword.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;showpassword.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -268,7 +268,7 @@
     <value>btnUpdate</value>
   </data>
   <data name="&gt;&gt;btnUpdate.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;btnUpdate.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -298,7 +298,7 @@
     <value>btnCancel</value>
   </data>
   <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -328,7 +328,7 @@
     <value>btnSave</value>
   </data>
   <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Button, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -397,7 +397,7 @@
     <value>pictureBoxAdminPhoto</value>
   </data>
   <data name="&gt;&gt;pictureBoxAdminPhoto.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2PictureBox, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;pictureBoxAdminPhoto.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -460,7 +460,7 @@
     <value>txtAdminAddress</value>
   </data>
   <data name="&gt;&gt;txtAdminAddress.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;txtAdminAddress.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -631,7 +631,7 @@
     <value>txtAdminCity</value>
   </data>
   <data name="&gt;&gt;txtAdminCity.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;txtAdminCity.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -658,7 +658,7 @@
     <value>txtAdminNRC</value>
   </data>
   <data name="&gt;&gt;txtAdminNRC.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;txtAdminNRC.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -685,7 +685,7 @@
     <value>txtAdminPostcode</value>
   </data>
   <data name="&gt;&gt;txtAdminPostcode.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;txtAdminPostcode.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -712,7 +712,7 @@
     <value>txtAdminGmail</value>
   </data>
   <data name="&gt;&gt;txtAdminGmail.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;txtAdminGmail.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -883,7 +883,7 @@
     <value>txtAdminPhoneNumber</value>
   </data>
   <data name="&gt;&gt;txtAdminPhoneNumber.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;txtAdminPhoneNumber.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -910,7 +910,7 @@
     <value>txtAdminPassword</value>
   </data>
   <data name="&gt;&gt;txtAdminPassword.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;txtAdminPassword.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -937,7 +937,7 @@
     <value>txtAdminUsername</value>
   </data>
   <data name="&gt;&gt;txtAdminUsername.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;txtAdminUsername.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -964,7 +964,7 @@
     <value>txtAdminName</value>
   </data>
   <data name="&gt;&gt;txtAdminName.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2TextBox, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;txtAdminName.Parent" xml:space="preserve">
     <value>guna2Panel1</value>
@@ -991,7 +991,7 @@
     <value>guna2Panel1</value>
   </data>
   <data name="&gt;&gt;guna2Panel1.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2Panel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1201,7 +1201,7 @@
     <value>dgvAdmin</value>
   </data>
   <data name="&gt;&gt;dgvAdmin.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;dgvAdmin.Parent" xml:space="preserve">
     <value>guna2Panel2</value>
@@ -1228,7 +1228,7 @@
     <value>guna2Panel2</value>
   </data>
   <data name="&gt;&gt;guna2Panel2.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
   </data>
   <data name="&gt;&gt;guna2Panel2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1250,30 +1250,6 @@
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>1180, 668</value>
-  </data>
-  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
-    <value>errorProvider1</value>
-  </data>
-  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;errorProvider2.Name" xml:space="preserve">
-    <value>errorProvider2</value>
-  </data>
-  <data name="&gt;&gt;errorProvider2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;errorProvider3.Name" xml:space="preserve">
-    <value>errorProvider3</value>
-  </data>
-  <data name="&gt;&gt;errorProvider3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;errorProvider4.Name" xml:space="preserve">
-    <value>errorProvider4</value>
-  </data>
-  <data name="&gt;&gt;errorProvider4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ColNo.Name" xml:space="preserve">
     <value>ColNo</value>
@@ -1359,11 +1335,41 @@
   <data name="&gt;&gt;ColAdminPostcode.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;ColDel.Name" xml:space="preserve">
+    <value>ColDel</value>
+  </data>
+  <data name="&gt;&gt;ColDel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;ColAdminPhotoString.Name" xml:space="preserve">
     <value>ColAdminPhotoString</value>
   </data>
   <data name="&gt;&gt;ColAdminPhotoString.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Name" xml:space="preserve">
+    <value>errorProvider1</value>
+  </data>
+  <data name="&gt;&gt;errorProvider1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorProvider2.Name" xml:space="preserve">
+    <value>errorProvider2</value>
+  </data>
+  <data name="&gt;&gt;errorProvider2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorProvider3.Name" xml:space="preserve">
+    <value>errorProvider3</value>
+  </data>
+  <data name="&gt;&gt;errorProvider3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorProvider4.Name" xml:space="preserve">
+    <value>errorProvider4</value>
+  </data>
+  <data name="&gt;&gt;errorProvider4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataGridViewImageColumn1.Name" xml:space="preserve">
     <value>dataGridViewImageColumn1</value>
@@ -1371,11 +1377,17 @@
   <data name="&gt;&gt;dataGridViewImageColumn1.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ColDel.Name" xml:space="preserve">
-    <value>ColDel</value>
+  <data name="&gt;&gt;errorProvider5.Name" xml:space="preserve">
+    <value>errorProvider5</value>
   </data>
-  <data name="&gt;&gt;ColDel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;errorProvider5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;errorProvider6.Name" xml:space="preserve">
+    <value>errorProvider6</value>
+  </data>
+  <data name="&gt;&gt;errorProvider6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ErrorProvider, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmAdmin</value>
@@ -1426,4 +1438,10 @@
         YRiGYRjGBJib+weMvETj2wrg2wAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="errorProvider5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>567, 20</value>
+  </metadata>
+  <metadata name="errorProvider6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>722, 20</value>
+  </metadata>
 </root>

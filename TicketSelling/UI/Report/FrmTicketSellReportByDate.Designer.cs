@@ -38,10 +38,16 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dgvReport = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ColNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMovieName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMovieDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMovieTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSeatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTotalPrice = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dgvReport = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblDate = new System.Windows.Forms.Label();
@@ -55,17 +61,11 @@
             this.rbByCustom = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbByDay = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.ColNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMovieName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMovieDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColMovieTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSeatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel6.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
-            this.guna2Panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
+            this.guna2Panel7.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -107,55 +107,6 @@
             this.guna2Panel4.Size = new System.Drawing.Size(1061, 465);
             this.guna2Panel4.TabIndex = 1;
             // 
-            // guna2Panel7
-            // 
-            this.guna2Panel7.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2Panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.guna2Panel7.BorderThickness = 2;
-            this.guna2Panel7.Controls.Add(this.label2);
-            this.guna2Panel7.Controls.Add(this.txtTotalPrice);
-            this.guna2Panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel7.Location = new System.Drawing.Point(0, 401);
-            this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.ShadowDecoration.Color = System.Drawing.Color.DeepSkyBlue;
-            this.guna2Panel7.ShadowDecoration.Enabled = true;
-            this.guna2Panel7.Size = new System.Drawing.Size(1061, 64);
-            this.guna2Panel7.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(644, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 22);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Total Price";
-            // 
-            // txtTotalPrice
-            // 
-            this.txtTotalPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTotalPrice.DefaultText = "0";
-            this.txtTotalPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTotalPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTotalPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTotalPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTotalPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalPrice.ForeColor = System.Drawing.Color.Black;
-            this.txtTotalPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalPrice.Location = new System.Drawing.Point(778, 9);
-            this.txtTotalPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtTotalPrice.Name = "txtTotalPrice";
-            this.txtTotalPrice.PasswordChar = '\0';
-            this.txtTotalPrice.PlaceholderText = "";
-            this.txtTotalPrice.ReadOnly = true;
-            this.txtTotalPrice.SelectedText = "";
-            this.txtTotalPrice.Size = new System.Drawing.Size(270, 47);
-            this.txtTotalPrice.TabIndex = 0;
-            this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // dgvReport
             // 
             this.dgvReport.AllowUserToAddRows = false;
@@ -169,6 +120,7 @@
             dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(5);
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -221,6 +173,109 @@
             this.dgvReport.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvReport.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // ColNo
+            // 
+            this.ColNo.DataPropertyName = "RowNumber";
+            this.ColNo.FillWeight = 30F;
+            this.ColNo.HeaderText = "No";
+            this.ColNo.Name = "ColNo";
+            this.ColNo.ReadOnly = true;
+            // 
+            // ColMovieName
+            // 
+            this.ColMovieName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.ColMovieName.DataPropertyName = "MovieName";
+            this.ColMovieName.HeaderText = "Movie Name";
+            this.ColMovieName.Name = "ColMovieName";
+            this.ColMovieName.ReadOnly = true;
+            this.ColMovieName.Width = 175;
+            // 
+            // ColMovieDate
+            // 
+            this.ColMovieDate.DataPropertyName = "MovieDate";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColMovieDate.DefaultCellStyle = dataGridViewCellStyle10;
+            this.ColMovieDate.HeaderText = "Date";
+            this.ColMovieDate.Name = "ColMovieDate";
+            this.ColMovieDate.ReadOnly = true;
+            // 
+            // ColMovieTime
+            // 
+            this.ColMovieTime.DataPropertyName = "MovieTime";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColMovieTime.DefaultCellStyle = dataGridViewCellStyle11;
+            this.ColMovieTime.HeaderText = "Time";
+            this.ColMovieTime.Name = "ColMovieTime";
+            this.ColMovieTime.ReadOnly = true;
+            // 
+            // ColSeatName
+            // 
+            this.ColSeatName.DataPropertyName = "SeatName";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.ColSeatName.DefaultCellStyle = dataGridViewCellStyle12;
+            this.ColSeatName.FillWeight = 50F;
+            this.ColSeatName.HeaderText = "Seat";
+            this.ColSeatName.Name = "ColSeatName";
+            this.ColSeatName.ReadOnly = true;
+            // 
+            // ColPrice
+            // 
+            this.ColPrice.DataPropertyName = "Price";
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColPrice.DefaultCellStyle = dataGridViewCellStyle13;
+            this.ColPrice.HeaderText = "Price";
+            this.ColPrice.Name = "ColPrice";
+            this.ColPrice.ReadOnly = true;
+            // 
+            // guna2Panel7
+            // 
+            this.guna2Panel7.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Panel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.guna2Panel7.BorderThickness = 2;
+            this.guna2Panel7.Controls.Add(this.label2);
+            this.guna2Panel7.Controls.Add(this.txtTotalPrice);
+            this.guna2Panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel7.Location = new System.Drawing.Point(0, 401);
+            this.guna2Panel7.Name = "guna2Panel7";
+            this.guna2Panel7.ShadowDecoration.Color = System.Drawing.Color.DeepSkyBlue;
+            this.guna2Panel7.ShadowDecoration.Enabled = true;
+            this.guna2Panel7.Size = new System.Drawing.Size(1061, 64);
+            this.guna2Panel7.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(644, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 22);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Total Price";
+            // 
+            // txtTotalPrice
+            // 
+            this.txtTotalPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTotalPrice.DefaultText = "0";
+            this.txtTotalPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTotalPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTotalPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTotalPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPrice.ForeColor = System.Drawing.Color.Black;
+            this.txtTotalPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTotalPrice.Location = new System.Drawing.Point(778, 9);
+            this.txtTotalPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.PasswordChar = '\0';
+            this.txtTotalPrice.PlaceholderText = "";
+            this.txtTotalPrice.ReadOnly = true;
+            this.txtTotalPrice.SelectedText = "";
+            this.txtTotalPrice.Size = new System.Drawing.Size(270, 47);
+            this.txtTotalPrice.TabIndex = 0;
+            this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // guna2Panel5
             // 
             this.guna2Panel5.BackColor = System.Drawing.SystemColors.Control;
@@ -234,7 +289,8 @@
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.White;
-            this.guna2Panel3.BorderThickness = 3;
+            this.guna2Panel3.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.guna2Panel3.BorderThickness = 2;
             this.guna2Panel3.Controls.Add(this.lblDate);
             this.guna2Panel3.Controls.Add(this.label1);
             this.guna2Panel3.Controls.Add(this.cbMovie);
@@ -246,7 +302,6 @@
             this.guna2Panel3.Controls.Add(this.rbByCustom);
             this.guna2Panel3.Controls.Add(this.rbByDay);
             this.guna2Panel3.CustomBorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.guna2Panel3.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
             this.guna2Panel3.Location = new System.Drawing.Point(35, 11);
             this.guna2Panel3.Name = "guna2Panel3";
@@ -340,7 +395,7 @@
             this.dpToDate.CustomFormat = "dd-MM-yyyy";
             this.dpToDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.dpToDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpToDate.ForeColor = System.Drawing.Color.Black;
+            this.dpToDate.ForeColor = System.Drawing.Color.White;
             this.dpToDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dpToDate.Location = new System.Drawing.Point(402, 132);
             this.dpToDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -357,7 +412,7 @@
             this.dpFromDate.CustomFormat = "dd-MM-yyyy";
             this.dpFromDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.dpFromDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpFromDate.ForeColor = System.Drawing.Color.Black;
+            this.dpFromDate.ForeColor = System.Drawing.Color.White;
             this.dpFromDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dpFromDate.Location = new System.Drawing.Point(45, 132);
             this.dpFromDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -420,60 +475,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1129, 724);
             this.guna2Panel1.TabIndex = 4;
             // 
-            // ColNo
-            // 
-            this.ColNo.DataPropertyName = "RowNumber";
-            this.ColNo.FillWeight = 30F;
-            this.ColNo.HeaderText = "No";
-            this.ColNo.Name = "ColNo";
-            this.ColNo.ReadOnly = true;
-            // 
-            // ColMovieName
-            // 
-            this.ColMovieName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.ColMovieName.DataPropertyName = "MovieName";
-            this.ColMovieName.HeaderText = "Movie Name";
-            this.ColMovieName.Name = "ColMovieName";
-            this.ColMovieName.ReadOnly = true;
-            this.ColMovieName.Width = 165;
-            // 
-            // ColMovieDate
-            // 
-            this.ColMovieDate.DataPropertyName = "MovieDate";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColMovieDate.DefaultCellStyle = dataGridViewCellStyle10;
-            this.ColMovieDate.HeaderText = "Date";
-            this.ColMovieDate.Name = "ColMovieDate";
-            this.ColMovieDate.ReadOnly = true;
-            // 
-            // ColMovieTime
-            // 
-            this.ColMovieTime.DataPropertyName = "MovieTime";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColMovieTime.DefaultCellStyle = dataGridViewCellStyle11;
-            this.ColMovieTime.HeaderText = "Time";
-            this.ColMovieTime.Name = "ColMovieTime";
-            this.ColMovieTime.ReadOnly = true;
-            // 
-            // ColSeatName
-            // 
-            this.ColSeatName.DataPropertyName = "SeatName";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.ColSeatName.DefaultCellStyle = dataGridViewCellStyle12;
-            this.ColSeatName.FillWeight = 50F;
-            this.ColSeatName.HeaderText = "Seat";
-            this.ColSeatName.Name = "ColSeatName";
-            this.ColSeatName.ReadOnly = true;
-            // 
-            // ColPrice
-            // 
-            this.ColPrice.DataPropertyName = "Price";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColPrice.DefaultCellStyle = dataGridViewCellStyle13;
-            this.ColPrice.HeaderText = "Price";
-            this.ColPrice.Name = "ColPrice";
-            this.ColPrice.ReadOnly = true;
-            // 
             // FrmTicketSellReportByDate
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -486,9 +487,9 @@
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel6.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).EndInit();
             this.guna2Panel7.ResumeLayout(false);
             this.guna2Panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).EndInit();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();

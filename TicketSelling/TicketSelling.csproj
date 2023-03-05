@@ -124,12 +124,6 @@
     <Compile Include="UI\Configuration\FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Configuration\FrmDashboard1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Configuration\FrmDashboard1.Designer.cs">
-      <DependentUpon>FrmDashboard1.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Configuration\FrmDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -245,9 +239,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Configuration\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Configuration\FrmDashboard1.resx">
-      <DependentUpon>FrmDashboard1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Configuration\FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>

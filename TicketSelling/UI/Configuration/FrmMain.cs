@@ -205,6 +205,10 @@ namespace TicketSelling.UI.Configuration
             {
                 btnAdmin.Visible = false;
                 btnSeat.Visible = false;
+                btnConfiguration.Visible = false;
+                btnEntry.Visible = false;
+                btnUser.Padding = new Padding(0, 0, 0, 0);
+                btnMovie.Padding = new Padding(0, 0, 0, 0);
             }
         }
 
@@ -266,7 +270,7 @@ namespace TicketSelling.UI.Configuration
             panelBody.Controls.Clear();
             switch (btn.Tag)
             {
-                case "Seat":
+                case "Seats":
                     frm = new FrmSeat();
                     lblTitleChildForm.Text = btnSeat.Tag.ToString();
                     iconCurrentChildForm.IconChar = btnSeat.IconChar;

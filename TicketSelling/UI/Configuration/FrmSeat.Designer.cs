@@ -58,6 +58,12 @@
             this.tabSeat = new System.Windows.Forms.TabPage();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvSeat = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ColNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSeatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDelSeat = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ColTypeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblnote = new System.Windows.Forms.Label();
             this.txtSeatNote = new Guna.UI2.WinForms.Guna2TextBox();
@@ -73,12 +79,6 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ColNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColSeatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDelSeat = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ColTypeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabcontrolSeat.SuspendLayout();
             this.tabSeatType.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
@@ -445,7 +445,7 @@
             this.dgvSeat.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -470,7 +470,7 @@
             this.dgvSeat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSeat.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvSeat.Location = new System.Drawing.Point(0, 0);
-            this.dgvSeat.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvSeat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 6);
             this.dgvSeat.Name = "dgvSeat";
             this.dgvSeat.ReadOnly = true;
             this.dgvSeat.RowHeadersVisible = false;
@@ -500,6 +500,56 @@
             this.dgvSeat.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvSeat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSeat_CellContentClick);
             this.dgvSeat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSeat_CellDoubleClick);
+            // 
+            // ColNo
+            // 
+            this.ColNo.DataPropertyName = "RowNumber";
+            this.ColNo.FillWeight = 86.80939F;
+            this.ColNo.HeaderText = "No";
+            this.ColNo.Name = "ColNo";
+            this.ColNo.ReadOnly = true;
+            // 
+            // ColId
+            // 
+            this.ColId.DataPropertyName = "Id";
+            this.ColId.HeaderText = "ID";
+            this.ColId.Name = "ColId";
+            this.ColId.ReadOnly = true;
+            this.ColId.Visible = false;
+            // 
+            // ColSeatName
+            // 
+            this.ColSeatName.DataPropertyName = "Name";
+            this.ColSeatName.HeaderText = "Seat Name";
+            this.ColSeatName.Name = "ColSeatName";
+            this.ColSeatName.ReadOnly = true;
+            // 
+            // ColPrice
+            // 
+            this.ColPrice.DataPropertyName = "Price";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.ColPrice.DefaultCellStyle = dataGridViewCellStyle7;
+            this.ColPrice.HeaderText = "Price";
+            this.ColPrice.Name = "ColPrice";
+            this.ColPrice.ReadOnly = true;
+            // 
+            // ColDelSeat
+            // 
+            this.ColDelSeat.FillWeight = 30F;
+            this.ColDelSeat.HeaderText = "";
+            this.ColDelSeat.Image = global::TicketSelling.Properties.Resources.delete;
+            this.ColDelSeat.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColDelSeat.Name = "ColDelSeat";
+            this.ColDelSeat.ReadOnly = true;
+            this.ColDelSeat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // ColTypeId
+            // 
+            this.ColTypeId.DataPropertyName = "SeatTypeId";
+            this.ColTypeId.HeaderText = "TypeID";
+            this.ColTypeId.Name = "ColTypeId";
+            this.ColTypeId.ReadOnly = true;
+            this.ColTypeId.Visible = false;
             // 
             // guna2Panel2
             // 
@@ -747,56 +797,6 @@
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.Visible = false;
             this.dataGridViewImageColumn2.Width = 104;
-            // 
-            // ColNo
-            // 
-            this.ColNo.DataPropertyName = "RowNumber";
-            this.ColNo.FillWeight = 86.80939F;
-            this.ColNo.HeaderText = "No";
-            this.ColNo.Name = "ColNo";
-            this.ColNo.ReadOnly = true;
-            // 
-            // ColId
-            // 
-            this.ColId.DataPropertyName = "Id";
-            this.ColId.HeaderText = "ID";
-            this.ColId.Name = "ColId";
-            this.ColId.ReadOnly = true;
-            this.ColId.Visible = false;
-            // 
-            // ColSeatName
-            // 
-            this.ColSeatName.DataPropertyName = "Name";
-            this.ColSeatName.HeaderText = "Seat Name";
-            this.ColSeatName.Name = "ColSeatName";
-            this.ColSeatName.ReadOnly = true;
-            // 
-            // ColPrice
-            // 
-            this.ColPrice.DataPropertyName = "Price";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            this.ColPrice.DefaultCellStyle = dataGridViewCellStyle7;
-            this.ColPrice.HeaderText = "Price";
-            this.ColPrice.Name = "ColPrice";
-            this.ColPrice.ReadOnly = true;
-            // 
-            // ColDelSeat
-            // 
-            this.ColDelSeat.FillWeight = 30F;
-            this.ColDelSeat.HeaderText = "";
-            this.ColDelSeat.Image = global::TicketSelling.Properties.Resources.delete;
-            this.ColDelSeat.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ColDelSeat.Name = "ColDelSeat";
-            this.ColDelSeat.ReadOnly = true;
-            this.ColDelSeat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // ColTypeId
-            // 
-            this.ColTypeId.DataPropertyName = "SeatTypeId";
-            this.ColTypeId.HeaderText = "TypeID";
-            this.ColTypeId.Name = "ColTypeId";
-            this.ColTypeId.ReadOnly = true;
-            this.ColTypeId.Visible = false;
             // 
             // FrmSeat
             // 

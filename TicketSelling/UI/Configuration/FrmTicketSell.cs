@@ -37,7 +37,108 @@ namespace TicketSelling.UI.Configuration
             BindName();
             BindSeat();
             CreateSeat();
+            colorchangeseat();
+            colordaynight();
         }
+
+        #region theme color change
+
+        FrmMain frmmain = (FrmMain)Application.OpenForms["FrmMain"];
+
+        public void colorchangeseat()
+        {
+            if (frmmain.panelleft.BackColor == Color.FromArgb(253, 73, 131))
+            {
+                btnCheck.BackColor = Color.FromArgb(253, 73, 131);
+                dpMovieDate.FillColor = Color.FromArgb(253, 73, 131);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(0, 120, 215))
+            {
+                btnCheck.BackColor = Color.FromArgb(0, 120, 215);
+                dpMovieDate.FillColor = Color.FromArgb(0, 120, 215);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(27, 182, 211))
+            {
+                btnCheck.BackColor = Color.FromArgb(27, 182, 211);
+                dpMovieDate.FillColor = Color.FromArgb(27, 182, 211);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(123, 31, 162))
+            {
+                btnCheck.BackColor = Color.FromArgb(123, 31, 162);
+                dpMovieDate.FillColor = Color.FromArgb(123, 31, 162);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(84, 110, 122))
+            {
+                btnCheck.BackColor = Color.FromArgb(84, 110, 122);
+                dpMovieDate.FillColor = Color.FromArgb(84, 110, 122);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(0, 200, 83))
+            {
+                btnCheck.BackColor = Color.FromArgb(0, 200, 83);
+                dpMovieDate.FillColor = Color.FromArgb(0, 200, 83);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(217, 115, 65))
+            {
+                btnCheck.BackColor = Color.FromArgb(217, 115, 65);
+                dpMovieDate.FillColor = Color.FromArgb(217, 115, 65);
+            }
+            else if (frmmain.panelleft.BackColor == Color.FromArgb(196, 30, 58))
+            {
+                btnCheck.BackColor = Color.FromArgb(196, 30, 58);
+                dpMovieDate.FillColor = Color.FromArgb(196, 30, 58);
+            }
+        }
+
+        public void colordaynight()
+        {
+            if (frmmain.panelTitle.BackColor == Color.FromArgb(41, 47, 57))
+            {
+                panelTop.BackColor = Color.FromArgb(43, 55, 61);
+                panelMid.BackColor = Color.FromArgb(43, 55, 61);
+                panelBot.BackColor = Color.FromArgb(43, 55, 61);
+                label1.ForeColor = Color.White;
+                label2.ForeColor = Color.White;
+                label3.ForeColor = Color.White;
+                cboMovieName.FillColor = Color.FromArgb(45, 57, 68);
+                cboMovieName.ForeColor = Color.White;
+                cboTime.FillColor = Color.FromArgb(45, 57, 68);
+                cboTime.ForeColor = Color.White;
+                //dgvSeatType.BackgroundColor = Color.FromArgb(68, 87, 96);
+                //dgvSeatType.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                //dgvSeatType.DefaultCellStyle.ForeColor = Color.White;
+                //dgvSeatType.GridColor = Color.FromArgb(41, 47, 57);
+                //dgvSeatType.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                //dgvSeatType.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                //dgvSeatType.DefaultCellStyle.SelectionForeColor = Color.White;
+
+                //tabSeat.BackColor = Color.FromArgb(43, 55, 61);
+                //lblSeatname.ForeColor = Color.White;
+                //lblnote.ForeColor = Color.White;
+                //lblnumberofseats.ForeColor = Color.White;
+                //lblprice.ForeColor = Color.White;
+                //cbSeatType.FillColor = Color.FromArgb(45, 57, 68);
+                //txtSeatNote.FillColor = Color.FromArgb(45, 57, 68);
+                //txtNumberOfSeats.FillColor = Color.FromArgb(45, 57, 68);
+                //txtSeatPrice.FillColor = Color.FromArgb(45, 57, 68);
+                //cbSeatType.ForeColor = Color.White;
+                //txtSeatNote.ForeColor = Color.White;
+                //txtNumberOfSeats.ForeColor = Color.White;
+                //txtSeatPrice.ForeColor = Color.White;
+                //dgvSeat.BackgroundColor = Color.FromArgb(68, 87, 96);
+                //dgvSeat.DefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                //dgvSeat.DefaultCellStyle.ForeColor = Color.White;
+                //dgvSeat.GridColor = Color.FromArgb(41, 47, 57);
+                //dgvSeat.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(68, 87, 96);
+                //dgvSeat.DefaultCellStyle.SelectionBackColor = Color.FromArgb(43, 55, 61);
+                //dgvSeat.DefaultCellStyle.SelectionForeColor = Color.White;
+            }
+            else
+            {
+                guna2Panel1.BackColor = Color.White;
+            }
+        }
+
+        #endregion
 
         private void BindName()
         {
@@ -164,22 +265,22 @@ namespace TicketSelling.UI.Configuration
                     btnSeat.ShadowDecoration.BorderRadius = 3;
                     btnSeat.ShadowDecoration.Depth = 10;
                     btnSeat.ShadowDecoration.Enabled = true;
-                    btnSeat.Size = new System.Drawing.Size(72, 70);
+                    btnSeat.Size = new System.Drawing.Size(82, 80);
                     btnSeat.TabIndex = 0;
                     btnSeat.Text = item.Name;
                     btnSeat.Click += new EventHandler(BtnSeat_Click);
                     panelMid.Controls.Add(btnSeat);
-                    X += btnSeat.Width + 15;
+                    X += btnSeat.Width + 20;
                     if ((i + 1) % item.NumberOfSeat == 0)
                     {
                         X = 40;
                         if (item.SeatTypeId != item.SeatTypeId)
                         {
-                            Y += btnSeat.Height + 10;
+                            Y += btnSeat.Height + 15;
                         }
                         else
                         {
-                            Y += btnSeat.Height + 10;
+                            Y += btnSeat.Height + 15;
                         }
                     }
                 }

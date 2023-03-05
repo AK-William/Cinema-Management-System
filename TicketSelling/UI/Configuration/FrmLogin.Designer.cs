@@ -30,23 +30,23 @@
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.chkSP = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnLogin = new FontAwesome.Sharp.IconButton();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,13 +68,32 @@
             // 
             this.guna2Panel3.Controls.Add(this.btnExit);
             this.guna2Panel3.Controls.Add(this.guna2Panel2);
-            this.guna2Panel3.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.guna2Panel3.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.guna2Panel3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 5, 5, 5);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel3.Location = new System.Drawing.Point(326, 0);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(465, 644);
             this.guna2Panel3.TabIndex = 17;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnExit.HoverState.Image = global::TicketSelling.Properties.Resources.cancel_512px;
+            this.btnExit.HoverState.ImageSize = new System.Drawing.Size(47, 47);
+            this.btnExit.Image = global::TicketSelling.Properties.Resources.cancel_480px;
+            this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnExit.ImageRotate = 0F;
+            this.btnExit.ImageSize = new System.Drawing.Size(45, 45);
+            this.btnExit.Location = new System.Drawing.Point(413, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.PressedState.Image = global::TicketSelling.Properties.Resources.cancel_480px;
+            this.btnExit.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btnExit.Size = new System.Drawing.Size(50, 50);
+            this.btnExit.TabIndex = 15;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // guna2Panel2
             // 
@@ -118,73 +137,6 @@
             this.chkSP.UncheckedState.BorderThickness = 0;
             this.chkSP.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.chkSP.CheckedChanged += new System.EventHandler(this.ChkSP_CheckedChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(45, 301);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 27);
-            this.label4.TabIndex = 83;
-            this.label4.Text = "Password";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(45, 202);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 27);
-            this.label5.TabIndex = 81;
-            this.label5.Text = "Username";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(160, 41);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 31);
-            this.label6.TabIndex = 80;
-            this.label6.Text = "LOGIN";
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.BorderColor = System.Drawing.Color.Aqua;
-            this.guna2Panel4.Controls.Add(this.pictureBox2);
-            this.guna2Panel4.CustomBorderColor = System.Drawing.Color.RoyalBlue;
-            this.guna2Panel4.CustomBorderThickness = new System.Windows.Forms.Padding(5, 5, 0, 5);
-            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.guna2Panel4.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.ShadowDecoration.Color = System.Drawing.Color.Aqua;
-            this.guna2Panel4.ShadowDecoration.Enabled = true;
-            this.guna2Panel4.Size = new System.Drawing.Size(326, 644);
-            this.guna2Panel4.TabIndex = 18;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnExit.HoverState.Image = global::TicketSelling.Properties.Resources.cancel_512px;
-            this.btnExit.HoverState.ImageSize = new System.Drawing.Size(47, 47);
-            this.btnExit.Image = global::TicketSelling.Properties.Resources.cancel_480px;
-            this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnExit.ImageRotate = 0F;
-            this.btnExit.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnExit.Location = new System.Drawing.Point(413, 2);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.PressedState.Image = global::TicketSelling.Properties.Resources.cancel_480px;
-            this.btnExit.PressedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnExit.Size = new System.Drawing.Size(50, 50);
-            this.btnExit.TabIndex = 15;
-            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // btnLogin
             // 
@@ -254,6 +206,17 @@
             this.pictureBox1.TabIndex = 85;
             this.pictureBox1.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(45, 301);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 27);
+            this.label4.TabIndex = 83;
+            this.label4.Text = "Password";
+            // 
             // txtUsername
             // 
             this.txtUsername.Animated = true;
@@ -282,6 +245,43 @@
             this.txtUsername.TextOffset = new System.Drawing.Point(10, 0);
             this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsername_KeyDown);
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUsername_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(45, 202);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(108, 27);
+            this.label5.TabIndex = 81;
+            this.label5.Text = "Username";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(160, 41);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 31);
+            this.label6.TabIndex = 80;
+            this.label6.Text = "LOGIN";
+            // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.BorderColor = System.Drawing.Color.Aqua;
+            this.guna2Panel4.Controls.Add(this.pictureBox2);
+            this.guna2Panel4.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.guna2Panel4.CustomBorderThickness = new System.Windows.Forms.Padding(5, 5, 0, 5);
+            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.guna2Panel4.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.ShadowDecoration.Color = System.Drawing.Color.Aqua;
+            this.guna2Panel4.ShadowDecoration.Enabled = true;
+            this.guna2Panel4.Size = new System.Drawing.Size(326, 644);
+            this.guna2Panel4.TabIndex = 18;
             // 
             // pictureBox2
             // 
@@ -314,8 +314,8 @@
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            this.guna2Panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2Panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 

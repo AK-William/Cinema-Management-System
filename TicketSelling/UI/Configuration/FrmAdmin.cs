@@ -704,6 +704,22 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
+        private void TxtAdminPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtAdminPassword.Text.Length >= 8 && txtAdminPassword.Text.Length <= 16)
+            {
+                errorProvider5.Clear();
+            }
+            else
+            {
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Password must be within 8 and 16 letters and characters.";
+                fmW.ShowDialog();
+                errorProvider5.SetError(this.txtAdminPassword, "Please provide valid Password");
+                txtAdminPassword.Text = "";
+            }
+        }
+
         #region Gmail Validation
 
         private void TxtAdminGmail_Leave(object sender, EventArgs e) //Error provide icon show
@@ -778,10 +794,26 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
+
+
         #endregion
 
         #endregion
 
-
+        private void TxtAdminUsername_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtAdminUsername.Text.Length >= 3 && txtAdminUsername.Text.Length <= 10)
+            {
+                errorProvider6.Clear();
+            }
+            else
+            {
+                FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
+                fmW.lblWarning.Text = "Username must be within 3 and 10 letters and characters.";
+                fmW.ShowDialog();
+                errorProvider6.SetError(this.txtAdminUsername, "Please provide valid Username");
+                txtAdminUsername.Text = "";
+            }
+        }
     }
 }

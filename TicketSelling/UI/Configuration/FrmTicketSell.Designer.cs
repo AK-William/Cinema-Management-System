@@ -121,6 +121,7 @@
             this.dpMovieDate.Checked = true;
             this.dpMovieDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.dpMovieDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpMovieDate.ForeColor = System.Drawing.Color.White;
             this.dpMovieDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dpMovieDate.Location = new System.Drawing.Point(574, 21);
             this.dpMovieDate.Margin = new System.Windows.Forms.Padding(4);

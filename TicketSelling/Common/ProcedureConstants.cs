@@ -726,7 +726,7 @@ namespace TicketSelling.Common
 	
                                                 SELECT * FROM TblSaleHead WHERE Id IN (SELECT Max(Id) FROM TblSaleHead);";
 
-        public static string GetSellingTicket = @"SELECT HeadId,SeatTypeId,SeatId,Price FROM TblSaleHead H inner join TblSaleDetail D on H.Id = D.HeadId WHERE MovieId=@MovieId AND CONVERT(char(10),MovieDate,111)=CONVERT(char(10),@MovieDate,111) AND MovieTime=@MovieTime;";
+        public static string GetSellingTicket = @"SELECT HeadId,SeatTypeId,SeatId,Price FROM TblSaleHead H  WITH (NOLOCK) inner join TblSaleDetail D  WITH (NOLOCK) on H.Id = D.HeadId WHERE MovieId=@MovieId AND CONVERT(char(10),MovieDate,111)=CONVERT(char(10),@MovieDate,111) AND MovieTime=@MovieTime;";
 
         public static string GetExportDataById = @"SELECT M.Name MovieName,MovieDate,MovieTime,CustomerName,Phone,S.Name SeatName,TotalPrice FROM TblSaleHead H
                                                     INNER JOIN TblSaleDetail D

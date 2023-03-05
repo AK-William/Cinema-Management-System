@@ -274,7 +274,7 @@ namespace TicketSelling.UI.Configuration
             {
                 e.Handled = true;
             }
-            
+
         }
 
         private void DgvSeatType_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -372,12 +372,23 @@ namespace TicketSelling.UI.Configuration
         int id = -1;
         private void DgvSeatType_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow dgvRowST = dgvSeatType.SelectedRows[0];
-            id = Convert.ToInt32(dgvRowST.Cells["ColIdSeatType"].Value);
-            txtSeatTypeName.Text = dgvRowST.Cells["ColSeatTypeName"].Value.ToString();
-            txtSeatTypeNote.Text = dgvRowST.Cells["ColSeatTypeNote"].Value.ToString();
-            btnSeatTypeSave.Visible = false;
-            btnSeatTypeUpdate.Visible = true;
+            int SeatCount = new SeatTypeDao().CheckSeatBySeatTypeId(Convert.ToInt32(dgvSeatType.Rows[e.RowIndex].Cells["ColIdSeatType"].Value));//Control delete seattype when seats are assign
+            if (SeatCount > 0)
+            {
+                FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
+                fmE.lblError.Text = "Transaction Exists! This action cannot be done.";
+                fmE.ShowDialog();
+                return;
+            }
+            else
+            {
+                DataGridViewRow dgvRowST = dgvSeatType.SelectedRows[0];
+                id = Convert.ToInt32(dgvRowST.Cells["ColIdSeatType"].Value);
+                txtSeatTypeName.Text = dgvRowST.Cells["ColSeatTypeName"].Value.ToString();
+                txtSeatTypeNote.Text = dgvRowST.Cells["ColSeatTypeNote"].Value.ToString();
+                btnSeatTypeSave.Visible = false;
+                btnSeatTypeUpdate.Visible = true;
+            }
         }
 
         #endregion

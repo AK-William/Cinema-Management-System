@@ -248,7 +248,7 @@
             this.btnSeat.IconColor = System.Drawing.Color.White;
             this.btnSeat.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSeat.Name = "btnSeat";
-            this.btnSeat.Tag = "Seat";
+            this.btnSeat.Tag = "Seats";
             this.btnSeat.UseVisualStyleBackColor = false;
             this.btnSeat.Click += new System.EventHandler(this.BtnSeat_Click);
             this.btnSeat.MouseHover += new System.EventHandler(this.BtnSeat_MouseHover);

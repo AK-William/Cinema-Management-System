@@ -88,7 +88,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvSummary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvSummary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSummary.ColumnHeadersHeight = 82;
+            this.dgvSummary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvSummary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colRowNumer,
             this.ColName,
@@ -127,7 +128,7 @@
             this.dgvSummary.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvSummary.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvSummary.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvSummary.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSummary.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvSummary.ThemeStyle.HeaderStyle.Height = 82;
             this.dgvSummary.ThemeStyle.ReadOnly = true;
             this.dgvSummary.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -195,6 +196,7 @@
             this.ColPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColPrice.DataPropertyName = "TotalAmount";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
             this.ColPrice.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColPrice.FillWeight = 58.8343F;
             this.ColPrice.HeaderText = "Total Amount";
