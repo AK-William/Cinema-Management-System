@@ -274,7 +274,30 @@ namespace TicketSelling.UI.Configuration
                 frmmain.label1.ForeColor = Color.White;
                 frmmain.txtLoginNameForMain.ForeColor = Color.White;
                 frmmain.btnSetting.FlatAppearance.MouseDownBackColor = Color.FromArgb(68, 87, 96);
-               
+                lbluserguide.ForeColor = Color.White;
+                frmmain.panelleft.BackColor = Color.FromArgb(84, 110, 122);
+                frmmain.panelMenuBar.BackColor = Color.FromArgb(84, 110, 122);
+                frmmain.paneltitlebar.BackColor = Color.FromArgb(84, 110, 122);
+                frmmain.btnAdmin.BackColor = Color.FromArgb(84, 110, 122);
+                frmmain.btnUser.BackColor = Color.FromArgb(84, 110, 122);
+                frmmain.btnMovie.BackColor = Color.FromArgb(84, 110, 122);
+                frmmain.btnSeat.BackColor = Color.FromArgb(84, 110, 122);
+                frmmain.btnDashboard.BackColor = Color.FromArgb(84, 110, 122);
+                frmmain.btnTicket.BackColor = Color.FromArgb(84, 110, 122);
+                frmmain.btnReport.BackColor = Color.FromArgb(84, 110, 122);
+                frmmain.accountimage.IconColor = Color.FromArgb(84, 110, 122);
+                frmmain.panelAccountShow.BorderColor = Color.FromArgb(84, 110, 122);
+                frmmain.pbLochmara.Visible = false;
+                frmmain.pbCeriseRed.Visible = false;
+                frmmain.pbJava.Visible = false;
+                frmmain.pbSeance.Visible = false;
+                frmmain.pbCuttySark.Visible = true;
+                frmmain.pbMalachite.Visible = false;
+                frmmain.pbCoral.Visible = false;
+                frmmain.pbCardinelRed.Visible = false;
+                btnUserManual.FillColor = Color.FromArgb(84, 110, 122);
+                lblCopyright.ForeColor = Color.White;
+
             }
             else
             {
@@ -290,12 +313,55 @@ namespace TicketSelling.UI.Configuration
                 frmmain.label1.ForeColor = Color.Black;
                 frmmain.txtLoginNameForMain.ForeColor = Color.Black;
                 frmmain.btnSetting.FlatAppearance.MouseDownBackColor = Color.LightGray;
+                lbluserguide.ForeColor = Color.Black;
+                frmmain.panelleft.BackColor = Color.FromArgb(0, 120, 215);
+                frmmain.panelMenuBar.BackColor = Color.FromArgb(0, 120, 215);
+                frmmain.paneltitlebar.BackColor = Color.FromArgb(0, 120, 215);
+                frmmain.btnAdmin.BackColor = Color.FromArgb(0, 120, 215);
+                frmmain.btnUser.BackColor = Color.FromArgb(0, 120, 215);
+                frmmain.btnMovie.BackColor = Color.FromArgb(0, 120, 215);
+                frmmain.btnSeat.BackColor = Color.FromArgb(0, 120, 215);
+                frmmain.btnDashboard.BackColor = Color.FromArgb(0, 120, 215);
+                frmmain.btnTicket.BackColor = Color.FromArgb(0, 120, 215);
+                frmmain.btnReport.BackColor = Color.FromArgb(0, 120, 215);
+                frmmain.accountimage.IconColor = Color.FromArgb(0, 120, 215);
+                frmmain.panelAccountShow.BorderColor = Color.FromArgb(0, 120, 215);
+                frmmain.pbLochmara.Visible = true;
+                frmmain.pbCeriseRed.Visible = false;
+                frmmain.pbJava.Visible = false;
+                frmmain.pbSeance.Visible = false;
+                frmmain.pbCuttySark.Visible = false;
+                frmmain.pbMalachite.Visible = false;
+                frmmain.pbCoral.Visible = false;
+                frmmain.pbCardinelRed.Visible = false;
+                btnUserManual.FillColor = Color.FromArgb(0, 120, 215);
+                lblCopyright.ForeColor = Color.Black;
             }
         }
 
         private void BtnUserManual_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start(@"C:\Users\WILLIAM\source\repos\TS\TicketSelling\User Manual\Index.html");
+        }
+
+        private void IconButton3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"https://www.facebook.com/profile.php?id=100010195896880");
+        }
+
+        private void IconButton1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"https://www.instagram.com/ak.phyo/");
+        }
+
+        private void IconButton2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"https://mail.google.com/mail/u/1/#inbox");
+        }
+
+        private void IconButton4_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"https://www.whatsapp.com/");
         }
     }
 }

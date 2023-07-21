@@ -25,6 +25,7 @@ namespace TicketSelling.UI.Configuration
         }
 
         public static string user;
+
         public static byte[] UserImage;
 
         private void FrmLogin_Load(object sender, EventArgs e)
@@ -58,7 +59,6 @@ namespace TicketSelling.UI.Configuration
         }
 
 
-
         private void BtnLogin_Click(object sender, EventArgs e)
         {
             try
@@ -80,6 +80,8 @@ namespace TicketSelling.UI.Configuration
                     if (res.LstAdmin.Count > 0)
                     {
                         RoleId = res.LstAdmin[0].RoleId;
+                        CommonFormat.LoginId= res.LstAdmin[0].Id;
+                        CommonFormat.RoleId = res.LstAdmin[0].RoleId;
                     }
                     FrmMain frm = new FrmMain(RoleId);
                     frm.Show();

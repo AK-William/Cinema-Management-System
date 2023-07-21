@@ -472,7 +472,7 @@ p {
 /* Movie section */
 #movies .movies {
 	flex-direction: column;
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
@@ -490,10 +490,10 @@ p {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 80%;
+	width: 90%;
 	margin: 20px auto;
 	overflow: hidden;
-	border-radius: 10px;
+	border-radius: 0;
 }
 #movies .movie-info {
 	padding: 30px;
@@ -505,6 +505,11 @@ p {
 	flex-direction: column;
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	color: white;
+}
+
+#movies .movie-info .movie-info-b{
+	font-size: 15px;
+	font-weight: 500;
 }
 #movies .movie-info h1 {
 	font-size: 4rem;
@@ -519,33 +524,22 @@ p {
 	color: white;
 }
 #movies .movie-img {
-	flex-basis: 50%;
-	height: 300px;
+	flex-basis: 100%;
+	height: 100%;
 	overflow: hidden;
 	position: relative;
-}
-#movies .movie-img:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.7;
-}
-#movies .movie-img img {
-	transition: 0.3s ease transform;
-}
-#movies .movie-item:hover .movie-img img {
-	transform: scale(1.1);
+	display: block;
+	float: left;
+	padding: 5px 5px 5px 5px;
+	border: 1px solid;
+	border-color: #29323c;
 }
 /* End Movie section */
 
 /* Ticket section */
 #tickets .tickets {
 	flex-direction: column;
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
@@ -563,10 +557,10 @@ p {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 80%;
+	width: 90%;
 	margin: 20px auto;
 	overflow: hidden;
-	border-radius: 10px;
+	border-radius: 0;
 }
 #tickets .ticket-info {
 	padding: 30px;
@@ -578,6 +572,11 @@ p {
 	flex-direction: column;
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	color: white;
+}
+
+#tickets .ticket-info .ticket-info-b{
+	font-size: 15px;
+	font-weight: 500;
 }
 #tickets .ticket-info h1 {
 	font-size: 4rem;
@@ -592,33 +591,22 @@ p {
 	color: white;
 }
 #tickets .ticket-img {
-	flex-basis: 50%;
-	height: 300px;
+	flex-basis: 100%;
+	height: 100%;
 	overflow: hidden;
 	position: relative;
-}
-#tickets .ticket-img:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.7;
-}
-#tickets .ticket-img img {
-	transition: 0.3s ease transform;
-}
-#tickets .ticket-item:hover .ticket-img img {
-	transform: scale(1.1);
+	display: block;
+	float: left;
+	padding: 5px 5px 5px 5px;
+	border: 1px solid;
+	border-color: #29323c;
 }
 /* End Ticket section */
 
 /* Report section */
 #reports .reports {
 	flex-direction: column;
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
@@ -636,10 +624,10 @@ p {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 80%;
+	width: 90%;
 	margin: 20px auto;
 	overflow: hidden;
-	border-radius: 10px;
+	border-radius: 0;
 }
 #reports .report-info {
 	padding: 30px;
@@ -651,6 +639,11 @@ p {
 	flex-direction: column;
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	color: white;
+}
+
+#reports .report-info .report-info-b{
+	font-size: 15px;
+	font-weight: 500;
 }
 #reports .report-info h1 {
 	font-size: 4rem;
@@ -665,26 +658,15 @@ p {
 	color: white;
 }
 #reports .report-img {
-	flex-basis: 50%;
-	height: 300px;
+	flex-basis: 100%;
+	height: 100%;
 	overflow: hidden;
 	position: relative;
-}
-#reports .report-img:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: 0.7;
-}
-#reports .report-img img {
-	transition: 0.3s ease transform;
-}
-#reports .report-item:hover .report-img img {
-	transform: scale(1.1);
+	display: block;
+	float: left;
+	padding: 5px 5px 5px 5px;
+	border: 1px solid;
+	border-color: #29323c;
 }
 /* End Report section */
 
@@ -715,13 +697,13 @@ p {
 	width: 50px;
 	margin: 0 5px;
 }
-#footer .social-item img {
+/* #footer .social-item img {
 	filter: grayscale(1);
 	transition: 0.3s ease filter;
-}
-#footer .social-item:hover img {
+} */
+/* #footer .social-item:hover img {
 	filter: grayscale(0);
-}
+} */
 #footer p {
 	color: white;
 	font-size: 1.3rem;
@@ -810,12 +792,17 @@ p {
 	}
 	#entrys .entry-info .entry-info-1p{
 		text-align: justify;
+		height: 348px;
 	}
 	#entrys .entry-info .entry-info-2p{
 		text-align: justify;
-		height: 400px;
+		height: 430px;
 	}
 	#entrys .entry-info .entry-info-3p{
+		text-align: justify;
+		height: 400px;
+	}
+	#entrys .entry-info .entry-info-4p{
 		text-align: justify;
 		height: 400px;
 	}
@@ -847,15 +834,15 @@ p {
 	}
 	#seats .seat-info .seat-info-1p{
 		text-align: justify;
-		height: 340px;
+		height: 338px;
 	}
 	#seats .seat-info .seat-info-2p{
 		text-align: justify;
-		height: 400px;
+		height: 397px;
 	}
 	#seats .seat-info .seat-info-3p{
 		text-align: justify;
-		height: 400px;
+		height:398px;
 	}
 	#seats .seat-info .seat-info-4p{
 		text-align: justify;
@@ -875,7 +862,7 @@ p {
 		flex-direction: row-reverse;
 	}
 	#movies .movie-item {
-		height: 410px;
+		height: 100%;
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
@@ -884,11 +871,33 @@ p {
 		height: 100%;
 	}
 	#movies .all-movies .movie-img {
-		height: 100%;
+		display: block;
+		float: left;
+		padding: 5px 5px 5px 5px;
+		border: 1px solid;
+		border-color: #29323c;
 	}
+	#movies .movie-info .movie-info-1p{
+		text-align: justify;
+		height: 304px;
+	}
+	#movies .movie-info .movie-info-2p{
+		text-align: justify;
+		height: 431px;
+	}
+	#movies .movie-info .movie-info-3p{
+		text-align: justify;
+		height: 433px;
+	}
+	#movies .movie-info .movie-info-4p{
+		text-align: justify;
+		height: 433px;
+	}
+	
 	/* End movies */
 
-	/* tickets */
+
+	/* ticket */
 	#tickets .ticket-item {
 		flex-direction: row;
 	}
@@ -896,7 +905,7 @@ p {
 		flex-direction: row-reverse;
 	}
 	#tickets .ticket-item {
-		height: 410px;
+		height: 100%;
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
@@ -905,9 +914,22 @@ p {
 		height: 100%;
 	}
 	#tickets .all-tickets .ticket-img {
-		height: 100%;
+		display: block;
+		float: left;
+		padding: 5px 5px 5px 5px;
+		border: 1px solid;
+		border-color: #29323c;
 	}
-	/* End entrys */
+	#tickets .ticket-info .ticket-info-1p{
+		text-align: justify;
+		height: 352px;
+	}
+	#tickets .ticket-info .ticket-info-2p{
+		text-align: justify;
+		height: 432px;
+	}
+	
+	/* End ticket */
 
 	/* reports */
 	#reports .report-item {
@@ -917,7 +939,7 @@ p {
 		flex-direction: row-reverse;
 	}
 	#reports .report-item {
-		height: 410px;
+		height: 100%;
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
@@ -926,11 +948,24 @@ p {
 		height: 100%;
 	}
 	#reports .all-reports .report-img {
-		height: 100%;
+		display: block;
+		float: left;
+		padding: 5px 5px 5px 5px;
+		border: 1px solid;
+		border-color: #29323c;
 	}
-	/* End entrys */
-	
-}
+	#reports .report-info .report-info-1p{
+		text-align: justify;
+		height: 380px;
+	}
+	#reports .report-info .report-info-2p{
+		text-align: justify;
+		height: 430px;
+	}
+
+	/* End reports */
+}	
+
 /* End Media Query For Tablet */
 
 /* Media Query For Desktop */

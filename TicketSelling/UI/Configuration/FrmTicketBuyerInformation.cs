@@ -121,7 +121,7 @@ namespace TicketSelling.UI.Configuration
                     FrmMessageBox.FrmSuccess fmS = new FrmMessageBox.FrmSuccess();
                     fmS.lblSuccess.Text = "Saving Successfully";
                     fmS.ShowDialog();
-                    //PrintData(res.HeadId);
+                    PrintData(res.HeadId);
                     this.Close();
                 }
                 else if (res.RespMessageType == CommonResponseMessage.ResErrorType)
@@ -153,7 +153,6 @@ namespace TicketSelling.UI.Configuration
             try
             {
                 string SeatName = string.Empty;
-
                 ResTicketData res = new SaleDao().GetTicketData(HeadId);
                 if (res.lstTicketData != null && res.lstTicketData.Count > 0)
                 {
@@ -171,20 +170,16 @@ namespace TicketSelling.UI.Configuration
                         excelPackage.Workbook.Properties.Title = "Title of Document";
                         excelPackage.Workbook.Properties.Subject = "EPPlus demo export data";
                         excelPackage.Workbook.Properties.Created = DateTime.Now;
-
                         //Create the WorkSheet
                         ExcelWorksheet worksheet = excelPackage.Workbook.Worksheets.Add("Sheet 1");
-
                         worksheet.Cells["A1:C1"].Style.Font.Color.SetColor(Color.FromArgb(0, 124, 183));
                         worksheet.Cells["A1:C1"].Style.Fill.PatternType = ExcelFillStyle.Solid;
                         worksheet.Cells["A1:C1"].Style.Fill.BackgroundColor.SetColor(Color.FromArgb(232, 235, 249));
                         worksheet.Cells["A1:C1"].Style.Font.Bold = true;
                         worksheet.Cells["A1:C1"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-
                         //Add some text to cell A1
                         worksheet.Cells["A1:C1"].Value = "CINEMA TICKET";
                         worksheet.Cells["A1:C1"].Merge = true;
-
                         worksheet.Cells["A3"].Value = "Name :";
                         worksheet.Cells["B3"].Value = res.lstTicketData[0].CustomerName;
                         worksheet.Cells["A4"].Value = "Phone No :";
@@ -199,17 +194,15 @@ namespace TicketSelling.UI.Configuration
                         worksheet.Cells["B8"].Value = SeatName;
                         worksheet.Cells["A9"].Value = "Total Amount :";
                         worksheet.Cells["B9"].Value = res.lstTicketData[0].TotalPrice;
-
                         worksheet.Cells["A11:C11"].Value = "THANK YOU";
                         worksheet.Cells["A11:C11"].Merge = true;
-
                         worksheet.Cells["A11:A11"].Style.Font.Bold = true;
                         worksheet.Cells["A11:A11"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-
                         //Save your file
-                        FileInfo fi = new FileInfo(@"C:\Users\WILLIAM\source\repos\TS\ExportData\1.xlsx");
+                        string ExportPath = AppDomain.CurrentDomain.BaseDirectory + @"ExportData\1.xlsx";
+                        FileInfo fi = new FileInfo(ExportPath);
                         excelPackage.SaveAs(fi);
-                        System.Diagnostics.Process.Start(@"C:\Users\WILLIAM\source\repos\TS\ExportData\1.xlsx");
+                        System.Diagnostics.Process.Start(ExportPath);
                     }
                 }
             }

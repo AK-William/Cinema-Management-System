@@ -37,12 +37,12 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelDGV = new System.Windows.Forms.Panel();
             this.dgvSummary = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.pnlAllMovie = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbltitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.colRowNumer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlAllMovie = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbltitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.panelDGV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSummary)).BeginInit();
@@ -81,11 +81,11 @@
             this.dgvSummary.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSummary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvSummary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSummary.ColumnHeadersHeight = 82;
@@ -138,38 +138,7 @@
             this.dgvSummary.ThemeStyle.RowsStyle.Height = 24;
             this.dgvSummary.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvSummary.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // pnlAllMovie
-            // 
-            this.pnlAllMovie.AutoScroll = true;
-            this.pnlAllMovie.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAllMovie.Location = new System.Drawing.Point(0, 88);
-            this.pnlAllMovie.Name = "pnlAllMovie";
-            this.pnlAllMovie.ShadowDecoration.Color = System.Drawing.Color.Chartreuse;
-            this.pnlAllMovie.Size = new System.Drawing.Size(1137, 352);
-            this.pnlAllMovie.TabIndex = 1;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Controls.Add(this.lbltitle);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1137, 88);
-            this.guna2Panel2.TabIndex = 0;
-            // 
-            // lbltitle
-            // 
-            this.lbltitle.AutoSize = false;
-            this.lbltitle.BackColor = System.Drawing.Color.Transparent;
-            this.lbltitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbltitle.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitle.Location = new System.Drawing.Point(0, 0);
-            this.lbltitle.Name = "lbltitle";
-            this.lbltitle.Size = new System.Drawing.Size(1137, 88);
-            this.lbltitle.TabIndex = 0;
-            this.lbltitle.Text = "NOW SHOWING";
-            this.lbltitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dgvSummary.Visible = false;
             // 
             // colRowNumer
             // 
@@ -202,6 +171,38 @@
             this.ColPrice.HeaderText = "Total Amount";
             this.ColPrice.Name = "ColPrice";
             this.ColPrice.ReadOnly = true;
+            // 
+            // pnlAllMovie
+            // 
+            this.pnlAllMovie.AutoScroll = true;
+            this.pnlAllMovie.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlAllMovie.Location = new System.Drawing.Point(0, 88);
+            this.pnlAllMovie.Name = "pnlAllMovie";
+            this.pnlAllMovie.ShadowDecoration.Color = System.Drawing.Color.Chartreuse;
+            this.pnlAllMovie.Size = new System.Drawing.Size(1137, 352);
+            this.pnlAllMovie.TabIndex = 1;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Controls.Add(this.lbltitle);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1137, 88);
+            this.guna2Panel2.TabIndex = 0;
+            // 
+            // lbltitle
+            // 
+            this.lbltitle.AutoSize = false;
+            this.lbltitle.BackColor = System.Drawing.Color.Transparent;
+            this.lbltitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbltitle.Font = new System.Drawing.Font("Times New Roman", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitle.Location = new System.Drawing.Point(0, 0);
+            this.lbltitle.Name = "lbltitle";
+            this.lbltitle.Size = new System.Drawing.Size(1137, 88);
+            this.lbltitle.TabIndex = 0;
+            this.lbltitle.Text = "NOW SHOWING";
+            this.lbltitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmDashboard
             // 

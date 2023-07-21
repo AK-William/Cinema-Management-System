@@ -129,7 +129,7 @@ namespace TicketSelling.DAO
             }
         }
 
-        public ResAdmin GetAllAdmin()
+        public ResAdmin GetAllAdmin(int RoleId, int LoginId)
         {
             sqlConnection = DbConnector.Connect();
             if (sqlConnection == null)
@@ -141,6 +141,8 @@ namespace TicketSelling.DAO
             {
                 scom = new SqlCommand(ProcedureConstants.GetAllAdmin, sqlConnection);
                 scom.CommandType = CommandType.Text;
+                scom.Parameters.AddWithValue("@RoleId", RoleId);
+                scom.Parameters.AddWithValue("@LoginId", LoginId);
                 DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(scom);
                 adapter.Fill(ds);
@@ -320,7 +322,7 @@ namespace TicketSelling.DAO
         //            return new MessageEntity() { RespCode = "001", RespDesp = "Invalid LoginName and Password", RespMessageType = CommonResponseMessage.ResErrorType };
 
         //        dt = ds.Tables[0];
-              
+
         //        return new MessageEntity()
         //        {
         //            RespCode = dt.Rows[0]["RespCode"].ToString(),
@@ -351,6 +353,7 @@ namespace TicketSelling.DAO
                 scom.CommandType = CommandType.Text;
                 scom.Parameters.AddWithValue("@Username", req.Username);
                 scom.Parameters.AddWithValue("@Password", Cryptography.Encrypt(req.Password));
+                //scom.Parameters.AddWithValue("@Password", req.Password);
                 DataSet ds = new DataSet();
                 adapter = new SqlDataAdapter(scom);
                 adapter.Fill(ds);
@@ -371,7 +374,7 @@ namespace TicketSelling.DAO
                         RoleId = Convert.ToInt32(dt.Rows[i]["RoleId"].ToString()),
                         Name = dt.Rows[i]["Name"].ToString(),
                         Username = dt.Rows[i]["Username"].ToString(),
-                        Photo= dt.Rows[i]["Photo"].ToString(),
+                        Photo = dt.Rows[i]["Photo"].ToString(),
                         PhotoByte = File.ReadAllBytes(dt.Rows[i]["Photo"].ToString()),
                     });
                 }
@@ -416,7 +419,7 @@ namespace TicketSelling.DAO
                 DataTable dt1 = ds.Tables[1];
                 UserCount = Convert.ToInt32(dt.Rows[0][0]);
                 RoleId = Convert.ToInt32(dt1.Rows[0][0]);
-                if(RoleId==1 && UserCount == 1)
+                if (RoleId == 1 && UserCount == 1)
                 {
                     IsDeleteUser = false;
                 }

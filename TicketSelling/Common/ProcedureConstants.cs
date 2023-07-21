@@ -286,7 +286,10 @@ namespace TicketSelling.Common
                                                     WHERE  Id=@Id
                                                     ";
 
-        public static string GetAllAdmin = @"SELECT
+        public static string GetAllAdmin = @"
+                                            IF(@RoleId=1)
+                                            BEGIN
+                                            SELECT
                                                 ROW_NUMBER() OVER (ORDER BY A.Id ASC) AS RowNumber,
                                                 A.Id,
                                                 Photo,
@@ -303,7 +306,30 @@ namespace TicketSelling.Common
                                                 Postcode
                                                 FROM TblAdmin AS A WITH (NOLOCK)
                                                 INNER JOIN TblRole AS R
-                                                ON A.RoleId = R.Id";
+                                                ON A.RoleId = R.Id
+                                            END
+                                            ELSE
+                                            BEGIN
+                                            SELECT
+                                                ROW_NUMBER() OVER (ORDER BY A.Id ASC) AS RowNumber,
+                                                A.Id,
+                                                Photo,
+                                                Name,
+                                                RoleName,
+                                                A.RoleId,
+                                                Username,
+                                                Password,
+                                                Gmail,
+                                                PhoneNumber,
+                                                NRC,
+                                                Address,
+                                                City,
+                                                Postcode
+                                                FROM TblAdmin AS A WITH (NOLOCK)
+                                                INNER JOIN TblRole AS R
+                                                ON A.RoleId = R.Id Where A.Id=@LoginId
+                                            END
+                                            ";
 
         public static string UpdateAdmin = @"IF EXISTS (SELECT * FROM TblAdmin WHERE Username = @Username
                                                        AND Id != @Id)
@@ -728,13 +754,15 @@ namespace TicketSelling.Common
 
         public static string GetSellingTicket = @"SELECT HeadId,SeatTypeId,SeatId,Price FROM TblSaleHead H  WITH (NOLOCK) inner join TblSaleDetail D  WITH (NOLOCK) on H.Id = D.HeadId WHERE MovieId=@MovieId AND CONVERT(char(10),MovieDate,111)=CONVERT(char(10),@MovieDate,111) AND MovieTime=@MovieTime;";
 
-        public static string GetExportDataById = @"SELECT M.Name MovieName,MovieDate,MovieTime,CustomerName,Phone,S.Name SeatName,TotalPrice FROM TblSaleHead H
+        public static string GetExportDataById = @"SELECT M.Name MovieName,MovieDate,SMT.Time 'MovieTime',CustomerName,Phone,S.Name SeatName,TotalPrice FROM TblSaleHead H
                                                     INNER JOIN TblSaleDetail D
                                                     ON H.Id=D.HeadId
                                                     INNER JOIN TblMovie M
                                                     ON H.MovieId=M.Id
                                                     INNER JOIN TblSeat S
                                                     ON S.Id=D.SeatId
+													LEFT JOIN TblScheduleMovieTime SMT
+													ON H.MovieTime=SMT.Id
                                                     WHERE H.Id=@HeadId";
       
         

@@ -299,7 +299,6 @@ namespace TicketSelling.UI.Configuration
 
         private bool CheckRequireFields()
         {
-
             if (string.IsNullOrEmpty(txtAdminName.Text))
             {
                 FrmMessageBox.FrmWarning fmW = new FrmMessageBox.FrmWarning();
@@ -385,7 +384,7 @@ namespace TicketSelling.UI.Configuration
             try
             {
                 if (!CheckRequireFields()) return;
-                MessageEntity res = new AdminDao().SaveAdmin(1, new DAO.Entity.Admin()
+                MessageEntity res = new AdminDao().SaveAdmin(CommonFormat.LoginId, new DAO.Entity.Admin()
                 {
                     Name = txtAdminName.Text,
                     Username = txtAdminUsername.Text,
@@ -461,8 +460,10 @@ namespace TicketSelling.UI.Configuration
             if (imgUrl.Length > 0)
             {
                 string extension = System.IO.Path.GetExtension(imgUrl);
-                string serverPhotoPath = Path.Combine(@"C:\Shared\Images\Admin\");
-                strString = serverPhotoPath + AdminPhotoName + extension;
+                //string serverPhotoPath = Path.Combine(@"C:\Shared\Images\Admin\");
+
+                string ImagePath = AppDomain.CurrentDomain.BaseDirectory + @"Images\Admin\";
+                strString = ImagePath + AdminPhotoName + extension;
                 Bitmap imgOutforsaveondisk = CommonFormat.ConvertTo16bpp(CommonFormat.getResizedImage(codeImage, 800, 600));
                 imgOutforsaveondisk.Save(strString);
             }
@@ -474,12 +475,15 @@ namespace TicketSelling.UI.Configuration
             string strString = null;
             if (imgUrl.Length > 0)
             {
-                string serverPhotoPath = Path.Combine(@"C:\Shared\Images\Admin\");
+                //string serverPhotoPath = Path.Combine(@"C:\Shared\Images\Admin\");
+
+                string ImagePath = AppDomain.CurrentDomain.BaseDirectory + @"Images\Admin\";
+
 
                 string extension = System.IO.Path.GetExtension(imgUrl);
                 string name = AdminPhotoName + extension;
 
-                strString = serverPhotoPath + name;
+                strString = ImagePath + name;
 
                 Bitmap orgBitmap = new Bitmap(imgUrl);
                 orgBitmap.Save(strString);
@@ -502,7 +506,7 @@ namespace TicketSelling.UI.Configuration
             try
             {
                 dgvAdmin.DataSource = null;
-                ResAdmin res = new AdminDao().GetAllAdmin();
+                ResAdmin res = new AdminDao().GetAllAdmin(CommonFormat.RoleId,CommonFormat.LoginId);
                 if (res.MessageEntity.RespMessageType == CommonResponseMessage.ResSuccessType)
                 {
                     dgvAdmin.DataSource = res.LstAdmin;
@@ -533,7 +537,7 @@ namespace TicketSelling.UI.Configuration
                     EditImageFilePath(AdminPhotoName);
                 }
                 if (!CheckRequireFields()) return;
-                MessageEntity res = new AdminDao().UpdateAdmin(1, new DAO.Entity.Admin()
+                MessageEntity res = new AdminDao().UpdateAdmin(CommonFormat.LoginId, new DAO.Entity.Admin()
                 {
                     Id = id,
                     Name = txtAdminName.Text,
@@ -594,7 +598,7 @@ namespace TicketSelling.UI.Configuration
                         if (!IsDeleteUser)
                         {
                             FrmMessageBox.FrmError fmE = new FrmMessageBox.FrmError();
-                            fmE.lblError.Text = "System need at least one admin!";
+                            fmE.lblError.Text = "System needs at least one MD level!";
                             fmE.ShowDialog();
                             return;
                         }
@@ -815,5 +819,7 @@ namespace TicketSelling.UI.Configuration
                 txtAdminUsername.Text = "";
             }
         }
+
+       
     }
 }

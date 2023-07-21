@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdmin));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.labelRole = new System.Windows.Forms.Label();
             this.cbuserrole = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -280,7 +280,7 @@
             this.txtAdminAddress.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtAdminAddress.Name = "txtAdminAddress";
             this.txtAdminAddress.PasswordChar = '\0';
-            this.txtAdminAddress.PlaceholderText = "Enter your address";
+            this.txtAdminAddress.PlaceholderText = "Enter your home address";
             this.txtAdminAddress.SelectedText = "";
             this.txtAdminAddress.TextOffset = new System.Drawing.Point(30, 0);
             this.txtAdminAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAdminAddress_KeyDown);
@@ -324,7 +324,7 @@
             this.txtAdminCity.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtAdminCity.Name = "txtAdminCity";
             this.txtAdminCity.PasswordChar = '\0';
-            this.txtAdminCity.PlaceholderText = "Enter your City";
+            this.txtAdminCity.PlaceholderText = "Enter your current City";
             this.txtAdminCity.SelectedText = "";
             this.txtAdminCity.TextOffset = new System.Drawing.Point(30, 0);
             this.txtAdminCity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAdminCity_KeyDown);
@@ -348,7 +348,7 @@
             this.txtAdminNRC.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtAdminNRC.Name = "txtAdminNRC";
             this.txtAdminNRC.PasswordChar = '\0';
-            this.txtAdminNRC.PlaceholderText = "Enter your NRC card";
+            this.txtAdminNRC.PlaceholderText = "Example:14/HATHATA(N)111111";
             this.txtAdminNRC.SelectedText = "";
             this.txtAdminNRC.TextOffset = new System.Drawing.Point(30, 0);
             this.txtAdminNRC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAdminNRC_KeyDown);
@@ -374,7 +374,7 @@
             this.txtAdminPostcode.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtAdminPostcode.Name = "txtAdminPostcode";
             this.txtAdminPostcode.PasswordChar = '\0';
-            this.txtAdminPostcode.PlaceholderText = "Enter your postcode";
+            this.txtAdminPostcode.PlaceholderText = "Enter current city postcode";
             this.txtAdminPostcode.SelectedText = "";
             this.txtAdminPostcode.TextOffset = new System.Drawing.Point(30, 0);
             this.txtAdminPostcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAdminPostcode_KeyDown);
@@ -398,7 +398,7 @@
             this.txtAdminGmail.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtAdminGmail.Name = "txtAdminGmail";
             this.txtAdminGmail.PasswordChar = '\0';
-            this.txtAdminGmail.PlaceholderText = "Enter your gmail";
+            this.txtAdminGmail.PlaceholderText = "Example: admin@gmail.com";
             this.txtAdminGmail.SelectedText = "";
             this.txtAdminGmail.TextOffset = new System.Drawing.Point(30, 0);
             this.txtAdminGmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAdminGmail_KeyDown);
@@ -444,7 +444,7 @@
             this.txtAdminPhoneNumber.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtAdminPhoneNumber.Name = "txtAdminPhoneNumber";
             this.txtAdminPhoneNumber.PasswordChar = '\0';
-            this.txtAdminPhoneNumber.PlaceholderText = "Enter your Phone Number";
+            this.txtAdminPhoneNumber.PlaceholderText = "Example: 09111111111";
             this.txtAdminPhoneNumber.SelectedText = "";
             this.txtAdminPhoneNumber.TextOffset = new System.Drawing.Point(30, 0);
             this.txtAdminPhoneNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAdminPhoneNumber_KeyDown);
@@ -470,7 +470,7 @@
             this.txtAdminPassword.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtAdminPassword.Name = "txtAdminPassword";
             this.txtAdminPassword.PasswordChar = '\0';
-            this.txtAdminPassword.PlaceholderText = "Enter Password";
+            this.txtAdminPassword.PlaceholderText = "between 8 to 16 characters";
             this.txtAdminPassword.SelectedText = "";
             this.txtAdminPassword.TextOffset = new System.Drawing.Point(30, 0);
             this.txtAdminPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAdminPassword_KeyDown);
@@ -495,7 +495,7 @@
             this.txtAdminUsername.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtAdminUsername.Name = "txtAdminUsername";
             this.txtAdminUsername.PasswordChar = '\0';
-            this.txtAdminUsername.PlaceholderText = "Enter your username";
+            this.txtAdminUsername.PlaceholderText = "between 3 to 10 words";
             this.txtAdminUsername.SelectedText = "";
             this.txtAdminUsername.TextOffset = new System.Drawing.Point(30, 0);
             this.txtAdminUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAdminUsername_KeyDown);
@@ -538,17 +538,17 @@
             this.dgvAdmin.AllowUserToDeleteRows = false;
             this.dgvAdmin.AllowUserToResizeColumns = false;
             this.dgvAdmin.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvAdmin.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            this.dgvAdmin.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
             this.dgvAdmin.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAdmin.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             resources.ApplyResources(this.dgvAdmin, "dgvAdmin");
             this.dgvAdmin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColNo,
@@ -567,14 +567,14 @@
             this.ColAdminPostcode,
             this.ColDel,
             this.ColAdminPhotoString});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAdmin.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAdmin.DefaultCellStyle = dataGridViewCellStyle39;
             this.dgvAdmin.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvAdmin.Name = "dgvAdmin";
             this.dgvAdmin.ReadOnly = true;
@@ -623,8 +623,8 @@
             // ColAdminName
             // 
             this.ColAdminName.DataPropertyName = "Name";
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColAdminName.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminName.DefaultCellStyle = dataGridViewCellStyle29;
             this.ColAdminName.FillWeight = 120.8097F;
             resources.ApplyResources(this.ColAdminName, "ColAdminName");
             this.ColAdminName.Name = "ColAdminName";
@@ -634,8 +634,8 @@
             // 
             this.Coluserrole.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Coluserrole.DataPropertyName = "RoleName";
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Coluserrole.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Coluserrole.DefaultCellStyle = dataGridViewCellStyle30;
             this.Coluserrole.FillWeight = 50F;
             resources.ApplyResources(this.Coluserrole, "Coluserrole");
             this.Coluserrole.Name = "Coluserrole";
@@ -652,10 +652,10 @@
             // 
             this.ColAdminPhoto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColAdminPhoto.DataPropertyName = "PhotoByte";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle5.NullValue")));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColAdminPhoto.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle31.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle31.NullValue")));
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminPhoto.DefaultCellStyle = dataGridViewCellStyle31;
             resources.ApplyResources(this.ColAdminPhoto, "ColAdminPhoto");
             this.ColAdminPhoto.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.ColAdminPhoto.Name = "ColAdminPhoto";
@@ -667,8 +667,8 @@
             // 
             this.ColAdminUsername.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColAdminUsername.DataPropertyName = "Username";
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColAdminUsername.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminUsername.DefaultCellStyle = dataGridViewCellStyle32;
             this.ColAdminUsername.FillWeight = 120.8097F;
             resources.ApplyResources(this.ColAdminUsername, "ColAdminUsername");
             this.ColAdminUsername.Name = "ColAdminUsername";
@@ -685,8 +685,8 @@
             // 
             this.ColAdminGmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColAdminGmail.DataPropertyName = "Gmail";
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColAdminGmail.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminGmail.DefaultCellStyle = dataGridViewCellStyle33;
             resources.ApplyResources(this.ColAdminGmail, "ColAdminGmail");
             this.ColAdminGmail.Name = "ColAdminGmail";
             this.ColAdminGmail.ReadOnly = true;
@@ -695,8 +695,8 @@
             // 
             this.ColAdminPhoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColAdminPhoneNumber.DataPropertyName = "PhoneNumber";
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColAdminPhoneNumber.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminPhoneNumber.DefaultCellStyle = dataGridViewCellStyle34;
             this.ColAdminPhoneNumber.FillWeight = 120.8097F;
             resources.ApplyResources(this.ColAdminPhoneNumber, "ColAdminPhoneNumber");
             this.ColAdminPhoneNumber.Name = "ColAdminPhoneNumber";
@@ -706,8 +706,8 @@
             // 
             this.ColAdminNRC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColAdminNRC.DataPropertyName = "NRC";
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColAdminNRC.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminNRC.DefaultCellStyle = dataGridViewCellStyle35;
             resources.ApplyResources(this.ColAdminNRC, "ColAdminNRC");
             this.ColAdminNRC.Name = "ColAdminNRC";
             this.ColAdminNRC.ReadOnly = true;
@@ -716,8 +716,8 @@
             // 
             this.ColAdminAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColAdminAddress.DataPropertyName = "Address";
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColAdminAddress.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminAddress.DefaultCellStyle = dataGridViewCellStyle36;
             resources.ApplyResources(this.ColAdminAddress, "ColAdminAddress");
             this.ColAdminAddress.Name = "ColAdminAddress";
             this.ColAdminAddress.ReadOnly = true;
@@ -726,8 +726,8 @@
             // 
             this.ColAdminCity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColAdminCity.DataPropertyName = "City";
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColAdminCity.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminCity.DefaultCellStyle = dataGridViewCellStyle37;
             resources.ApplyResources(this.ColAdminCity, "ColAdminCity");
             this.ColAdminCity.Name = "ColAdminCity";
             this.ColAdminCity.ReadOnly = true;
@@ -736,8 +736,8 @@
             // 
             this.ColAdminPostcode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.ColAdminPostcode.DataPropertyName = "Postcode";
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColAdminPostcode.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColAdminPostcode.DefaultCellStyle = dataGridViewCellStyle38;
             resources.ApplyResources(this.ColAdminPostcode, "ColAdminPostcode");
             this.ColAdminPostcode.Name = "ColAdminPostcode";
             this.ColAdminPostcode.ReadOnly = true;
@@ -825,7 +825,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
-        private Guna.UI2.WinForms.Guna2Button btnSave;
         private System.Windows.Forms.Label labelPhoto;
         private Guna.UI2.WinForms.Guna2PictureBox pictureBoxAdminPhoto;
         private System.Windows.Forms.Label labelAddress;
@@ -874,5 +873,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAdminPhotoString;
         private System.Windows.Forms.ErrorProvider errorProvider5;
         private System.Windows.Forms.ErrorProvider errorProvider6;
+        public Guna.UI2.WinForms.Guna2Button btnSave;
     }
 }

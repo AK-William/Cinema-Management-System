@@ -187,7 +187,7 @@
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="hidepassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>674, 52</value>
+    <value>734, 52</value>
   </data>
   <data name="hidepassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -217,7 +217,7 @@
     <value>Segoe UI, 9pt</value>
   </data>
   <data name="showpassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>674, 52</value>
+    <value>734, 52</value>
   </data>
   <data name="showpassword.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -247,7 +247,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="btnUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>810, 365</value>
+    <value>847, 365</value>
   </data>
   <data name="btnUpdate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -280,7 +280,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>936, 365</value>
+    <value>973, 365</value>
   </data>
   <data name="btnCancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -310,7 +310,7 @@
     <value>Segoe UI, 12pt</value>
   </data>
   <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>810, 365</value>
+    <value>847, 365</value>
   </data>
   <data name="btnSave.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -415,7 +415,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelAddress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>765, 11</value>
+    <value>802, 11</value>
   </data>
   <data name="labelAddress.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
@@ -445,13 +445,13 @@
     <value>Times New Roman, 12pt</value>
   </data>
   <data name="txtAdminAddress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>771, 48</value>
+    <value>808, 48</value>
   </data>
   <data name="txtAdminAddress.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
   </data>
   <data name="txtAdminAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 50</value>
+    <value>379, 50</value>
   </data>
   <data name="txtAdminAddress.TabIndex" type="System.Int32, mscorlib">
     <value>297</value>
@@ -478,7 +478,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelCity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>765, 115</value>
+    <value>802, 115</value>
   </data>
   <data name="labelCity.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
@@ -550,7 +550,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelAdminPostcode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>765, 229</value>
+    <value>802, 229</value>
   </data>
   <data name="labelAdminPostcode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
@@ -616,13 +616,13 @@
     <value>Times New Roman, 12pt</value>
   </data>
   <data name="txtAdminCity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>771, 151</value>
+    <value>808, 151</value>
   </data>
   <data name="txtAdminCity.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
   </data>
   <data name="txtAdminCity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 50</value>
+    <value>379, 50</value>
   </data>
   <data name="txtAdminCity.TabIndex" type="System.Int32, mscorlib">
     <value>292</value>
@@ -649,7 +649,7 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="txtAdminNRC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 50</value>
+    <value>390, 50</value>
   </data>
   <data name="txtAdminNRC.TabIndex" type="System.Int32, mscorlib">
     <value>291</value>
@@ -670,13 +670,13 @@
     <value>Times New Roman, 12pt</value>
   </data>
   <data name="txtAdminPostcode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>771, 265</value>
+    <value>808, 265</value>
   </data>
   <data name="txtAdminPostcode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 5, 5, 5</value>
   </data>
   <data name="txtAdminPostcode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 50</value>
+    <value>379, 50</value>
   </data>
   <data name="txtAdminPostcode.TabIndex" type="System.Int32, mscorlib">
     <value>290</value>
@@ -703,7 +703,7 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="txtAdminGmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 50</value>
+    <value>390, 50</value>
   </data>
   <data name="txtAdminGmail.TabIndex" type="System.Int32, mscorlib">
     <value>289</value>
@@ -874,7 +874,7 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="txtAdminPhoneNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 50</value>
+    <value>390, 50</value>
   </data>
   <data name="txtAdminPhoneNumber.TabIndex" type="System.Int32, mscorlib">
     <value>284</value>
@@ -901,7 +901,7 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="txtAdminPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 50</value>
+    <value>390, 50</value>
   </data>
   <data name="txtAdminPassword.TabIndex" type="System.Int32, mscorlib">
     <value>283</value>
@@ -928,7 +928,7 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="txtAdminUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 50</value>
+    <value>344, 50</value>
   </data>
   <data name="txtAdminUsername.TabIndex" type="System.Int32, mscorlib">
     <value>282</value>
@@ -955,7 +955,7 @@
     <value>5, 5, 5, 5</value>
   </data>
   <data name="txtAdminName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 50</value>
+    <value>344, 50</value>
   </data>
   <data name="txtAdminName.TabIndex" type="System.Int32, mscorlib">
     <value>281</value>
@@ -982,7 +982,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="guna2Panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1180, 441</value>
+    <value>1236, 441</value>
   </data>
   <data name="guna2Panel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -998,6 +998,45 @@
   </data>
   <data name="&gt;&gt;guna2Panel1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;dgvAdmin.Name" xml:space="preserve">
+    <value>dgvAdmin</value>
+  </data>
+  <data name="&gt;&gt;dgvAdmin.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DataGridView, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;dgvAdmin.Parent" xml:space="preserve">
+    <value>guna2Panel2</value>
+  </data>
+  <data name="&gt;&gt;dgvAdmin.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="guna2Panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="guna2Panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 441</value>
+  </data>
+  <data name="guna2Panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="guna2Panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1236, 227</value>
+  </data>
+  <data name="guna2Panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel2.Name" xml:space="preserve">
+    <value>guna2Panel2</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel2.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;guna2Panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="dgvAdmin.ColumnHeadersHeight" type="System.Int32, mscorlib">
     <value>35</value>
@@ -1044,7 +1083,7 @@
   <metadata name="ColAdminPhoto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="dataGridViewCellStyle5.NullValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="dataGridViewCellStyle31.NullValue" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         Qk32AgAAAAAAADYAAAAoAAAADgAAABAAAAABABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEgoTGw8bGw8bGw8bGw8bGw8bGw8bG
@@ -1192,7 +1231,7 @@
     <value>45</value>
   </data>
   <data name="dgvAdmin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1180, 227</value>
+    <value>1236, 227</value>
   </data>
   <data name="dgvAdmin.TabIndex" type="System.Int32, mscorlib">
     <value>282</value>
@@ -1209,33 +1248,6 @@
   <data name="&gt;&gt;dgvAdmin.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="guna2Panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="guna2Panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 441</value>
-  </data>
-  <data name="guna2Panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="guna2Panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1180, 227</value>
-  </data>
-  <data name="guna2Panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;guna2Panel2.Name" xml:space="preserve">
-    <value>guna2Panel2</value>
-  </data>
-  <data name="&gt;&gt;guna2Panel2.Type" xml:space="preserve">
-    <value>Guna.UI2.WinForms.Guna2Panel, Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
-  </data>
-  <data name="&gt;&gt;guna2Panel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;guna2Panel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>22, 20</value>
   </metadata>
@@ -1249,7 +1261,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1180, 668</value>
+    <value>1236, 668</value>
   </data>
   <data name="&gt;&gt;ColNo.Name" xml:space="preserve">
     <value>ColNo</value>

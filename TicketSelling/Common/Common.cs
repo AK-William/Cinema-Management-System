@@ -19,6 +19,8 @@ namespace TicketSelling.Common
     {
         public static string DateFormat = "dd-MM-yyyy";
         public static string MonthFormat = "MM-yyyy";
+        public static int LoginId = 0;
+        public static int RoleId = 0;
 
         public static Bitmap ConvertTo16bpp(Image img)
         {

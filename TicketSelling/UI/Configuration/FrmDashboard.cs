@@ -157,6 +157,7 @@ namespace TicketSelling.UI.Configuration
                 ResMovie res = new DashboardDao().GetAllMovieSummary();
                 if (res.lstMovieSummary.Count > 0)
                 {
+                    dgvSummary.Visible = true;
                     dgvSummary.DataSource = res.lstMovieSummary;
                 }
             }

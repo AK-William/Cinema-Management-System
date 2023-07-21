@@ -231,7 +231,6 @@ namespace TicketSelling.UI.Report
             {
                 btnView.Enabled = false;
                 int MovieId = Convert.ToInt32(cbMovie.SelectedValue);
-
                 if (rbByDay.Checked)
                 {
                     res = new SaleDao().GetSaleReportByDate(ProcedureConstants.SP_GetSaleReportByDate, MovieId, dpFromDate.Value);
@@ -239,7 +238,6 @@ namespace TicketSelling.UI.Report
                     StartDate = dpFromDate.Value.ToString(Common.CommonFormat.DateFormat);
                     EndDate = "";
                 }
-
                 else
                 {
                     StartDate = dpFromDate.Value.ToString(CommonFormat.DateFormat);
@@ -249,7 +247,6 @@ namespace TicketSelling.UI.Report
                 }
                 if (lstSaleReport.Count > 0)
                 {
-
                     dgvReport.DataSource = lstSaleReport;
                     txtTotalPrice.Text = lstSaleReport.Sum(x => x.Price).ToString();
                 }

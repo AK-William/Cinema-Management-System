@@ -191,24 +191,28 @@ namespace TicketSelling.UI.Configuration
             }
         }
 
-        
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
             formSize = this.ClientSize;
             panelBody.Controls.Add(frmdashboard);
             frmdashboard.Dock = DockStyle.Fill;
+            ActivateButton(btnDashboard);
             pbLochmara.Visible = true;
             panelConfiguration.Visible = (RoleId == 2) ? false : true;
+            btnEntry.Visible = (RoleId == 2) ? false : true;
             panelEntry.Visible = (RoleId == 2) ? false : true;
+            btnReport.Visible = (RoleId == 2) ? false : true;
+
+            btnUser.Visible = (RoleId == 2) ? false : true;
             if (RoleId == 3)
             {
                 btnAdmin.Visible = false;
                 btnSeat.Visible = false;
                 btnConfiguration.Visible = false;
+                panelEntry.Visible = false;
                 btnEntry.Visible = false;
-                btnUser.Padding = new Padding(0, 0, 0, 0);
-                btnMovie.Padding = new Padding(0, 0, 0, 0);
+                btnUser.Visible = false;
             }
         }
 
@@ -242,6 +246,9 @@ namespace TicketSelling.UI.Configuration
         private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            //FrmLogin frm = new FrmLogin();
+            //frm.ShowDialog();
+            //this.Close();
         }
 
         private void BtnMenu_Click(object sender, EventArgs e)

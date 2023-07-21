@@ -459,8 +459,9 @@ namespace TicketSelling.UI.Configuration
             if (imgUrl.Length > 0)
             {
                 string extension = System.IO.Path.GetExtension(imgUrl);
-                string serverPhotoPath = Path.Combine(@"C:\Shared\Images\");
-                strString = serverPhotoPath + MovieCoverName + extension;
+                //string serverPhotoPath = Path.Combine(@"C:\Shared\Images\");
+                string ImagePath = AppDomain.CurrentDomain.BaseDirectory + @"Images\";
+                strString = ImagePath + MovieCoverName + extension;
                 Bitmap imgOutforsaveondisk = CommonFormat.ConvertTo16bpp(CommonFormat.getResizedImage(codeImage, 800, 600));
                 imgOutforsaveondisk.Save(strString);
             }
@@ -472,13 +473,14 @@ namespace TicketSelling.UI.Configuration
             string strString = null;
             if (imgUrl.Length > 0)
             {
-                //string serverPhotoPath = App_Setting.ServerPhotoPath;
-                string serverPhotoPath = Path.Combine(@"C:\Shared\Images\");
+                //string serverPhotoPath = Path.Combine(@"C:\Shared\Images\");
+
+                string ImagePath = AppDomain.CurrentDomain.BaseDirectory + @"Images\";
 
                 string extension = System.IO.Path.GetExtension(imgUrl);
                 string name = MovieCoverName + extension;
 
-                strString = serverPhotoPath + name;
+                strString = ImagePath + name;
 
                 Bitmap orgBitmap = new Bitmap(imgUrl);
                 orgBitmap.Save(strString);

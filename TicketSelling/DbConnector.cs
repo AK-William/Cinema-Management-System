@@ -20,6 +20,7 @@ namespace TicketSelling.DAO
             cn = new SqlConnection(cs);
         }
 
+
         public static SqlConnection Connect()
         {
             //CONNECTION_STRING = System.Configuration.ConfigurationSettings.AppSettings["HRMaster.Properties.Settings.HRConnectionString"].ToString();
@@ -61,6 +62,8 @@ namespace TicketSelling.DAO
         //        return true;
         //    }
         //}
+
+
 
     }
 }
